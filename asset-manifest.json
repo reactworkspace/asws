@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/reactworkspace.github.io/asws/static/css/main.93a0497a.css",
-    "main.js": "/reactworkspace.github.io/asws/static/js/main.35e01ec7.js",
-    "index.html": "/reactworkspace.github.io/asws/index.html",
-    "main.93a0497a.css.map": "/reactworkspace.github.io/asws/static/css/main.93a0497a.css.map",
-    "main.35e01ec7.js.map": "/reactworkspace.github.io/asws/static/js/main.35e01ec7.js.map"
+    "main.css": "/asws/static/css/main.93a0497a.css",
+    "main.js": "/asws/static/js/main.35e01ec7.js",
+    "index.html": "/asws/index.html",
+    "main.93a0497a.css.map": "/asws/static/css/main.93a0497a.css.map",
+    "main.35e01ec7.js.map": "/asws/static/js/main.35e01ec7.js.map"
   },
   "entrypoints": [
     "static/css/main.93a0497a.css",
