@@ -1,5 +1,5 @@
 
-
+import * as React from 'react';
 
 const Student = () => {
 
@@ -7,7 +7,7 @@ const Student = () => {
 		<>
 		<section>
 
-
+		<h1>Student</h1>
 
 
 
