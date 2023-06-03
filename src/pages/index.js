@@ -32,7 +32,9 @@ const AswsIndex = () => {
   const [isActive, setActive] = useState('dashboard');
   const handleClick = (isActiveItem) => {
     setActive(isActiveItem);
+    // This if condition is use only for 320px to 767px screen
     if (window.innerWidth >= 320 && window.innerWidth <= 767) {
+      // This will close the menu
       setIsMenuOpen(false);
     }
   };
@@ -44,12 +46,10 @@ const AswsIndex = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // setIsMenuOpen(false);
-
   return (
     <>
       <Router>
-        <header id="header-menu">
+        <header >
           <div>
             <GiHamburgerMenu
               className={`icon ${isMenuOpen ? 'open' : ''}`}
@@ -57,9 +57,7 @@ const AswsIndex = () => {
             />
           </div>
           <div>
-            <figure>
-              <AswsLogo />
-            </figure>
+            <AswsLogo />
           </div>
           <div>Profile</div>
         </header>
