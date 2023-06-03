@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 // styles
-import './index.css';
+import './styles/index.css';
 
 import Dashboard from './dashboard';
 import Zone from './zone';
@@ -257,13 +257,13 @@ const AswsIndex = () => {
           <main>
             <section id="main-section">
               <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/zone" element={<Zone />} />
-                <Route path="/student" element={<Student />} />
-                <Route path="/teacher" element={<Teacher />} />
-                <Route path="/attendance" element={<Attendance />} />
-                <Route path="/syllabus" element={<Syllabus />} />
-                <Route path="/setting" element={<Setting />} />
+                <Route exact path="/" element={<Dashboard />} />
+                <Route exact path="/zone" element={<Zone />} />
+                <Route exact path="/student" element={<Student />} />
+                <Route exact path="/teacher" element={<Teacher />} />
+                <Route exact path="/attendance" element={<Attendance />} />
+                <Route exact path="/syllabus" element={<Syllabus />} />
+                <Route exact path="/setting" element={<Setting />} />
               </Routes>
             </section>
           </main>
