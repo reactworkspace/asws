@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/asws/static/css/main.831723fc.css",
-    "main.js": "/asws/static/js/main.d1d99303.js",
+    "main.css": "/asws/static/css/main.d36acd7b.css",
+    "main.js": "/asws/static/js/main.50e4b980.js",
+    "static/media/teacherprofile.png": "/asws/static/media/teacherprofile.6ddce6bd411c1699d32d.png",
+    "static/media/userprofile.png": "/asws/static/media/userprofile.2ae106a362a3cc556cbe.png",
+    "static/media/studentprofile.png": "/asws/static/media/studentprofile.71cc14acc79aff8722de.png",
     "static/media/aswslogo.svg": "/asws/static/media/aswslogo.8f3e6ce72d631092d5ab203644da6b63.svg",
+    "static/media/threedots.svg": "/asws/static/media/threedots.f8ca4e6c16594d598050449f591cae45.svg",
     "static/media/student.svg": "/asws/static/media/student.88eb15498f64adda8372972ce59d9479.svg",
     "static/media/teacher.svg": "/asws/static/media/teacher.50f2d4e6d4857d6e35fe12e3cd54b933.svg",
     "static/media/setting.svg": "/asws/static/media/setting.d983ea7cce1db1f3a8d6913ef2035856.svg",
     "index.html": "/asws/index.html",
     "static/media/zone.svg": "/asws/static/media/zone.890e368215b49a42d4580ae772fe2e4f.svg",
     "static/media/notes.svg": "/asws/static/media/notes.87d0e40b6ec8c5834ff7cddd3a25e1ac.svg",
-    "main.831723fc.css.map": "/asws/static/css/main.831723fc.css.map",
-    "main.d1d99303.js.map": "/asws/static/js/main.d1d99303.js.map"
+    "main.d36acd7b.css.map": "/asws/static/css/main.d36acd7b.css.map",
+    "main.50e4b980.js.map": "/asws/static/js/main.50e4b980.js.map"
   },
   "entrypoints": [
-    "static/css/main.831723fc.css",
-    "static/js/main.d1d99303.js"
+    "static/css/main.d36acd7b.css",
+    "static/js/main.50e4b980.js"
   ]
 }
