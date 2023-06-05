@@ -1,23 +1,40 @@
-#profile {
+#userprofile {
   position: relative;
   width: 4rem;
   height: 4rem;
 }
-#profile img {
+#userprofile img {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
 
-.notification {
-  position: relative;
-  color: var(--color-muted-test);
+#user-profile-div{
+  width: 20rem;
+  height: 100%;
+ 
 }
 
-.notification .bell-icon {
-  color: #a098ae;
+
+
+.profile-icons{
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-muted-test);
 }
+.profile-icons:hover{
+  color: var(--color-heading)
+}
+.notification {
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--color-white);
+  border-radius: 100%;
+
+}
+
 .notification-count {
   position: absolute;
   top: 0;
@@ -30,6 +47,15 @@
   text-align: center;
   color: var(--color-white);
   visibility: hidden;
+}
+
+.profile-setting {
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--color-white);
+  border-radius: 100%;
+
 }
 
 .username span {

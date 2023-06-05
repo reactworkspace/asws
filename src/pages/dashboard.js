@@ -1,6 +1,11 @@
+import './styles/index.css'
 import './styles/dashboard.css';
-import './styles/userprofile.css'
-import './styles/font.css'
+import './styles/flex.css'
+import './styles/userprofile.css';
+import './styles/studentprofile.css';
+import './styles/teacherprofile.css';
+import './styles/font.css';
+
 import React from 'react';
 
 // icons
@@ -8,18 +13,75 @@ import { ReactComponent as ZoneIcon } from '../assets/svg/zone.svg';
 import { ReactComponent as StudentIcon } from '../assets/svg/student.svg';
 import { ReactComponent as TeacherIcon } from '../assets/svg/teacher.svg';
 import { ReactComponent as ThreeDotsIcons } from '../assets/svg/threedots.svg';
-import { ReactComponent as BellIcon } from '../assets/svg/bell.svg';
+import {AiOutlineBell} from 'react-icons/ai';
 
 // react icons
 import { FaFilter } from 'react-icons/fa';
 
-import ProfilePhoto from '../assets/images/profile.png';
+import UserProfilePhoto from '../assets/images/userprofile.png';
+import StudentProfilePhoto from '../assets/images/studentprofile.png';
+import TeacherProfilePhoto from '../assets/images/teacherprofile.png';
 
-const Profile = () => {
+
+const UserProfile = () => {
+  const userInfo = {
+    firstName: 'yahiya',
+    lastName: 'ali',
+    role: 'admin',
+  };
+
   return (
-    <div id="profile">
-      <img src={ProfilePhoto} alt="ProfilePhoto" width={200} />
+    <>
+      <div className="notification">
+            <AiOutlineBell className='profile-icons' />
+            <span className="notification-count"></span>
+          </div>
+          <div className="username">
+            <span className="poppins">
+              {userInfo.firstName}
+              {userInfo.lastName}
+            </span>
+            <span className="poppins-w400">{userInfo.role}</span>
+          </div>
+    <div id="userprofile">
+      <img src={UserProfilePhoto} alt="UserProfilePhoto" />
     </div>
+    </>
+  );
+};
+
+const StudentProfile = () => {
+  return (
+    <div id="studentprofile">
+      <img src={StudentProfilePhoto} alt="StudentProfilePhoto" />
+    </div>
+  );
+};
+
+const TeacherProfile = () => {
+  return (
+
+    <div id="teacherprofile">
+      <img src={TeacherProfilePhoto} alt="TeacherProfilePhoto" />
+    </div>
+  );
+};
+
+const StudentTrData = () => {
+  return (
+    <tr>
+      <td>
+        <StudentProfile />
+      </td>
+      <td> Mohd Kashif</td>
+      <td>ID: 123456789</td>
+      <td>Zeba Masjid</td>
+      <td>8686081162</td>
+      <td>22/02/2022</td>
+      <td>
+        <ThreeDotsIcons />
+      </td>
+    </tr>
   );
 };
 
@@ -31,12 +93,7 @@ const Dashboard = () => {
     centres: '15',
   };
 
-  const userInfo = {
-    firstName: 'yahiya',
-    lastName: 'ali',
-    role: 'admin',
-  };
-
+  
   return (
     <section id="dashboard">
       {/* DASHBOARD SECTION */}
@@ -82,7 +139,7 @@ const Dashboard = () => {
           </div>
         </div>
         {/* ATTENDANCE SECTION */}
-        <div id="attendance">
+        <div id="attendance-section">
           <div className="flex-r-sb">
             <div>
               <span className="inter-heading">attendance</span>
@@ -119,19 +176,13 @@ const Dashboard = () => {
                 <th> </th>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                    <Profile />
-                  </td>
-                  <td> Mohd Kashif</td>
-                  <td>ID: 123456789</td>
-                  <td>Zeba Masjid</td>
-                  <td>8686081162</td>
-                  <td>22/02/2022</td>
-                  <td>
-                    <ThreeDotsIcons />
-                  </td>
-                </tr>
+                <StudentTrData />
+                <StudentTrData />
+                <StudentTrData />
+                <StudentTrData />
+                <StudentTrData />
+                <StudentTrData />
+                <StudentTrData />
               </tbody>
             </table>
           </div>
@@ -141,77 +192,80 @@ const Dashboard = () => {
       {/* ASIDE SECTION */}
       <aside id="dashboard-right">
         <div className="flex-r-sb">
-          <div className="notification">
-            <BellIcon />
-            <span className="notification-count"></span>
-          </div>
-          <div className="username">
-            <span className="poppins">
-              {userInfo.firstName}
-              {userInfo.lastName}
-            </span>
-            <span className="poppins-w400">{userInfo.role}</span>
-          </div>
-          <Profile />
+          
+          <UserProfile />
 
           {/* Recently Joined Teachers */}
           <div className="recently-joined-teachers">
-            <span className='poppins-sub-heading'>recently joined teachers</span>
-            <div className='teachers-div flex'>
-              <div className='teachers-profile'>
-                <Profile />
+            <span className="poppins-sub-heading">
+              recently joined teachers
+            </span>
+            <div className="teachers-div flex">
+              <div className="teachers-profile">
+                <TeacherProfile />
               </div>
-              <div className='teachers-details'>
-                <span className='teachers-name poppins-sub-heading-1rem'>shaik ahmed</span>
-                <span className='teachers-centre'>jamia masjid centre</span>
-              </div>
-            </div>
-            <div className="line "></div>
-            <div className='teachers-div flex'>
-              <div className='teachers-profile'>
-                <Profile />
-              </div>
-              <div className='teachers-details'>
-                <span className='teachers-name poppins-sub-heading-1rem'>shaik ahmed</span>
-                <span className='teachers-centre'>jamia masjid centre</span>
+              <div className="teachers-details">
+                <span className="teachers-name poppins-sub-heading-1rem">
+                  shaik ahmed
+                </span>
+                <span className="teachers-centre">jamia masjid centre</span>
               </div>
             </div>
             <div className="line "></div>
-            <div className='teachers-div flex'>
-              <div className='teachers-profile'>
-                <Profile />
+            <div className="teachers-div flex">
+              <div className="teachers-profile">
+                <TeacherProfile />
               </div>
-              <div className='teachers-details'>
-                <span className='teachers-name poppins-sub-heading-1rem'>shaik ahmed</span>
-                <span className='teachers-centre'>jamia masjid centre</span>
-              </div>
-            </div>
-            <div className="line"></div><div className='teachers-div flex'>
-              <div className='teachers-profile'>
-                <Profile />
-              </div>
-              <div className='teachers-details'>
-                <span className='teachers-name  poppins-sub-heading-1rem'>shaik ahmed</span>
-                <span className='teachers-centre'>jamia masjid centre</span>
+              <div className="teachers-details">
+                <span className="teachers-name poppins-sub-heading-1rem">
+                  shaik ahmed
+                </span>
+                <span className="teachers-centre">jamia masjid centre</span>
               </div>
             </div>
             <div className="line "></div>
-            <div className='teachers-div flex'>
-              <div className='teachers-profile'>
-                <Profile />
+            <div className="teachers-div flex">
+              <div className="teachers-profile">
+                <TeacherProfile />
               </div>
-              <div className='teachers-details'>
-                <span className='teachers-name poppins-sub-heading-1rem'>shaik ahmed</span>
-                <span className='teachers-centre'>jamia masjid centre</span>
+              <div className="teachers-details">
+                <span className="teachers-name poppins-sub-heading-1rem">
+                  shaik ahmed
+                </span>
+                <span className="teachers-centre">jamia masjid centre</span>
               </div>
             </div>
-            <div className="view-more-btn poppins flex-c">
-              <span>view more</span>
+            <div className="line"></div>
+            <div className="teachers-div flex">
+              <div className="teachers-profile">
+                <TeacherProfile />
+              </div>
+              <div className="teachers-details">
+                <span className="teachers-name  poppins-sub-heading-1rem">
+                  shaik ahmed
+                </span>
+                <span className="teachers-centre">jamia masjid centre</span>
+              </div>
             </div>
+            <div className="line "></div>
+            <div className="teachers-div flex">
+              <div className="teachers-profile">
+                <TeacherProfile />
+              </div>
+              <div className="teachers-details">
+                <span className="teachers-name poppins-sub-heading-1rem">
+                  shaik ahmed
+                </span>
+                <span className="teachers-centre">jamia masjid centre</span>
+              </div>
+            </div>
+            <a href="/teacher">
+              <div className="view-more-btn poppins flex-c">
+                <span>view more</span>
+              </div>
+            </a>
           </div>
         </div>
-        
-
       </aside>
     </section>
   );

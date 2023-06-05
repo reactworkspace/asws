@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // styles
 import './styles/index.css';
 import './styles/font.css'
+import './styles/flex.css'
 
 import Dashboard from './dashboard';
 import Zone from './zone';
@@ -30,17 +31,17 @@ import { useState } from 'react';
 
 
 //  import profile 
-import ProfilePhoto from '../assets/images/profile.png';
+import UserProfilePhoto from '../assets/images/userprofile.png';
 
-const Profile = () => {
+const UserProfile = () => {
   return (
-    <div id="profile">
-    <img src={ProfilePhoto} alt="ProfilePhoto" width={200} />
-  </div>
+    <div id="userprofile">
+      <img src={UserProfilePhoto} alt="UserProfilePhoto"  />
+    </div>
   );
-}
+};
 
-const AswsIndex = () => {
+export const AswsIndex = () => {
   // hook to set the active onClick event
   const [isActive, setActive] = useState('dashboard');
   const handleClick = (isActiveItem) => {
@@ -72,7 +73,7 @@ const AswsIndex = () => {
           <div>
             <AswsLogo />
           </div>
-          <div><Profile /></div>
+          <div><UserProfile /></div>
         </header>
         <div id="hamburger-menu">
           {isMenuOpen && (

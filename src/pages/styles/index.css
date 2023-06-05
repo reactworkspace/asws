@@ -7,9 +7,14 @@
   --color-navbar-font: #c1bbeb;
 
   --color-heading: #303972;
-  --color-muted-test : #A098AE;
-  --color-white:  #FFFFFF;
+  --color-muted-test: #a098ae;
+  --color-white: #ffffff;
 
+  --color-present: #39b29a;
+  --color-absent: #F95A77;
+  --color-leave: #F4BE37;
+
+  --card-border: 0.6rem;
 }
 
 * {
@@ -70,11 +75,7 @@ header .icon {
 }
 
 /* Nav Bar list Styling */
-.flex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+
 ul {
   padding-left: 2.5rem;
   list-style-type: none;

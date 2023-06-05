@@ -1,26 +1,7 @@
-/* ROOT SECTION OF CSS VARIABLE DECLARATION */
-:root {
-  /* COLOR */
-  --color-background: #f3f4ff;
-
-  --color-navbar-background: #4d44b5;
-  --color-navbar-font: #c1bbeb;
-
-  --color-heading: #303972;
-  --color-muted-test: #a098ae;
-  --color-white: #ffffff;
-
-  --color-present: #39b29a;
-  --color-absent: #F95A77;
-  --color-leave: #F4BE37;
-
-  --card-border: 0.6rem;
-}
-
 
 #dashboard {
   display: grid;
-  grid-template-columns: 59vw 20vw;
+  grid-template-columns: 59vw 22vw;
   grid-auto-flow: column;
 }
 
@@ -31,13 +12,7 @@
   color: var(--color-heading);
 }
 
-.flex-r-sb {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .create-btn {
   height: 3.75rem;
@@ -69,16 +44,6 @@
   border-radius: var(--card-border);
 }
 
-.flex-c {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.flex-s {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
 
 .stc .left {
   height: 5rem;
@@ -119,7 +84,7 @@
 
 /* ATTENDANCE */
 
-#attendance {
+#attendance-section {
   background-color: var(--color-white);
   width: 100%;
   height: 30rem;
@@ -178,10 +143,24 @@
   border-radius: var(--card-border);
 }
 
-#recently-joined-students #profile{
+#recently-joined-students #studentprofile{
   width: 3rem;
   height: 3rem;
+  cursor: pointer;
 }
+
+table{
+  padding: 1rem 0 0 0;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  text-transform: capitalize;
+}
+tr{
+  height: 5rem;
+  width: 100%;
+}
+
 
 /* DASHBORD RIGHT ASIDE SECTION */
 
@@ -196,26 +175,27 @@
 /* Recently Joined Teachers */
 
 .teachers-div{
-  padding: 1.5rem 0 1rem 0;
+  padding: 0.5rem 0 0.5rem 0;
 }
 
 .teachers-details{
   padding: 0.5rem;
 }
-.teachers-profile #profile{
+.teachers-profile #teacherprofile{
   width: 3rem;
   height: 3rem;
 }
 .teachers-name,
 .teachers-centre{
   display: block;
+  padding: 0 0 0 0.9rem;
 }
 
 .teachers-centre{
   font-family: Poppins;
   font-weight: 400;
-  font-size: 0.8rem;
-  line-height: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
   color: var(--color-muted-test);
 }
 .line{
