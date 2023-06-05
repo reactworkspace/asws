@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link  } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 // styles
 import './styles/index.css';
+import './styles/font.css'
 
 import Dashboard from './dashboard';
 import Zone from './zone';
@@ -27,6 +28,18 @@ import { ReactComponent as SettingIcons } from '../assets/svg/setting.svg';
 // hooks
 import { useState } from 'react';
 
+
+//  import profile 
+import ProfilePhoto from '../assets/images/profile.png';
+
+const Profile = () => {
+  return (
+    <div id="profile">
+    <img src={ProfilePhoto} alt="ProfilePhoto" width={200} />
+  </div>
+  );
+}
+
 const AswsIndex = () => {
   // hook to set the active onClick event
   const [isActive, setActive] = useState('dashboard');
@@ -49,7 +62,7 @@ const AswsIndex = () => {
   return (
     <>
       <Router>
-        <header >
+        <header>
           <div>
             <GiHamburgerMenu
               className={`icon ${isMenuOpen ? 'open' : ''}`}
@@ -59,11 +72,11 @@ const AswsIndex = () => {
           <div>
             <AswsLogo />
           </div>
-          <div>Profile</div>
+          <div><Profile /></div>
         </header>
-        <div className="hamburger-menu">
+        <div id="hamburger-menu">
           {isMenuOpen && (
-            <ul className="popines">
+            <ul className="poppins">
               <li>
                 <Link to="/" onClick={() => handleClick('dashboard')}>
                   <div
@@ -158,12 +171,10 @@ const AswsIndex = () => {
         <section id="body-section">
           <nav className="navbar">
             <div className="aswslogo">
-              <figure>
-                <AswsLogo />
-              </figure>
+              <AswsLogo />
             </div>
             <div id="navbar-list">
-              <ul className="popines">
+              <ul className="poppins">
                 <li>
                   <Link to="/" onClick={() => handleClick('dashboard')}>
                     <div
@@ -254,7 +265,7 @@ const AswsIndex = () => {
               </ul>
             </div>
           </nav>
-          <main>
+          <section>
             <section id="main-section">
               <Routes>
                 <Route exact path="/" element={<Dashboard />} />
@@ -266,7 +277,7 @@ const AswsIndex = () => {
                 <Route exact path="/setting" element={<Setting />} />
               </Routes>
             </section>
-          </main>
+          </section>
         </section>
       </Router>
     </>
