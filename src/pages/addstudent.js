@@ -1,6 +1,6 @@
 // CSS
 import './styles/index.css'
-import './styles/studentdetails.css';
+import './styles/addstudent.css';
 import './styles/font.css';
 import './styles/flex.css'
 import './styles/userprofile.css';
@@ -59,14 +59,14 @@ const UserProfile = () => {
 
 
 
-const Studentdetails = () => {
+const AddStudent = () => {
 
 	return (
-		<section id="studentdetails">
-		<div className="studentdetails-heading flex-r-sb">
+		<section id="addstudent">
+		<div className="addstudent-heading flex-r-sb">
 		  <div>
 			<span className="poppins-heading">
-			student <span className="poppins ">{'>'} student details</span>
+			student <span className="poppins ">{'>'} add student</span>
 			</span>
 		  </div>
 		  <UserProfile />
@@ -77,4 +77,4 @@ const Studentdetails = () => {
 
 }
 
-export default Studentdetails;
+export default AddStudent;

@@ -66,7 +66,7 @@ const Student = () => {
 		<div className="student-heading flex-r-sb">
 		  <div>
 			<span className="poppins-heading">
-			student <span className="poppins ">{'>'} centres</span>
+			student <span className="poppins "></span>
 			</span>
 		  </div>
 		  <UserProfile />

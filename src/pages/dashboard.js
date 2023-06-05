@@ -8,6 +8,9 @@ import './styles/font.css';
 
 import React from 'react';
 
+
+
+
 // icons
 import { ReactComponent as ZoneIcon } from '../assets/svg/zone.svg';
 import { ReactComponent as StudentIcon } from '../assets/svg/student.svg';
@@ -85,6 +88,25 @@ const StudentTrData = () => {
   );
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const Dashboard = () => {
   // Cards Data
   const cards = {
@@ -157,7 +179,19 @@ const Dashboard = () => {
               <span>filters</span>
             </div>
           </div>
-          <div className="attendance-barchart"></div>
+          <div className="attendance-barchart">
+
+
+         
+
+
+
+
+
+
+
+            
+          </div>
         </div>
 
         <div id="recently-joined-students">

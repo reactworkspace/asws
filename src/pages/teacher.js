@@ -61,7 +61,7 @@ const Teacher = () => {
 		<div className="teacher-heading flex-r-sb">
 		  <div>
 			<span className="poppins-heading">
-			teacher <span className="poppins ">{'>'} centres</span>
+			teacher <span className="poppins "></span>
 			</span>
 		  </div>
 		  <UserProfile />
