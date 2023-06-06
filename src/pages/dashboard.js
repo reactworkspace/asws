@@ -1,16 +1,15 @@
 import '../styles/index.css'
 import '../styles/dashboard.css';
 import '../styles/flex.css'
-
-import '../styles/studentprofile.css';
-import '../styles/teacherprofile.css';
 import '../styles/font.css';
 
+
+import '../styles/userprofile.css'
+import '../styles/studentprofile.css';
+import '../styles/teacherprofile.css';
+
+
 import React from 'react';
-
-
-// Import user profile components
-import UserProfile from '../components/userprofile';
 
 
 
@@ -24,11 +23,61 @@ import { ReactComponent as ThreeDotsIcons } from '../assets/svg/threedots.svg';
 // react icons
 import { FaFilter } from 'react-icons/fa';
 import { TiPlus } from 'react-icons/ti';
+import {  AiOutlineBell } from 'react-icons/ai';
 
 
 
+import UserProfilePhoto from '../assets/images/userprofile.png';
 import StudentProfilePhoto from '../assets/images/studentprofile.png';
 import TeacherProfilePhoto from '../assets/images/teacherprofile.png';
+
+
+const UserProfile = () => {
+
+
+  const userInfo = {
+    firstName: 'yahiya',
+    lastName: 'ali',
+    role: 'admin',
+  };
+
+  return (
+    <div id="user-profile-div" className='flex-r-sb'>
+      <div className="notification ">
+        <AiOutlineBell className="profile-icons" />
+        <span className="notification-count"></span>
+      </div>
+      
+      <div className="username">
+        <span className="poppins">
+          {userInfo.firstName}
+          {userInfo.lastName}
+        </span>
+        <span className="poppins-w400">{userInfo.role}</span>
+      </div>
+      <div id="userprofile">
+        <img src={UserProfilePhoto} alt="UserProfilePhoto" />
+      </div>
+    </div>
+  );
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const StudentProfile = () => {
@@ -202,10 +251,10 @@ const Dashboard = () => {
       </section>
 
       {/* ASIDE SECTION */}
-      <aside id="dashboard-right">
+      <aside id="dashboard-right" >
         <div className='flex-r-sb' >
           
-          <UserProfile />
+          <UserProfile  />
 
           {/* Recently Joined Teachers */}
           <div className="recently-joined-teachers">

@@ -28,3 +28,59 @@
   font-size: 1.7rem;
   font-weight: 400;
 }
+
+
+
+
+/* SEARCH TEACHER DIV */
+
+.teacher-search-btn{
+  padding: 2rem 0 2rem 0;
+}
+
+/* SEARCH INPUT & CREATE BUTTON */
+
+
+.search-teacher-div{
+  position: relative;
+}
+
+#search-teacher{
+ 
+  align-items: center;
+  
+  padding-left: 4rem;
+  padding-right: 2rem;
+
+  width: 21rem;
+  height: 3.75rem;
+  
+  font-size: 1.2rem;
+  background: #FFFFFF;
+  border-radius: 40px;
+
+}
+.search-teacher-icon{
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-heading)
+}
+
+
+.new-btn {
+
+  height: 3.75rem;
+  width: 10.125rem;
+  border-radius: 2.5rem;
+  background-color: var(--color-heading);
+  color: var(--color-white);
+  position: relative;
+  cursor: pointer;
+}
+
+.new-btn > span {
+  padding: 0.3rem;
+}

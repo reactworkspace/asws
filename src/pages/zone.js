@@ -16,7 +16,7 @@ import { HiOutlineSearch } from 'react-icons/hi';
 
 
 
-const Searchzone = () => {
+const SearchZone = () => {
   return (
     <div className="search-centre-div">
       <input type="text" id="search-centre" placeholder="Search here.." />
@@ -37,28 +37,22 @@ const NewCentreButton = () => {
 const Zone = () => {
   return (
     <section id="zone">
-      <div className="zone-heading flex-r-sb">
-        <div>
-          <span className="poppins-heading">
-            zone <span className="poppins ">{'>'} centres</span>
-          </span>
-        </div>
-        <UserProfile />
-      </div>
-
-      <div className="search-div flex-r-sb">
-        <Searchzone />
-        <NewCentreButton />
-      </div>.
-
-
-      
-
-
-
-
-
-    </section>
+		<div>
+    <div className="zone-heading flex-r-sb">
+		  <div>
+			<span className="poppins-heading">
+			zone <span className="poppins "> {'>'} Centre</span>
+			</span>
+		  </div>
+		  <UserProfile />
+		</div>
+    <div className='zone-search-btn flex-r-sb'>
+    <SearchZone />
+    <NewCentreButton />
+    </div>
+    </div>
+    
+	  </section>
   );
 };
 

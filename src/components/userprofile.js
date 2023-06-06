@@ -1,9 +1,6 @@
 // icons
 import { AiOutlineSetting, AiOutlineBell } from 'react-icons/ai';
 
-// Userprofile
-// import UserProfilePhoto from '../assets/images/userprofile.png';
-
 import UserProfilePhoto from '../assets/images/userprofile.png';
 
 import '../styles/userprofile.css';

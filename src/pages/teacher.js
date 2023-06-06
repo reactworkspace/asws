@@ -6,49 +6,34 @@ import '../styles/flex.css'
 
 
 
-
-// icons
-import {AiOutlineSetting, AiOutlineBell} from 'react-icons/ai';
-
-
-
-// Userprofile
-import UserProfilePhoto from '../assets/images/userprofile.png';
+// Import user profile components
+import UserProfile from '../components/userprofile';
 
 
 
+import { TiPlus } from 'react-icons/ti';
+import { HiOutlineSearch } from 'react-icons/hi';
 
 
 
-const UserProfile = () => {
-  const userInfo = {
-    firstName: 'yahiya',
-    lastName: 'ali',
-    role: 'admin',
-  };
-
+const SearchTeacher = () => {
   return (
-    <div id='user-profile-div' className='flex-r-sb' >
-      <div className="notification flex-c">
-        <AiOutlineBell className='profile-icons'/>
-        <span className="notification-count"></span>
-      </div>
-	  <div className='profile-setting flex-c'>
-	  <AiOutlineSetting className='profile-icons'/>
-	  </div>
-      <div className="username">
-        <span className="poppins">
-          {userInfo.firstName}
-          {userInfo.lastName}
-        </span>
-        <span className="poppins-w400">{userInfo.role}</span>
-      </div>
-      <div id="userprofile">
-        <img src={UserProfilePhoto} alt="UserProfilePhoto" />
-      </div>
+    <div className="search-teacher-div">
+      <input type="text" id="search-teacher" placeholder="Search Teacher here.." />
+      <HiOutlineSearch className="search-centre-icon" />
     </div>
   );
 };
+
+const NewCentreButton = () => {
+  return (
+    <button className="new-btn Montserrat flex-c">
+          <TiPlus />
+          <span>New</span>
+        </button>
+  );
+}
+
 
 
 
@@ -56,7 +41,8 @@ const UserProfile = () => {
 const Teacher = () => {
 	return (
 		<section id="teacher">
-		<div className="teacher-heading flex-r-sb">
+		<div>
+      <div className="teacher-heading flex-r-sb">
 		  <div>
 			<span className="poppins-heading">
 			teacher <span className="poppins "></span>
@@ -64,6 +50,16 @@ const Teacher = () => {
 		  </div>
 		  <UserProfile />
 		</div>
+    <div className='teacher-search-btn flex-r-sb'>
+      <SearchTeacher />
+      <NewCentreButton />
+    </div>
+
+
+    
+    </div>
+
+
 	  </section>
 	)
 }
