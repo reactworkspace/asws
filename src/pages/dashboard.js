@@ -1,13 +1,16 @@
-import './styles/index.css'
-import './styles/dashboard.css';
-import './styles/flex.css'
-import './styles/userprofile.css';
-import './styles/studentprofile.css';
-import './styles/teacherprofile.css';
-import './styles/font.css';
+import '../styles/index.css'
+import '../styles/dashboard.css';
+import '../styles/flex.css'
+
+import '../styles/studentprofile.css';
+import '../styles/teacherprofile.css';
+import '../styles/font.css';
 
 import React from 'react';
 
+
+// Import user profile components
+import UserProfile from '../components/userprofile';
 
 
 
@@ -16,42 +19,17 @@ import { ReactComponent as ZoneIcon } from '../assets/svg/zone.svg';
 import { ReactComponent as StudentIcon } from '../assets/svg/student.svg';
 import { ReactComponent as TeacherIcon } from '../assets/svg/teacher.svg';
 import { ReactComponent as ThreeDotsIcons } from '../assets/svg/threedots.svg';
-import {AiOutlineBell} from 'react-icons/ai';
+
 
 // react icons
 import { FaFilter } from 'react-icons/fa';
+import { TiPlus } from 'react-icons/ti';
 
-import UserProfilePhoto from '../assets/images/userprofile.png';
+
+
 import StudentProfilePhoto from '../assets/images/studentprofile.png';
 import TeacherProfilePhoto from '../assets/images/teacherprofile.png';
 
-
-const UserProfile = () => {
-  const userInfo = {
-    firstName: 'yahiya',
-    lastName: 'ali',
-    role: 'admin',
-  };
-
-  return (
-    <>
-      <div className="notification">
-            <AiOutlineBell className='profile-icons' />
-            <span className="notification-count"></span>
-          </div>
-          <div className="username">
-            <span className="poppins">
-              {userInfo.firstName}
-              {userInfo.lastName}
-            </span>
-            <span className="poppins-w400">{userInfo.role}</span>
-          </div>
-    <div id="userprofile">
-      <img src={UserProfilePhoto} alt="UserProfilePhoto" />
-    </div>
-    </>
-  );
-};
 
 const StudentProfile = () => {
   return (
@@ -125,8 +103,8 @@ const Dashboard = () => {
             <span className="poppins-heading">dashboard</span>
           </div>
 
-          <button className="create-btn Montserrat">
-            <span>+</span>
+          <button className="create-btn Montserrat flex-c">
+            <TiPlus />
             <span>create</span>
           </button>
         </div>
@@ -225,7 +203,7 @@ const Dashboard = () => {
 
       {/* ASIDE SECTION */}
       <aside id="dashboard-right">
-        <div className="flex-r-sb">
+        <div className='flex-r-sb' >
           
           <UserProfile />
 

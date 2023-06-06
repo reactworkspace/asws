@@ -1,10 +1,8 @@
 // CSS
-import './styles/index.css'
-import './styles/teacher.css';
-import './styles/font.css';
-import './styles/flex.css'
-import './styles/userprofile.css';
-
+import '../styles/index.css'
+import '../styles/teacher.css';
+import '../styles/font.css';
+import '../styles/flex.css'
 
 
 

@@ -1,61 +1,38 @@
 // CSS
-import './styles/index.css'
-import './styles/zone.css';
-import './styles/font.css';
-import './styles/flex.css'
-import './styles/userprofile.css';
+import '../styles/index.css';
+import '../styles/zone.css';
+import '../styles/font.css';
+import '../styles/flex.css';
 
 
 
-
-
-// icons
-import {AiOutlineSetting, AiOutlineBell} from 'react-icons/ai';
-
-
-
-// Userprofile
-import UserProfilePhoto from '../assets/images/userprofile.png';
+// Import user profile components
+import UserProfile from '../components/userprofile';
 
 
 
+import { TiPlus } from 'react-icons/ti';
+import { HiOutlineSearch } from 'react-icons/hi';
 
 
 
-const UserProfile = () => {
-  const userInfo = {
-    firstName: 'yahiya',
-    lastName: 'ali',
-    role: 'admin',
-  };
-
+const Searchzone = () => {
   return (
-    <div id='user-profile-div' className='flex-r-sb' >
-      <div className="notification flex-c">
-        <AiOutlineBell className='profile-icons'/>
-        <span className="notification-count"></span>
-      </div>
-	  <div className='profile-setting flex-c'>
-	  <AiOutlineSetting className='profile-icons'/>
-	  </div>
-      <div className="username">
-        <span className="poppins">
-          {userInfo.firstName}
-          {userInfo.lastName}
-        </span>
-        <span className="poppins-w400">{userInfo.role}</span>
-      </div>
-      <div id="userprofile">
-        <img src={UserProfilePhoto} alt="UserProfilePhoto" />
-      </div>
+    <div className="search-centre-div">
+      <input type="text" id="search-centre" placeholder="Search here.." />
+      <HiOutlineSearch className="search-centre-icon" />
     </div>
   );
 };
 
-
-
-
-
+const NewCentreButton = () => {
+  return (
+    <button className="new-btn Montserrat flex-c">
+          <TiPlus />
+          <span>New</span>
+        </button>
+  );
+}
 
 const Zone = () => {
   return (
@@ -68,6 +45,19 @@ const Zone = () => {
         </div>
         <UserProfile />
       </div>
+
+      <div className="search-div flex-r-sb">
+        <Searchzone />
+        <NewCentreButton />
+      </div>.
+
+
+      
+
+
+
+
+
     </section>
   );
 };

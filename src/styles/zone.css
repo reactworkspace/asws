@@ -1,0 +1,81 @@
+/* ROOT SECTION OF CSS VARIABLE DECLARATION */
+:root {
+  /* COLOR */
+  --color-background: #f3f4ff;
+
+  --color-navbar-background: #4d44b5;
+  --color-navbar-font: #c1bbeb;
+
+  --color-heading: #303972;
+  --color-muted-test: #a098ae;
+  --color-white: #ffffff;
+
+  --color-present: #39b29a;
+  --color-absent: #f95a77;
+  --color-leave: #f4be37;
+
+  --card-border: 0.6rem;
+}
+
+#zone {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  padding: 2rem;
+}
+
+.zone-heading span span {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+
+
+
+/* SEARCH INPUT & CREAYE BUTTON */
+
+.search-centre-div{
+  position: relative;
+  margin: 2rem;
+  margin-left: 0;
+}
+
+#search-centre{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  padding-left: 4rem;
+  padding-right: 2rem;
+
+  width: 21rem;
+  height: 3.75rem;
+  
+  font-size: 1.2rem;
+  background: #FFFFFF;
+  border-radius: 40px;
+
+}
+.search-centre-icon{
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-heading)
+}
+
+
+.new-btn {
+  height: 3.75rem;
+  width: 10.125rem;
+  border-radius: 2.5rem;
+  background-color: var(--color-heading);
+  color: var(--color-white);
+  position: relative;
+  cursor: pointer;
+}
+
+.new-btn > span {
+  padding: 0.3rem;
+}

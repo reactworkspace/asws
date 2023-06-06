@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 // styles
-import './styles/index.css';
-import './styles/font.css'
-import './styles/flex.css'
+import '../styles/index.css';
+import '../styles/font.css'
+import '../styles/flex.css'
 
 import Dashboard from './dashboard';
 import Zone from './zone';
