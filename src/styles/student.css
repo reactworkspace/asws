@@ -73,7 +73,7 @@
   height: 3.75rem;
   width: 10.125rem;
   border-radius: 2.5rem;
-  background-color: var(--color-heading);
+  background-color: var(--color-navbar-background);
   color: var(--color-white);
   position: relative;
   cursor: pointer;

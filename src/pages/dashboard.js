@@ -1,17 +1,15 @@
-import '../styles/index.css'
+import '../styles/index.css';
 import '../styles/dashboard.css';
-import '../styles/flex.css'
+import '../styles/flex.css';
 import '../styles/font.css';
 
-
-import '../styles/userprofile.css'
+import '../styles/userprofile.css';
 import '../styles/studentprofile.css';
 import '../styles/teacherprofile.css';
 
-
 import React from 'react';
 
-
+import UserProfile from '../components/userprofile';
 
 // icons
 import { ReactComponent as ZoneIcon } from '../assets/svg/zone.svg';
@@ -19,66 +17,43 @@ import { ReactComponent as StudentIcon } from '../assets/svg/student.svg';
 import { ReactComponent as TeacherIcon } from '../assets/svg/teacher.svg';
 import { ReactComponent as ThreeDotsIcons } from '../assets/svg/threedots.svg';
 
-
 // react icons
 import { FaFilter } from 'react-icons/fa';
 import { TiPlus } from 'react-icons/ti';
-import {  AiOutlineBell } from 'react-icons/ai';
+// import {  AiOutlineBell } from 'react-icons/ai';
 
-
-
-import UserProfilePhoto from '../assets/images/userprofile.png';
+// import UserProfilePhoto from '../assets/images/userprofile.png';
 import StudentProfilePhoto from '../assets/images/studentprofile.png';
 import TeacherProfilePhoto from '../assets/images/teacherprofile.png';
 
+// const UserProfile = () => {
 
-const UserProfile = () => {
+//   const userInfo = {
+//     firstName: 'yahiya',
+//     lastName: 'ali',
+//     role: 'admin',
+//   };
 
+//   return (
+//     <div id="user-profile-div" className='flex-r-sb'>
+//       <div className="notification ">
+//         <AiOutlineBell className="profile-icons" />
+//         <span className="notification-count"></span>
+//       </div>
 
-  const userInfo = {
-    firstName: 'yahiya',
-    lastName: 'ali',
-    role: 'admin',
-  };
-
-  return (
-    <div id="user-profile-div" className='flex-r-sb'>
-      <div className="notification ">
-        <AiOutlineBell className="profile-icons" />
-        <span className="notification-count"></span>
-      </div>
-      
-      <div className="username">
-        <span className="poppins">
-          {userInfo.firstName}
-          {userInfo.lastName}
-        </span>
-        <span className="poppins-w400">{userInfo.role}</span>
-      </div>
-      <div id="userprofile">
-        <img src={UserProfilePhoto} alt="UserProfilePhoto" />
-      </div>
-    </div>
-  );
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//       <div className="username">
+//         <span className="poppins">
+//           {userInfo.firstName}
+//           {userInfo.lastName}
+//         </span>
+//         <span className="poppins-w400">{userInfo.role}</span>
+//       </div>
+//       <div id="userprofile">
+//         <img src={UserProfilePhoto} alt="UserProfilePhoto" />
+//       </div>
+//     </div>
+//   );
+// };
 
 const StudentProfile = () => {
   return (
@@ -90,7 +65,6 @@ const StudentProfile = () => {
 
 const TeacherProfile = () => {
   return (
-
     <div id="teacherprofile">
       <img src={TeacherProfilePhoto} alt="TeacherProfilePhoto" />
     </div>
@@ -115,25 +89,6 @@ const StudentTrData = () => {
   );
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const Dashboard = () => {
   // Cards Data
   const cards = {
@@ -142,7 +97,6 @@ const Dashboard = () => {
     centres: '15',
   };
 
-  
   return (
     <section id="dashboard">
       {/* DASHBOARD SECTION */}
@@ -206,19 +160,7 @@ const Dashboard = () => {
               <span>filters</span>
             </div>
           </div>
-          <div className="attendance-barchart">
-
-
-         
-
-
-
-
-
-
-
-            
-          </div>
+          <div className="attendance-barchart"></div>
         </div>
 
         <div id="recently-joined-students">
@@ -228,13 +170,15 @@ const Dashboard = () => {
           <div>
             <table>
               <thead>
-                <th></th>
-                <th>name</th>
-                <th>id</th>
-                <th>centre</th>
-                <th>contact no</th>
-                <th>admission date</th>
-                <th> </th>
+                <tr>
+                  <th></th>
+                  <th>name</th>
+                  <th>id</th>
+                  <th>centre</th>
+                  <th>contact no</th>
+                  <th>admission date</th>
+                  <th> </th>
+                </tr>
               </thead>
               <tbody>
                 <StudentTrData />
@@ -251,10 +195,9 @@ const Dashboard = () => {
       </section>
 
       {/* ASIDE SECTION */}
-      <aside id="dashboard-right" >
-        <div className='flex-r-sb' >
-          
-          <UserProfile  />
+      <aside id="dashboard-right">
+        <div className="flex-col">
+          <UserProfile />
 
           {/* Recently Joined Teachers */}
           <div className="recently-joined-teachers">
