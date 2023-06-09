@@ -169,6 +169,8 @@ export const AswsIndex = () => {
           )}
         </div>
 
+
+        {/* Body Section */}
         <section id="body-section">
           <nav className="navbar">
             <div className="aswslogo">

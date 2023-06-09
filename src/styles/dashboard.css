@@ -34,13 +34,19 @@
   grid-auto-flow: column;
   gap: 1rem;
   padding: 2rem 0 2rem 0;
+
 }
 
 #cards .stc {
-  padding: inherit;
+  padding: 2rem 0 2rem 0;
+
   background-color: var(--color-white);
   border-radius: var(--card-border);
-}
+  margin: auto;
+  width: 100%;
+  gap: 1.5rem;
+ 
+} 
 
 
 .stc .left {
@@ -49,18 +55,20 @@
   background-color: var(--color-background);
   text-align: center;
   border-radius: 100%;
-  margin-left: 2.2rem;
-}
-.stc .right {
-  height: 4rem;
-  width: 4rem;
-  margin-left: 1.5rem;
+  
 }
 
 .stc-icons {
   width: 3rem;
   height: 3rem;
 }
+
+.stc .right {
+  height: 4rem;
+  width: 4rem;
+
+}
+
 .right .title {
   display: block;
   color: var(--color-muted-test);
@@ -156,7 +164,9 @@ tr{
   height: 5rem;
   width: 100%;
 }
-
+tr:hover{
+  background-color: var(--color-background);
+}
 
 /* DASHBORD RIGHT ASIDE SECTION */
 
@@ -207,13 +217,13 @@ tr{
 }
 .teachers-name{
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .teachers-centre{
   font-family: 'Poppins';
   font-weight: 400;
-  font-size: 0.8rem;
-  line-height: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--color-muted-test);
   text-transform: capitalize;
 }
@@ -254,6 +264,50 @@ tr{
     grid-auto-flow: column;
   }
 
+  /* Cards */
+  .stc .left {
+    height: 6rem;
+    width: 6rem;
+  }
+  .stc-icons {
+    width: 4rem;
+    height: 4rem;
+  }
+  .stc .right {
+    height: 6rem;
+    width: 6rem;
+  }
+  
+  .right .title {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  .right .total {
+    font-size: 2.5rem;
+  }
+
+  /* Recently Joinned Students  */
+  #recently-joined-students .poppins-sub-heading{
+    font-size: 1.5rem;
+  }
+  #recently-joined-students table{
+    font-size: 1.3rem;
+  }
+
+  /* Recently Joinned Teachers  */
+  .recently-joined-teachers .poppins-sub-heading{
+    font-size: 1.4rem;
+  }
+  .recently-joined-teachers .poppins-sub-heading-1rem{
+    font-size: 1.2rem;
+  }
+  .recently-joined-teachers .teachers-centre{
+    font-size: 1.1rem;
+  }
+  .teachers-details{
+    padding: 0.6rem;
+  }
+  
 }
 
 /* Medium-sized desktop screens (1280px to 1439px) */
@@ -264,9 +318,51 @@ tr{
     grid-auto-flow: column;
 
   }
+  
+  /* Cards */
+  .stc .left {
+    height: 4rem;
+    width: 4rem;
+  }
+  .stc-icons {
+    width: 3rem;
+    height: 3rem;
+  }
+  .stc .right {
+    height: 4rem;
+    width: 4rem;
+  }
+  
+  .right .title {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .right .total {
+    font-size: 1.8rem;
+  }
+
+  /* Recently Joinned Students  */
+  #recently-joined-students .poppins-sub-heading{
+    font-size: 1.5rem;
+  }
+  #recently-joined-students table{
+    font-size: 1rem;
+  }
+  
+  /* Recently Joinned Teachers  */
   .recently-joined-teachers .poppins-sub-heading{
     font-size: 1rem;
   }
+  .recently-joined-teachers .poppins-sub-heading-1rem{
+    font-size: 1rem;
+  }
+  .recently-joined-teachers .teachers-centre{
+    font-size: 0.8rem;
+  }
+  .teachers-details{
+    padding: 0.5rem;
+  }
+  
 
 }
 /* Small desktop screens and tablets (1024px to 1279px) */
@@ -278,11 +374,51 @@ tr{
     grid-auto-flow: column;
 
   }
-  .recently-joined-teachers .poppins-sub-heading{
-    font-size: 1rem;
+   /* Cards */
+   .stc .left {
+    height: 4rem;
+    width: 4rem;
+  }
+  .stc-icons {
+    width: 3rem;
+    height: 3rem;
+  }
+  .stc .right {
+    height: 4rem;
+    width: 4rem;
+  }
+  
+  .right .title {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .right .total {
+    font-size: 1.8rem;
   }
 
+  /* Recently Joinned Students  */
+  #recently-joined-students .poppins-sub-heading{
+    font-size: 1rem;
+  }
+  #recently-joined-students table{
+    font-size: 0.8rem;
+  }
   
+  /* Recently Joinned Teachers  */
+  .recently-joined-teachers .poppins-sub-heading{
+    font-size: 0.9rem;
+  }
+  .recently-joined-teachers .poppins-sub-heading-1rem{
+    font-size: 0.8rem;
+  }
+  .recently-joined-teachers .teachers-centre{
+    font-size: 0.6rem;
+  }
+  .teachers-details{
+    padding: 0.5rem;
+  }
+  
+
 }
 
 

@@ -26,34 +26,6 @@ import { TiPlus } from 'react-icons/ti';
 import StudentProfilePhoto from '../assets/images/studentprofile.png';
 import TeacherProfilePhoto from '../assets/images/teacherprofile.png';
 
-// const UserProfile = () => {
-
-//   const userInfo = {
-//     firstName: 'yahiya',
-//     lastName: 'ali',
-//     role: 'admin',
-//   };
-
-//   return (
-//     <div id="user-profile-div" className='flex-r-sb'>
-//       <div className="notification ">
-//         <AiOutlineBell className="profile-icons" />
-//         <span className="notification-count"></span>
-//       </div>
-
-//       <div className="username">
-//         <span className="poppins">
-//           {userInfo.firstName}
-//           {userInfo.lastName}
-//         </span>
-//         <span className="poppins-w400">{userInfo.role}</span>
-//       </div>
-//       <div id="userprofile">
-//         <img src={UserProfilePhoto} alt="UserProfilePhoto" />
-//       </div>
-//     </div>
-//   );
-// };
 
 const StudentProfile = () => {
   return (
@@ -113,7 +85,7 @@ const Dashboard = () => {
         </div>
         {/* CARDS SECTION */}
         <div id="cards">
-          <div className="stc flex-s ">
+          <div className="stc flex-c ">
             <div className="left flex-c">
               <StudentIcon className="stc-icons" />
             </div>
@@ -122,7 +94,7 @@ const Dashboard = () => {
               <span className="total">{cards.student}</span>
             </div>
           </div>
-          <div className="stc flex-s">
+          <div className="stc flex-c">
             <div className="left flex-c">
               <TeacherIcon className="stc-icons" />
             </div>
@@ -131,7 +103,7 @@ const Dashboard = () => {
               <span className="total">{cards.teachers}</span>
             </div>
           </div>
-          <div className="stc flex-s">
+          <div className="stc flex-c">
             <div className="left flex-c">
               <ZoneIcon className="stc-icons" />
             </div>
