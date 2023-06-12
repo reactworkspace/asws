@@ -1,22 +1,3 @@
-/* ROOT SECTION OF CSS VARIABLE DECLARATION */
-:root {
-	/* COLOR */
-	--color-background: #f3f4ff;
-  
-	--color-navbar-background: #4d44b5;
-	--color-navbar-font: #c1bbeb;
-  
-	--color-heading: #303972;
-	--color-muted-test: #a098ae;
-	--color-white: #ffffff;
-  
-	--color-present: #39b29a;
-	--color-absent: #f95a77;
-	--color-leave: #f4be37;
-  
-	--card-border: 0.6rem;
-  }
-  
   #syllabus {
 	display: grid;
 	grid-template-columns: 100%;
