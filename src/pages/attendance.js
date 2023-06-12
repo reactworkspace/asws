@@ -17,7 +17,7 @@ import UserProfile from '../components/userprofile';
 const Attendance = () => {
 	return (
 		<section id="attendance">
-		<div className="teacher-heading flex-r-sb">
+		<div className="attendance-heading flex-r-sb">
 		  <div>
 			<span className="poppins-heading">
 			attendance 

@@ -1,22 +1,3 @@
-/* ROOT SECTION OF CSS VARIABLE DECLARATION */
-:root {
-  /* COLOR */
-  --color-background: #f3f4ff;
-
-  --color-navbar-background: #4d44b5;
-  --color-navbar-font: #c1bbeb;
-
-  --color-heading: #303972;
-  --color-muted-test: #a098ae;
-  --color-white: #ffffff;
-
-  --color-present: #39b29a;
-  --color-absent: #f95a77;
-  --color-leave: #f4be37;
-
-  --card-border: 0.6rem;
-}
-
 #teacher {
   display: grid;
   grid-template-columns: 100%;
@@ -29,132 +10,189 @@
   font-weight: 400;
 }
 
-
-
-
 /* SEARCH TEACHER DIV */
 
-.teacher-search-btn{
+.teacher-search-btn {
   padding: 2rem 0 2rem 0;
 }
 
 /* SEARCH INPUT & CREATE BUTTON */
 
-
-.search-teacher-div{
+.search-teacher-div {
   position: relative;
 }
 
-#search-teacher{
- 
+#search-teacher {
   align-items: center;
-  
+
   padding-left: 4rem;
   padding-right: 2rem;
 
   width: 21rem;
   height: 3.75rem;
-  
-  font-size: 1.2rem;
-  background: #FFFFFF;
-  border-radius: 40px;
 
+  font-size: 1.2rem;
+  background: #ffffff;
+  border-radius: 40px;
 }
-.search-teacher-icon{
+.search-teacher-icon {
   position: absolute;
   top: 1rem;
   left: 1.5rem;
   width: 2rem;
   height: 2rem;
-  color: var(--color-heading)
+  color: var(--color-heading);
 }
 
+/* new teacher button */
+.new-teacher-btn-div {
+  position: relative;
+  display: inline-block;
+}
 
-.new-btn {
+.new-teacher-btn {
+  height: 4rem;
+  width: 15rem;
 
-  height: 3.75rem;
-  width: 10.125rem;
   border-radius: 2.5rem;
   background-color: var(--color-navbar-background);
   color: var(--color-white);
-  position: relative;
   cursor: pointer;
+  position: relative;
 }
 
-.new-btn > span {
+.new-teacher-btn > span {
   padding: 0.3rem;
 }
 
+.new-teacher-btn-content {
+  position: absolute;
+  top: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  color: var(--color-white);
+  background-color: var(--color-navbar-background);
+  z-index: 1;
+  width: 10.1rem;
+  border-radius: 1.5rem;
+  width: 15rem;
+}
 
+.new-teacher-btn-content > div {
+  cursor: pointer;
+}
+.new-teacher-btn-content > div a {
+  color: var(--color-white);
+  padding: 0.5rem 0 0 0;
+}
 
+/* Teacher Cards list */
+#teacher-cards-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
+/* Teacher Cards */
 
+#teacher-card {
+  width: 21rem;
+  height: 22rem;
+  border-radius: 1.2rem;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.teacher-card-profile {
+  padding: 1.5rem;
+}
 
+.teacher-profile-img {
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+}
 
+.teacher-card-name a {
+  font-weight: 700;
+  font-size: 1.5;
+  cursor: pointer;
+  color: var(--color-heading) !important;
+}
 
+.teacher-card-zone {
+  padding: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-muted-test);
+  text-transform: capitalize;
+}
+.teacher-card-contact {
+  display: flex;
+  gap: 1rem;
+}
 
+.teacher-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-navbar-background);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.mobile-phone-icon,
+.email-icon {
+  color: var(--color-white);
+  width: 1.2rem;
+  height: 1.2rem;
+}
 
 /* Large desktop screens (1440px and above) */
 @media (min-width: 1440px) {
-
 }
-
 
 /* Small desktop screens and tablets (1024px to 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
- 
-
-  
 }
-
 
 /* Tablets (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
- 
-  #user-profile-div{
+  #user-profile-div {
     display: none;
   }
-
+  #teacher-cards-list {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* Mobile devices in landscape orientation (480px to 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
-  #user-profile-div{
+  #user-profile-div {
     display: none;
   }
-
+  #teacher-cards-list {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* Mobile devices in portrait orientation (320px to 479px) */
 @media (min-width: 320px) and (max-width: 479px) {
-#user-profile-div{
-  display: none;
-}
+  #user-profile-div {
+    display: none;
+  }
 
+  #teacher-cards-list {
+    display: flex;
+    justify-content: center;
+  }
 }

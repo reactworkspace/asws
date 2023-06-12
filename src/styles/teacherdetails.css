@@ -1,0 +1,11 @@
+#teacherdetails {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  padding: 2rem;
+}
+
+.teacherdetails-heading span span {
+  font-size: 1.7rem;
+  font-weight: 400;
+}

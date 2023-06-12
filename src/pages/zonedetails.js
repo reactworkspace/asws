@@ -1,6 +1,6 @@
 // CSS
 import '../styles/index.css'
-import '../styles/studentdetails.css';
+import '../styles/zonedetails.css';
 import '../styles/font.css';
 import '../styles/flex.css'
 
@@ -13,22 +13,21 @@ import * as React from 'react';
 // Import user profile components
 import UserProfile from '../components/userprofile';
 
+// import zone data
+import ZoneData from '../data/zonedata';
 
 
 
+const ZoneDetails = () => {
 
 
-
-
-
-const StudentDetails = () => {
 
 	return (
-		<section id="studentdetails">
-		<div className="studentdetails-heading flex-r-sb">
+		<section id="zonedetails">
+		<div className="zonedetails-heading flex-r-sb">
 		  <div>
 			<span className="poppins-heading">
-			student <span className="poppins ">{'>'} student details</span>
+			zone <span className="poppins ">{'>'} {ZoneData.centreName}</span>
 			</span>
 		  </div>
 		  <UserProfile />
@@ -39,4 +38,4 @@ const StudentDetails = () => {
 
 }
 
-export default StudentDetails;
+export default ZoneDetails;

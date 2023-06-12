@@ -7,6 +7,7 @@ import '../styles/flex.css'
 
 
 import * as React from 'react';
+import { useState } from 'react';
 
 
 // Import user profile components
@@ -16,6 +17,7 @@ import UserProfile from '../components/userprofile';
 // react icons
 import { TiPlus } from 'react-icons/ti';
 import { HiOutlineSearch } from 'react-icons/hi';
+import { BsCaretUpFill } from 'react-icons/bs';
 
 
 
@@ -32,16 +34,37 @@ const SearchStudent= () => {
   };
   
   const NewStudentButton = () => {
+	
+	const [showContent, setShowContent] = useState(false);
+
+	const toggleContent = () => {
+	  setShowContent(!showContent);
+	}
+  
 	return (
-	  <button className="new-btn Montserrat flex-c">
-			<TiPlus />
-			<span>New</span>
-		  </button>
+  
+			<div className='new-student-btn-div'>
+		<button className='new-student-btn Montserrat flex-c' onClick={toggleContent}>
+		  <TiPlus />
+		  <span>new student</span>
+		</button>
+		{showContent && (
+		  <div className='new-student-btn-content Montserrat'
+		  >
+			<div className='flex-r-sb'  onClick={toggleContent}>
+			  <span>Select</span>
+			   <BsCaretUpFill />
+			</div>
+			<div className='flex-col'>
+			  <a href='/addstudent'>add student</a>
+			  <a href='/importstudent'>import student</a>
+			</div>
+		  </div>
+		)}
+	  </div>
+  
 	);
   }
-  
-
-
 
 
 

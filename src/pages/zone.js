@@ -4,17 +4,18 @@ import '../styles/zone.css';
 import '../styles/font.css';
 import '../styles/flex.css';
 
-
+import { useState } from 'react';
 
 // Import user profile components
 import UserProfile from '../components/userprofile';
 
-
-
+// react icons
 import { TiPlus } from 'react-icons/ti';
 import { HiOutlineSearch } from 'react-icons/hi';
+import { BsCaretUpFill } from 'react-icons/bs';
 
-
+// Import zone card
+import ZoneCard from '../components/zonecard';
 
 const SearchZone = () => {
   return (
@@ -26,33 +27,106 @@ const SearchZone = () => {
 };
 
 const NewCentreButton = () => {
+  const [showContent, setShowContent] = useState(false);
+
+  const toggleContent = () => {
+    setShowContent(!showContent);
+  };
+
   return (
-    <button className="new-btn Montserrat flex-c">
-          <TiPlus />
-          <span>New</span>
-        </button>
+    <div className="new-zone-btn-div">
+      <button
+        className="new-zone-btn Montserrat flex-c"
+        onClick={toggleContent}
+      >
+        <TiPlus />
+        <span>new zone</span>
+      </button>
+      {showContent && (
+        <div className="new-zone-btn-content Montserrat">
+          <div className="flex-r-sb" onClick={toggleContent}>
+            <span>Select</span>
+            <BsCaretUpFill />
+          </div>
+          <div className="flex-col">
+            <a href="/addzone">add centre</a>
+            <a href="/importzone">import centre</a>
+          </div>
+        </div>
+      )}
+    </div>
   );
-}
+};
+
+const ZoneCheckButtons = () => {
+  return (
+    <div id="zone-check-buttons">
+      <label className="zone-checkbox-lable flex-c poppins">
+        <input type="checkbox" />
+        <span>east zone</span>
+      </label>
+
+      <label className="zone-checkbox-lable flex-c poppins">
+        <input type="checkbox" />
+        <span>west zone</span>
+      </label>
+
+      <label className="zone-checkbox-lable flex-c poppins">
+        <input type="checkbox" />
+        <span>north zone</span>
+      </label>
+
+      <label className="zone-checkbox-lable flex-c poppins">
+        <input type="checkbox" />
+        <span>south zone</span>
+      </label>
+
+      <label className="zone-checkbox-lable flex-c poppins">
+        <input type="checkbox" />
+        <span>central zone</span>
+      </label>
+    </div>
+  );
+};
 
 const Zone = () => {
   return (
     <section id="zone">
-		<div>
-    <div className="zone-heading flex-r-sb">
-		  <div>
-			<span className="poppins-heading">
-			zone <span className="poppins "> {'>'} Centre</span>
-			</span>
-		  </div>
-		  <UserProfile />
-		</div>
-    <div className='zone-search-btn flex-r-sb'>
-    <SearchZone />
-    <NewCentreButton />
-    </div>
-    </div>
-    
-	  </section>
+      <div>
+        <div className="zone-heading flex-r-sb">
+          <div>
+            <span className="poppins-heading">
+              zone <span className="poppins"> {'>'} Centre</span>
+            </span>
+          </div>
+          <UserProfile />
+        </div>
+        <div className="zone-search-btn flex-r-sb">
+          <SearchZone />
+          <NewCentreButton />
+        </div>
+        <div className="select-zone">
+          <div className="select-zone-heading">
+            <span className="poppins">select zone</span>
+          </div>
+          <ZoneCheckButtons />
+        </div>
+        <div id="zone-card-list" className="flex">
+          <ZoneCard />
+          <ZoneCard />
+          <ZoneCard />
+          <ZoneCard />
+          <ZoneCard />
+          <ZoneCard />
+          <ZoneCard />
+          <ZoneCard />
+          <ZoneCard />
+          <ZoneCard />
+          <ZoneCard />
+          <ZoneCard />
+        </div>
+      </div>
+    </section>
   );
 };
 

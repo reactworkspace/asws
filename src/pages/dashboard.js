@@ -7,8 +7,9 @@ import '../styles/userprofile.css';
 import '../styles/studentprofile.css';
 import '../styles/teacherprofile.css';
 
-import React from 'react';
+import React, { useState } from 'react';
 
+// Import user profile components
 import UserProfile from '../components/userprofile';
 
 // icons
@@ -20,11 +21,54 @@ import { ReactComponent as ThreeDotsIcons } from '../assets/svg/threedots.svg';
 // react icons
 import { FaFilter } from 'react-icons/fa';
 import { TiPlus } from 'react-icons/ti';
+import { BsCaretUpFill } from 'react-icons/bs';
 // import {  AiOutlineBell } from 'react-icons/ai';
 
 // import UserProfilePhoto from '../assets/images/userprofile.png';
 import StudentProfilePhoto from '../assets/images/studentprofile.png';
 import TeacherProfilePhoto from '../assets/images/teacherprofile.png';
+
+// import student data from data folder
+import studentData from '../data/studentdata'
+
+const CreateBtn = () => {
+  const [showContent, setShowContent] = useState(false);
+
+  const toggleContent = () => {
+    setShowContent(!showContent);
+  };
+
+  return (
+    <div className='create-btn-div'>
+      <button className='create-btn Montserrat flex-c' onClick={toggleContent}>
+        <TiPlus />
+        <span>create</span>
+      </button>
+      {showContent && (
+        <div className='create-btn-content Montserrat'
+        >
+          <div className='flex-r-sb'  onClick={toggleContent}>
+            <span>Select</span>
+             <BsCaretUpFill />
+          </div>
+          <div className='flex-col'>
+            <a href='/addstudent'>student</a>
+            <a href='/addteacher'>teacher</a>
+            <a href='/addzone'>zone</a>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+
+
+
+
+
+
+
 
 
 const StudentProfile = () => {
@@ -49,17 +93,24 @@ const StudentTrData = () => {
       <td>
         <StudentProfile />
       </td>
-      <td> Mohd Kashif</td>
-      <td>ID: 123456789</td>
-      <td>Zeba Masjid</td>
-      <td>8686081162</td>
-      <td>22/02/2022</td>
+      <td> {studentData.studentName}</td>
+      <td>ID: {studentData.studentId}</td>
+      <td>{studentData.centreName}</td>
+      <td>{studentData.studentContactNum1}</td>
+      <td>{studentData.addmissionDate}</td>
       <td>
         <ThreeDotsIcons />
       </td>
     </tr>
   );
 };
+
+
+
+
+
+
+
 
 const Dashboard = () => {
   // Cards Data
@@ -77,11 +128,8 @@ const Dashboard = () => {
           <div>
             <span className="poppins-heading">dashboard</span>
           </div>
-
-          <button className="create-btn Montserrat flex-c">
-            <TiPlus />
-            <span>create</span>
-          </button>
+          <CreateBtn />
+    
         </div>
         {/* CARDS SECTION */}
         <div id="cards">
@@ -149,7 +197,7 @@ const Dashboard = () => {
                   <th>centre</th>
                   <th>contact no</th>
                   <th>admission date</th>
-                  <th> </th>
+                  <th>action</th>
                 </tr>
               </thead>
               <tbody>

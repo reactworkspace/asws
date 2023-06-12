@@ -1,12 +1,23 @@
+// CSS
+import '../styles/index.css';
+import '../styles/syllabus.css';
+import '../styles/font.css';
+import '../styles/flex.css';
 
-
+// Import user profile components
+import UserProfile from '../components/userprofile';
 
 const Syllabus = () => {
-return (
-	<>
-		<h1>Syllabus</h1>
-	</>
-)
-}
+  return (
+    <section id="syllabus">
+      <div className="syllabus-heading flex-r-sb">
+        <div>
+          <span className="poppins-heading">syllabus</span>
+        </div>
+        <UserProfile />
+      </div>
+    </section>
+  );
+};
 
 export default Syllabus;

@@ -12,19 +12,48 @@
 }
 
 
+/* create button */
+.create-btn-div{
+  position: relative;
+  display: inline-block;
+}
+
 .create-btn {
-  height: 3.75rem;
-  width: 10.125rem;
+  height: 3.7rem;
+  width: 10.1rem;
   border-radius: 2.5rem;
   background-color: var(--color-navbar-background);
   color: var(--color-white);
-  position: relative;
   cursor: pointer;
+
 }
 
 .create-btn > span {
   padding: 0.3rem;
 }
+
+.create-btn-content{
+  position: absolute;
+  top: 0;
+  font-weight: 400;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  color: var(--color-white);
+  background-color: var(--color-navbar-background);
+  z-index: 1;
+  width: 10.1rem;
+  border-radius: 1.5rem;
+}
+
+
+.create-btn-content > div{
+  cursor: pointer;
+}
+.create-btn-content > div a{
+  color: var(--color-white);
+  padding: 1rem 0 0 0;
+}
+
+
 
 /* STUDENTS, TEACHERS, CENTRE CARDS */
 #cards {
@@ -435,8 +464,8 @@ tr:hover{
   }
   #cards {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100%;
     grid-auto-flow: column;
   }
 
@@ -448,7 +477,7 @@ tr:hover{
   #dashboard {
     display: grid;
     grid-template-columns: 100%;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
 
   }
   #dashboard-right{

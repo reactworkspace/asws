@@ -14,6 +14,14 @@ import Attendance from './attendance';
 import Syllabus from './syllabus';
 import Setting from './setting';
 
+import AddStudent from './addstudent';
+import AddTeacher from './addteacher';
+import AddZone from './addzone';
+
+import StudentDetails from './studentdetails';
+import TeacherDetails from './teacherdetails';
+import ZoneDetails from './zonedetails';
+
 // react-icons
 import { BsGridFill } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -43,7 +51,7 @@ const UserProfile = () => {
 
 export const AswsIndex = () => {
   // hook to set the active onClick event
-  const [isActive, setActive] = useState('dashboard');
+  const [isActive, setActive] = useState('');
   const handleClick = (isActiveItem) => {
     setActive(isActiveItem);
     // This if condition is use only for 320px to 767px screen
@@ -278,6 +286,15 @@ export const AswsIndex = () => {
                 <Route exact path="/attendance" element={<Attendance />} />
                 <Route exact path="/syllabus" element={<Syllabus />} />
                 <Route exact path="/setting" element={<Setting />} />
+
+
+                <Route exact path="/addstudent" element={<AddStudent />} />
+                <Route exact path="/addteacher" element={<AddTeacher />} />
+                <Route exact path="/addzone" element={<AddZone />} />
+
+                <Route exact path="/studentdetails" element={<StudentDetails />} />
+                <Route exact path="/teacherdetails" element={<TeacherDetails />} />
+                <Route exact path="/zonedetails" element={<ZoneDetails />} />
               </Routes>
             </section>
           </section>

@@ -1,6 +1,6 @@
 // CSS
 import '../styles/index.css'
-import '../styles/addstudent.css';
+import '../styles/addstudent.css'
 import '../styles/font.css';
 import '../styles/flex.css'
 import '../styles/userprofile.css';
@@ -27,7 +27,7 @@ const AddStudent = () => {
 		<div className="addstudent-heading flex-r-sb">
 		  <div>
 			<span className="poppins-heading">
-			student <span className="poppins ">{'>'} add student</span>
+			student <span className="poppins">{'>'} add student</span>
 			</span>
 		  </div>
 		  <UserProfile />

@@ -11,8 +11,10 @@
   --color-white: #ffffff;
 
   --color-present: #39b29a;
-  --color-absent: #F95A77;
-  --color-leave: #F4BE37;
+  --color-absent: #f95a77;
+  --color-leave: #f4be37;
+
+  --color-font-link: #FB7D5B;
 
   --card-border: 0.6rem;
 }
@@ -160,22 +162,30 @@ li .nav-icons {
     grid-template-columns: 18vw 1fr;
     grid-gap: 0px;
   }
+  
   #hamburger-menu {
     display: none;
   }
 
-  #navbar-list .poppins{
-    font-size: 1.7rem;
-
-  }
+  /* nav bar */
+  #navbar-list .poppins {
+    font-size: 1.2rem;
+    }
+  
   .list-button {
     cursor: pointer;
     width: 100%;
     height: 1.5rem;
-    padding: 1.9rem;
+    padding: 2.3rem;
     margin: 0.5rem 0 0.5rem 0;
   }
-  
+  li .nav-icons {
+    height: 2.7rem;
+    width: 2.7rem;
+  }
+
+
+
 }
 
 
@@ -192,6 +202,25 @@ li .nav-icons {
   #hamburger-menu {
     display: none;
   }
+  /* nav bar */
+  #navbar-list .poppins {
+    font-size: 1rem;
+    }
+  
+  .list-button {
+    cursor: pointer;
+    width: 100%;
+    height: 1.5rem;
+    padding: 1.9rem;
+    margin: 0.5rem 0 0.5rem 0;
+  }
+  li .nav-icons {
+    height: 1.9rem;
+    width: 1.9rem;
+  }
+  
+
+
 }
 
 /* Small desktop screens and tablets (1024px to 1279px) */
@@ -207,6 +236,11 @@ li .nav-icons {
   #hamburger-menu {
     display: none;
   }
+
+  /* nav bar */
+  #navbar-list .poppins {
+    font-size: 0.7rem;
+    }
   .aswslogo {
 
     margin-top: 0.5rem;
@@ -221,8 +255,8 @@ li .nav-icons {
     font-size: 1rem;
   }
   li .nav-icons {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.9rem;
+    width: 1.9rem;
   }
 
 
