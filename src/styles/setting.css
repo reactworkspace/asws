@@ -1,18 +1,11 @@
+#setting {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  padding: 3rem;
+}
 
-  #setting {
-	display: grid;
-	grid-template-columns: 100%;
-	grid-template-rows: 100%;
-	padding: 2rem;
-  }
-  
-  .setting-heading span span {
-	font-size: 1.7rem;
-	font-weight: 400;
-  }
-  
-  
-  
-  
-  
-  
+.setting-heading span span {
+  font-size: 1.7rem;
+  font-weight: 400;
+}

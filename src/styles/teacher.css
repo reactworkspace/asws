@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 100%;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .teacher-heading span span {
@@ -98,7 +98,7 @@
 /* Teacher Cards */
 
 #teacher-card {
-  width: 20rem;
+  width: 19.5rem;
   height: 22rem;
   border-radius: 1.2rem;
   background-color: var(--color-white);
@@ -157,10 +157,22 @@
 
 /* Large desktop screens (1440px and above) */
 @media (min-width: 1440px) {
+  #teacher-card {
+    width: 19.5rem;
+  }
 }
 
+/* Medium-sized desktop screens (1280px to 1439px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  #teacher-card {
+    width: 16.5rem;
+  }
+}
 /* Small desktop screens and tablets (1024px to 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
+  #teacher-card {
+    width: 19.5rem;
+  }
 }
 
 /* Tablets (768px to 1023px) */
