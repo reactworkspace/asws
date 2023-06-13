@@ -30,42 +30,90 @@ const AddZone = () => {
 
           <div className="zone-information-form poppin">
             <div>
-              <label className='zone-form-label' htmlFor="centrename">centre name *</label>
-              <input type="text" className='zone-form-input poppin' id="centre-name-input" placeholder=' ' required />
+              <label className="zone-form-label" htmlFor="centrename">
+                centre name *
+              </label>
+              <input
+                type="text"
+                className="zone-form-input poppin"
+                id="centre-name-input"
+                placeholder=" "
+                required
+              />
             </div>
-			<div>
-              <label className='zone-form-label' htmlFor="masjidcommitemember">masjid commitee member name *</label>
-              <input type="text" className='zone-form-input poppin' id="masjid-committe-member-name" placeholder=' ' required />
+            <div>
+              <label className="zone-form-label" htmlFor="masjidcommitemember">
+                masjid commitee member name *
+              </label>
+              <input
+                type="text"
+                className="zone-form-input poppin"
+                id="masjid-committe-member-name"
+                placeholder=" "
+                required
+              />
             </div>
-			<div>
-              <label className='zone-form-label' htmlFor="email">eamil *</label>
-              <input type="text" className='zone-form-input poppin' id="centre-email-input" placeholder=' ' required />
+            <div>
+              <label className="zone-form-label" htmlFor="email">
+                eamil *
+              </label>
+              <input
+                type="text"
+                className="zone-form-input poppin"
+                id="centre-email-input"
+                placeholder=" "
+                required
+              />
             </div>
-			<div>
-              <label className='zone-form-label' htmlFor="email">phone *</label>
-              <input type="text" className='zone-form-input poppin' id="centre-phone-input" placeholder=' ' required />
+            <div>
+              <label className="zone-form-label" htmlFor="email">
+                phone *
+              </label>
+              <input
+                type="text"
+                className="zone-form-input poppin"
+                id="centre-phone-input"
+                placeholder=" "
+                required
+              />
             </div>
-			<div>
-              <label className='zone-form-label' htmlFor="address">address *</label>
-              <input type="text" className='zone-form-input zone-form-input-address poppin' id="centre-address-input" placeholder=' ' required />
+            <div>
+              <label className="zone-form-label" htmlFor="address">
+                address *
+              </label>
+              <input
+                type="text"
+                className="zone-form-input zone-form-input-address poppin"
+                id="centre-address-input"
+                placeholder=" "
+                required
+              />
             </div>
-			<div>
-              <label className='zone-form-label' htmlFor="waqboardno">waqt board no *</label>
-              <input type="text" className='zone-form-input poppin' id="centre-waqt-board-no" placeholder=' ' required />
+            <div>
+              <label className="zone-form-label" htmlFor="waqboardno">
+                waqt board no *
+              </label>
+              <input
+                type="text"
+                className="zone-form-input poppin"
+                id="centre-waqt-board-no"
+                placeholder=" "
+                required
+              />
             </div>
           </div>
         </div>
 
-		{/* photo collection */}
-		<div id='zone-photo-collection'>
-			<div className='zone-photo-collection-heading poppins'>
-				<span>photo collections *</span>
-			</div>
-			<div className='photo-card-collection-card'>
-				<span>drag and drop or</span>
-				<span>click here to select file</span>
-			</div>
-		</div>
+        {/* photo collection */}
+        <div id="zone-photo-collection">
+          <div className="zone-photo-collection-heading poppins">
+            <span>photo collections *</span>
+          </div>
+          <div className="photo-card-collection-card">
+            <span>drag and drop or</span>
+            <span>click here to select file</span>
+          </div>
+        </div>
       </div>
     </section>
   );
