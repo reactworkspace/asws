@@ -24,7 +24,7 @@ import { TiPlus } from 'react-icons/ti';
 import { BsCaretUpFill } from 'react-icons/bs';
 // import {  AiOutlineBell } from 'react-icons/ai';
 
-// import UserProfilePhoto from '../assets/images/userprofile.png';
+
 import StudentProfilePhoto from '../assets/images/studentprofile.png';
 import TeacherProfilePhoto from '../assets/images/teacherprofile.png';
 

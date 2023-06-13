@@ -9,7 +9,7 @@ import { ReactComponent as ClockIcon } from '../assets/svg/clockicon.svg';
 
 
 // centre photo
-import CentrePhoto from '../assets/images/hello.png';
+import CentrePhoto from '../assets/images/centrephoto.png';
 
 // import data from js 
 import zoneData from '../data/zonedata';

@@ -39,3 +39,11 @@
   flex-wrap: wrap;
 
 }
+
+.flex-wrap{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: centre;
+}
