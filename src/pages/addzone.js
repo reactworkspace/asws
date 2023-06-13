@@ -114,6 +114,11 @@ const AddZone = () => {
             <span>click here to select file</span>
           </div>
         </div>
+        <div className='zone-submit-button-div'>
+          <div className='zone-submit-button'>
+            <span>submit</span>
+          </div>
+        </div>  
       </div>
     </section>
   );

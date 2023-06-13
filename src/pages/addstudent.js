@@ -232,6 +232,351 @@ const BrotherSibling = () => {
   );
 };
 
+const FamilyInformationForm = () => {
+  const [selectedParentalStatus, setSelectedParentalStatus] = useState('');
+
+  const handleRadioChangeParental = (e) => {
+    setSelectedParentalStatus(e.target.value);
+  };
+
+  return (
+    <div className="parental-status">
+      <div className="parental-status-heading poppins">
+        <span>parental status</span>
+      </div>
+      <div className="flex">
+        <div>
+          <input
+            type="radio"
+            name="parentalstatus"
+            value="father"
+            id="father"
+            className="poppins"
+            onChange={handleRadioChangeParental}
+          />
+          <label htmlFor="father">
+            <span>father</span>
+          </label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="parentalstatus"
+            value="mother"
+            id="mother"
+            className="poppins"
+            onChange={handleRadioChangeParental}
+          />
+          <label htmlFor="mother">
+            <span>mother</span>
+          </label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="parentalstatus"
+            value="guardian"
+            id="guardian"
+            className="poppins"
+            onChange={handleRadioChangeParental}
+          />
+          <label htmlFor="guardian">
+            <span>guardian</span>
+          </label>
+        </div>
+      </div>
+      {selectedParentalStatus === 'father' && <ParentalInformationFather />}
+      {selectedParentalStatus === 'mother' && <ParentalInformationMother />}
+      {selectedParentalStatus === 'guardian' && <ParentalInformationGuardian />}
+    </div>
+  );
+};
+
+const ParentalInformationFather = () => {
+  return (
+    <div className="parental-status-father">
+      <div>
+        <span className="poppins">father information *</span>
+      </div>
+      <div id="father-details-grid">
+        <div>
+          <label className="father-form-label" htmlFor="">
+            {' '}
+            first name *{' '}
+          </label>
+          <input
+            type="text"
+            className="father-form-input poppins"
+            id="father-details-input"
+            placeholder="Mohmmed"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="father-form-label" htmlFor="">
+            {' '}
+            last name *{' '}
+          </label>
+          <input
+            type="text"
+            className="father-form-input poppins"
+            id="father-details-input"
+            placeholder="Javeed"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="father-form-label" htmlFor="">
+            {' '}
+            email *{' '}
+          </label>
+          <input
+            type="text"
+            className="father-form-input poppins"
+            id="father-details-input"
+            placeholder="Mohd@gmail.com"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="father-form-label" htmlFor="">
+            {' '}
+            phone *{' '}
+          </label>
+          <input
+            type="number"
+            className="father-form-input poppins"
+            id="father-details-input"
+            placeholder="+91 987654321"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="father-form-label" htmlFor="">
+            {' '}
+            education qualification *{' '}
+          </label>
+          <input
+            type="text"
+            className="father-form-input poppins"
+            id="father-details-input"
+            placeholder="Gradution"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="father-form-label" htmlFor="">
+            {' '}
+            occupation *{' '}
+          </label>
+          <input
+            type="text"
+            className="father-form-input poppins"
+            id="father-details-input"
+            placeholder="Driver"
+            required
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ParentalInformationMother = () => {
+  return (
+    <div className="parental-status-mother">
+      <div>
+        <span className="poppins">mother information *</span>
+      </div>
+      <div id="mother-details-grid">
+        <div>
+          <label className="mother-form-label" htmlFor="">
+            {' '}
+            first name *{' '}
+          </label>
+          <input
+            type="text"
+            className="mother-form-input poppins"
+            id="mother-details-input"
+            placeholder="Afsha"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="mother-form-label" htmlFor="">
+            {' '}
+            last name *{' '}
+          </label>
+          <input
+            type="text"
+            className="mother-form-input poppins"
+            id="mother-details-input"
+            placeholder="Fatima"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="mother-form-label" htmlFor="">
+            {' '}
+            email *{' '}
+          </label>
+          <input
+            type="text"
+            className="mother-form-input poppins"
+            id="mother-details-input"
+            placeholder="Afsha@gmail.com"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="mother-form-label" htmlFor="">
+            {' '}
+            phone *{' '}
+          </label>
+          <input
+            type="number"
+            className="mother-form-input poppins"
+            id="mother-details-input"
+            placeholder="+91 987654321"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="mother-form-label" htmlFor="">
+            {' '}
+            education qualification *{' '}
+          </label>
+          <input
+            type="text"
+            className="mother-form-input poppins"
+            id="mother-details-input"
+            placeholder="Gradution"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="mother-form-label" htmlFor="">
+            {' '}
+            occupation *{' '}
+          </label>
+          <input
+            type="text"
+            className="mother-form-input poppins"
+            id="mother-details-input"
+            placeholder="Homemaker"
+            required
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ParentalInformationGuardian = () => {
+  return (
+    <div className="parental-status-guardian">
+      <div>
+        <span className="poppins">guardian information *</span>
+      </div>
+      <div id="guardian-details-grid">
+        <div>
+          <label className="guardian-form-label" htmlFor="">
+            {' '}
+            first name *{' '}
+          </label>
+          <input
+            type="text"
+            className="guardian-form-input poppins"
+            id="guardian-details-input"
+            placeholder="Mohammed"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="guardian-form-label" htmlFor="">
+            {' '}
+            last name *{' '}
+          </label>
+          <input
+            type="text"
+            className="guardian-form-input poppins"
+            id="guardian-details-input"
+            placeholder="Irfan"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="guardian-form-label" htmlFor="">
+            {' '}
+            email *{' '}
+          </label>
+          <input
+            type="text"
+            className="guardian-form-input poppins"
+            id="guardian-details-input"
+            placeholder="Mohd@gmail.com"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="guardian-form-label" htmlFor="">
+            {' '}
+            phone *{' '}
+          </label>
+          <input
+            type="number"
+            className="guardian-form-input poppins"
+            id="guardian-details-input"
+            placeholder="+91 987654321"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="guardian-form-label" htmlFor="">
+            {' '}
+            education qualification *{' '}
+          </label>
+          <input
+            type="text"
+            className="guardian-form-input poppins"
+            id="guardian-details-input"
+            placeholder="Gradution"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="guardian-form-label" htmlFor="">
+            {' '}
+            occupation *{' '}
+          </label>
+          <input
+            type="text"
+            className="guardian-form-input poppins"
+            id="guardian-details-input"
+            placeholder="Business"
+            required
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const AddStudent = () => {
   return (
     <section id="addstudent">
@@ -251,7 +596,17 @@ const AddStudent = () => {
           </div>
 
           <div className="student-details-form poppins">
-            <div className=""></div>
+            <div className="student-photo-div">
+                <div>
+                  <span>photo *</span>
+                </div>
+                <div className='student-photo-box'>
+                  <span>drang and drop or</span>
+                  <span>click here to select file</span>
+                </div>
+
+
+            </div>
 
             <div id="student-details-grid">
               <div>
@@ -446,6 +801,26 @@ const AddStudent = () => {
             </div>
           </div>
         </div>
+
+        {/* Family Information */}
+        <div id="family-information">
+          <div id="student-family-information">
+            <div className="family-information-heading">
+              <span>family information</span>
+            </div>
+            <div className="family-information-form-div">
+              <FamilyInformationForm />
+            </div>
+          </div>
+        </div>
+
+       
+        <div className='student-submit-button-div'>
+          <div className='student-submit-button'>
+            <span>submit</span>
+          </div>
+        </div>  
+      
       </div>
     </section>
   );
