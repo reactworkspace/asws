@@ -1,24 +1,3 @@
-/* ROOT SECTION OF CSS VARIABLE DECLARATION */
-:root {
-  /* COLOR */
-  --color-background: #f3f4ff;
-
-  --color-navbar-background: #4d44b5;
-  --color-navbar-font: #c1bbeb;
-
-  --color-heading: #303972;
-  --color-muted-test: #a098ae;
-  --color-white: #ffffff;
-
-  --color-present: #39b29a;
-  --color-absent: #f95a77;
-  --color-leave: #f4be37;
-
-  --color-font-link: #fb7d5b;
-
-  --card-border: 0.6rem;
-}
-
 #addstudent {
   display: grid;
   grid-template-columns: 100%;
@@ -37,14 +16,18 @@
 
 /* student Details */
 
-#student-details {
+#student-details,
+#student-sibling-information,
+#student-family-information{
   width: 100%;
   height: auto;
   border-radius: 1.25rem;
   background-color: var(--color-white);
 }
 
-.student-details-heading {
+.student-details-heading,
+.sibling-information-heading,
+.family-information-heading {
   width: 100%;
   height: 3.75rem;
   color: var(--color-white);
@@ -71,14 +54,6 @@
   padding: 2rem;
 }
 
-.student-photo-div span {
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  text-transform: capitalize;
-  color: var(--color-heading);
-}
-
 .student-details-form div {
   display: flex;
   flex-direction: column;
@@ -91,20 +66,19 @@
 
   border-radius: 0.3125rem;
   background-color: var(--color-white);
-  border: 0.0625rem dashed #C1BBEB;   
+  border: 0.0625rem dashed #c1bbeb;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
+
 .student-photo-box span {
   font-size: 0.8rem;
   line-height: 0.3rem;
   color: var(--color-muted-test);
   font-weight: 400;
- 
 }
 
 #student-details-grid {
@@ -114,7 +88,19 @@
   gap: 3rem;
 }
 
-.student-form-label {
+/* sibling details grid */
+
+#sibling-details {
+  padding-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 10rem 5rem 13rem 23.5rem 10rem 1fr;
+  grid-template-rows: 100%;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.student-form-label,
+.sibling-form-label {
   font-weight: 600;
   font-size: 1.2rem;
   line-height: 2rem;
@@ -122,7 +108,8 @@
   color: var(--color-heading);
 }
 
-.student-form-input {
+.student-form-input,
+.sibling-form-input {
   height: 3rem;
   width: 100%;
   left: 0rem;
@@ -150,40 +137,15 @@
   width: 100%;
 }
 
-/* Student Sibling Information */
+/* Student Sibling Information & Family Information common properties */
 
-#sibling-information {
+#sibling-information,
+#family-information {
   padding-top: 2rem;
 }
 
-#student-sibling-information {
-  width: 100%;
-  height: auto;
-  border-radius: 1.25rem;
-  background-color: var(--color-white);
-}
-
-.sibling-information-heading {
-  width: 100%;
-  height: 3.75rem;
-  color: var(--color-white);
-  border-top-left-radius: 1.25rem;
-  border-top-right-radius: 1.25rem;
-  background-color: var(--color-navbar-background);
-
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  text-transform: capitalize;
-
-  display: flex;
-  align-items: center;
-  padding-left: 2rem;
-}
-
-.sibling-information-form-div {
+.sibling-information-form-div,
+.family-information-form-div  {
   padding: 2rem;
 }
 
@@ -226,38 +188,6 @@ input[type='radio'] {
   padding: 2rem 0 0 0;
 }
 
-#sibling-details {
-  padding-top: 1.5rem;
-  display: grid;
-  grid-template-columns: 10rem 5rem 13rem 23.5rem 10rem 1fr;
-  grid-template-rows: 100%;
-  gap: 1.5rem;
-  align-items: flex-end;
-}
-
-#sibling-details div > label {
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  text-transform: capitalize;
-  color: var(--color-heading);
-}
-
-#sibling-details div > input {
-  height: 3rem;
-  width: 100%;
-  left: 0rem;
-  top: 2.6875rem;
-  border-radius: 0.3125rem;
-  background-color: var(--color-white);
-  border: 0.0625rem solid #c1bbeb;
-  font-size: 1rem;
-  color: var(--color-muted-test);
-  text-transform: capitalize;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .add-more-btn-sibling {
   width: 10rem;
   height: 3rem;
@@ -283,40 +213,6 @@ input[type='radio'] {
 }
 
 /* Family information  */
-
-#family-information {
-  padding-top: 2rem;
-}
-#student-family-information {
-  width: 100%;
-  height: auto;
-  border-radius: 1.25rem;
-  background-color: var(--color-white);
-}
-
-.family-information-heading {
-  width: 100%;
-  height: 3.75rem;
-  color: var(--color-white);
-  border-top-left-radius: 1.25rem;
-  border-top-right-radius: 1.25rem;
-  background-color: var(--color-navbar-background);
-
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  text-transform: capitalize;
-
-  display: flex;
-  align-items: center;
-  padding-left: 2rem;
-}
-
-.family-information-form-div {
-  padding: 2rem;
-}
 
 .parental-status-heading {
   font-weight: 600;

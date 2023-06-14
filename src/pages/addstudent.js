@@ -597,15 +597,13 @@ const AddStudent = () => {
 
           <div className="student-details-form poppins">
             <div className="student-photo-div">
-                <div>
-                  <span>photo *</span>
-                </div>
-                <div className='student-photo-box'>
-                  <span>drang and drop or</span>
-                  <span>click here to select file</span>
-                </div>
-
-
+              <label className="student-form-label" htmlFor="">
+                photo *
+              </label>
+              <div className="student-photo-box">
+                <span>drang and drop or</span>
+                <span>click here to select file</span>
+              </div>
             </div>
 
             <div id="student-details-grid">
@@ -794,7 +792,7 @@ const AddStudent = () => {
         <div id="sibling-information">
           <div id="student-sibling-information">
             <div className="sibling-information-heading">
-              <span>sibling details</span>
+              <span>sibling information</span>
             </div>
             <div className="sibling-information-form-div">
               <SiblingInformationForm />
@@ -814,13 +812,12 @@ const AddStudent = () => {
           </div>
         </div>
 
-       
-        <div className='student-submit-button-div'>
-          <div className='student-submit-button'>
+        {/* submit button */}
+        <div className="student-submit-button-div">
+          <div className="student-submit-button">
             <span>submit</span>
           </div>
-        </div>  
-      
+        </div>
       </div>
     </section>
   );
