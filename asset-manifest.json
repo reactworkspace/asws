@@ -1,23 +1,30 @@
 {
   "files": {
-    "main.css": "/asws/static/css/main.2a0e65d4.css",
-    "main.js": "/asws/static/js/main.cf385518.js",
+    "main.css": "/asws/static/css/main.10e38d22.css",
+    "main.js": "/asws/static/js/main.d510c58d.js",
     "static/media/teacherprofile.png": "/asws/static/media/teacherprofile.6ddce6bd411c1699d32d.png",
+    "static/media/centrephoto.png": "/asws/static/media/centrephoto.84113396ad7afe73d336.png",
     "static/media/userprofile.png": "/asws/static/media/userprofile.2ae106a362a3cc556cbe.png",
     "static/media/studentprofile.png": "/asws/static/media/studentprofile.71cc14acc79aff8722de.png",
+    "static/media/teachericon.svg": "/asws/static/media/teachericon.84b5a5be807f204d7eb4dca8d79ea59b.svg",
     "static/media/aswslogo.svg": "/asws/static/media/aswslogo.8f3e6ce72d631092d5ab203644da6b63.svg",
+    "static/media/personicon.svg": "/asws/static/media/personicon.e4ff83a59454273ebe4e3ea79c965b6a.svg",
     "static/media/threedots.svg": "/asws/static/media/threedots.f8ca4e6c16594d598050449f591cae45.svg",
     "static/media/student.svg": "/asws/static/media/student.88eb15498f64adda8372972ce59d9479.svg",
     "static/media/teacher.svg": "/asws/static/media/teacher.50f2d4e6d4857d6e35fe12e3cd54b933.svg",
+    "static/media/classesicon.svg": "/asws/static/media/classesicon.00ff28be4098f1c9ad99d6340a8a6db2.svg",
+    "static/media/clockicon.svg": "/asws/static/media/clockicon.2db4c25722409b8ef5aa4db42bb868c6.svg",
     "static/media/setting.svg": "/asws/static/media/setting.d983ea7cce1db1f3a8d6913ef2035856.svg",
     "index.html": "/asws/index.html",
     "static/media/zone.svg": "/asws/static/media/zone.890e368215b49a42d4580ae772fe2e4f.svg",
     "static/media/notes.svg": "/asws/static/media/notes.87d0e40b6ec8c5834ff7cddd3a25e1ac.svg",
-    "main.2a0e65d4.css.map": "/asws/static/css/main.2a0e65d4.css.map",
-    "main.cf385518.js.map": "/asws/static/js/main.cf385518.js.map"
+    "static/media/profileicon.svg": "/asws/static/media/profileicon.a37cb5821ed7da35778a5598773f4106.svg",
+    "static/media/studenticon.svg": "/asws/static/media/studenticon.2f9dede768d21053584fd0dc77331dce.svg",
+    "main.10e38d22.css.map": "/asws/static/css/main.10e38d22.css.map",
+    "main.d510c58d.js.map": "/asws/static/js/main.d510c58d.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a0e65d4.css",
-    "static/js/main.cf385518.js"
+    "static/css/main.10e38d22.css",
+    "static/js/main.d510c58d.js"
   ]
 }
