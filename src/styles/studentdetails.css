@@ -1,3 +1,76 @@
+/* ROOT SECTION OF CSS VARIABLE DECLARATION */
+:root {
+  /* COLOR */
+  --color-background: #f3f4ff;
+
+  --color-navbar-background: #4d44b5;
+  --color-navbar-font: #c1bbeb;
+
+  --color-heading: #303972;
+  --color-muted-test: #a098ae;
+  --color-white: #ffffff;
+
+  --color-present: #39b29a;
+  --color-absent: #f95a77;
+  --color-leave: #f4be37;
+
+  --color-font-link: #FB7D5B;
+
+  --card-border: 0.6rem;
+}
+
+#studentdetails {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  padding: 3rem;
+}
+
+.studentdetails-heading span span {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10,7 +83,10 @@
 
 }
 
+/* Medium-sized desktop screens (1280px to 1439px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
 
+}
 /* Small desktop screens and tablets (1024px to 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
  

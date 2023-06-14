@@ -6,7 +6,7 @@
 	font-style: normal;
 	font-weight: 500;
 	font-size: 1.2rem;
-	line-height: 27px;
+	line-height: 2rem;
 	text-transform: capitalize;
 	color: var(--color-heading);
   }
@@ -16,10 +16,9 @@
 	font-style: normal;
 	font-weight: 400;
 	font-size: 0.9rem;
-	line-height: 21px;
+	line-height: 1.4rem;
 	text-transform: capitalize;
 	color: var(--color-muted-test);
-  
   }
   
   .poppins-heading {

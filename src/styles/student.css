@@ -1,3 +1,25 @@
+/* ROOT SECTION OF CSS VARIABLE DECLARATION */
+:root {
+  /* COLOR */
+  --color-background: #f3f4ff;
+
+  --color-navbar-background: #4d44b5;
+  --color-navbar-font: #c1bbeb;
+
+  --color-heading: #303972;
+  --color-muted-test: #a098ae;
+  --color-white: #ffffff;
+
+  --color-present: #39b29a;
+  --color-absent: #f95a77;
+  --color-leave: #f4be37;
+
+  --color-font-link: #FB7D5B;
+
+  --card-border: 0.6rem;
+}
+
+
 #student {
   display: grid;
   grid-template-columns: 100%;
@@ -88,8 +110,58 @@
 
 /* Student tables */
 
+.student-table-div{
+  width: 100%;
+  height: 54.5625rem; 
+
+  background-color: var(--color-white);
+  border-radius: 1.2rem;
+
+}
+.muted-text{
+  color: var(--color-muted-test);
+}
+table thead{
+  font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	text-transform: capitalize;
+	color: var(--color-heading);
+}
+
+
+table tbody{
+  font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	text-transform: capitalize;
+	color: var(--color-heading);
+}
+
+
+tbody a{
+  text-decoration: none; 
+  color: inherit; 
+  font-weight: normal; 
+  cursor: pointer;
+}
+
+
+
+
+
+
 /* Large desktop screens (1440px and above) */
 @media (min-width: 1440px) {
+}
+
+/* Medium-sized desktop screens (1280px to 1439px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
+
 }
 
 /* Small desktop screens and tablets (1024px to 1279px) */

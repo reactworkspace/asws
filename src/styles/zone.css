@@ -251,6 +251,10 @@
 @media (min-width: 1440px) {
 }
 
+/* Medium-sized desktop screens (1280px to 1439px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
+}
+
 /* Small desktop screens and tablets (1024px to 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
 }
