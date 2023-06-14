@@ -16,6 +16,22 @@ import { TiPlus } from 'react-icons/ti';
 import { HiOutlineSearch } from 'react-icons/hi';
 import { BsCaretUpFill } from 'react-icons/bs';
 
+// import svg
+import { ReactComponent as ThreeDotsIcons } from '../assets/svg/threedots.svg';
+
+// import image address
+import StudentProfilePhoto from '../assets/images/studentprofile.png';
+
+
+const StudentProfile = () => {
+  return (
+    <div id="studentprofile">
+      <img src={StudentProfilePhoto} alt="StudentProfilePhoto" />
+    </div>
+  );
+};
+
+
 const SearchStudent = () => {
   return (
     <div className="search-student-div">
@@ -96,7 +112,7 @@ const StudentTableRowData = () => {
   return (
     <tr>
       <td></td>
-      <td></td>
+      <td><StudentProfile /></td>
       <td>
         <Link to="/studentdetails">mohd kashif </Link>
       </td>
@@ -106,10 +122,11 @@ const StudentTableRowData = () => {
       <td>hyderabad</td>
       <td>contact</td>
       <td>iv</td>
-      <td>action</td>
+      <td><ThreeDotsIcons /></td>
     </tr>
   );
 };
+
 
 const Student = () => {
   return (

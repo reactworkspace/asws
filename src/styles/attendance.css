@@ -1,4 +1,23 @@
+/* ROOT SECTION OF CSS VARIABLE DECLARATION */
+:root {
+  /* COLOR */
+  --color-background: #f3f4ff;
 
+  --color-navbar-background: #4d44b5;
+  --color-navbar-font: #c1bbeb;
+
+  --color-heading: #303972;
+  --color-muted-test: #a098ae;
+  --color-white: #ffffff;
+
+  --color-present: #39b29a;
+  --color-absent: #f95a77;
+  --color-leave: #f4be37;
+
+  --color-font-link: #fb7d5b;
+
+  --card-border: 0.6rem;
+}
 #attendance {
   display: grid;
   grid-template-columns: 100%;
@@ -11,24 +30,16 @@
   font-weight: 400;
 }
 
+#attendance-table-id {
+  padding: 2rem 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.attendance-table-div {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+}
 
 
 
@@ -53,43 +64,33 @@
 
 /* Large desktop screens (1440px and above) */
 @media (min-width: 1440px) {
-
 }
 
 /* Medium-sized desktop screens (1280px to 1439px) */
 @media (min-width: 1280px) and (max-width: 1439px) {
-
 }
 
 /* Small desktop screens and tablets (1024px to 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
- 
-
-  
 }
-
 
 /* Tablets (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
- 
-  #user-profile-div{
+  #user-profile-div {
     display: none;
   }
-
 }
 
 /* Mobile devices in landscape orientation (480px to 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
-  #user-profile-div{
+  #user-profile-div {
     display: none;
   }
-
 }
 
 /* Mobile devices in portrait orientation (320px to 479px) */
 @media (min-width: 320px) and (max-width: 479px) {
-#user-profile-div{
-  display: none;
-}
-
+  #user-profile-div {
+    display: none;
+  }
 }

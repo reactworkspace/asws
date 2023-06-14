@@ -74,6 +74,7 @@
   color: var(--color-muted-test);
   text-transform: capitalize;
   padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .zone-form-input-address {
