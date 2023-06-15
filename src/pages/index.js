@@ -60,8 +60,8 @@ const AswsIndex = () => {
 
   let navUrl;
 
-  if (modifiedUrl === 'dashboard') {
-    navUrl = modifiedUrl;
+  if (modifiedUrl === '') {
+    navUrl = 'dashboard';
   } else if (
     modifiedUrl === 'zone' ||
     modifiedUrl === 'addzone' ||
@@ -133,7 +133,7 @@ const AswsIndex = () => {
           {isMenuOpen && (
             <ul className="poppins">
               <li>
-                <Link to="/dashboard" onClick={() => handleClick('dashboard')}>
+                <Link to="/" onClick={() => handleClick('dashboard')}>
                   <div
                     className={`flex list-button ${
                       isActive === 'dashboard' ? 'active' : ''
@@ -233,7 +233,7 @@ const AswsIndex = () => {
               <ul className="poppins">
                 <li>
                   <Link
-                    to="/dashboard"
+                    to="/"
                     onClick={() => handleClick('dashboard')}
                   >
                     <div
@@ -327,7 +327,7 @@ const AswsIndex = () => {
           <section>
             <section id="main-section">
               <Routes>
-                <Route exact path="/dashboard" element={<Dashboard />} />
+                <Route exact path="/" element={<Dashboard />} />
                 <Route exact path="/zone" element={<Zone />} />
                 <Route exact path="/student" element={<Student />} />
                 <Route exact path="/teacher" element={<Teacher />} />

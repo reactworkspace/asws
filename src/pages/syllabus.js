@@ -10,11 +10,13 @@ import UserProfile from '../components/userprofile';
 const Syllabus = () => {
   return (
     <section id="syllabus">
-      <div className="syllabus-heading flex-r-sb">
-        <div>
-          <span className="poppins-heading">syllabus</span>
+      <div>
+        <div className="syllabus-heading flex-r-sb">
+          <div>
+            <span className="poppins-heading">syllabus</span>
+          </div>
+          <UserProfile />
         </div>
-        <UserProfile />
       </div>
     </section>
   );
