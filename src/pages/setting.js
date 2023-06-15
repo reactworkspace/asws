@@ -14,7 +14,7 @@ const Setting = () => {
         <div>
           <span className="poppins-heading">setting</span>
         </div>
-        <UserProfile />
+        <UserProfile />hello
       </div>
     </section>
   );
