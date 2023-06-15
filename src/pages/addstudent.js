@@ -792,26 +792,26 @@ const AddStudent = () => {
 
         {/* Student Sibling Information */}
         <div id="sibling-information">
-          <div id="student-sibling-information">
+         
             <div className="sibling-information-heading">
               <span>sibling information</span>
             </div>
             <div className="sibling-information-form-div">
               <SiblingInformationForm />
             </div>
-          </div>
+       
         </div>
 
         {/* Family Information */}
         <div id="family-information">
-          <div id="student-family-information">
+          
             <div className="family-information-heading">
               <span>family information</span>
             </div>
             <div className="family-information-form-div">
               <FamilyInformationForm />
             </div>
-          </div>
+     
         </div>
 
         {/* submit button */}

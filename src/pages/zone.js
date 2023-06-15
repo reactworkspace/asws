@@ -1,5 +1,6 @@
 // CSS
 import '../styles/index.css';
+import '../styles/style.css';
 import '../styles/zone.css';
 import '../styles/font.css';
 import '../styles/flex.css';
@@ -92,9 +93,9 @@ const ZoneCheckButtons = () => {
 
 const Zone = () => {
   return (
-    <section id="zone">
+    <section id="page">
       <div>
-        <div className="zone-heading flex-r-sb">
+        <div className="page-heading flex-r-sb">
           <div>
             <span className="poppins-heading">
               zone <span className="poppins"> {'>'} Centres</span>

@@ -1,17 +1,12 @@
-
 #import {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100%;
-  padding: 3rem;
-  height: 100vh;
-}
-.import-heading span span {
-  font-size: 1.7rem;
-  font-weight: 400;
-}
-
-#upload {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 100%;
+	padding: 3rem;
+	height: 100%;
+  }
+  
+#import-heading {
   margin: auto;
   text-align: center;
   padding: 2rem 0;
@@ -43,8 +38,8 @@
   color: var(--color-muted-test);
 }
 
-.download-template-file span{
-	text-decoration: underline;
-	color: var(--color-green-hyperlink);
-	cursor: pointer;
+.download-template-file span {
+  text-decoration: underline;
+  color: var(--color-green-hyperlink);
+  cursor: pointer;
 }

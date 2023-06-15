@@ -10,19 +10,16 @@
   font-weight: 400;
 }
 
-.addstudent-heading {
-  padding-bottom: 2rem;
-}
-
 /* student Details */
 
 #student-details,
-#student-sibling-information,
-#student-family-information{
+#sibling-information,
+#family-information{
   width: 100%;
   height: auto;
   border-radius: 1.25rem;
   background-color: var(--color-white);
+  margin-top: 2rem;
 }
 
 .student-details-heading,
@@ -139,10 +136,7 @@
 
 /* Student Sibling Information & Family Information common properties */
 
-#sibling-information,
-#family-information {
-  padding-top: 2rem;
-}
+
 
 .sibling-information-form-div,
 .family-information-form-div  {
