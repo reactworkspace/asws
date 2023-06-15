@@ -10,6 +10,9 @@
   font-weight: 400;
 }
 
+#addstudent Link{
+  color: var(--color-heading);
+}
 /* student Details */
 
 #student-details,

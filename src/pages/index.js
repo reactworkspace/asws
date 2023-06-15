@@ -54,9 +54,48 @@ const UserProfile = () => {
   );
 };
 
-export const AswsIndex = () => {
+const AswsIndex = () => {
+  const currentUrl = window.location.pathname;
+  const modifiedUrl = currentUrl.substring(1);
+
+  let navUrl;
+
+  if (modifiedUrl === 'dashboard') {
+    navUrl = modifiedUrl;
+  } else if (
+    modifiedUrl === 'zone' ||
+    modifiedUrl === 'addzone' ||
+    modifiedUrl === 'zonedetails' ||
+    modifiedUrl === 'importzone'
+  ) {
+    navUrl = 'zone';
+  } else if (
+    modifiedUrl === 'student' ||
+    modifiedUrl === 'addstudent' ||
+    modifiedUrl === 'studentdetails' ||
+    modifiedUrl === 'importstudent'
+  ) {
+    navUrl = 'student';
+  } else if (
+    modifiedUrl === 'teacher' ||
+    modifiedUrl === 'addteacher' ||
+    modifiedUrl === 'teacherdetails' ||
+    modifiedUrl === 'importteacher'
+  ) {
+    navUrl = 'teacher';
+  } else if (modifiedUrl === 'attendance') {
+    navUrl = modifiedUrl;
+  } else if (modifiedUrl === 'syllabus') {
+    navUrl = modifiedUrl;
+  } else if (modifiedUrl === 'setting') {
+    navUrl = modifiedUrl;
+  } else {
+    console.log('Error');
+  }
+
   // hook to set the active onClick event
-  const [isActive, setActive] = useState('');
+  const [isActive, setActive] = useState(navUrl);
+
   const handleClick = (isActiveItem) => {
     setActive(isActiveItem);
     // This if condition is use only for 320px to 767px screen
@@ -94,7 +133,7 @@ export const AswsIndex = () => {
           {isMenuOpen && (
             <ul className="poppins">
               <li>
-                <Link to="/" onClick={() => handleClick('dashboard')}>
+                <Link to="/dashboard" onClick={() => handleClick('dashboard')}>
                   <div
                     className={`flex list-button ${
                       isActive === 'dashboard' ? 'active' : ''
@@ -193,7 +232,10 @@ export const AswsIndex = () => {
             <div id="navbar-list">
               <ul className="poppins">
                 <li>
-                  <Link to="/" onClick={() => handleClick('dashboard')}>
+                  <Link
+                    to="/dashboard"
+                    onClick={() => handleClick('dashboard')}
+                  >
                     <div
                       className={`flex list-button ${
                         isActive === 'dashboard' ? 'active' : ''
@@ -285,7 +327,7 @@ export const AswsIndex = () => {
           <section>
             <section id="main-section">
               <Routes>
-                <Route exact path="/" element={<Dashboard />} />
+                <Route exact path="/dashboard" element={<Dashboard />} />
                 <Route exact path="/zone" element={<Zone />} />
                 <Route exact path="/student" element={<Student />} />
                 <Route exact path="/teacher" element={<Teacher />} />
