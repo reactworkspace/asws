@@ -6,6 +6,7 @@ import '../styles/flex.css';
 import '../styles/userprofile.css';
 
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 // useState react hook
 import { useState } from 'react';
@@ -584,7 +585,8 @@ const AddStudent = () => {
         <div className="addstudent-heading flex-r-sb">
           <div>
             <span className="poppins-heading">
-              student <span className="poppins">{'>'} add student</span>
+              <Link to="/student">student</Link>
+              {' > '} <span className="poppins"> add student</span>
             </span>
           </div>
           <UserProfile />

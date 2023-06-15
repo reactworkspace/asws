@@ -285,11 +285,11 @@ const Dashboard = () => {
                 <span className="teachers-centre">jamia masjid centre</span>
               </div>
             </div>
-            <a href="/teacher">
+            <Link to="/teacher">
               <div className="view-more-btn poppins flex-c">
                 <span>view more</span>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </aside>

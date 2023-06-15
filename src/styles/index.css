@@ -14,38 +14,36 @@
   --color-absent: #f95a77;
   --color-leave: #f4be37;
 
-  --color-font-link: #FB7D5B;
+  --color-font-link: #fb7d5b;
 
+  --color-green-hyperlink: #6418c3;
   --card-border: 0.6rem;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	outline: 0;
-	appearance: none;
-	border: 0;
-	text-decoration: none;
-	list-style: none;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-html{
-	font-size: 14px;
+html {
+  font-size: 14px;
 }
 
-body{
-	width: 100vw;
-	height: 100%;
-	font-family: poppins, sans-serif;
-	font-size: 0.88rem;
-	background: var(--color-background);
+body {
+  width: 100vw;
+  height: 100%;
+  font-family: poppins, sans-serif;
+  font-size: 0.88rem;
+  background: var(--color-background);
   user-select: none;
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
-
-
-
 
 #body-section {
   display: grid;
@@ -53,7 +51,7 @@ body{
   grid-auto-rows: 100% 100%;
   grid-auto-flow: column;
 }
- 
+
 nav {
   background-color: var(--color-navbar-background);
   height: 100%;
@@ -139,19 +137,6 @@ li .nav-icons {
   margin-left: 2rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Large desktop screens (1440px and above) */
 @media (min-width: 1440px) {
   header {
@@ -162,7 +147,7 @@ li .nav-icons {
     grid-template-columns: 18vw 1fr;
     grid-gap: 0px;
   }
-  
+
   #hamburger-menu {
     display: none;
   }
@@ -170,8 +155,8 @@ li .nav-icons {
   /* nav bar */
   #navbar-list .poppins {
     font-size: 1.2rem;
-    }
-  
+  }
+
   .list-button {
     cursor: pointer;
     width: 100%;
@@ -183,9 +168,6 @@ li .nav-icons {
     height: 2.7rem;
     width: 2.7rem;
   }
-
-
-
 }
 
 /* Medium-sized desktop screens (1280px to 1439px) */
@@ -204,8 +186,8 @@ li .nav-icons {
   /* nav bar */
   #navbar-list .poppins {
     font-size: 1rem;
-    }
-  
+  }
+
   .list-button {
     cursor: pointer;
     width: 100%;
@@ -217,9 +199,6 @@ li .nav-icons {
     height: 1.9rem;
     width: 1.9rem;
   }
-  
-
-
 }
 
 /* Small desktop screens and tablets (1024px to 1279px) */
@@ -239,9 +218,8 @@ li .nav-icons {
   /* nav bar */
   #navbar-list .poppins {
     font-size: 0.7rem;
-    }
+  }
   .aswslogo {
-
     margin-top: 0.5rem;
     padding-top: 0.5rem;
     padding-left: 0.5rem;
@@ -250,24 +228,18 @@ li .nav-icons {
   ul {
     padding-left: 1rem;
   }
-  #navbar-list .poppins{
+  #navbar-list .poppins {
     font-size: 1rem;
   }
   li .nav-icons {
     height: 1.9rem;
     width: 1.9rem;
   }
-
-
-
 }
-
-
-
 
 /* Tablets (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
-  body{
+  body {
     width: 100%;
     height: 100%;
   }
@@ -303,7 +275,7 @@ li .nav-icons {
 
 /* Mobile devices in landscape orientation (480px to 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
-  body{
+  body {
     width: 100%;
     height: 100%;
   }
@@ -339,7 +311,7 @@ li .nav-icons {
 
 /* Mobile devices in portrait orientation (320px to 479px) */
 @media (min-width: 320px) and (max-width: 479px) {
-  body{
+  body {
     width: 100%;
     height: 100%;
   }

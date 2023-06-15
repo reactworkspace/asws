@@ -22,7 +22,6 @@ import { ReactComponent as ThreeDotsIcons } from '../assets/svg/threedots.svg';
 // import image address
 import StudentProfilePhoto from '../assets/images/studentprofile.png';
 
-
 const StudentProfile = () => {
   return (
     <div id="studentprofile">
@@ -30,7 +29,6 @@ const StudentProfile = () => {
     </div>
   );
 };
-
 
 const SearchStudent = () => {
   return (
@@ -112,7 +110,9 @@ const StudentTableRowData = () => {
   return (
     <tr>
       <td></td>
-      <td><StudentProfile /></td>
+      <td>
+        <StudentProfile />
+      </td>
       <td>
         <Link to="/studentdetails">mohd kashif </Link>
       </td>
@@ -122,11 +122,12 @@ const StudentTableRowData = () => {
       <td>hyderabad</td>
       <td>contact</td>
       <td>iv</td>
-      <td><ThreeDotsIcons /></td>
+      <td>
+        <ThreeDotsIcons />
+      </td>
     </tr>
   );
 };
-
 
 const Student = () => {
   return (

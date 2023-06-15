@@ -6,6 +6,8 @@ import '../styles/flex.css';
 import '../styles/userprofile.css';
 
 import * as React from 'react';
+import { Link } from 'react-router-dom';
+
 
 // Import user profile components
 import UserProfile from '../components/userprofile';
@@ -17,7 +19,8 @@ const AddZone = () => {
         <div className="addzone-heading flex-r-sb">
           <div>
             <span className="poppins-heading">
-              centre <span className="poppins ">{'>'} create centre</span>
+            <Link to="/zone">centre</Link>
+              {' > '} <span className="poppins "> create centre</span>
             </span>
           </div>
           <UserProfile />

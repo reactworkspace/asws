@@ -5,6 +5,8 @@ import '../styles/font.css';
 import '../styles/flex.css';
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 // Import user profile components
 import UserProfile from '../components/userprofile';
@@ -274,10 +276,9 @@ const ZoneDetails = () => {
         <div className="zonedetails-heading flex-r-sb">
           <div>
             <span className="poppins-heading">
-              <a href="/zone">zone</a>
-              <span className="poppins ">
-                {'>'} {ZoneData.centreName}
-              </span>
+              <Link to="/zone">centre</Link>
+              {' > '}
+              <span className="poppins ">{ZoneData.centreName}</span>
             </span>
           </div>
           <UserProfile />
@@ -323,34 +324,27 @@ const ZoneDetails = () => {
               <span>centre attendance performace</span>
             </div>
             <div className="attendance-performance-div poppins ">
-        
-                <div className='poppins-w400"'>
-                  <span>student</span>
+              <div className='poppins-w400"'>
+                <span>student</span>
+              </div>
+              <div className="flex-r-sb">
+                <div>
+                  <span className="inter-heading">attendance</span>
                 </div>
-                <div className="flex-r-sb">
-                  <div>
-                    <span className="inter-heading">attendance</span>
-                  </div>
-                  <div className="flex inter-regular p-a-l ">
-                    <span className="circle bg-color-1"></span>
-                    <span>present</span>
-                    <span className="circle bg-color-2"></span>
-                    <span>absent</span>
-                    <span className="circle bg-color-3"></span>
-                    <span>leave</span>
-                  </div>
-                  <div className="filters-btn flex-c">
-                    <FaFilter />
-                    <span>filters</span>
-                  </div>
+                <div className="flex inter-regular p-a-l ">
+                  <span className="circle bg-color-1"></span>
+                  <span>present</span>
+                  <span className="circle bg-color-2"></span>
+                  <span>absent</span>
+                  <span className="circle bg-color-3"></span>
+                  <span>leave</span>
                 </div>
-                <div className="attendance-performance-barchart">
-
-
-            
-
+                <div className="filters-btn flex-c">
+                  <FaFilter />
+                  <span>filters</span>
                 </div>
-          
+              </div>
+              <div className="attendance-performance-barchart"></div>
             </div>
           </div>
 

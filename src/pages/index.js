@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 // styles
 import '../styles/index.css';
-import '../styles/font.css'
-import '../styles/flex.css'
+import '../styles/font.css';
+import '../styles/flex.css';
 
 import Dashboard from './dashboard';
 import Zone from './zone';
@@ -17,6 +17,12 @@ import Setting from './setting';
 import AddStudent from './addstudent';
 import AddTeacher from './addteacher';
 import AddZone from './addzone';
+
+// import ImportStudent from './importstudent';
+// import ImportTeacher from './importteacher';
+// import ImportZone from './importzone';
+
+import { ImportZone, ImportStudent, ImportTeacher } from './import';
 
 import StudentDetails from './studentdetails';
 import TeacherDetails from './teacherdetails';
@@ -37,14 +43,13 @@ import { ReactComponent as SettingIcons } from '../assets/svg/setting.svg';
 // hooks
 import { useState } from 'react';
 
-
-//  import profile 
+//  import profile
 import UserProfilePhoto from '../assets/images/userprofile.png';
 
 const UserProfile = () => {
   return (
     <div id="userprofile">
-      <img src={UserProfilePhoto} alt="UserProfilePhoto"  />
+      <img src={UserProfilePhoto} alt="UserProfilePhoto" />
     </div>
   );
 };
@@ -81,7 +86,9 @@ export const AswsIndex = () => {
           <div>
             <AswsLogo />
           </div>
-          <div><UserProfile /></div>
+          <div>
+            <UserProfile />
+          </div>
         </header>
         <div id="hamburger-menu">
           {isMenuOpen && (
@@ -176,7 +183,6 @@ export const AswsIndex = () => {
             </ul>
           )}
         </div>
-
 
         {/* Body Section */}
         <section id="body-section">
@@ -287,14 +293,33 @@ export const AswsIndex = () => {
                 <Route exact path="/syllabus" element={<Syllabus />} />
                 <Route exact path="/setting" element={<Setting />} />
 
-
                 <Route exact path="/addstudent" element={<AddStudent />} />
                 <Route exact path="/addteacher" element={<AddTeacher />} />
                 <Route exact path="/addzone" element={<AddZone />} />
 
-                <Route exact path="/studentdetails" element={<StudentDetails />} />
-                <Route exact path="/teacherdetails" element={<TeacherDetails />} />
+                <Route
+                  exact
+                  path="/studentdetails"
+                  element={<StudentDetails />}
+                />
+                <Route
+                  exact
+                  path="/teacherdetails"
+                  element={<TeacherDetails />}
+                />
                 <Route exact path="/zonedetails" element={<ZoneDetails />} />
+
+                <Route
+                  exact
+                  path="/importstudent"
+                  element={<ImportStudent />}
+                />
+                <Route
+                  exact
+                  path="/importteacher"
+                  element={<ImportTeacher />}
+                />
+                <Route exact path="/importzone" element={<ImportZone />} />
               </Routes>
             </section>
           </section>

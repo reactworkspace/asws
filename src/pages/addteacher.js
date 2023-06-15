@@ -5,6 +5,7 @@ import '../styles/font.css';
 import '../styles/flex.css';
 
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 // Import user profile components
 import UserProfile from '../components/userprofile';
@@ -16,7 +17,9 @@ const AddTeacher = () => {
         <div className="addteacher-heading flex-r-sb">
           <div>
             <span className="poppins-heading">
-              Teacher <span className="poppins ">{'>'} add teacher</span>
+              <Link to="/teacher">teacher</Link>
+              {' > '}
+              <span className="poppins "> add teacher</span>
             </span>
           </div>
           <UserProfile />

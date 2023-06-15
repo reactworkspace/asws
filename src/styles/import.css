@@ -1,0 +1,50 @@
+
+#import {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  padding: 3rem;
+  height: 100vh;
+}
+.import-heading span span {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+#upload {
+  margin: auto;
+  text-align: center;
+  padding: 2rem 0;
+}
+#upload div {
+  padding: 1rem 0;
+}
+.upload-heading {
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+}
+.upload-card {
+  margin: auto;
+  border: 1px dashed var(--color-muted-test);
+  border-radius: 1.25rem;
+  width: 40.875rem;
+  height: 14.6875rem;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.upload-card span {
+  margin: auto;
+  display: block;
+
+  color: var(--color-muted-test);
+}
+
+.download-template-file span{
+	text-decoration: underline;
+	color: var(--color-green-hyperlink);
+	cursor: pointer;
+}

@@ -8,12 +8,11 @@
   width: 100%;
   height: 100%;
   padding: 3rem;
-  color: var( --color-navbar-background);
+  color: var(--color-navbar-background);
 }
 
-
 /* create button */
-.create-btn-div{
+.create-btn-div {
   position: relative;
   display: inline-block;
 }
@@ -25,14 +24,13 @@
   background-color: var(--color-navbar-background);
   color: var(--color-white);
   cursor: pointer;
-
 }
 
 .create-btn > span {
   padding: 0.3rem;
 }
 
-.create-btn-content{
+.create-btn-content {
   position: absolute;
   top: 0;
   font-weight: 400;
@@ -44,16 +42,13 @@
   border-radius: 1.5rem;
 }
 
-
-.create-btn-content > div{
+.create-btn-content > div {
   cursor: pointer;
 }
-.create-btn-content > div a{
+.create-btn-content > div a {
   color: var(--color-white);
   padding: 1rem 0 0 0;
 }
-
-
 
 /* STUDENTS, TEACHERS, CENTRE CARDS */
 #cards {
@@ -63,7 +58,6 @@
   grid-auto-flow: column;
   gap: 1rem;
   padding: 2rem 0 2rem 0;
-
 }
 
 #cards .stc {
@@ -74,9 +68,7 @@
   margin: auto;
   width: 100%;
   gap: 1.5rem;
- 
-} 
-
+}
 
 .stc .left {
   height: 5rem;
@@ -84,7 +76,6 @@
   background-color: var(--color-background);
   text-align: center;
   border-radius: 100%;
-  
 }
 
 .stc-icons {
@@ -95,7 +86,6 @@
 .stc .right {
   height: 4rem;
   width: 4rem;
-
 }
 
 .right .title {
@@ -137,37 +127,36 @@
   padding: 0 0.5rem 0 0.5rem;
 }
 
-.bg-color-1{
+.bg-color-1 {
   background: var(--color-present);
 }
-.bg-color-2{
+.bg-color-2 {
   background: var(--color-absent);
 }
-.bg-color-3{
+.bg-color-3 {
   background: var(--color-leave);
 }
-.p-a-l > span{
+.p-a-l > span {
   padding: 0 0.5rem 0 0.5rem;
   color: var(--color-muted-test);
 }
 
-.filters-btn{
+.filters-btn {
   width: 7.5rem;
   height: 2.5rem;
   border: 0.1rem solid var(--color-heading);
   border-radius: 1.4rem;
   cursor: pointer;
 }
-.filters-btn span{
+.filters-btn span {
   margin-left: 0.5rem;
   font-size: 1.2rem;
   text-transform: capitalize;
 }
 
-
 /* RECENTLY JOINED STUDENTS */
 
-#recently-joined-students{
+#recently-joined-students {
   width: 100%;
   height: auto;
   padding: 2rem;
@@ -176,29 +165,28 @@
   border-radius: var(--card-border);
 }
 
-#recently-joined-students #studentprofile{
+#recently-joined-students #studentprofile {
   width: 3rem;
   height: 3rem;
   cursor: pointer;
 }
 
-table{
+table {
   padding: 1rem 0 0 0;
   width: 100%;
   text-align: center;
   margin: auto;
   text-transform: capitalize;
 }
-tr{
+tr {
   height: 5rem;
   width: 100%;
 }
-tr:hover{
+tr:hover {
   background-color: var(--color-background);
 }
 
 /* DASHBORD RIGHT ASIDE SECTION */
-
 
 #dashboard-right {
   background-color: var(--color-white);
@@ -209,14 +197,14 @@ tr:hover{
 
 /* User Profile */
 /* 100% rule will only apply to dashboard page */
-#dashboard-right #user-profile-div{
+#dashboard-right #user-profile-div {
   width: 100%;
   height: 100%;
   padding-right: 1rem;
   justify-content: space-around;
 }
 /* display none rule will only apply to dashboard page */
-#dashboard-right .profile-setting{
+#dashboard-right .profile-setting {
   display: none;
 }
 
@@ -226,29 +214,29 @@ tr:hover{
   padding: 2rem 4rem 2rem 0;
 }
 
-.teachers-div{
+.teachers-div {
   padding: 0.5rem 0 0.5rem 0;
   width: 100%;
 }
 
-.teachers-details{
+.teachers-details {
   padding: 0.5rem;
 }
 
-.teachers-profile #teacherprofile{
+.teachers-profile #teacherprofile {
   width: 3rem;
   height: 3rem;
 }
 .teachers-name,
-.teachers-centre{
+.teachers-centre {
   display: block;
   padding: 0 0 0 0.9rem;
 }
-.teachers-name{
+.teachers-name {
   font-weight: 500;
   font-size: 1rem;
 }
-.teachers-centre{
+.teachers-centre {
   font-family: 'Poppins';
   font-weight: 400;
   font-size: 1rem;
@@ -256,13 +244,13 @@ tr:hover{
   color: var(--color-muted-test);
   text-transform: capitalize;
 }
-.line{
+.line {
   width: 100%;
   border: 0.01rem solid var(--color-muted-test);
   padding-right: 2rem;
 }
 
-.view-more-btn{
+.view-more-btn {
   width: 100%;
   height: 3rem;
   margin: 1rem 0 0 0;
@@ -272,18 +260,6 @@ tr:hover{
   border-radius: 2rem;
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Large desktop screens (1440px and above) */
 @media (min-width: 1440px) {
@@ -306,7 +282,7 @@ tr:hover{
     height: 6rem;
     width: 6rem;
   }
-  
+
   .right .title {
     font-weight: 500;
     font-size: 1.5rem;
@@ -316,27 +292,26 @@ tr:hover{
   }
 
   /* Recently Joinned Students  */
-  #recently-joined-students .poppins-sub-heading{
+  #recently-joined-students .poppins-sub-heading {
     font-size: 1.5rem;
   }
-  #recently-joined-students table{
+  #recently-joined-students table {
     font-size: 1.3rem;
   }
 
   /* Recently Joinned Teachers  */
-  .recently-joined-teachers .poppins-sub-heading{
+  .recently-joined-teachers .poppins-sub-heading {
     font-size: 1.4rem;
   }
-  .recently-joined-teachers .poppins-sub-heading-1rem{
+  .recently-joined-teachers .poppins-sub-heading-1rem {
     font-size: 1.2rem;
   }
-  .recently-joined-teachers .teachers-centre{
+  .recently-joined-teachers .teachers-centre {
     font-size: 1.1rem;
   }
-  .teachers-details{
+  .teachers-details {
     padding: 0.6rem;
   }
-  
 }
 
 /* Medium-sized desktop screens (1280px to 1439px) */
@@ -345,9 +320,8 @@ tr:hover{
     display: grid;
     grid-template-columns: 60vw 23vw;
     grid-auto-flow: column;
-
   }
-  
+
   /* Cards */
   .stc .left {
     height: 4rem;
@@ -361,7 +335,7 @@ tr:hover{
     height: 4rem;
     width: 4rem;
   }
-  
+
   .right .title {
     font-weight: 500;
     font-size: 1.2rem;
@@ -371,40 +345,36 @@ tr:hover{
   }
 
   /* Recently Joinned Students  */
-  #recently-joined-students .poppins-sub-heading{
+  #recently-joined-students .poppins-sub-heading {
     font-size: 1.5rem;
   }
-  #recently-joined-students table{
+  #recently-joined-students table {
     font-size: 1rem;
   }
-  
+
   /* Recently Joinned Teachers  */
-  .recently-joined-teachers .poppins-sub-heading{
+  .recently-joined-teachers .poppins-sub-heading {
     font-size: 1rem;
   }
-  .recently-joined-teachers .poppins-sub-heading-1rem{
+  .recently-joined-teachers .poppins-sub-heading-1rem {
     font-size: 1rem;
   }
-  .recently-joined-teachers .teachers-centre{
+  .recently-joined-teachers .teachers-centre {
     font-size: 0.8rem;
   }
-  .teachers-details{
+  .teachers-details {
     padding: 0.5rem;
   }
-  
-
 }
 /* Small desktop screens and tablets (1024px to 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
- 
   #dashboard {
     display: grid;
     grid-template-columns: 61vw 24vw;
     grid-auto-flow: column;
-
   }
-   /* Cards */
-   .stc .left {
+  /* Cards */
+  .stc .left {
     height: 4rem;
     width: 4rem;
   }
@@ -416,7 +386,7 @@ tr:hover{
     height: 4rem;
     width: 4rem;
   }
-  
+
   .right .title {
     font-weight: 500;
     font-size: 1.2rem;
@@ -426,40 +396,36 @@ tr:hover{
   }
 
   /* Recently Joinned Students  */
-  #recently-joined-students .poppins-sub-heading{
+  #recently-joined-students .poppins-sub-heading {
     font-size: 1rem;
   }
-  #recently-joined-students table{
+  #recently-joined-students table {
     font-size: 0.8rem;
   }
-  
+
   /* Recently Joinned Teachers  */
-  .recently-joined-teachers .poppins-sub-heading{
+  .recently-joined-teachers .poppins-sub-heading {
     font-size: 0.9rem;
   }
-  .recently-joined-teachers .poppins-sub-heading-1rem{
+  .recently-joined-teachers .poppins-sub-heading-1rem {
     font-size: 0.8rem;
   }
-  .recently-joined-teachers .teachers-centre{
+  .recently-joined-teachers .teachers-centre {
     font-size: 0.6rem;
   }
-  .teachers-details{
+  .teachers-details {
     padding: 0.5rem;
   }
-  
-
 }
-
 
 /* Tablets (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
- 
   #dashboard {
     display: grid;
     grid-template-columns: 100%;
     grid-auto-flow: column;
   }
-  #dashboard-right{
+  #dashboard-right {
     display: none;
   }
   #cards {
@@ -468,8 +434,6 @@ tr:hover{
     grid-template-rows: 100%;
     grid-auto-flow: column;
   }
-
-
 }
 
 /* Mobile devices in landscape orientation (480px to 767px) */
@@ -478,9 +442,8 @@ tr:hover{
     display: grid;
     grid-template-columns: 100%;
     grid-auto-flow: row;
-
   }
-  #dashboard-right{
+  #dashboard-right {
     display: none;
   }
   #cards {
@@ -489,32 +452,25 @@ tr:hover{
     grid-template-rows: repeat(3, 1fr);
     grid-auto-flow: column;
   }
-  #recently-joined-students table{
+  #recently-joined-students table {
     font-size: 0.6rem;
   }
 }
 
 /* Mobile devices in portrait orientation (320px to 479px) */
 @media (min-width: 320px) and (max-width: 479px) {
-
   #dashboard {
     display: grid;
     grid-template-columns: 100%;
     grid-auto-flow: column;
-
   }
-  #dashboard-right{
+  #dashboard-right {
     display: none;
   }
   #cards {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(3, 1fr);
-    grid-auto-flow: column;
+    grid-auto-flow: row;
   }
-  #recently-joined-students table{
-    font-size: 0.4rem;
-  }
-
-
 }

@@ -7,7 +7,6 @@ import '../styles/flex.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
 // Import user profile components
 import UserProfile from '../components/userprofile';
 
@@ -98,7 +97,7 @@ const Zone = () => {
         <div className="zone-heading flex-r-sb">
           <div>
             <span className="poppins-heading">
-              zone <span className="poppins"> {'>'} Centre</span>
+              zone <span className="poppins"> {'>'} Centres</span>
             </span>
           </div>
           <UserProfile />
