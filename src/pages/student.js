@@ -68,8 +68,8 @@ const NewStudentButton = () => {
             <BsCaretUpFill />
           </div>
           <div className="flex-col">
-            <a href="/addstudent">add student</a>
-            <a href="/importstudent">import student</a>
+            <Link to="/addstudent">add student</Link>
+            <Link to="/importstudent">import student</Link>
           </div>
         </div>
       )}
