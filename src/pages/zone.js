@@ -5,6 +5,8 @@ import '../styles/font.css';
 import '../styles/flex.css';
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 // Import user profile components
 import UserProfile from '../components/userprofile';
@@ -49,8 +51,8 @@ const NewCentreButton = () => {
             <BsCaretUpFill />
           </div>
           <div className="flex-col">
-            <a href="/addzone">add centre</a>
-            <a href="/importzone">import centre</a>
+            <Link to="/addzone">add centre</Link>
+            <Link to="/importzone">import centre</Link>
           </div>
         </div>
       )}

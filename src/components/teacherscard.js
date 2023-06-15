@@ -1,5 +1,6 @@
 
-
+import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 
 //  import profile
@@ -27,9 +28,9 @@ const TeacherCard = () => {
 		  />
 		</div>
 		<div className="teacher-card-name poppins">
-		  <a href="/teacherdetails">
+		  <Link to="/teacherdetails">
 			<span>{teacherData.teacherName}</span>
-		  </a>
+		  </Link>
 		</div>
 		<div className="teacher-card-zone">
 		  <span>{teacherData.centreName}</span>

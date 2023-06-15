@@ -5,6 +5,8 @@ import '../styles/font.css';
 import '../styles/flex.css';
 
 import * as React from 'react';
+import { Link } from 'react-router-dom';
+
 import { useState } from 'react';
 
 // Import user profile components
@@ -55,8 +57,8 @@ const NewCentreButton = () => {
             <BsCaretUpFill />
           </div>
           <div className="flex-col">
-            <a href="/addteacher">add teacher</a>
-            <a href="/importteacher">import teacher</a>
+            <Link to="/addteacher">add teacher</Link>
+            <Link to="/importteacher">import teacher</Link>
           </div>
         </div>
       )}

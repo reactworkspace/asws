@@ -8,6 +8,8 @@ import '../styles/studentprofile.css';
 import '../styles/teacherprofile.css';
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 // Import user profile components
 import UserProfile from '../components/userprofile';
@@ -52,9 +54,9 @@ const CreateBtn = () => {
              <BsCaretUpFill />
           </div>
           <div className='flex-col'>
-            <a href='/addstudent'>student</a>
-            <a href='/addteacher'>teacher</a>
-            <a href='/addzone'>zone</a>
+            <Link to='/addstudent'>student</Link>
+            <Link to='/addteacher'>teacher</Link>
+            <Link to='/addzone'>zone</Link>
           </div>
         </div>
       )}
