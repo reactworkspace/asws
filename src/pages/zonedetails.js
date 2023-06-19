@@ -7,7 +7,6 @@ import '../styles/flex.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
 // Import user profile components
 import UserProfile from '../components/userprofile';
 
@@ -30,6 +29,16 @@ import { ReactComponent as ThreeDotsIcons } from '../assets/svg/threedots.svg';
 // import student data
 import studentData from '../data/studentdata';
 import teacherData from '../data/teacherdata';
+
+// import recharts
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+} from 'recharts';
 
 const CentreInformationData = () => {
   return (
@@ -263,6 +272,85 @@ const TeacherContent = () => {
   );
 };
 
+const CentreAttendancePerformanceData = [
+  {
+    week: 'week 1',
+    present: 40,
+    absent: 10,
+    leave: 20,
+  },
+  {
+    week: 'week 2',
+    present: 25,
+    absent: 10,
+    leave: 15,
+  },
+  {
+    week: 'week 3',
+    present: 50,
+    absent: 30,
+    leave: 40,
+  },
+  {
+    week: 'week 4',
+    present: 40,
+    absent: 30,
+    leave: 20,
+  },
+  {
+    week: 'week 5',
+    present: 40,
+    absent: 30,
+    leave: 20,
+  },
+  {
+    week: 'week 6',
+    present: 40,
+    absent: 30,
+    leave: 20,
+  },
+  {
+    week: 'week 7',
+    present: 40,
+    absent: 30,
+    leave: 20,
+  },
+];
+
+const CentreAttendancePerformance = () => {
+  return (
+    <ResponsiveContainer width="100%" height="100%" aspect={3}>
+      <BarChart
+        data={CentreAttendancePerformanceData}
+        barGap={10}
+        barCategoryGap="20%"
+      >
+        <XAxis dataKey="week" />
+        <YAxis />
+        <Tooltip />
+        <Bar
+          dataKey="present"
+          fill="#4cbc9a"
+          barSize={25}
+          radius={[10, 10, 10, 10]}
+        />
+        <Bar
+          dataKey="absent"
+          fill="#F95A77"
+          barSize={25}
+          radius={[10, 10, 10, 10]}
+        />
+        <Bar
+          dataKey="leave"
+          fill="#F4BE37"
+          barSize={25}
+          radius={[10, 10, 10, 10]}
+        />
+      </BarChart>
+    </ResponsiveContainer>
+  );
+};
+
 const ZoneDetails = () => {
   const [displayContent, setDisplayContent] = useState('student');
 
@@ -344,7 +432,9 @@ const ZoneDetails = () => {
                   <span>filters</span>
                 </div>
               </div>
-              <div className="attendance-performance-barchart"></div>
+              <div className="attendance-performance-barchart">
+                <CentreAttendancePerformance />
+              </div>
             </div>
           </div>
 

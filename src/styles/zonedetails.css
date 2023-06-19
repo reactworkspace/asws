@@ -126,7 +126,9 @@
   padding: 2rem;
 }
 
-/*  */
+.attendance-performance-barchart {
+  padding: 2rem 2rem 0 0;
+}
 
 /* Overall Users  */
 #overall-users {

@@ -5,7 +5,7 @@ import '../styles/detailscard.css';
 import '../styles/font.css';
 import '../styles/flex.css';
 
-import * as React from 'react';
+
 import { Link } from 'react-router-dom';
 
 // Import user profile components
@@ -22,6 +22,8 @@ import { ReactComponent as CAPabsent } from '../assets/svg/cap-absent.svg';
 
 // Import icons using react icons
 import { BsThreeDotsVertical, BsPerson } from 'react-icons/bs';
+
+// Import rechart
 
 const StudentDetailsCardData = () => {
   return (
@@ -334,6 +336,7 @@ const StudentDetailsCardData = () => {
   );
 };
 
+
 const StudentDetails = () => {
   return (
     <section id="studentdetails">
@@ -391,15 +394,16 @@ const StudentDetails = () => {
               <span>current attendance performance</span>
             </div>
             <div className="current-attendance-performance-card">
-              <div className="current-attendance-performance-chart"></div>
+              <div className="current-attendance-performance-chart">
+              </div>
 
               <div className="cap-pla flex-r-sa">
                 <div className="current-attendance-performance-present">
                   <div className="cap-present-icon">
                     <CAPpresent />
                   </div>
-                  <div className='cap-present-title'>
-                    <span >70% present</span>
+                  <div className="cap-present-title">
+                    <span>70% present</span>
                   </div>
                 </div>
 
@@ -407,7 +411,7 @@ const StudentDetails = () => {
                   <div className="cap-leave-icon">
                     <CAPleave />
                   </div>
-                  <div className='cap-leave-title'>
+                  <div className="cap-leave-title">
                     <span>10% leave</span>
                   </div>
                 </div>
@@ -416,7 +420,7 @@ const StudentDetails = () => {
                   <div className="cap-absent-icon">
                     <CAPabsent />
                   </div>
-                  <div className='cap-absent-title'>
+                  <div className="cap-absent-title">
                     <span>20% absent</span>
                   </div>
                 </div>
@@ -425,6 +429,7 @@ const StudentDetails = () => {
           </div>
         </div>
       </div>
+    
     </section>
   );
 };

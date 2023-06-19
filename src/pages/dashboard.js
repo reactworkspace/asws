@@ -26,12 +26,22 @@ import { TiPlus } from 'react-icons/ti';
 import { BsCaretUpFill } from 'react-icons/bs';
 // import {  AiOutlineBell } from 'react-icons/ai';
 
-
 import StudentProfilePhoto from '../assets/images/studentprofile.png';
 import TeacherProfilePhoto from '../assets/images/teacherprofile.png';
 
 // import student data from data folder
-import studentData from '../data/studentdata'
+import studentData from '../data/studentdata';
+
+// import recharts 
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+} from "recharts";
+
 
 const CreateBtn = () => {
   const [showContent, setShowContent] = useState(false);
@@ -41,37 +51,27 @@ const CreateBtn = () => {
   };
 
   return (
-    <div className='create-btn-div'>
-      <button className='create-btn Montserrat flex-c' onClick={toggleContent}>
+    <div className="create-btn-div">
+      <button className="create-btn Montserrat flex-c" onClick={toggleContent}>
         <TiPlus />
         <span>create</span>
       </button>
       {showContent && (
-        <div className='create-btn-content Montserrat'
-        >
-          <div className='flex-r-sb'  onClick={toggleContent}>
+        <div className="create-btn-content Montserrat">
+          <div className="flex-r-sb" onClick={toggleContent}>
             <span>Select</span>
-             <BsCaretUpFill />
+            <BsCaretUpFill />
           </div>
-          <div className='flex-col'>
-            <Link to='/addstudent'>student</Link>
-            <Link to='/addteacher'>teacher</Link>
-            <Link to='/addzone'>zone</Link>
+          <div className="flex-col">
+            <Link to="/addstudent">student</Link>
+            <Link to="/addteacher">teacher</Link>
+            <Link to="/addzone">zone</Link>
           </div>
         </div>
       )}
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
 
 const StudentProfile = () => {
   return (
@@ -108,9 +108,65 @@ const StudentTrData = () => {
 };
 
 
+const DashboardAttendanceArray = [
+  {
+    week: "week 1",
+    present: 40,
+    absent: 10,
+    leave: 20,
+  },
+  {
+    week: "week 2",
+    present: 25,
+    absent: 10,
+    leave: 15,
+  },
+  {
+    week: "week 3",
+    present: 50,
+    absent: 30,
+    leave: 40,
+  },
+  {
+    week: "week 4",
+    present: 40,
+    absent: 30,
+    leave: 20,
+  },
+  {
+    week: "week 5",
+    present: 40,
+    absent: 30,
+    leave: 20,
+  },
+  {
+    week: "week 6",
+    present: 40,
+    absent: 30,
+    leave: 20,
+  },
+  {
+    week: "week 7",
+    present: 40,
+    absent: 30,
+    leave: 20,
+  },
+];
 
-
-
+const AttendanceBarChart = () => {
+  return (
+    <ResponsiveContainer width="100%" height="100%" aspect={3}>
+        <BarChart data={DashboardAttendanceArray}  barGap={10} barCategoryGap="20%">
+          <XAxis dataKey="week" />
+          <YAxis />
+          <Tooltip />
+          <Bar dataKey="present" fill='#4cbc9a' barSize={25} radius={[10, 10, 10, 10]} />
+          <Bar dataKey="absent" fill='#F95A77' barSize={25} radius={[10, 10, 10, 10]}/>
+          <Bar dataKey="leave"  fill='#F4BE37' barSize={25} radius={[10, 10, 10, 10]}/>
+        </BarChart>
+      </ResponsiveContainer>
+  );
+}
 
 
 
@@ -131,7 +187,6 @@ const Dashboard = () => {
             <span className="poppins-heading">dashboard</span>
           </div>
           <CreateBtn />
-    
         </div>
         {/* CARDS SECTION */}
         <div id="cards">
@@ -182,7 +237,9 @@ const Dashboard = () => {
               <span>filters</span>
             </div>
           </div>
-          <div className="attendance-barchart"></div>
+          <div className="attendance-barchart">
+            <AttendanceBarChart />
+          </div>
         </div>
 
         <div id="recently-joined-students">
