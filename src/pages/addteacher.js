@@ -143,68 +143,137 @@ const AddTeacher = () => {
           </div>
 
           {/* education */}
-          <div className="education-details-div"></div>
-          <div className="education-details">
-            <div className="education-details-heading poppins">
-              <span>education</span>
-            </div>
-            <div id="education-details-grid">
-              <div>
-                <label className="teacher-education-form-label" htmlFor="">
-                  university *
-                </label>
-                <input
-                  type="text"
-                  className="teacher-education-form-input poppins"
-                  id="teacher-education-details-input"
-                  placeholder="Osmania University"
-                  required
-                />
+          <div className="education-details-div">
+            <div className="education-details">
+              <div className="education-details-heading poppins">
+                <span>education</span>
               </div>
-              <div>
-                <label className="teacher-education-form-label" htmlFor="">
-                  degree *
-                </label>
-                <input
-                  type="text"
-                  className="teacher-education-form-input poppins"
-                  id="teacher-education-details-input"
-                  placeholder="History Major"
-                  required
-                />
-              </div>
-              <div>
-                <label className="teacher-education-form-label" htmlFor="">
-                  start & end data *
-                </label>
-                <div id="start-end-date-id">
+              <div id="education-details-grid">
+                <div>
+                  <label className="teacher-education-form-label" htmlFor="">
+                    university *
+                  </label>
                   <input
                     type="text"
                     className="teacher-education-form-input poppins"
                     id="teacher-education-details-input"
-                    placeholder="September 2013"
+                    placeholder="Osmania University"
                     required
                   />
+                </div>
+                <div>
+                  <label className="teacher-education-form-label" htmlFor="">
+                    degree *
+                  </label>
                   <input
                     type="text"
                     className="teacher-education-form-input poppins"
                     id="teacher-education-details-input"
-                    placeholder="September 2017"
+                    placeholder="History Major"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="teacher-education-form-label" htmlFor="">
+                    start & end data *
+                  </label>
+                  <div id="start-end-date-id">
+                    <input
+                      type="text"
+                      className="teacher-education-form-input poppins"
+                      id="teacher-education-details-input"
+                      placeholder="September 2013"
+                      required
+                    />
+                    <input
+                      type="text"
+                      className="teacher-education-form-input poppins"
+                      id="teacher-education-details-input"
+                      placeholder="September 2017"
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="teacher-education-form-label" htmlFor="">
+                    city *
+                  </label>
+                  <input
+                    type="text"
+                    className="teacher-education-form-input poppins"
+                    id="teacher-education-details-input"
+                    placeholder="Hyderabad"
                     required
                   />
                 </div>
               </div>
-              <div>
-                <label className="teacher-education-form-label" htmlFor="">
-                  city *
-                </label>
-                <input
-                  type="text"
-                  className="teacher-education-form-input poppins"
-                  id="teacher-education-details-input"
-                  placeholder="Hyderabad"
-                  required
-                />
+            </div>
+          </div>
+
+          {/* experience */}
+          <div className="experience-details-div">
+            <div className="experience-details">
+              <div className="experience-details-heading poppins">
+                <span>experience</span>
+              </div>
+              <div id="experience-details-grid">
+                <div>
+                  <label className="teacher-experience-form-label" htmlFor="">
+                    orgnisation *
+                  </label>
+                  <input
+                    type="text"
+                    className="teacher-experience-form-input poppins"
+                    id="teacher-experience-details-input"
+                    placeholder="Osmania University"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="teacher-experience-form-label" htmlFor="">
+                    designation *
+                  </label>
+                  <input
+                    type="text"
+                    className="teacher-experience-form-input poppins"
+                    id="teacher-experience-details-input"
+                    placeholder="Teacher"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="teacher-experience-form-label" htmlFor="">
+                    start & end data *
+                  </label>
+                  <div id="start-end-date-id">
+                    <input
+                      type="text"
+                      className="teacher-experience-form-input poppins"
+                      id="teacher-experience-details-input"
+                      placeholder="September 2013"
+                      required
+                    />
+                    <input
+                      type="text"
+                      className="teacher-experience-form-input poppins"
+                      id="teacher-experience-details-input"
+                      placeholder="September 2017"
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="teacher-experience-form-label" htmlFor="">
+                    city *
+                  </label>
+                  <input
+                    type="text"
+                    className="teacher-experience-form-input poppins"
+                    id="teacher-experience-details-input"
+                    placeholder="Hyderabad"
+                    required
+                  />
+                </div>
               </div>
             </div>
           </div>

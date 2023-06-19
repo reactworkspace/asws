@@ -11,7 +11,7 @@
 }
 
 #addstudent Link{
-  color: var(--color-heading);
+  color: var(--color-text);
 }
 /* student Details */
 
@@ -33,7 +33,7 @@
   color: var(--color-white);
   border-top-left-radius: 1.25rem;
   border-top-right-radius: 1.25rem;
-  background-color: var(--color-navbar-background);
+  background-color: var(--color-purple);
 
   font-family: 'Poppins';
   font-style: normal;
@@ -77,7 +77,7 @@
 .student-photo-box span {
   font-size: 0.8rem;
   line-height: 0.3rem;
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
   font-weight: 400;
 }
 
@@ -105,7 +105,7 @@
   font-size: 1.2rem;
   line-height: 2rem;
   text-transform: capitalize;
-  color: var(--color-heading);
+  color: var(--color-text);
 }
 
 .student-form-input,
@@ -118,7 +118,7 @@
   background-color: var(--color-white);
   border: 0.0625rem solid #c1bbeb;
   font-size: 1rem;
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
   text-transform: capitalize;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -163,7 +163,7 @@
 
 .sibling-radio-container .flex div > label {
   padding-left: 1rem;
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
   text-transform: capitalize;
 }
 
@@ -189,7 +189,7 @@ input[type='radio'] {
   width: 10rem;
   height: 3rem;
 
-  background: var(--color-navbar-background);
+  background: var(--color-purple);
   border-radius: 0.5rem;
   color: var(--color-white);
 
@@ -227,7 +227,7 @@ input[type='radio'] {
 
 .parental-status .flex div > label {
   padding-left: 1rem;
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
   text-transform: capitalize;
   font-size: 1rem;
 }
@@ -269,7 +269,7 @@ input[type='radio'] {
   font-size: 1.2rem;
   line-height: 2rem;
   text-transform: capitalize;
-  color: var(--color-heading);
+  color: var(--color-text);
 }
 
 .father-form-input,
@@ -283,7 +283,7 @@ input[type='radio'] {
   background-color: var(--color-white);
   border: 0.0625rem solid #c1bbeb;
   font-size: 1rem;
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
   text-transform: capitalize;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -307,7 +307,7 @@ input[type='radio'] {
   width: 7rem;
   height: 3.75rem;
 
-  background: var(--color-navbar-background);
+  background: var(--color-purple);
   border-radius: 2.5rem;
   cursor: pointer;
 }

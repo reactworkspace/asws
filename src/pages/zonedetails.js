@@ -34,7 +34,7 @@ import teacherData from '../data/teacherdata';
 const CentreInformationData = () => {
   return (
     <div id="centre-info-card">
-      <div className="centre-field flex-col">
+      <div className="details-field flex-col">
         <div className="label-heading poppins">
           <span>head teacher</span>
         </div>
@@ -47,7 +47,7 @@ const CentreInformationData = () => {
           </div>
         </div>
       </div>
-      <div className="centre-field flex-col">
+      <div className="details-field flex-col">
         <div className="label-heading poppins">
           <span>zone coordinator</span>
         </div>
@@ -60,7 +60,7 @@ const CentreInformationData = () => {
           </div>
         </div>
       </div>
-      <div className="centre-field flex-col">
+      <div className="details-field flex-col">
         <div className="label-heading poppins">
           <span>waqf border no.</span>
         </div>
@@ -73,7 +73,7 @@ const CentreInformationData = () => {
           </div>
         </div>
       </div>
-      <div className="centre-field flex-col">
+      <div className="details-field flex-col">
         <div className="label-heading poppins">
           <span>head teacher no</span>
         </div>
@@ -86,7 +86,7 @@ const CentreInformationData = () => {
           </div>
         </div>
       </div>
-      <div className="centre-field flex-col">
+      <div className="details-field flex-col">
         <div className="label-heading poppins">
           <span>zone coordinator no</span>
         </div>
@@ -99,7 +99,7 @@ const CentreInformationData = () => {
           </div>
         </div>
       </div>
-      <div className="centre-field flex-col">
+      <div className="details-field flex-col">
         <div className="label-heading poppins">
           <span>masjid head name</span>
         </div>
@@ -112,7 +112,7 @@ const CentreInformationData = () => {
           </div>
         </div>
       </div>
-      <div className="centre-field flex-col">
+      <div className="details-field flex-col">
         <div className="label-heading poppins">
           <span>masjid head no.</span>
         </div>
@@ -125,7 +125,7 @@ const CentreInformationData = () => {
           </div>
         </div>
       </div>
-      <div className="centre-field flex-col">
+      <div className="details-field flex-col">
         <div className="label-heading poppins">
           <span>email address</span>
         </div>
@@ -138,7 +138,7 @@ const CentreInformationData = () => {
           </div>
         </div>
       </div>
-      <div className="centre-field flex-col">
+      <div className="details-field flex-col">
         <div className="label-heading poppins">
           <span>address</span>
         </div>

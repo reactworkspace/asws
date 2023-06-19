@@ -1,23 +1,44 @@
 /* ROOT SECTION OF CSS VARIABLE DECLARATION */
 :root {
-  /* COLOR */
-  --color-background: #f3f4ff;
+  /* Theme Color */
+  --color-purple: #4d44b5;
+  --color-orange: #fb7d5b;
+  --color-yellow: #fcc43e;
+  --color-text: #303972;
+  --color-green: #4cbc9a;
 
-  --color-navbar-background: #4d44b5;
-  --color-navbar-font: #c1bbeb;
-
-  --color-heading: #303972;
-  --color-muted-test: #a098ae;
+  /* white Color */
   --color-white: #ffffff;
+  --color-grey-0: #f3f4ff;
+  --color-grey-1: #f5f5f5;
+  --color-grey-2: #c1bbeb;
+  --color-grey-3: #a098ae;
 
-  --color-present: #39b29a;
-  --color-absent: #f95a77;
-  --color-leave: #f4be37;
-
-  --color-font-link: #fb7d5b;
-
+  /* extras */
   --color-green-hyperlink: #6418c3;
-  --card-border: 0.6rem;
+  --color-font-link: red;
+
+  /* black Color */
+  --color-black: #232222;
+
+  /* Transparent Color */
+  --color-purple-10: rgba(77, 68, 181, 0.1);
+
+  /* Gradient Color */
+  --linear-1: linear-gradient(
+    180deg,
+    #fb7d5b -242.86%,
+    rgba(251, 125, 91, 0) 100%
+  );
+  --linear-2: linear-gradient(
+    180deg,
+    #fcc43e -241.95%,
+    rgba(252, 196, 62, 0) 100%
+  );
+  --linear-3: linear-gradient(178.76deg, #4d44b5 -47.98%, #303972 163.51%);
+
+  /* Border */
+  --card-border: 1.5rem;
 }
 
 * {
@@ -40,7 +61,7 @@ body {
   height: 100%;
   font-family: poppins, sans-serif;
   font-size: 0.88rem;
-  background: var(--color-background);
+  background: var(--color-grey-0);
   user-select: none;
   overflow-x: hidden;
 }
@@ -53,7 +74,7 @@ body {
 }
 
 nav {
-  background-color: var(--color-navbar-background);
+  background-color: var(--color-purple);
   height: 100%;
   width: 100%;
 }
@@ -82,7 +103,7 @@ ul {
 }
 li a {
   text-decoration: none;
-  color: var(--color-background);
+  color: var(--color-grey-0);
   outline: none;
 }
 li .nav-icons {
@@ -99,15 +120,15 @@ li .nav-icons {
 
 .list-button.active {
   font-weight: 600;
-  color: var(--color-navbar-background);
-  background-color: var(--color-background);
+  color: var(--color-purple);
+  background-color: var(--color-white);
   border-radius: 40px 0px 0px 40px;
 }
 
 .list-button:hover {
   font-weight: 600;
-  color: var(--color-navbar-background);
-  background-color: var(--color-background);
+  color: var(--color-purple);
+  background-color: var(--color-white);
   border-radius: 40px 0px 0px 40px;
 }
 .list-button span {
@@ -117,7 +138,7 @@ li .nav-icons {
 /* hamburger-menu styling */
 
 #hamburger-menu {
-  background-color: var(--color-navbar-background);
+  background-color: var(--color-purple);
   margin-top: -1.4rem;
 }
 
@@ -250,7 +271,7 @@ li .nav-icons {
     grid-template-rows: 90px;
     grid-gap: 5px;
     align-items: center;
-    background-color: var(--color-navbar-background);
+    background-color: var(--color-purple);
     margin-bottom: 1rem;
     width: 100%;
     height: 100%;
@@ -286,7 +307,7 @@ li .nav-icons {
     grid-template-rows: 90px;
     grid-gap: 5px;
     align-items: center;
-    background-color: var(--color-navbar-background);
+    background-color: var(--color-purple);
     margin-bottom: 1.4rem;
     width: 100%;
     height: 100%;
@@ -322,7 +343,7 @@ li .nav-icons {
     grid-template-rows: 90px;
     grid-gap: 0;
     align-items: center;
-    background-color: var(--color-navbar-background);
+    background-color: var(--color-purple);
     margin-bottom: 1.4rem;
     width: 100%;
     height: 100%;

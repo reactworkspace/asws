@@ -40,6 +40,14 @@
 
 }
 
+.flex-col-end{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+}
+
 .flex-wrap{
   display: flex;
   flex-direction: row;
@@ -47,3 +55,4 @@
   align-items: center;
   justify-content: centre;
 }
+

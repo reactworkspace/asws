@@ -11,11 +11,13 @@
 }
 
 .personal-details-div,
-.education-details-div {
+.education-details-div,
+.experience-details-div {
   padding-top: 2rem;
 }
 .personal-details,
-.education-details {
+.education-details,
+.experience-details {
   width: 100%;
   height: auto;
   border-radius: 1.25rem;
@@ -23,13 +25,14 @@
 }
 
 .personal-details-heading,
-.education-details-heading {
+.education-details-heading,
+.experience-details-heading {
   width: 100%;
   height: 3.75rem;
   color: var(--color-white);
   border-top-left-radius: 1.25rem;
   border-top-right-radius: 1.25rem;
-  background-color: var(--color-navbar-background);
+  background-color: var(--color-purple);
 
   font-family: 'Poppins';
   font-style: normal;
@@ -44,7 +47,8 @@
 }
 
 #personal-details-grid,
-#education-details-grid {
+#education-details-grid,
+#experience-details-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
@@ -53,16 +57,18 @@
 }
 
 .teacher-personal-form-label,
-.teacher-education-form-label {
+.teacher-education-form-label,
+.teacher-experience-form-label {
   font-weight: 600;
   font-size: 1.2rem;
   line-height: 2rem;
   text-transform: capitalize;
-  color: var(--color-heading);
+  color: var(--color-text);
 }
 
 .teacher-personal-form-input,
-.teacher-education-form-input {
+.teacher-education-form-input,
+.teacher-experience-form-input {
   height: 3rem;
   width: 100%;
   left: 0rem;
@@ -71,7 +77,7 @@
   background-color: var(--color-white);
   border: 0.0625rem solid #c1bbeb;
   font-size: 1rem;
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
   text-transform: capitalize;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -85,6 +91,7 @@
   gap: 1rem;
 }
 
+/* teacher add & photo */
 .teacher-personal-form-address {
   height: 10.9rem;
 }
@@ -106,7 +113,7 @@
 .teacher-photo-box span {
   font-size: 0.8rem;
   line-height: 1rem;
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
   font-weight: 400;
 }
 
@@ -128,7 +135,7 @@
   width: 7rem;
   height: 3.75rem;
 
-  background: var(--color-navbar-background);
+  background: var(--color-purple);
   border-radius: 2.5rem;
   cursor: pointer;
 }

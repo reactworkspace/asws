@@ -8,7 +8,7 @@
   width: 100%;
   height: 100%;
   padding: 3rem;
-  color: var(--color-navbar-background);
+  color: var(--color-purple);
 }
 
 /* create button */
@@ -21,7 +21,7 @@
   height: 3.7rem;
   width: 10.1rem;
   border-radius: 2.5rem;
-  background-color: var(--color-navbar-background);
+  background-color: var(--color-purple);
   color: var(--color-white);
   cursor: pointer;
 }
@@ -36,7 +36,7 @@
   font-weight: 400;
   padding: 1rem 1.5rem 1rem 1.5rem;
   color: var(--color-white);
-  background-color: var(--color-navbar-background);
+  background-color: var(--color-purple);
   z-index: 1;
   width: 10.1rem;
   border-radius: 1.5rem;
@@ -73,7 +73,7 @@
 .stc .left {
   height: 5rem;
   width: 5rem;
-  background-color: var(--color-background);
+  background-color: var(--color-grey-0);
   text-align: center;
   border-radius: 100%;
 }
@@ -90,7 +90,7 @@
 
 .right .title {
   display: block;
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -98,7 +98,7 @@
   text-transform: capitalize;
 }
 .right .total {
-  color: var(--color-heading);
+  color: var(--color-text);
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
@@ -111,7 +111,7 @@
   background-color: var(--color-white);
   width: 100%;
   height: auto;
-  color: var(--color-heading);
+  color: var(--color-text);
   border-radius: var(--card-border);
   padding: 2rem;
 }
@@ -123,29 +123,29 @@
   position: relative;
   width: 0.8rem;
   height: 0.8rem;
-  border-radius: 10px;
-  padding: 0 0.5rem 0 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0 0.7rem;
 }
 
 .bg-color-1 {
-  background: var(--color-present);
+  background: var(--color-green);
 }
 .bg-color-2 {
-  background: var(--color-absent);
+  background: var(--color-orange);
 }
 .bg-color-3 {
-  background: var(--color-leave);
+  background: var(--color-yellow);
 }
 .p-a-l > span {
   padding: 0 0.5rem 0 0.5rem;
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
 }
 
 .filters-btn {
   width: 7.5rem;
   height: 2.5rem;
-  border: 0.1rem solid var(--color-heading);
-  border-radius: 1.4rem;
+  border: 0.1rem solid var(--color-text);
+  border-radius: 1.5rem;
   cursor: pointer;
 }
 .filters-btn span {
@@ -183,7 +183,7 @@ tr {
   width: 100%;
 }
 tr:hover {
-  background-color: var(--color-background);
+  background-color: var(--color-grey-0);
 }
 
 /* DASHBORD RIGHT ASIDE SECTION */
@@ -241,12 +241,12 @@ tr:hover {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
   text-transform: capitalize;
 }
 .line {
   width: 100%;
-  border: 0.01rem solid var(--color-muted-test);
+  border: 0.01rem solid var(--color-grey-3);
   padding-right: 2rem;
 }
 
@@ -255,7 +255,7 @@ tr:hover {
   height: 3rem;
   margin: 1rem 0 0 0;
   padding: 1rem;
-  background-color: var(--color-background);
+  background-color: var(--color-grey-0);
   font-size: 1rem;
   border-radius: 2rem;
   cursor: pointer;

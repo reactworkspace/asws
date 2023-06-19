@@ -41,7 +41,7 @@
   left: 1.5rem;
   width: 2rem;
   height: 2rem;
-  color: var(--color-heading);
+  color: var(--color-text);
 }
 
 /* new teacher button */
@@ -55,7 +55,7 @@
   width: 15rem;
 
   border-radius: 2.5rem;
-  background-color: var(--color-navbar-background);
+  background-color: var(--color-purple);
   color: var(--color-white);
   cursor: pointer;
   position: relative;
@@ -72,7 +72,7 @@
   font-weight: 400;
   padding: 1rem 1.5rem 1rem 1.5rem;
   color: var(--color-white);
-  background-color: var(--color-navbar-background);
+  background-color: var(--color-purple);
   z-index: 1;
   width: 10.1rem;
   border-radius: 1.5rem;
@@ -100,7 +100,7 @@
 #teacher-card {
   width: 19.5rem;
   height: 22rem;
-  border-radius: 1.2rem;
+  border-radius: var(--card-border);
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
@@ -120,7 +120,7 @@
   font-weight: 700;
   font-size: 1.5;
   cursor: pointer;
-  color: var(--color-heading) !important;
+  color: var(--color-text) !important;
 }
 
 .teacher-card-zone {
@@ -128,7 +128,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
   text-transform: capitalize;
 }
 .teacher-card-contact {
@@ -139,7 +139,7 @@
 .teacher-circle {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: var(--color-navbar-background);
+  background-color: var(--color-purple);
   border-radius: 50%;
   display: flex;
   flex-direction: row;

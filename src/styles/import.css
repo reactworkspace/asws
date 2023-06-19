@@ -25,7 +25,7 @@
   line-height: 3.375rem;
 }
 .upload-card {
-  border: 1px dashed var(--color-muted-test);
+  border: 1px dashed var(--color-grey-3);
   border-radius: 1.25rem;
   width: 40%;
   height: 14.6875rem;
@@ -39,7 +39,7 @@
   margin: auto;
   display: block;
 
-  color: var(--color-muted-test);
+  color: var(--color-grey-3);
 }
 
 .download-template-file span {
