@@ -26,7 +26,7 @@
 }
 .upload-card {
   border: 1px dashed var(--color-grey-3);
-  border-radius: 1.25rem;
+  border-radius: var(--card-border);
   width: 40%;
   height: 14.6875rem;
   background-color: var(--color-white);
