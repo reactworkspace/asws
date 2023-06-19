@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/asws/static/css/main.c6503eae.css",
-    "main.js": "/asws/static/js/main.71cfba62.js",
+    "main.css": "/asws/static/css/main.dbb10947.css",
+    "main.js": "/asws/static/js/main.d2fe7345.js",
     "static/media/teacherprofile.png": "/asws/static/media/teacherprofile.6ddce6bd411c1699d32d.png",
     "static/media/centrephoto.png": "/asws/static/media/centrephoto.84113396ad7afe73d336.png",
     "static/media/userprofile.png": "/asws/static/media/userprofile.2ae106a362a3cc556cbe.png",
@@ -26,11 +26,11 @@
     "static/media/cap-absent.svg": "/asws/static/media/cap-absent.594940ac52b15ecf9748692db9c81cb8.svg",
     "static/media/cap-leave.svg": "/asws/static/media/cap-leave.a03ecfcf8144af1720df60d436f02863.svg",
     "static/media/cap-present.svg": "/asws/static/media/cap-present.3058778aa3307cf22761a0ef0da1b761.svg",
-    "main.c6503eae.css.map": "/asws/static/css/main.c6503eae.css.map",
-    "main.71cfba62.js.map": "/asws/static/js/main.71cfba62.js.map"
+    "main.dbb10947.css.map": "/asws/static/css/main.dbb10947.css.map",
+    "main.d2fe7345.js.map": "/asws/static/js/main.d2fe7345.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6503eae.css",
-    "static/js/main.71cfba62.js"
+    "static/css/main.dbb10947.css",
+    "static/js/main.d2fe7345.js"
   ]
 }
