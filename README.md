@@ -17,11 +17,11 @@ A web application that stores the attendance of teachers & students with detail 
 2. Change directory :
 - `cd asws`
 3. Install the required dependencies: 
-- `npm install -g create-react-app --save`
-- `npm install -g react-router-dom --save`
-- `npm install -g react-icons --save`
-- `npm install -g formik --save`
-- `npm install -g recharts --save`
+- `npm install create-react-app --save`
+- `npm install react-router-dom --save`
+- `npm install react-icons --save`
+- `npm install formik --save`
+- `npm install recharts --save`
 
 
 ## Usage
