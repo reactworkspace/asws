@@ -197,14 +197,40 @@
   text-transform: capitalize;
 }
 
-.attendance-barchart{
+.attendance-barchart {
   padding: 2rem 2rem 0 0;
 }
 
 .present-bar,
 .absent-bar,
-.leave-bar{
+.leave-bar {
   border-radius: 2rem !important;
+}
+
+.tooltipStyle {
+  color: var(--color-white);
+  background-color: var(--color-purple);
+  padding: 0.75rem 1rem;
+  border-radius: 0.8125rem;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+
+  font-family: Inter;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.875rem;
+  text-transform: capitalize;
+}
+
+.tooltipStyle div {
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.tooltipStyle div span {
+  border-radius: 0.125rem;
 }
 
 /* RECENTLY JOINED STUDENTS */

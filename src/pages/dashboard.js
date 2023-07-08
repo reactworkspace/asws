@@ -10,7 +10,6 @@ import '../styles/teacherprofile.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
 // Import user profile components
 import UserProfile from '../components/userprofile';
 
@@ -32,7 +31,7 @@ import TeacherProfilePhoto from '../assets/images/teacherprofile.png';
 // import student data from data folder
 import studentData from '../data/studentdata';
 
-// import recharts 
+// import recharts
 import {
   ResponsiveContainer,
   BarChart,
@@ -40,8 +39,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-} from "recharts";
-
+} from 'recharts';
 
 const CreateBtn = () => {
   const [showContent, setShowContent] = useState(false);
@@ -107,46 +105,45 @@ const StudentTrData = () => {
   );
 };
 
-
 const DashboardAttendanceArray = [
   {
-    week: "week 1",
+    week: 'week 1',
     present: 40,
     absent: 10,
     leave: 20,
   },
   {
-    week: "week 2",
+    week: 'week 2',
     present: 25,
     absent: 10,
     leave: 15,
   },
   {
-    week: "week 3",
+    week: 'week 3',
     present: 50,
     absent: 30,
     leave: 40,
   },
   {
-    week: "week 4",
+    week: 'week 4',
     present: 40,
     absent: 30,
     leave: 20,
   },
   {
-    week: "week 5",
+    week: 'week 5',
     present: 40,
     absent: 30,
     leave: 20,
   },
   {
-    week: "week 6",
+    week: 'week 6',
     present: 40,
     absent: 30,
     leave: 20,
   },
   {
-    week: "week 7",
+    week: 'week 7',
     present: 40,
     absent: 30,
     leave: 20,
@@ -154,21 +151,64 @@ const DashboardAttendanceArray = [
 ];
 
 const AttendanceBarChart = () => {
+  const renderCustomTooltip = ({ payload }) => {
+    if (payload && payload.length) {
+      // Extracting the dataKeys and values from the payload
+      const { present, absent, leave } = payload[0].payload;
+
+      return (
+        <div className="tooltipStyle">
+          <div className='flex p-a-l'>
+            <span className="circle bg-color-1"></span>
+            <p>{present}% present</p>
+          </div>
+          <div className='flex p-a-l'>
+            <span className="circle bg-color-2"></span>
+            <p>{absent}% absent</p>
+          </div>
+          <div className='flex p-a-l'>
+            <span className="circle bg-color-3"></span>
+            <p>{leave}% leave</p>
+          </div>
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   return (
     <ResponsiveContainer width="100%" height="100%" aspect={3}>
-        <BarChart data={DashboardAttendanceArray}  barGap={10} barCategoryGap="20%">
-          <XAxis dataKey="week" />
-          <YAxis />
-          <Tooltip />
-          <Bar dataKey="present" fill='#4cbc9a' barSize={25} radius={[10, 10, 10, 10]} />
-          <Bar dataKey="absent" fill='#F95A77' barSize={25} radius={[10, 10, 10, 10]}/>
-          <Bar dataKey="leave"  fill='#F4BE37' barSize={25} radius={[10, 10, 10, 10]}/>
-        </BarChart>
-      </ResponsiveContainer>
+      <BarChart
+        data={DashboardAttendanceArray}
+        barGap={10}
+        barCategoryGap="20%"
+      >
+        <XAxis dataKey="week" />
+        <YAxis />
+        <Tooltip content={renderCustomTooltip} />
+        <Bar
+          dataKey="present"
+          fill="#4cbc9a"
+          barSize={25}
+          radius={[10, 10, 10, 10]}
+        />
+        <Bar
+          dataKey="absent"
+          fill="#F95A77"
+          barSize={25}
+          radius={[10, 10, 10, 10]}
+        />
+        <Bar
+          dataKey="leave"
+          fill="#F4BE37"
+          barSize={25}
+          radius={[10, 10, 10, 10]}
+        />
+      </BarChart>
+    </ResponsiveContainer>
   );
-}
-
-
+};
 
 const Dashboard = () => {
   // Cards Data
