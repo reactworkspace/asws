@@ -44,48 +44,6 @@
   color: var(--color-text);
 }
 
-/* new zone button */
-.new-zone-btn-div {
-  position: relative;
-  display: inline-block;
-}
-
-.new-zone-btn {
-  height: 4rem;
-  width: 13rem;
-  border-radius: 2.5rem;
-  background-color: var(--color-purple);
-  color: var(--color-white);
-  cursor: pointer;
-  position: relative;
-}
-
-.new-zone-btn > span {
-  padding: 0.3rem;
-}
-
-.new-zone-btn-content {
-  position: absolute;
-  top: 0;
-  font-size: 1.25rem;
-  font-weight: 400;
-  padding: 1rem 1.5rem 1rem 1.5rem;
-  color: var(--color-white);
-  background-color: var(--color-purple);
-  z-index: 1;
-  width: 10.1rem;
-  border-radius: 1.5rem;
-  width: 13rem;
-}
-
-.new-zone-btn-content > div {
-  cursor: pointer;
-}
-.new-zone-btn-content > div a {
-  color: var(--color-white);
-  padding: 0.5rem 0 0 0;
-}
-
 /* Select Centre */
 .select-zone-heading span {
   font-size: 1.8rem;

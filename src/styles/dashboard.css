@@ -54,45 +54,6 @@
   color: var(--color-purple);
 }
 
-/* create button */
-.create-btn-div {
-  position: relative;
-  display: inline-block;
-}
-
-.create-btn {
-  height: 3.7rem;
-  width: 10.1rem;
-  border-radius: 2.5rem;
-  background-color: var(--color-purple);
-  color: var(--color-white);
-  cursor: pointer;
-}
-
-.create-btn > span {
-  padding: 0.3rem;
-}
-
-.create-btn-content {
-  position: absolute;
-  top: 0;
-  font-weight: 400;
-  padding: 1rem 1.5rem 1rem 1.5rem;
-  color: var(--color-white);
-  background-color: var(--color-purple);
-  z-index: 1;
-  width: 10.1rem;
-  border-radius: 1.5rem;
-}
-
-.create-btn-content > div {
-  cursor: pointer;
-}
-.create-btn-content > div a {
-  color: var(--color-white);
-  padding: 1rem 0 0 0;
-}
-
 /* STUDENTS, TEACHERS, CENTRE CARDS */
 #cards {
   display: grid;
@@ -105,7 +66,6 @@
 
 #cards .stc {
   padding: 2rem 0 2rem 0;
-
   background-color: var(--color-white);
   border-radius: var(--card-border);
   margin: auto;
@@ -124,6 +84,7 @@
 .stc-icons {
   width: 3rem;
   height: 3rem;
+  color: var(--color-purple);
 }
 
 .stc .right {
@@ -360,7 +321,6 @@ tr:hover {
   .stc-icons {
     width: 4rem;
     height: 4rem;
-    color: var(--color-purple);
   }
   .stc .right {
     height: 6rem;

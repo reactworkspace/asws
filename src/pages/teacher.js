@@ -5,18 +5,19 @@ import '../styles/font.css';
 import '../styles/flex.css';
 
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 
-import { useState } from 'react';
+// import { useState } from 'react';
+// import { Link } from 'react-router-dom';
+
 
 // Import user profile components
 import UserProfile from '../components/userprofile';
 
+// Import Button Componenets
+import { PrimaryNewButton } from '../components/buttons';
 
 // react icons
-import { TiPlus } from 'react-icons/ti';
 import { HiOutlineSearch } from 'react-icons/hi';
-import { BsCaretUpFill } from 'react-icons/bs';
 
 // Import Teacher Card
 import TeacherCard from '../components/teacherscard';
@@ -34,40 +35,6 @@ const SearchTeacher = () => {
   );
 };
 
-const NewCentreButton = () => {
-  const [showContent, setShowContent] = useState(false);
-
-  const toggleContent = () => {
-    setShowContent(!showContent);
-  };
-
-  return (
-    <div className="new-teacher-btn-div">
-      <button
-        className="new-teacher-btn Montserrat flex-c"
-        onClick={toggleContent}
-      >
-        <TiPlus />
-        <span>new teacher</span>
-      </button>
-      {showContent && (
-        <div className="new-teacher-btn-content Montserrat">
-          <div className="flex-r-sb" onClick={toggleContent}>
-            <span>Select</span>
-            <BsCaretUpFill />
-          </div>
-          <div className="flex-col">
-            <Link to="/addteacher">add teacher</Link>
-            <Link to="/importteacher">import teacher</Link>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
-
-
-
 const Teacher = () => {
   return (
     <section id="teacher">
@@ -82,7 +49,13 @@ const Teacher = () => {
         </div>
         <div className="teacher-search-btn flex-r-sb">
           <SearchTeacher />
-          <NewCentreButton />
+          <PrimaryNewButton
+            title="new teacher"
+            address1="/addteacher"
+            addressTitle1="add teacher"
+            address2="/importteacher"
+            addressTitle2="import teacher"
+          />
         </div>
         <div id="teacher-cards-list">
           <TeacherCard />

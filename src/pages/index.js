@@ -18,10 +18,6 @@ import AddStudent from './addstudent';
 import AddTeacher from './addteacher';
 import AddZone from './addzone';
 
-// import ImportStudent from './importstudent';
-// import ImportTeacher from './importteacher';
-// import ImportZone from './importzone';
-
 import { ImportZone, ImportStudent, ImportTeacher } from './import';
 
 import StudentDetails from './studentdetails';

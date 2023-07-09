@@ -5,16 +5,17 @@ import '../styles/font.css';
 import '../styles/flex.css';
 
 import * as React from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // Import user profile components
 import UserProfile from '../components/userprofile';
 
+// Import Button Componenets
+import { PrimaryNewButton } from '../components/buttons';
+
 // react icons
-import { TiPlus } from 'react-icons/ti';
 import { HiOutlineSearch } from 'react-icons/hi';
-import { BsCaretUpFill } from 'react-icons/bs';
 
 // import svg
 import { ReactComponent as ThreeDotsIcons } from '../assets/svg/threedots.svg';
@@ -39,38 +40,6 @@ const SearchStudent = () => {
         placeholder="Search Student here.."
       />
       <HiOutlineSearch className="search-student-icon" />
-    </div>
-  );
-};
-
-const NewStudentButton = () => {
-  const [showContent, setShowContent] = useState(false);
-
-  const toggleContent = () => {
-    setShowContent(!showContent);
-  };
-
-  return (
-    <div className="new-student-btn-div">
-      <button
-        className="new-student-btn Montserrat flex-c"
-        onClick={toggleContent}
-      >
-        <TiPlus />
-        <span>new student</span>
-      </button>
-      {showContent && (
-        <div className="new-student-btn-content Montserrat">
-          <div className="flex-r-sb" onClick={toggleContent}>
-            <span>Select</span>
-            <BsCaretUpFill />
-          </div>
-          <div className="flex-col">
-            <Link to="/addstudent">add student</Link>
-            <Link to="/importstudent">import student</Link>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
@@ -145,7 +114,13 @@ const Student = () => {
 
           <div className="student-search-btn flex-r-sb">
             <SearchStudent />
-            <NewStudentButton />
+            <PrimaryNewButton
+              title="new student"
+              address1="/addstudent"
+              addressTitle1="addstudent"
+              address2="/importstudent"
+              addressTitle2="import student"
+            />
           </div>
         </div>
 

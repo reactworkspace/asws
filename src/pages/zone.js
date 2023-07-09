@@ -4,16 +4,14 @@ import '../styles/zone.css';
 import '../styles/font.css';
 import '../styles/flex.css';
 
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-
 // Import user profile components
 import UserProfile from '../components/userprofile';
 
+// Import Button Componenets
+import { PrimaryNewButton } from '../components/buttons';
+
 // react icons
-import { TiPlus } from 'react-icons/ti';
 import { HiOutlineSearch } from 'react-icons/hi';
-import { BsCaretUpFill } from 'react-icons/bs';
 
 // Import zone card
 import ZoneCard from '../components/zonecard';
@@ -23,38 +21,6 @@ const SearchZone = () => {
     <div className="search-centre-div">
       <input type="text" id="search-centre" placeholder="Search here.." />
       <HiOutlineSearch className="search-centre-icon" />
-    </div>
-  );
-};
-
-const NewCentreButton = () => {
-  const [showContent, setShowContent] = useState(false);
-
-  const toggleContent = () => {
-    setShowContent(!showContent);
-  };
-
-  return (
-    <div className="new-zone-btn-div">
-      <button
-        className="new-zone-btn Montserrat flex-c"
-        onClick={toggleContent}
-      >
-        <TiPlus />
-        <span>new zone</span>
-      </button>
-      {showContent && (
-        <div className="new-zone-btn-content Montserrat">
-          <div className="flex-r-sb" onClick={toggleContent}>
-            <span>Select</span>
-            <BsCaretUpFill />
-          </div>
-          <div className="flex-col">
-            <Link to="/addzone">add centre</Link>
-            <Link to="/importzone">import centre</Link>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
@@ -104,7 +70,13 @@ const Zone = () => {
         </div>
         <div className="zone-search-btn flex-r-sb">
           <SearchZone />
-          <NewCentreButton />
+          <PrimaryNewButton
+            title="new centre"
+            address1="/addzone"
+            addressTitle1="add centre"
+            address2="/importzone"
+            addressTitle2="import centre"
+          />
         </div>
         <div className="select-zone">
           <div className="select-zone-heading">

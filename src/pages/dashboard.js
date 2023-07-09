@@ -7,11 +7,15 @@ import '../styles/userprofile.css';
 import '../styles/studentprofile.css';
 import '../styles/teacherprofile.css';
 
-import React, { useState } from 'react';
+import React from 'react';
+// import {useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // Import user profile components
 import UserProfile from '../components/userprofile';
+
+// Import Button components
+import { PrimaryButton } from '../components/buttons';
 
 // icons
 import { ReactComponent as ZoneIcon } from '../assets/svg/zone.svg';
@@ -21,8 +25,7 @@ import { ReactComponent as ThreeDotsIcons } from '../assets/svg/threedots.svg';
 
 // react icons
 import { FaFilter } from 'react-icons/fa';
-import { TiPlus } from 'react-icons/ti';
-import { BsCaretUpFill } from 'react-icons/bs';
+
 // import {  AiOutlineBell } from 'react-icons/ai';
 
 import StudentProfilePhoto from '../assets/images/studentprofile.png';
@@ -39,38 +42,8 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  CartesianGrid
+  CartesianGrid,
 } from 'recharts';
-
-const CreateBtn = () => {
-  const [showContent, setShowContent] = useState(false);
-
-  const toggleContent = () => {
-    setShowContent(!showContent);
-  };
-
-  return (
-    <div className="create-btn-div">
-      <button className="create-btn Montserrat flex-c" onClick={toggleContent}>
-        <TiPlus />
-        <span>create</span>
-      </button>
-      {showContent && (
-        <div className="create-btn-content Montserrat">
-          <div className="flex-r-sb" onClick={toggleContent}>
-            <span>Select</span>
-            <BsCaretUpFill />
-          </div>
-          <div className="flex-col">
-            <Link to="/addstudent">student</Link>
-            <Link to="/addteacher">teacher</Link>
-            <Link to="/addzone">zone</Link>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
 
 const StudentProfile = () => {
   return (
@@ -184,9 +157,8 @@ const AttendanceBarChart = () => {
         data={DashboardAttendanceArray}
         barGap={10}
         barCategoryGap="20%"
-        
       >
-         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         <XAxis dataKey="week" />
         <YAxis />
         <Tooltip content={renderCustomTooltip} />
@@ -195,7 +167,7 @@ const AttendanceBarChart = () => {
           fill="#4cbc9a"
           barSize={25}
           radius={[10, 10, 10, 10]}
-          className='bar'
+          className="bar"
         />
         <Bar
           dataKey="absent"
@@ -230,7 +202,15 @@ const Dashboard = () => {
           <div>
             <span className="poppins-heading">dashboard</span>
           </div>
-          <CreateBtn />
+          <PrimaryButton
+            title="create"
+            address1="/student"
+            addressTitle1="student"
+            address2="/teacher"
+            addressTitle2="teacher"
+            address3="/zone"
+            addressTitle3="zone"
+          />
         </div>
         {/* CARDS SECTION */}
         <div id="cards">

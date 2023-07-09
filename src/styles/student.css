@@ -44,94 +44,46 @@
   color: var(--color-text);
 }
 
-/* new student button */
-.new-student-btn-div {
-  position: relative;
-  display: inline-block;
-}
-
-.new-student-btn {
-  height: 4rem;
-  width: 15rem;
-  border-radius: 2.5rem;
-  background-color: var(--color-purple);
-  color: var(--color-white);
-  cursor: pointer;
-  position: relative;
-}
-
-.new-student-btn > span {
-  padding: 0.3rem;
-}
-
-.new-student-btn-content {
-  position: absolute;
-  top: 0;
-  font-size: 1.25rem;
-  font-weight: 400;
-  padding: 1rem 1.5rem 1rem 1.5rem;
-  color: var(--color-white);
-  background-color: var(--color-purple);
-  z-index: 1;
-  width: 10.1rem;
-  border-radius: 1.5rem;
-  width: 15rem;
-}
-
-.new-student-btn-content > div {
-  cursor: pointer;
-}
-.new-student-btn-content > div a {
-  color: var(--color-white);
-  padding: 0.5rem 0 0 0;
-}
-
 /* Student tables */
 
-.student-table-div{
+.student-table-div {
   width: 100%;
-  height: 54.5625rem; 
+  height: 54.5625rem;
 
   background-color: var(--color-white);
   border-radius: var(--card-border);
-
 }
-.muted-text{
+
+.muted-text {
   color: var(--color-grey-3);
 }
-table thead{
+
+table thead {
   font-family: 'Poppins';
-	font-style: normal;
-	font-weight: 600;
-	font-size: 1.2rem;
-	line-height: 2rem;
-	text-transform: capitalize;
-	color: var(--color-text);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+  color: var(--color-text);
 }
 
-
-table tbody{
+table tbody {
   font-family: 'Poppins';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 1.2rem;
-	line-height: 2rem;
-	text-transform: capitalize;
-	color: var(--color-text);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+  color: var(--color-text);
 }
 
-
-tbody a{
-  text-decoration: none; 
-  color: inherit; 
-  font-weight: normal; 
+tbody a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
   cursor: pointer;
 }
-
-
-
-
-
 
 /* Large desktop screens (1440px and above) */
 @media (min-width: 1440px) {
@@ -139,7 +91,6 @@ tbody a{
 
 /* Medium-sized desktop screens (1280px to 1439px) */
 @media (min-width: 1280px) and (max-width: 1439px) {
-
 }
 
 /* Small desktop screens and tablets (1024px to 1279px) */
