@@ -112,7 +112,7 @@ const Zone = () => {
           </div>
           <ZoneCheckButtons />
         </div>
-        <div id="zone-card-list" className="flex">
+        <div id="zone-card-list">
           <ZoneCard />
           <ZoneCard />
           <ZoneCard />

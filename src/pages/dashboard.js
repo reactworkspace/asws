@@ -39,6 +39,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  CartesianGrid
 } from 'recharts';
 
 const CreateBtn = () => {
@@ -158,15 +159,15 @@ const AttendanceBarChart = () => {
 
       return (
         <div className="tooltipStyle">
-          <div className='flex p-a-l'>
+          <div className="flex p-a-l">
             <span className="circle bg-color-1"></span>
             <p>{present}% present</p>
           </div>
-          <div className='flex p-a-l'>
+          <div className="flex p-a-l">
             <span className="circle bg-color-2"></span>
             <p>{absent}% absent</p>
           </div>
-          <div className='flex p-a-l'>
+          <div className="flex p-a-l">
             <span className="circle bg-color-3"></span>
             <p>{leave}% leave</p>
           </div>
@@ -183,7 +184,9 @@ const AttendanceBarChart = () => {
         data={DashboardAttendanceArray}
         barGap={10}
         barCategoryGap="20%"
+        
       >
+         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         <XAxis dataKey="week" />
         <YAxis />
         <Tooltip content={renderCustomTooltip} />
@@ -192,6 +195,7 @@ const AttendanceBarChart = () => {
           fill="#4cbc9a"
           barSize={25}
           radius={[10, 10, 10, 10]}
+          className='bar'
         />
         <Bar
           dataKey="absent"
@@ -230,33 +234,40 @@ const Dashboard = () => {
         </div>
         {/* CARDS SECTION */}
         <div id="cards">
-          <div className="stc flex-c ">
-            <div className="left flex-c">
-              <StudentIcon className="stc-icons" />
+          <Link to="/student">
+            <div className="stc flex-c ">
+              <div className="left flex-c">
+                <StudentIcon className="stc-icons" />
+              </div>
+              <div className="right">
+                <span className="title">students</span>
+                <span className="total">{cards.student}</span>
+              </div>
             </div>
-            <div className="right">
-              <span className="title">students</span>
-              <span className="total">{cards.student}</span>
+          </Link>
+          <Link to="teacher">
+            <div className="stc flex-c">
+              <div className="left flex-c">
+                <TeacherIcon className="stc-icons" />
+              </div>
+              <div className="right">
+                <span className="title">teachers</span>
+                <span className="total">{cards.teachers}</span>
+              </div>
             </div>
-          </div>
-          <div className="stc flex-c">
-            <div className="left flex-c">
-              <TeacherIcon className="stc-icons" />
+          </Link>
+
+          <Link to="zone">
+            <div className="stc flex-c">
+              <div className="left flex-c">
+                <ZoneIcon className="stc-icons" />
+              </div>
+              <div className="right">
+                <span className="title">centres</span>
+                <span className="total ">{cards.centres}</span>
+              </div>
             </div>
-            <div className="right">
-              <span className="title">teachers</span>
-              <span className="total">{cards.teachers}</span>
-            </div>
-          </div>
-          <div className="stc flex-c">
-            <div className="left flex-c">
-              <ZoneIcon className="stc-icons" />
-            </div>
-            <div className="right">
-              <span className="title">centres</span>
-              <span className="total ">{cards.centres}</span>
-            </div>
-          </div>
+          </Link>
         </div>
         {/* ATTENDANCE SECTION */}
         <div id="attendance-section">

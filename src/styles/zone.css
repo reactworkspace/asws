@@ -249,10 +249,16 @@
 
 /* Large desktop screens (1440px and above) */
 @media (min-width: 1440px) {
+  #zone-card {
+    width: 25.1rem;
+  }
 }
 
 /* Medium-sized desktop screens (1280px to 1439px) */
 @media (min-width: 1280px) and (max-width: 1439px) {
+  #zone-card {
+    width: 23rem;
+  }
 }
 
 /* Small desktop screens and tablets (1024px to 1279px) */

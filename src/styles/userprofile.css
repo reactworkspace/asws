@@ -2,7 +2,9 @@
   position: relative;
   width: 4rem;
   height: 4rem;
+  cursor: pointer;
 }
+
 #userprofile img {
   position: absolute;
   width: 100%;
@@ -19,6 +21,7 @@
   width: 2rem;
   height: 2rem;
   color: var(--color-grey-3);
+  cursor: pointer;
 }
 .profile-icons:hover {
   color: var(--color-text);

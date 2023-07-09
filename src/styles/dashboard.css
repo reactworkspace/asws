@@ -233,6 +233,10 @@
   border-radius: 0.125rem;
 }
 
+.bar {
+  background-color: blue;
+}
+
 /* RECENTLY JOINED STUDENTS */
 
 #recently-joined-students {
@@ -356,6 +360,7 @@ tr:hover {
   .stc-icons {
     width: 4rem;
     height: 4rem;
+    color: var(--color-purple);
   }
   .stc .right {
     height: 6rem;
