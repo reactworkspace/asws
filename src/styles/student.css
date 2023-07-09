@@ -52,6 +52,7 @@
 
   background-color: var(--color-white);
   border-radius: var(--card-border);
+  box-shadow: 0px 2px 6px 0px rgba(13, 10, 44, 0.08);
 }
 
 .muted-text {

@@ -8,6 +8,7 @@ import '../styles/studentprofile.css';
 import '../styles/teacherprofile.css';
 
 import React from 'react';
+import { useState, useEffect } from 'react';
 // import {useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -123,8 +124,46 @@ const DashboardAttendanceArray = [
     leave: 20,
   },
 ];
-
 const AttendanceBarChart = () => {
+  const [barSize, setBarSize] = useState(20);
+  const [barGap, setBarGap] = useState(6);
+
+  const updateBarSize = () => {
+    const screenWidth = window.innerWidth;
+    let newBarSize;
+    let newBarGap;
+
+    if (screenWidth >= 1440) {
+      newBarSize = 20; 
+      newBarGap = 6;
+    } else if (screenWidth >= 1280) {
+      newBarSize = 15; 
+      newBarGap = 6;
+    } else if (screenWidth >= 1024) {
+      newBarSize = 15; 
+      newBarGap = 6;
+    } else if (screenWidth >= 768) {
+      newBarSize = 11; 
+      newBarGap = 6;
+    } else {
+      newBarSize = 8; 
+      newBarGap = 6;
+    }
+
+    setBarSize(newBarSize);
+    setBarGap(newBarGap);
+  };
+
+  useEffect(() => {
+    updateBarSize(); // Initial barSize calculation
+
+    window.addEventListener('resize', updateBarSize); // Update barSize on window resize
+
+    return () => {
+      window.removeEventListener('resize', updateBarSize); // Clean up the event listener
+    };
+  }, []);
+
   const renderCustomTooltip = ({ payload }) => {
     if (payload && payload.length) {
       // Extracting the dataKeys and values from the payload
@@ -155,7 +194,7 @@ const AttendanceBarChart = () => {
     <ResponsiveContainer width="100%" height="100%" aspect={3}>
       <BarChart
         data={DashboardAttendanceArray}
-        barGap={10}
+        barGap={barGap}
         barCategoryGap="20%"
       >
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
@@ -165,21 +204,20 @@ const AttendanceBarChart = () => {
         <Bar
           dataKey="present"
           fill="#4cbc9a"
-          barSize={25}
-          radius={[10, 10, 10, 10]}
-          className="bar"
+          barSize={barSize}
+          radius={[7, 7, 7, 7]}
         />
         <Bar
           dataKey="absent"
           fill="#F95A77"
-          barSize={25}
-          radius={[10, 10, 10, 10]}
+          barSize={barSize}
+          radius={[7, 7, 7, 7]}
         />
         <Bar
           dataKey="leave"
           fill="#F4BE37"
-          barSize={25}
-          radius={[10, 10, 10, 10]}
+          barSize={barSize}
+          radius={[7, 7, 7, 7]}
         />
       </BarChart>
     </ResponsiveContainer>
@@ -251,7 +289,7 @@ const Dashboard = () => {
         </div>
         {/* ATTENDANCE SECTION */}
         <div id="attendance-section">
-          <div className="flex-r-sb">
+          <div className="flex-r-sb p2rem">
             <div>
               <span className="inter-heading">attendance</span>
             </div>
