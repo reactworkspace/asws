@@ -117,7 +117,7 @@ const Student = () => {
             <PrimaryNewButton
               title="new student"
               address1="/addstudent"
-              addressTitle1="addstudent"
+              addressTitle1="add student"
               address2="/importstudent"
               addressTitle2="import student"
             />
