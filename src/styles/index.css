@@ -2,10 +2,11 @@
 :root {
   /* Theme Color */
   --color-purple: #4d44b5;
-  --color-orange: #F95A77;
-  --color-yellow: #F4BE37;
+  --color-red: #F95A77;
+  --color-orange: #fb7d5b;
+  --color-yellow: #fcc43e;
   --color-text: #303972;
-  --color-green: #39B29A;
+  --color-green: #4cbc9a;
 
   /* white Color */
   --color-white: #ffffff;

@@ -37,7 +37,6 @@
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
-
 }
 
 .flex-col-end{
@@ -45,7 +44,6 @@
   flex-direction: column;
   justify-content: flex-end;
   flex-wrap: wrap;
-
 }
 
 .flex-wrap{
@@ -56,3 +54,6 @@
   justify-content: centre;
 }
 
+.gap2rem{
+  gap: 2rem;
+}
