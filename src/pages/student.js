@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import UserProfile from '../components/userprofile';
 
 // Import Button Componenets
-import { PrimaryNewButton } from '../components/buttons';
+import { DropdownNewMenuButton } from '../components/buttons';
 
 // react icons
 import { HiOutlineSearch } from 'react-icons/hi';
@@ -114,7 +114,7 @@ const Student = () => {
 
           <div className="student-search-btn flex-r-sb">
             <SearchStudent />
-            <PrimaryNewButton
+            <DropdownNewMenuButton
               title="new student"
               address1="/addstudent"
               addressTitle1="add student"

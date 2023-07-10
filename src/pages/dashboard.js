@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 import UserProfile from '../components/userprofile';
 
 // Import Button components
-import { PrimaryButton } from '../components/buttons';
+import { DropdownMenuButton } from '../components/buttons';
 
 // icons
 import { ReactComponent as ZoneIcon } from '../assets/svg/zone.svg';
@@ -240,7 +240,7 @@ const Dashboard = () => {
           <div>
             <span className="poppins-heading">dashboard</span>
           </div>
-          <PrimaryButton
+          <DropdownMenuButton
             title="create"
             address1="/student"
             addressTitle1="student"

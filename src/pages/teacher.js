@@ -14,7 +14,7 @@ import * as React from 'react';
 import UserProfile from '../components/userprofile';
 
 // Import Button Componenets
-import { PrimaryNewButton } from '../components/buttons';
+import { DropdownNewMenuButton } from '../components/buttons';
 
 // react icons
 import { HiOutlineSearch } from 'react-icons/hi';
@@ -49,7 +49,7 @@ const Teacher = () => {
         </div>
         <div className="teacher-search-btn flex-r-sb">
           <SearchTeacher />
-          <PrimaryNewButton
+          <DropdownNewMenuButton
             title="new teacher"
             address1="/addteacher"
             addressTitle1="add teacher"

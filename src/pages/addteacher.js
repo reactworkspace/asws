@@ -10,6 +10,9 @@ import { Link } from 'react-router-dom';
 // Import user profile components
 import UserProfile from '../components/userprofile';
 
+// Import Components
+import { PrimaryButton } from '../components/buttons';
+
 const AddTeacher = () => {
   return (
     <section id="addteacher">
@@ -19,7 +22,7 @@ const AddTeacher = () => {
             <span className="poppins-heading">
               <Link to="/teacher">teacher</Link>
               {' > '}
-              <span className="poppins "> add teacher</span>
+              <span className="poppins-sub-heading"> add teacher</span>
             </span>
           </div>
           <UserProfile />
@@ -280,8 +283,8 @@ const AddTeacher = () => {
 
           {/* submit button */}
           <div className="teacher-submit-button-div">
-            <div className="teacher-submit-button">
-              <span>submit</span>
+            <div>
+              <PrimaryButton title="submit" />
             </div>
           </div>
         </div>

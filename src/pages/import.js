@@ -22,7 +22,8 @@ export const ImportZone = () => {
           <div>
             <span className="poppins-heading">
               <Link to="/zone">centre</Link>
-              {' > '} <span className="poppins"> import centre</span>
+              {' > '}{' '}
+              <span className="poppins-sub-heading"> import centre</span>
             </span>
           </div>
           <UserProfile />
@@ -30,7 +31,7 @@ export const ImportZone = () => {
 
         <div id="upload">
           <div>
-            <span className="upload-heading poppins">upload your files</span>
+            <span className="poppins-heading-2rem">upload your files</span>
           </div>
           <div className="upload-card">
             <div className="poppins">
@@ -61,7 +62,7 @@ export const ImportTeacher = () => {
             <span className="poppins-heading">
               <Link to="/teacher">teacher</Link>
               {' > '}
-              <span className="poppins"> import teacher</span>
+              <span className="poppins-sub-heading"> import teacher</span>
             </span>
           </div>
           <UserProfile />
@@ -69,7 +70,7 @@ export const ImportTeacher = () => {
 
         <div id="upload">
           <div>
-            <span className="upload-heading poppins">upload your files</span>
+            <span className="poppins-heading-2rem">upload your files</span>
           </div>
           <div className="upload-card">
             <div className="poppins">
@@ -98,7 +99,8 @@ export const ImportStudent = () => {
           <div>
             <span className="poppins-heading">
               <Link to="/student">student</Link>
-              {' > '} <span className="poppins"> import student</span>
+              {' > '}{' '}
+              <span className="poppins-sub-heading"> import student</span>
             </span>
           </div>
           <UserProfile />
@@ -106,7 +108,7 @@ export const ImportStudent = () => {
 
         <div id="upload">
           <div>
-            <span className="upload-heading poppins">upload your files</span>
+            <span className="poppins-heading-2rem">upload your files</span>
           </div>
           <div className="upload-card">
             <div className="poppins">

@@ -11,8 +11,9 @@ import { BsCaretUpFill } from 'react-icons/bs';
 
 //
 import '../styles/buttons.css';
-// common button1
-export const PrimaryButton = (props) => {
+
+// DropdownMenuButton button1
+export const DropdownMenuButton = (props) => {
   const {
     title,
     address1,
@@ -30,13 +31,16 @@ export const PrimaryButton = (props) => {
   };
 
   return (
-    <div className="btn-primary-div">
-      <button className="btn-primary Montserrat flex-c" onClick={toggleContent}>
+    <div className="btn-dropdownMenu-container">
+      <button
+        className="btn-dropdownMenu Montserrat flex-c"
+        onClick={toggleContent}
+      >
         <TiPlus />
         <span>{title}</span>
       </button>
       {showContent && (
-        <div className="btn-primary-content Montserrat">
+        <div className="btn-dropdownMenu-content Montserrat">
           <div className="flex-r-sb" onClick={toggleContent}>
             <span>Select</span>
             <BsCaretUpFill />
@@ -52,15 +56,9 @@ export const PrimaryButton = (props) => {
   );
 };
 
-// PrimaryNewButton for zone, student, teacher 
-export const PrimaryNewButton = (props) => {
-  const {
-    title,
-    address1,
-    address2,
-    addressTitle1,
-    addressTitle2,
-  } = props;
+// DropdownNewMenuButton for zone, student, teacher
+export const DropdownNewMenuButton = (props) => {
+  const { title, address1, address2, addressTitle1, addressTitle2 } = props;
 
   const [showContent, setShowContent] = useState(false);
 
@@ -69,13 +67,16 @@ export const PrimaryNewButton = (props) => {
   };
 
   return (
-    <div className="btn-primary-div">
-      <button className="btn-primary Montserrat flex-c" onClick={toggleContent}>
+    <div className="btn-dropdownMenu-container">
+      <button
+        className="btn-dropdownMenu Montserrat flex-c"
+        onClick={toggleContent}
+      >
         <TiPlus />
         <span>{title}</span>
       </button>
       {showContent && (
-        <div className="btn-primary-content Montserrat">
+        <div className="btn-dropdownMenu-content Montserrat">
           <div className="flex-r-sb" onClick={toggleContent}>
             <span>Select</span>
             <BsCaretUpFill />
@@ -90,3 +91,16 @@ export const PrimaryNewButton = (props) => {
   );
 };
 
+export const PrimaryButton = (props) => {
+  const { title, address } = props;
+
+  return (
+    <div className="btn-primary-container">
+      <Link to={address}>
+        <div>
+          <span>{title}</span>
+        </div>
+      </Link>
+    </div>
+  );
+};

@@ -11,6 +11,10 @@
   font-weight: 400;
 }
 
+.syllabus-container{
+  padding: 2rem 0;
+}
+
 /* Large desktop screens (1440px and above) */
 @media (min-width: 1440px) {
 }

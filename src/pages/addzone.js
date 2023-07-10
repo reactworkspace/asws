@@ -8,9 +8,11 @@ import '../styles/userprofile.css';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-
 // Import user profile components
 import UserProfile from '../components/userprofile';
+
+// Import Componenets
+import { PrimaryButton } from '../components/buttons';
 
 const AddZone = () => {
   return (
@@ -19,8 +21,9 @@ const AddZone = () => {
         <div className="addzone-heading flex-r-sb">
           <div>
             <span className="poppins-heading">
-            <Link to="/zone">centre</Link>
-              {' > '} <span className="poppins "> create centre</span>
+              <Link to="/zone">centre</Link>
+              {' > '}{' '}
+              <span className="poppins-sub-heading"> create centre</span>
             </span>
           </div>
           <UserProfile />
@@ -117,11 +120,9 @@ const AddZone = () => {
             <span>click here to select file</span>
           </div>
         </div>
-        <div className='zone-submit-button-div'>
-          <div className='zone-submit-button'>
-            <span>submit</span>
-          </div>
-        </div>  
+        <div className="zone-submit-button-div">
+          <div><PrimaryButton title='submit' /></div>
+        </div>
       </div>
     </section>
   );

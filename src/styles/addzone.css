@@ -8,10 +8,7 @@
 .addzone-heading {
   padding-bottom: 2rem;
 }
-.addzone-heading span span {
-  font-size: 1.7rem;
-  font-weight: 400;
-}
+
 
 #zone-information {
   width: 100%;
@@ -116,31 +113,6 @@
   padding: 2rem 0 0 0;
 }
 
-.zone-submit-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0.625rem 1.5rem;
-  gap: 0.625rem;
-
-  width: 7rem;
-  height: 3.75rem;
-
-  background: var(--color-purple);
-  border-radius: 2.5rem;
-  cursor: pointer;
-}
-
-.zone-submit-button span {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 2rem;
-  color: var(--color-white);
-  text-transform: capitalize;
-}
 
 /* Large desktop screens (1440px and above) */
 @media (min-width: 1440px) {

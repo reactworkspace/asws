@@ -14,6 +14,9 @@ import { useState } from 'react';
 // Import user profile components
 import UserProfile from '../components/userprofile';
 
+// Import Components
+import { PrimaryButton } from '../components/buttons';
+
 // import react icons
 import { TiPlus } from 'react-icons/ti';
 
@@ -586,7 +589,7 @@ const AddStudent = () => {
           <div>
             <span className="poppins-heading">
               <Link to="/student">student</Link>
-              {' > '} <span className="poppins"> add student</span>
+              {' > '} <span className="poppins-sub-heading"> add student</span>
             </span>
           </div>
           <UserProfile />
@@ -792,32 +795,28 @@ const AddStudent = () => {
 
         {/* Student Sibling Information */}
         <div id="sibling-information">
-         
-            <div className="sibling-information-heading">
-              <span>sibling information</span>
-            </div>
-            <div className="sibling-information-form-div">
-              <SiblingInformationForm />
-            </div>
-       
+          <div className="sibling-information-heading">
+            <span>sibling information</span>
+          </div>
+          <div className="sibling-information-form-div">
+            <SiblingInformationForm />
+          </div>
         </div>
 
         {/* Family Information */}
         <div id="family-information">
-          
-            <div className="family-information-heading">
-              <span>family information</span>
-            </div>
-            <div className="family-information-form-div">
-              <FamilyInformationForm />
-            </div>
-     
+          <div className="family-information-heading">
+            <span>family information</span>
+          </div>
+          <div className="family-information-form-div">
+            <FamilyInformationForm />
+          </div>
         </div>
 
         {/* submit button */}
         <div className="student-submit-button-div">
-          <div className="student-submit-button">
-            <span>submit</span>
+          <div>
+            <PrimaryButton title="submit" />
           </div>
         </div>
       </div>
