@@ -63,3 +63,30 @@
   color: var(--color-white);
   text-transform: capitalize;
 }
+
+
+/* Button Primary Add  */
+
+.btn-primary-add-container{
+  width: 100%;
+  height: auto;
+
+  background: var(--color-purple);
+  border-radius: 0.5rem;
+  color: var(--color-white);
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  text-transform: capitalize;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}

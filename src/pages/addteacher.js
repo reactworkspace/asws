@@ -4,7 +4,7 @@ import '../styles/addteacher.css';
 import '../styles/font.css';
 import '../styles/flex.css';
 
-import * as React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // Import user profile components
@@ -14,6 +14,13 @@ import UserProfile from '../components/userprofile';
 import { PrimaryButton } from '../components/buttons';
 
 const AddTeacher = () => {
+  const [text, setText] = useState('');
+
+  function handleTextChange(event) {
+    const newText = event.target.value;
+    setText(newText);
+  }
+
   return (
     <section id="addteacher">
       <div>
@@ -87,13 +94,20 @@ const AddTeacher = () => {
                   <label className="teacher-personal-form-label" htmlFor="">
                     address *
                   </label>
-                  <input
+                  <textarea
                     type="text"
-                    className="teacher-personal-form-input poppins teacher-personal-form-address"
+                    className="teacher-personal-form-input teacher-form-input-address poppins "
                     id="teacher-personal-details-input"
-                    placeholder=""
+                    placeholder="address"
+                    value={text}
+                    onChange={handleTextChange}
                     required
-                  />
+                  >
+                    {' '}
+                  </textarea>
+                  <p className="teacher-form-input-textarea-count">
+                    {text.length}/300
+                  </p>
                 </div>
                 <div>
                   <label className="teacher-personal-form-label" htmlFor="">

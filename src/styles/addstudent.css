@@ -23,6 +23,7 @@
   border-radius: 1.25rem;
   background-color: var(--color-white);
   margin-top: 2rem;
+  box-shadow: 0px 2px 6px 0px rgba(13, 10, 44, 0.08);
 }
 
 .student-details-heading,
@@ -124,9 +125,6 @@
   padding-right: 1rem;
 }
 
-.zone-form-input-address {
-  height: 9rem;
-}
 
 #dob-place-div {
   display: grid;
@@ -135,6 +133,22 @@
 }
 .dob-place {
   width: 100%;
+}
+
+.student-form-input-address{
+  height: 5rem;
+  padding: 1rem;
+}
+
+.student-form-input-textarea-count {
+  color: var(--color-grey-3);
+  font-family: 'Poppins';
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 /* Student Sibling Information & Family Information common properties */
@@ -294,32 +308,6 @@ input[type='radio'] {
   display: flex;
   flex-direction: row-reverse;
   padding: 2rem 0 0 0;
-}
-
-.student-submit-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0.625rem 1.5rem;
-  gap: 0.625rem;
-
-  width: 7rem;
-  height: 3.75rem;
-
-  background: var(--color-purple);
-  border-radius: 2.5rem;
-  cursor: pointer;
-}
-
-.student-submit-button span {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 2rem;
-  color: var(--color-white);
-  text-transform: capitalize;
 }
 
 /* Large desktop screens (1440px and above) */

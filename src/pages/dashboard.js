@@ -242,11 +242,11 @@ const Dashboard = () => {
           </div>
           <DropdownMenuButton
             title="create"
-            address1="/student"
+            address1="/addstudent"
             addressTitle1="student"
-            address2="/teacher"
+            address2="/addteacher"
             addressTitle2="teacher"
-            address3="/zone"
+            address3="/addzone"
             addressTitle3="zone"
           />
         </div>

@@ -30,7 +30,7 @@ const Syllabus = () => {
               <span className="poppins-sub-heading">all subjects</span>
             </div>
             <div>
-              <PrimaryButton title="add subject" />
+              <PrimaryButton title="add subject" address='/addsubject' />
             </div>
           </div>
           <div className="syllabus-subject-list-container flex-col gap2rem">

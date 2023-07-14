@@ -5,7 +5,7 @@ import '../styles/font.css';
 import '../styles/flex.css';
 import '../styles/userprofile.css';
 
-import * as React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // Import user profile components
@@ -15,6 +15,13 @@ import UserProfile from '../components/userprofile';
 import { PrimaryButton } from '../components/buttons';
 
 const AddZone = () => {
+  const [text, setText] = useState('');
+
+  function handleTextChange(event) {
+    const newText = event.target.value;
+    setText(newText);
+  }
+
   return (
     <section id="addzone">
       <div>
@@ -87,13 +94,16 @@ const AddZone = () => {
               <label className="zone-form-label" htmlFor="address">
                 address *
               </label>
-              <input
+              <textarea
                 type="text"
                 className="zone-form-input zone-form-input-address poppin"
                 id="centre-address-input"
-                placeholder=" "
+                placeholder="address"
+                value={text}
+                onChange={handleTextChange}
                 required
-              />
+              ></textarea>
+               <p className='zone-form-input-textarea-count'>{text.length}/300</p>
             </div>
             <div>
               <label className="zone-form-label" htmlFor="waqboardno">
@@ -121,7 +131,9 @@ const AddZone = () => {
           </div>
         </div>
         <div className="zone-submit-button-div">
-          <div><PrimaryButton title='submit' /></div>
+          <div>
+            <PrimaryButton title="submit" />
+          </div>
         </div>
       </div>
     </section>

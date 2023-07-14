@@ -17,6 +17,7 @@ import Setting from './setting';
 import AddStudent from './addstudent';
 import AddTeacher from './addteacher';
 import AddZone from './addzone';
+import AddSubject from './addsubject';
 
 import { ImportZone, ImportStudent, ImportTeacher } from './import';
 
@@ -228,10 +229,7 @@ const AswsIndex = () => {
             <div id="navbar-list">
               <ul className="poppins">
                 <li>
-                  <Link
-                    to="/"
-                    onClick={() => handleClick('dashboard')}
-                  >
+                  <Link to="/" onClick={() => handleClick('dashboard')}>
                     <div
                       className={`flex list-button ${
                         isActive === 'dashboard' ? 'active' : ''
@@ -334,12 +332,14 @@ const AswsIndex = () => {
                 <Route exact path="/addstudent" element={<AddStudent />} />
                 <Route exact path="/addteacher" element={<AddTeacher />} />
                 <Route exact path="/addzone" element={<AddZone />} />
+                <Route exact path="/addsubject" element={<AddSubject />} />
 
                 <Route
                   exact
                   path="/studentdetails"
                   element={<StudentDetails />}
                 />
+
                 <Route
                   exact
                   path="/teacherdetails"
@@ -352,11 +352,13 @@ const AswsIndex = () => {
                   path="/importstudent"
                   element={<ImportStudent />}
                 />
+
                 <Route
                   exact
                   path="/importteacher"
                   element={<ImportTeacher />}
                 />
+                
                 <Route exact path="/importzone" element={<ImportZone />} />
               </Routes>
             </section>

@@ -17,6 +17,7 @@
   height: auto;
   border-radius: 1.25rem;
   background-color: var(--color-white);
+  box-shadow: 0px 2px 6px 0px rgba(13, 10, 44, 0.08);
 }
 
 .personal-details-heading,
@@ -112,6 +113,22 @@
   font-weight: 400;
 }
 
+.teacher-form-input-address{
+  height: 10.9rem;
+  padding: 1rem;
+}
+
+.teacher-form-input-textarea-count {
+  color: var(--color-grey-3);
+  font-family: 'Poppins';
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 /* submit button div */
 .teacher-submit-button-div {
   display: flex;
@@ -151,7 +168,6 @@
 
 /* Medium-sized desktop screens (1280px to 1439px) */
 @media (min-width: 1280px) and (max-width: 1439px) {
-
 }
 
 /* Small desktop screens and tablets (1024px to 1279px) */

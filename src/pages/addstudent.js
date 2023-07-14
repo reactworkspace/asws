@@ -229,7 +229,6 @@ const BrotherSibling = () => {
       </div>
       <div className="add-more-btn-sibling">
         <TiPlus />
-
         <span>add more</span>
       </div>
     </div>
@@ -582,6 +581,14 @@ const ParentalInformationGuardian = () => {
 };
 
 const AddStudent = () => {
+
+  const [text, setText] = useState('');
+
+  function handleTextChange(event) {
+    const newText = event.target.value;
+    setText(newText);
+  }
+
   return (
     <section id="addstudent">
       <div>
@@ -729,13 +736,16 @@ const AddStudent = () => {
                 <label className="student-form-label" htmlFor="">
                   address *
                 </label>
-                <input
+                <textarea
                   type="text"
-                  className="student-form-input poppins"
+                  className="student-form-input poppins student-form-input-address"
                   id="student-details-input"
                   placeholder="Select"
+                  value={text}
+                  onChange={handleTextChange}
                   required
-                />
+                ></textarea>
+                <p className="student-form-input-textarea-count">{text.length}/300</p>
               </div>
 
               <div>

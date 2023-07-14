@@ -104,3 +104,14 @@ export const PrimaryButton = (props) => {
     </div>
   );
 };
+
+export const PrimaryAddButton = (props) => {
+  const { title } = props;
+
+  return (
+    <div className="btn-primary-add-container">
+      <TiPlus />
+      <span>{title}</span>
+    </div>
+  );
+};
