@@ -2,11 +2,12 @@
 :root {
   /* Theme Color */
   --color-purple: #4d44b5;
-  --color-red: #F95A77;
+  --color-red: #f95a77;
   --color-orange: #fb7d5b;
   --color-yellow: #fcc43e;
   --color-text: #303972;
   --color-green: #4cbc9a;
+  --color-blue: #153060;
 
   /* white Color */
   --color-white: #ffffff;
@@ -14,6 +15,13 @@
   --color-grey-1: #f5f5f5;
   --color-grey-2: #c1bbeb;
   --color-grey-3: #a098ae;
+  --color-grey-4: #fafafa;
+
+  /* line  */
+  --line: #eaeaea;
+
+  /* Text off */
+  --text-off: #828282;
 
   /* extras */
   --color-green-hyperlink: #6418c3;
@@ -21,6 +29,7 @@
 
   /* black Color */
   --color-black: #232222;
+  --color-black-1: #000;
 
   /* Transparent Color */
   --color-purple-10: rgba(77, 68, 181, 0.1);
@@ -73,7 +82,7 @@ body {
   grid-auto-rows: 100% 100%;
   grid-auto-flow: column;
 }
-a:focus{
+a:focus {
   color: var(--color-green-hyperlink);
 }
 nav {

@@ -65,7 +65,7 @@ const AddChapterTitle = () => {
         <label className="addsubject-form-label" htmlFor="">
           chapter name *
         </label>
-        <div className='addchapter-form-input'>
+        <div className="addchapter-form-input">
           <input
             type="text"
             className="addsubject-form-input poppins"
@@ -73,7 +73,9 @@ const AddChapterTitle = () => {
             placeholder="surah fatiha"
             required
           />
-          <div className='addchapters-button-container'><PrimaryAddButton title="add more" /></div>
+          <div className="addchapters-button-container">
+            <PrimaryAddButton title="add more" />
+          </div>
         </div>
       </div>
     </div>
