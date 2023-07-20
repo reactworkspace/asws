@@ -5,7 +5,7 @@ import '../styles/index.css';
 import '../styles/flex.css';
 
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
@@ -16,27 +16,51 @@ import { PiEyeClosedBold, PiEyeBold } from 'react-icons/pi';
 import SignInImg from '../assets/images/signin.png';
 import SignUpImg from '../assets/images/signup.png';
 
+// Imported the userLogin.json data somehow
+import userLoginData from '../json/userLogin.json';
+
+// Importing the dasboard
+import AswsIndex from './index';
+
+// Importing the Components
+import Loading from '../components/loading';
+
 const SignIn = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate an artificial delay of 2 seconds (2000 milliseconds)
+    const delay = 1000;
+
+    setTimeout(() => {
+      // Check if the user is logged in (e.g., retrieve data from localStorage)
+      const isLoggedInLocalStorage = localStorage.getItem('isLoggedIn');
+      setIsLoggedIn(isLoggedInLocalStorage === 'true');
+      setIsLoading(false); // Mark loading as completed
+    }, delay);
+  }, []);
+
+  if (isLoading) {
+    // Show a loading page or spinner while the status is being checked
+    return <Loading />;
+  }
+
   return (
     <>
-      <section>
-        <Router>
-          <Routes>
-            <Route exact path="/" element={<SigninPageComponent />}></Route>
-            <Route
-              exact
-              path="/signup"
-              element={<SignupPageComponent />}
-            ></Route>
-
-            <Route
-              exact
-              path="/forgot"
-              element={<ForgotPageComponenet />}
-            ></Route>
-          </Routes>
-        </Router>
-      </section>
+      {isLoggedIn ? (
+        <AswsIndex />
+      ) : (
+        <section>
+          <Router>
+            <Routes>
+              <Route exact path="/" element={<SigninPageComponent />} />
+              <Route exact path="/signup" element={<SignupPageComponent />} />
+              <Route exact path="/forgot" element={<ForgotPageComponenet />} />
+            </Routes>
+          </Router>
+        </section>
+      )}
     </>
   );
 };
@@ -260,6 +284,9 @@ const SignupPageComponent = () => {
 const SigninPageComponent = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
+  const [loginError, setLoginError] = useState('');
 
   const handleTogglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -267,6 +294,41 @@ const SigninPageComponent = () => {
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleRememberMeChange = (e) => {
+    setRememberMe(e.target.checked);
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    // Find the user in the userLoginData array by matching the email
+    const user = userLoginData.find((user) => user.email === email);
+
+    if (user) {
+      // Check if the password matches the stored password for the user
+      if (user.password === password) {
+        // Login successful, store login info in localStorage if "remember me" is checked
+        if (rememberMe) {
+          localStorage.setItem('isLoggedIn', 'true');
+        }
+        // Handle successful login here, e.g., redirect to dashboard
+        window.location.reload();
+        console.log('Login successful!');
+        setLoginError('');
+      } else {
+        // Password is incorrect
+        setLoginError('Incorrect password');
+      }
+    } else {
+      // User not found in userLoginData
+      setLoginError('User not found');
+    }
   };
 
   return (
@@ -290,7 +352,7 @@ const SigninPageComponent = () => {
               </span>
             </div>
             <div className="signin-form-container">
-              <form action="">
+              <form action="" onSubmit={handleFormSubmit}>
                 <div className="form-feild-container">
                   <label
                     className="signin-form-label"
@@ -303,6 +365,8 @@ const SigninPageComponent = () => {
                     className="signin-form-input poppin"
                     id="signin-email-input"
                     placeholder="hannah.green@test.com"
+                    value={email}
+                    onChange={handleEmailChange}
                     required
                   />
                 </div>
@@ -333,11 +397,19 @@ const SigninPageComponent = () => {
                       </span>
                     )}
                   </div>
+                  {loginError && (
+                    <div className="error-message">{loginError}</div>
+                  )}
                 </div>
+
                 <div className="form-checkbox-container">
                   <span>
                     <label className="signin-checkbox-lable flex-c">
-                      <input type="checkbox" />
+                      <input
+                        type="checkbox"
+                        checked={rememberMe}
+                        onChange={handleRememberMeChange}
+                      />
                       <span className="signin-checkbox-label">
                         remember me on this computer
                       </span>
