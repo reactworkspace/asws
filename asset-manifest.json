@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b34200d.css",
-    "main.js": "/static/js/main.92edd5a3.js",
+    "main.css": "/static/css/main.08706cb5.css",
+    "main.js": "/static/js/main.8e3dfaac.js",
     "static/media/teacherprofile.png": "/static/media/teacherprofile.6ddce6bd411c1699d32d.png",
     "static/media/centrephoto.png": "/static/media/centrephoto.84113396ad7afe73d336.png",
     "static/media/signup.png": "/static/media/signup.adcceb92bb8fadae080f.png",
@@ -31,11 +31,11 @@
     "static/media/cap-absent.svg": "/static/media/cap-absent.594940ac52b15ecf9748692db9c81cb8.svg",
     "static/media/cap-leave.svg": "/static/media/cap-leave.a03ecfcf8144af1720df60d436f02863.svg",
     "static/media/cap-present.svg": "/static/media/cap-present.3058778aa3307cf22761a0ef0da1b761.svg",
-    "main.3b34200d.css.map": "/static/css/main.3b34200d.css.map",
-    "main.92edd5a3.js.map": "/static/js/main.92edd5a3.js.map"
+    "main.08706cb5.css.map": "/static/css/main.08706cb5.css.map",
+    "main.8e3dfaac.js.map": "/static/js/main.8e3dfaac.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b34200d.css",
-    "static/js/main.92edd5a3.js"
+    "static/css/main.08706cb5.css",
+    "static/js/main.8e3dfaac.js"
   ]
 }
