@@ -6,15 +6,54 @@ import UserProfilePhoto from '../assets/images/userprofile.png';
 import '../styles/userprofile.css';
 import '../styles/flex.css';
 
+// Imported the userLogin.json data somehow
+import userLoginData from '../json/userLogin.json';
 
 const UserProfile = () => {
+  // Object that store the json fetch data of user
+  let userInfo = {};
 
+  const userIdLocalStorage = localStorage.getItem('userId');
+  const userIdSessionStorage = sessionStorage.getItem('userId');
 
-  const userInfo = {
-    firstName: 'yahiya',
-    lastName: 'ali',
-    role: 'admin',
-  };
+  // To check if the user is logged in
+  const isLoggedInLocalStorage = localStorage.getItem('isLoggedIn') === 'true';
+  const isLoggedInSessionStorage =
+    sessionStorage.getItem('isLoggedIn') === 'true';
+
+  // // Example of how to use the values
+  // if (isLoggedInLocalStorage) {
+  //   console.log('User is logged in. Id:', userIdLocalStorage);
+  // }
+
+  // if (isLoggedInSessionStorage) {
+  //   console.log('User is logged in. Id:', userIdSessionStorage);
+  // }
+
+  const users = userLoginData;
+
+  // Find the user object with matching ID in Local Storage
+  const loggedInUserLocalStorage = users.find(
+    (user) => user.id === parseInt(userIdLocalStorage, 10)
+  );
+
+  // Find the user object with matching ID in Session Storage
+  const loggedInUserSessionStorage = users.find(
+    (user) => user.id === parseInt(userIdSessionStorage, 10)
+  );
+
+  // Example of how to use the values
+  if (isLoggedInLocalStorage && loggedInUserLocalStorage) {
+    // console.log('User is logged in. Id:', userIdLocalStorage);
+    // console.log('User Data:', loggedInUserLocalStorage);
+    userInfo = loggedInUserLocalStorage;
+  }
+
+  if (isLoggedInSessionStorage && loggedInUserSessionStorage) {
+    // console.log('User is logged in. Id:', userIdSessionStorage);
+    // console.log('User Data:', loggedInUserSessionStorage);
+    userInfo = loggedInUserSessionStorage;
+  }
 
   return (
     <div id="user-profile-div" className="flex-r-sb">
@@ -27,8 +66,8 @@ const UserProfile = () => {
       </div>
       <div className="username">
         <span className="poppins">
-          {userInfo.firstName}
-          {userInfo.lastName}
+          {userInfo.firstname}
+          {/* {userInfo.lastname} */}
         </span>
         <span className="poppins-w400">{userInfo.role}</span>
       </div>
@@ -38,6 +77,5 @@ const UserProfile = () => {
     </div>
   );
 };
-
 
 export default UserProfile;

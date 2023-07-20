@@ -1,8 +1,34 @@
 [
+  {  
+      "id": 0,
+      "firstname": "furqan",
+      "lastname": "mohammed",
+      "email": "dev@asws.com",
+      "password": "dev",
+      "role": "developer"
+    },
     {  
       "id": 1,
-      "username": "admin",  
+      "firstname": "yahiyaali",
+      "lastname": "sohail", 
       "email": "admin@asws.com",
-      "password": "asws@dev1"
+      "password": "asws@dev1",
+      "role": "admin"
+    },
+    {  
+      "id": 2,
+      "firstname": "shaik",
+      "lastname": "ahmmed", 
+      "email": "shaik@asws.com",
+      "password": "teacher1",
+      "role": "teacher"
+    },
+    {  
+      "id": 3,
+      "firstname": "kashif",
+      "lastname": "mohd", 
+      "email": "kashif@asws.com",
+      "password": "designer1",
+      "role": "designer1"
     }
 ]

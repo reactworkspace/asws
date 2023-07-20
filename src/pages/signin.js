@@ -34,10 +34,21 @@ const SignIn = () => {
     const delay = 1000;
 
     setTimeout(() => {
-      // Check if the user is logged in (e.g., retrieve data from localStorage)
-      const isLoggedInLocalStorage = localStorage.getItem('isLoggedIn');
-      setIsLoggedIn(isLoggedInLocalStorage === 'true');
-      setIsLoading(false); // Mark loading as completed
+      // Check if the user is logged in (e.g., retrieve data from sessionStorage)
+      const isLoggedInSessionStorage = sessionStorage.getItem('isLoggedIn');
+      if (isLoggedInSessionStorage !== null) {
+        setIsLoggedIn(isLoggedInSessionStorage === 'true');
+        setIsLoading(false); // Mark loading as completed
+      } else {
+
+        // Check if the user is logged in (e.g., retrieve data from localStorage)
+        const isLoggedInLocalStorage = localStorage.getItem('isLoggedIn');
+        setIsLoggedIn(isLoggedInLocalStorage === 'true');
+        setIsLoading(false); // Mark loading as completed
+
+        // If not found in sessionStorage, store the value in sessionStorage for future reference in this session
+        sessionStorage.setItem('isLoggedIn', isLoggedInLocalStorage);
+      }
     }, delay);
   }, []);
 
@@ -316,10 +327,13 @@ const SigninPageComponent = () => {
         // Login successful, store login info in localStorage if "remember me" is checked
         if (rememberMe) {
           localStorage.setItem('isLoggedIn', 'true');
+          localStorage.setItem('userId', user.id);
         }
         // Handle successful login here, e.g., redirect to dashboard
         window.location.reload();
-        console.log('Login successful!');
+        sessionStorage.setItem('isLoggedIn', 'true');
+        sessionStorage.setItem('userId', user.id);
+
         setLoginError('');
       } else {
         // Password is incorrect

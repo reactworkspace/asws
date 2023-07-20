@@ -62,6 +62,7 @@
 
 .zone-checkbox-lable input[type='checkbox']:checked {
   appearance: auto;
+  accent-color: var(--color-purple);
 }
 
 .zone-checkbox-lable span {

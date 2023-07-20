@@ -90,9 +90,11 @@ nav {
   height: 100%;
   width: 100%;
 }
+nav a:focus {
+  color: var(--color-white) !important;
+}
 
 /*  header-menu */
-
 header .icon {
   cursor: pointer;
   height: 2rem;

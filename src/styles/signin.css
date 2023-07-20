@@ -113,6 +113,13 @@ body .signin-main-container {
   background: var(--color-grey-4);
 }
 
+.error-message{
+  font-family: 'Open Sans';
+  font-size: 1.2rem;
+  color: var(--color-red);
+  text-transform: capitalize;
+}
+
 .password-input-wrapper {
   display: flex;
   justify-content: center;

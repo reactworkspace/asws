@@ -82,12 +82,12 @@ const AswsIndex = () => {
     navUrl = 'teacher';
   } else if (modifiedUrl === 'attendance') {
     navUrl = modifiedUrl;
-  } else if (modifiedUrl === 'syllabus') {
-    navUrl = modifiedUrl;
+  } else if (modifiedUrl === 'syllabus' || modifiedUrl === 'addsubject') {
+    navUrl = 'syllabus';
   } else if (modifiedUrl === 'setting') {
     navUrl = modifiedUrl;
   } else {
-    console.log('Error');
+    // console.log('Error');
   }
 
   // hook to set the active onClick event
@@ -358,7 +358,7 @@ const AswsIndex = () => {
                   path="/importteacher"
                   element={<ImportTeacher />}
                 />
-                
+
                 <Route exact path="/importzone" element={<ImportZone />} />
               </Routes>
             </section>

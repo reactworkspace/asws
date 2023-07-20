@@ -230,7 +230,6 @@ body .signup-main-container {
 .signup-checkbox-lable input[type='checkbox']:checked {
   appearance: auto;
   accent-color: var(--color-blue);
-  border-radius: 50%;
 }
 
 .signup-checkbox-lable span {
