@@ -53,9 +53,14 @@
   justify-content: centre;
 }
 
+.gap1rem {
+  gap: 1rem;
+}
+
 .gap2rem {
   gap: 2rem;
 }
+
 
 .signin-heading span {
   color: var(--color-black-1);
