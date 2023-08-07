@@ -1,0 +1,169 @@
+/* title component */
+.title_container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.37rem;
+}
+
+.title_line {
+  display: flex;
+  align-items: center;
+}
+
+.title_wrapper {
+  color: var(--color-font-quaternary);
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+/* Content Component */
+.content_container {
+  margin-top: 2rem;
+  margin-left: 7.5rem;
+  width: 40rem;
+}
+
+/* List Component */
+.list_component {
+  padding: 0.5rem 1.5rem;
+}
+
+/* List Item Component */
+.list_item_container {
+  padding-top: 1.5rem;
+}
+
+.list_item_title {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+
+  color: var(--color-font-quaternary);
+  font-family: 'Roboto';
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.list_item_paragraph {
+  margin-top: 0.5rem;
+  margin-left: 3.6rem;
+  width: 24rem;
+
+  color: var(--color-font-tertiary);
+
+  /* Paragraph */
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6rem; /* 1.6rem */
+}
+
+/* Project Card Componenet */
+.projectcard_container {
+  width: 25.6875rem;
+  height: 26.3125rem;
+
+  border-radius: 1.25rem;
+}
+
+.projectcard_wrapper {
+  height: 100%;
+  padding: 5rem 3rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project_heading_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projectcard_paragraph {
+  color: var(--color-white);
+
+  /* Paragraph */
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6rem; /* 1.6rem */
+}
+
+.projectcard_button {
+  display: flex;
+}
+
+/* Statistics Section */
+
+.statistics_container {
+  padding-top: 1rem;
+}
+
+.statistics_wrapper {
+  width: 40rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+.statistic_data_container {
+ 
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: var(--color-white);
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6rem; /* 1.6rem */
+  text-transform: capitalize;
+}
+
+.statistic_data_1,
+.statistic_data_2,
+.statistic_data_3,
+.statistic_data_4,
+.statistic_data_5 {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+}
+
+.statistic_data_1 {
+  background: var(--color-chart-1);
+}
+
+.statistic_data_2 {
+  background: var(--color-chart-2);
+}
+
+.statistic_data_3 {
+  background: var(--color-chart-3);
+}
+
+.statistic_data_4 {
+  background: var(--color-chart-4);
+}
+
+.statistic_data_5 {
+  background: var(--color-chart-5);
+}
+
+/* Chart */
+
+/* .chart_container{
+
+} */

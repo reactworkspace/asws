@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import SignIn from './pages/signin';
-
+import HomePage from './pages/homepage/homepage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <SignIn />
+    <HomePage />
   </>
 );

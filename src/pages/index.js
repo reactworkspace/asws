@@ -2,28 +2,32 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 // styles
-import '../styles/index.css';
-import '../styles/font.css';
-import '../styles/flex.css';
+import '../assets/css/index.css';
+import '../assets/css/font.css';
+import '../assets/css/flex.css';
 
-import Dashboard from './dashboard';
-import Zone from './zone';
-import Student from './student';
-import Teacher from './teacher';
-import Attendance from './attendance';
-import Syllabus from './syllabus';
-import Setting from './setting';
+import Dashboard from './main/dashbaord/dashboard';
+import Zone from './main/zone/zone';
+import Student from './main/student/student';
+import Teacher from './main/teacher/teacher';
+import Attendance from './main/attendance/attendance';
+import Syllabus from './main/syllabus/syllabus';
+import Setting from './main/setting/setting';
 
-import AddStudent from './addstudent';
-import AddTeacher from './addteacher';
-import AddZone from './addzone';
-import AddSubject from './addsubject';
+import AddStudent from './main/student/addstudent/addstudent';
+import AddTeacher from './main/teacher/addteacher/addteacher';
+import AddZone from './main/zone/addzone/addzone';
+import AddSubject from './main/syllabus/addsubject/addsubject';
 
-import { ImportZone, ImportStudent, ImportTeacher } from './import';
+import {
+  ImportZone,
+  ImportStudent,
+  ImportTeacher,
+} from '../components/main/import/import';
 
-import StudentDetails from './studentdetails';
-import TeacherDetails from './teacherdetails';
-import ZoneDetails from './zonedetails';
+import StudentDetails from './main/student/studentdetails/studentdetails';
+import TeacherDetails from './main/teacher/teacherdetails/teacherdetails';
+import ZoneDetails from './main/zone/zonedetails/zonedetails';
 
 // react-icons
 import { BsGridFill } from 'react-icons/bs';

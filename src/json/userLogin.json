@@ -5,7 +5,8 @@
       "lastname": "mohammed",
       "email": "dev@asws.com",
       "password": "dev",
-      "role": "developer"
+      "role": "developer",
+      "img": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {  
       "id": 1,
@@ -13,7 +14,8 @@
       "lastname": "sohail", 
       "email": "admin@asws.com",
       "password": "asws@dev1",
-      "role": "admin"
+      "role": "admin",
+      "img": ""
     },
     {  
       "id": 2,
@@ -21,7 +23,8 @@
       "lastname": "ahmmed", 
       "email": "shaik@asws.com",
       "password": "teacher1",
-      "role": "teacher"
+      "role": "teacher",
+      "img": ""
     },
     {  
       "id": 3,
@@ -29,6 +32,7 @@
       "lastname": "mohd", 
       "email": "kashif@asws.com",
       "password": "designer1",
-      "role": "designer1"
+      "role": "designer1",
+      "img": ""
     }
 ]
