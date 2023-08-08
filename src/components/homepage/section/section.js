@@ -2,7 +2,11 @@
 import style from './section.module.css';
 
 // import button componenet
-import { PrimaryButton } from '../buttons/buttons';
+import {
+  PrimaryButton,
+  SecondaryButton,
+  CirclePrimaryButton,
+} from '../buttons/buttons';
 
 // import svg as react component
 import { ReactComponent as Line } from '../../../assets/svg/homepage/Line.svg';
@@ -234,7 +238,59 @@ export const EventCard = (props) => {
             <h3>{eventHeading}</h3>
           </div>
         </div>
-        <div className={style.eventcard_button}></div>
+        <div className={style.eventcard_button}>
+          <CirclePrimaryButton />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// footer  list
+export const FooterList = (props) => {
+  const { heading, subHeading1, subHeading2, subHeading3, subHeading4 } = props;
+  return (
+    <div className={style.footerlist_container}>
+      <div className={style.footerlist_heading}>
+        <span>{heading}</span>
+      </div>
+      <div className={style.footerlist_sub_heading}>
+        <span>{subHeading1}</span>
+      </div>
+      <div className={style.footerlist_sub_heading}>
+        <span>{subHeading2}</span>
+      </div>
+      <div className={style.footerlist_sub_heading}>
+        <span>{subHeading3}</span>
+      </div>
+      <div className={style.footerlist_sub_heading}>
+        <span>{subHeading4}</span>
+      </div>
+    </div>
+  );
+};
+
+// footer subsribe
+export const FooterSubcsribe = (props) => {
+  const { heading } = props;
+  return (
+    <div className={style.footersubscribe_container}>
+      <div className={style.footersubscribe_heading}>
+        <span>{heading}</span>
+      </div>
+      <div className={style.footersubscribe_form_container}>
+        <form action="" className={style.footersubscribe_form_wrapper}>
+          <input
+            className={style.footersubscribe_input}
+            type="text"
+            name="email"
+            placeholder="your email"
+            required
+          />
+          <div className={style.footersubscribe_button}>
+            <SecondaryButton title="subscribe" />
+          </div>
+        </form>
       </div>
     </div>
   );

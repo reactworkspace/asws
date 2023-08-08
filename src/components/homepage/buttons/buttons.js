@@ -7,7 +7,7 @@ import style from './buttons.module.css';
 import { Link } from 'react-router-dom';
 
 // import react icons
-import { BsChevronDown } from 'react-icons/bs';
+import { BsChevronDown, BsArrowRightShort } from 'react-icons/bs';
 
 // import svg as react component
 import { ReactComponent as PlayIcon } from '../../../assets/svg/homepage/play_icon.svg';
@@ -67,3 +67,32 @@ export const PrimaryButton = (props) => {
     </div>
   );
 };
+
+// Secondary Button
+export const SecondaryButton = (props) => {
+  const { title, address } = props;
+
+  return (
+    <div>
+      <Link to={address}>
+        <div className={style.btn_secondary_container}>
+          <span>{title}</span>
+        </div>
+      </Link>
+    </div>
+  );
+};
+
+
+export const CirclePrimaryButton = (props) =>{
+  const { address } = props;
+  return (
+    <div>
+      <Link to={address}>
+        <div className={style.btn_circle_primary_container}>
+          <BsArrowRightShort />
+        </div>
+      </Link>
+    </div>
+  );
+}

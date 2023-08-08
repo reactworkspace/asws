@@ -45,6 +45,8 @@ import {
   DonationCard,
   EventTitle,
   EventCard,
+  FooterList,
+  FooterSubcsribe
 } from '../../components/homepage/section/section';
 
 const HomePage = () => {
@@ -100,7 +102,7 @@ const HomePage = () => {
 
 export default HomePage;
 
-const HomePageComponent = () => {
+export const HomePageComponent = () => {
   // useEffect to Fade the Element in Section
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -406,7 +408,36 @@ const HomePageComponent = () => {
       {/* Footer section */}
       <section className={style.footer_container}>
         <div className={style.footer_wrapper}>
-          
+          <div className={style.footer_left_container}>
+            <div className={style.footer_organisation_name}>
+              <span>ahle sunnat welfare society</span>
+            </div>
+            <FooterList
+              heading="home"
+              subHeading1="about us"
+              subHeading2="team"
+              subHeading3="what we do"
+              subHeading4="contact"
+            />
+            <FooterList
+              heading="more"
+              subHeading1="projects"
+              subHeading2="events"
+              subHeading3="donate"
+              subHeading4="blog"
+            />
+            <FooterList
+              heading="connect"
+              subHeading1="facebook"
+              subHeading2="instagram"
+              subHeading3="twitter"
+              subHeading4="linkedin"
+            />
+          </div>
+          <div className={style.footer_right_container}>
+            <FooterSubcsribe 
+            heading='Subscribe to get latest updates' />
+          </div>
         </div>
       </section>
     </div>
