@@ -7,6 +7,8 @@ import { PrimaryButton } from '../buttons/buttons';
 // import svg as react component
 import { ReactComponent as Line } from '../../../assets/svg/homepage/Line.svg';
 import { ReactComponent as SquareIcon } from '../../../assets/svg/homepage/square_icon.svg';
+import { ReactComponent as StartLeftDesign } from '../../../assets/svg/homepage/star_left_group.svg';
+import { ReactComponent as StartRightDesign } from '../../../assets/svg/homepage/star_right_group.svg';
 
 // import Chart Component
 import { PieChart, Pie, Cell } from 'recharts';
@@ -159,27 +161,80 @@ export const Chart = () => {
   const COLORS = ['#bef3c0', '#ac94f1', '#fff0ca', '#f9cf64', '#f38fbf'];
 
   return (
-    <div className={style.chart_container}>
-      <div className={style.chart_wrapper}>
-        <PieChart width={330} height={310} id="pie-chart">
-          <Pie
-            data={data}
-            cx={160}
-            cy={150}
-            innerRadius={80}
-            outerRadius={150}
-            fill="#8884d8"
-            dataKey="value"
-            stroke="none" // This will remove the border
-          >
-            {data.map((entry, index) => (
-              <Cell
-                key={`cell-${index}`}
-                fill={COLORS[index % COLORS.length]}
-              />
-            ))}
-          </Pie>
-        </PieChart>
+    <div>
+      <PieChart width={330} height={310} id="pie-chart">
+        <Pie
+          data={data}
+          cx={160}
+          cy={150}
+          innerRadius={80}
+          outerRadius={150}
+          fill="#8884d8"
+          dataKey="value"
+          stroke="none" // This will remove the border
+        >
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
+        </Pie>
+      </PieChart>
+    </div>
+  );
+};
+
+// Donation Card
+export const DonationCard = (props) => {
+  const { heading, btnTitle, btnAddress } = props;
+  return (
+    <div className={style.donationcard_container}>
+      <div className={style.donationcard_wrapper}>
+        <div className={style.donationcard_heading}>
+          <span>{heading}</span>
+        </div>
+        <PrimaryButton title={btnTitle} address={btnAddress} />
+      </div>
+      <div className={style.start_left_container}>
+        <StartLeftDesign />
+      </div>
+      <div className={style.start_right_container}>
+        <StartRightDesign />
+      </div>
+    </div>
+  );
+};
+
+// Event Title
+export const EventTitle = (props) => {
+  const { title } = props;
+
+  return (
+    <div className={style.eventtitle_container}>
+      <div className={style.eventtitle_title}>
+        <span>{title}</span>
+      </div>
+      <div className={style.eventtitle_line}></div>
+    </div>
+  );
+};
+
+// Event Cards
+export const EventCard = (props) => {
+  const { eventDay, eventMonth, eventDetail, eventHeading } = props;
+
+  return (
+    <div className={style.eventcard_container}>
+      <div className={style.eventcard_wrapper}>
+        <div className={style.eventcard_date}>
+          <div className={style.eventcard_day}>{eventDay}</div>
+          <div className={style.eventcard_month}>{eventMonth}</div>
+        </div>
+        <div className={style.eventcard_details}>
+          <div className={style.eventcard_detail}>{eventDetail}</div>
+          <div className={style.eventcard_heading}>
+            <h3>{eventHeading}</h3>
+          </div>
+        </div>
+        <div className={style.eventcard_button}></div>
       </div>
     </div>
   );

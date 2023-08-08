@@ -118,7 +118,6 @@
   gap: 1rem;
 }
 .statistic_data_container {
- 
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -162,8 +161,142 @@
   background: var(--color-chart-5);
 }
 
-/* Chart */
+/* Donation Card */
+.donationcard_container {
+  width: 80rem;
+  height: 24rem;
+  border-radius: 1.25rem;
+  background-color: var(--bg-color-homepage-secondary);
+  position: relative;
+  overflow: hidden;
 
-/* .chart_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-} */
+.donationcard_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.donationcard_heading {
+  width: 50.3125rem;
+
+  color: var(--color-white);
+
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.4rem; /* 2.4rem */
+}
+
+.start_left_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.start_right_container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Event Title */
+.eventtitle_container {
+  width: 80rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.eventtitle_title {
+  width: 20%;
+  color: var(--color-font-primary);
+  font-family: 'Roboto';
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3.5rem; /* 3.5rem */
+  text-transform: capitalize;
+}
+
+.eventtitle_line {
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+/* event cards */
+.eventcard_container {
+  width: 39.25rem;
+  height: 11.9375rem;
+
+  border-radius: 1.25rem;
+  background-color: var(--bg-color-homepage-secondary);
+  padding: 2rem 2.5rem;
+}
+
+.eventcard_wrapper {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.eventcard_date {
+  display: flex;
+  flex-direction: column;
+}
+.eventcard_day {
+  color: var(--color-white);
+  font-family: 'Roboto';
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3.6rem; /* 3.6rem */
+  font-variant: small-caps;
+}
+
+.eventcard_month {
+  color: var(--color-white);
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+.eventcard_details {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.eventcard_detail {
+  color: var(--color-white);
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+.eventcard_heading {
+  color: var(--color-white);
+
+  /* H3 */
+  font-family: 'Roboto';
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.625rem; /* 2.625rem */
+}

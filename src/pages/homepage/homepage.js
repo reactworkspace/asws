@@ -42,6 +42,9 @@ import {
   ProjectCard,
   Statistics,
   Chart,
+  DonationCard,
+  EventTitle,
+  EventCard,
 } from '../../components/homepage/section/section';
 
 const HomePage = () => {
@@ -103,16 +106,13 @@ const HomePageComponent = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
-
   return (
     <div>
       {/* header */}
       <section class={style.header_container}>
         <div className={style.header_logo}>
           <h1>
-            <span className={style.righteous}>
-              ahle sun nat welfare society
-            </span>
+            <span className={style.righteous}>ahle sunnat welfare society</span>
           </h1>
         </div>
 
@@ -369,17 +369,45 @@ const HomePageComponent = () => {
 
       {/* Donation Section */}
       <section className={style.donation_container}>
-        <div className={style.donation_wrapper}></div>
+        <div className={style.donation_wrapper} data-aos="fade-up">
+          <DonationCard
+            heading='"Empower Positive Change: Extend a Helping Hand through Your
+          Generous Donations and Make a Lasting Difference"'
+            btnTitle="donate now"
+            btnAddress=""
+          />
+        </div>
       </section>
 
       {/* Our Event Section */}
       <section className={style.event_container}>
-        <div className={style.event_wrapper}></div>
+        <div className={style.event_wrapper}>
+          <div data-aos="fade-right">
+            <EventTitle title="our events" />
+          </div>
+          <div className={style.event_cards_container} data-aos="fade-up">
+            <EventCard
+              eventDay="13"
+              eventMonth="aug"
+              eventDetail="next event"
+              eventHeading="Next IFP program will start in another city, Kurnool."
+            />
+            <EventCard
+              eventDay="25"
+              eventMonth="sep"
+              eventDetail="next event"
+              eventHeading='"100-Day IFB Achiever: Celebrate with a Special Gift!
+              '
+            />
+          </div>
+        </div>
       </section>
 
       {/* Footer section */}
       <section className={style.footer_container}>
-        <div className={style.footer_wrapper}></div>
+        <div className={style.footer_wrapper}>
+          
+        </div>
       </section>
     </div>
   );

@@ -13,7 +13,6 @@
   --color-font-tertiary: #525560;
   --color-font-quaternary: #1d2130;
 
-
   --color-chart-1: #bef3c0;
   --color-chart-2: #ac94f1;
   --color-chart-3: #fff0ca;
@@ -158,8 +157,8 @@ p {
 }
 
 /* main */
-.main_container {
-}
+/* .main_container {
+} */
 
 /* Home Container */
 .home_container {
@@ -447,7 +446,6 @@ p {
   line-height: 1.6rem; /* 1.6rem */
 }
 
-
 /* Donation Section */
 .donation_container {
   width: 100%;
@@ -474,8 +472,15 @@ p {
 
 .event_wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
+}
+
+.event_cards_container {
+  display: flex;
+  gap: 1.5rem;
 }
 
 /* footer */
@@ -492,4 +497,3 @@ p {
   justify-content: center;
   align-items: center;
 }
-
