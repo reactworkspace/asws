@@ -28,6 +28,7 @@
   --color-yellow: #fcc43e;
   --color-text: #303972;
   --color-green: #4cbc9a;
+  --color-green-1: #219653;
   --color-blue: #153060;
 
   /* white Color */
@@ -72,9 +73,7 @@
   --card-border: 1.5rem;
 }
 
-body {
-  background-color: var(--color-white) !important;
-}
+
 
 h2 {
   width: 54.3125rem;
@@ -242,7 +241,7 @@ p {
   height: auto;
 
   padding: 5.31rem 6.81rem;
-  background-color: var(--bg-color-homepage-primary);
+  background-color: var(--color-white);
 }
 
 .aboutus_top_container {
@@ -355,6 +354,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-white);
 }
 
 .projectswehavedone_wrapper {

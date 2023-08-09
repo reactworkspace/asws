@@ -224,7 +224,7 @@ export const SignupPageComponent = () => {
               </div>
               <div className="login-container">
                 <span> already have an account ?</span>{' '}
-                <Link to="/">
+                <Link to="/signin">
                   <span className="login">log in</span>
                 </Link>
               </div>
@@ -274,6 +274,7 @@ export const SigninPageComponent = () => {
           localStorage.setItem('userId', user.id);
         }
         // Handle successful login here, e.g., redirect to dashboard
+        window.location.href = '/';
         window.location.reload();
         sessionStorage.setItem('isLoggedIn', 'true');
         sessionStorage.setItem('userId', user.id);

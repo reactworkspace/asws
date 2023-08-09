@@ -50,7 +50,7 @@ body .signin-main-container {
 }
 
 .signin-logo {
-  color: #219653;
+  color: var(--color-green-1);
   font-family: 'Roboto';
   font-size: 2.8125rem;
   font-style: normal;
@@ -61,7 +61,7 @@ body .signin-main-container {
 }
 
 .signin-greeting {
-  color: var(--blue, #153060);
+  color: var(--color-blue);
   /* material-theme/display/medium */
   font-family: 'Open Sans';
   font-size: 2.8125rem;
@@ -226,6 +226,9 @@ body .signin-main-container {
   cursor: pointer;
 }
 
+.login-button-container:hover {
+  background-color: var(--color-blue);
+}
 /* Input CheckBox */
 .signin-checkbox-lable input[type='checkbox'] {
   appearance: none;

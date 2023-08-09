@@ -5,7 +5,7 @@ import style from './homepage.module.css';
 import React, { useState, useEffect } from 'react';
 
 // React Router
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 // Import Animation On Scroll
 import AOS from 'aos';

@@ -13,11 +13,11 @@
   --color-font-tertiary: #525560;
   --color-font-quaternary: #1d2130;
 
-  --color-bar-1: #bef3c0;
-  --color-bar-2: #ac94f1;
-  --color-bar-3: #fff0ca;
-  --color-bar-4: #f9cf64;
-  --color-bar-5: #f38fbf;
+  --color-chart-1: #bef3c0;
+  --color-chart-2: #ac94f1;
+  --color-chart-3: #fff0ca;
+  --color-chart-4: #f9cf64;
+  --color-chart-5: #f38fbf;
 
   /* Home Page Them */
 
@@ -28,6 +28,7 @@
   --color-yellow: #fcc43e;
   --color-text: #303972;
   --color-green: #4cbc9a;
+  --color-green-1: #219653;
   --color-blue: #153060;
 
   /* white Color */
@@ -90,7 +91,7 @@ html {
 body {
   width: 100vw;
   height: 100%;
-  font-family: poppins, sans-serif;
+  font-family: 'poppins', sans-serif;
   font-size: 0.88rem;
   background: var(--color-grey-0);
   user-select: none;
