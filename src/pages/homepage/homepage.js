@@ -32,9 +32,11 @@ import {
 
 // import svg as react component
 import { ReactComponent as PlayIcon } from '../../assets/svg/homepage/play_icon.svg';
+import GreetingGif from '../../assets/images/opening.gif';
 
 // import section componenets
 import {
+
   NavigationBar,
   Title,
   Content,
@@ -49,6 +51,7 @@ import {
   FooterList,
   FooterSubcsribe,
 } from '../../components/homepage/section/section';
+
 
 const HomePage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -109,9 +112,29 @@ export const HomePageComponent = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
+  const [showGreeting, setShowGreeting] = useState(true);
+
+  useEffect(() => {
+    // Simulate loader delay
+    const loaderTimeout = setTimeout(() => {
+      setShowGreeting(false);
+    }, 5450); // 60000 milliseconds = 1 minute
+
+    return () => {
+      clearTimeout(loaderTimeout);
+    };
+  }, []);
+
 
   return (
     <div className={style.homepage}>
+
+      {showGreeting && (
+        <div className={style.greeting_container}>
+          <img src={GreetingGif} alt="gif" />
+        </div>
+      )}
+
       {/* header */}
       <section class={style.header_container}>
         <div className={style.header_logo}>
@@ -202,10 +225,7 @@ export const HomePageComponent = () => {
         </section>
 
         {/* What We Do Section */}
-        <section
-          id='whatwedo'
-          className={style.whatwedo_container}
-        >
+        <section id="whatwedo" className={style.whatwedo_container}>
           <div className={style.whatwedo_wrapper} data-aos="fade-up">
             <div className={style.whatwedo_left_wrapper}>
               <Title title="what we do" />
@@ -256,7 +276,10 @@ export const HomePageComponent = () => {
         </section>
 
         {/* Projects We Have Done Section */}
-        <section id='projectwehavedone' className={style.projectswehavedone_container}>
+        <section
+          id="projectwehavedone"
+          className={style.projectswehavedone_container}
+        >
           <div className={style.projectswehavedone_wrapper} data-aos="fade-up">
             <div className={style.projectswehavedone_top_wrapper}>
               <Title title="project we have done" />
@@ -370,7 +393,7 @@ export const HomePageComponent = () => {
       </section>
 
       {/* Footer section */}
-      <section id='footer' className={style.footer_container}>
+      <section id="footer" className={style.footer_container}>
         <div className={style.footer_wrapper}>
           <div className={style.footer_left_container}>
             <div className={style.footer_organisation_name}>
