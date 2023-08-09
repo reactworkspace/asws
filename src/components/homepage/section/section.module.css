@@ -1,3 +1,30 @@
+/* Navigation Bar */
+.nav_container {
+  display: flex;
+  padding: 1rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav_font {
+  color: var(--color-font-tertiary);
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.nav_font:hover,
+.active {
+  color: var(--color-font-primary) ;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
 /* title component */
 .title_container {
   display: flex;
@@ -336,7 +363,6 @@
 }
 
 .footerlist_sub_heading:hover {
-  
   font-style: normal;
   font-weight: 500;
   opacity: 1;

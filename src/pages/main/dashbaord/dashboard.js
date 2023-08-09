@@ -200,7 +200,7 @@ const AttendanceBarChart = () => {
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         <XAxis dataKey="week" />
         <YAxis />
-        <Tooltip content={renderCustomTooltip} />
+        <Tooltip content={renderCustomTooltip}  />
         <Bar
           dataKey="present"
           fill="#4cbc9a"

@@ -129,7 +129,6 @@
   padding: 2rem;
 }
 .tooltipStyle {
-  color: var(--color-white);
   background-color: var(--color-purple);
   padding: 0.75rem 1rem;
   border-radius: 0.8125rem;
@@ -137,7 +136,7 @@
   height: auto;
   flex-shrink: 0;
 
-  font-family: Inter;
+  font-family: 'Inter';
   font-size: 0.9rem;
   font-style: normal;
   font-weight: 500;
@@ -154,6 +153,9 @@
   border-radius: 0.125rem;
 }
 
+.tooltipStyle div p {
+  color: var(--color-white);
+}
 .bar {
   background-color: blue;
 }

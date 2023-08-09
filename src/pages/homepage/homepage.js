@@ -5,7 +5,7 @@ import style from './homepage.module.css';
 import React, { useState, useEffect } from 'react';
 
 // React Router
-import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Import Animation On Scroll
 import AOS from 'aos';
@@ -35,6 +35,7 @@ import { ReactComponent as PlayIcon } from '../../assets/svg/homepage/play_icon.
 
 // import section componenets
 import {
+  NavigationBar,
   Title,
   Content,
   List,
@@ -108,8 +109,9 @@ export const HomePageComponent = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
+
   return (
-    <div>
+    <div className={style.homepage}>
       {/* header */}
       <section class={style.header_container}>
         <div className={style.header_logo}>
@@ -118,45 +120,7 @@ export const HomePageComponent = () => {
           </h1>
         </div>
 
-        <div className={style.nav_container}>
-          <div>
-            <h1>
-              {' '}
-              <Link to="#home">
-                <span className={style.nav_font}>home</span>
-              </Link>
-            </h1>
-          </div>
-          <div>
-            <h1>
-              {' '}
-              <Link to="#aboutus">
-                <span className={style.nav_font}>about us</span>
-              </Link>
-            </h1>
-          </div>
-          <div>
-            <h1>
-              <Link to="#home">
-                <span className={style.nav_font}>what we do</span>
-              </Link>
-            </h1>
-          </div>
-          <div>
-            <h1>
-              <Link to="#home">
-                <span className={style.nav_font}>media</span>
-              </Link>
-            </h1>
-          </div>
-          <div>
-            <h1>
-              <Link to="#home">
-                <span className={style.nav_font}>contact</span>
-              </Link>
-            </h1>
-          </div>
-        </div>
+        <NavigationBar />
 
         <div className={style.sigin_container}>
           <SigninButton title="sign in" address="/signin" />
@@ -239,7 +203,7 @@ export const HomePageComponent = () => {
 
         {/* What We Do Section */}
         <section
-          id={style.whatwedoContainer}
+          id='whatwedo'
           className={style.whatwedo_container}
         >
           <div className={style.whatwedo_wrapper} data-aos="fade-up">
@@ -292,7 +256,7 @@ export const HomePageComponent = () => {
         </section>
 
         {/* Projects We Have Done Section */}
-        <section className={style.projectswehavedone_container}>
+        <section id='projectwehavedone' className={style.projectswehavedone_container}>
           <div className={style.projectswehavedone_wrapper} data-aos="fade-up">
             <div className={style.projectswehavedone_top_wrapper}>
               <Title title="project we have done" />
@@ -406,7 +370,7 @@ export const HomePageComponent = () => {
       </section>
 
       {/* Footer section */}
-      <section className={style.footer_container}>
+      <section id='footer' className={style.footer_container}>
         <div className={style.footer_wrapper}>
           <div className={style.footer_left_container}>
             <div className={style.footer_organisation_name}>

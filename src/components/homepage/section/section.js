@@ -1,3 +1,6 @@
+// React
+import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 //  style
 import style from './section.module.css';
 
@@ -16,6 +19,99 @@ import { ReactComponent as StartRightDesign } from '../../../assets/svg/homepage
 
 // import Chart Component
 import { PieChart, Pie, Cell } from 'recharts';
+
+// NavigationBar
+export const NavigationBar = () => {
+  const [click, setClick] = useState(false);
+  const closeMenu = () => setClick(false);
+
+  return (
+    <div className={click ? style.nav_container.active : style.nav_container}>
+      <div>
+        <h1>
+          {' '}
+          <Link
+            activeClass={style.active}
+            className={style.nav_font}
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-200}
+            duration={500}
+            onClick={closeMenu}
+          >
+            <span>home</span>
+          </Link>
+        </h1>
+      </div>
+      <div>
+        <h1>
+          {' '}
+          <Link
+            activeClass={style.active}
+            className={style.nav_font}
+            to="aboutus"
+            spy={true}
+            smooth={true}
+            offset={-60}
+            duration={500}
+            onClick={closeMenu}
+          >
+            <span>about us</span>
+          </Link>
+        </h1>
+      </div>
+      <div>
+        <h1>
+          <Link
+            activeClass={style.active}
+            className={style.nav_font}
+            to="whatwedo"
+            spy={true}
+            smooth={true}
+            offset={-60}
+            duration={500}
+            onClick={closeMenu}
+          >
+            <span>what we do</span>
+          </Link>
+        </h1>
+      </div>
+      <div>
+        <h1>
+          <Link
+            activeClass={style.active}
+            className={style.nav_font}
+            to="projectwehavedone"
+            spy={true}
+            smooth={true}
+            offset={-60}
+            duration={500}
+            onClick={closeMenu}
+          >
+            <span>media</span>
+          </Link>
+        </h1>
+      </div>
+      <div>
+        <h1>
+          <Link
+            activeClass={style.active}
+            className={style.nav_font}
+            to="footer"
+            spy={true}
+            smooth={true}
+            offset={-300}
+            duration={500}
+            onClick={closeMenu}
+          >
+            <span>contact</span>
+          </Link>
+        </h1>
+      </div>
+    </div>
+  );
+};
 
 // Section
 export const Section = ({ children }) => {
