@@ -118,6 +118,10 @@ p {
   align-items: center;
   justify-content: center;
   gap: 12rem;
+  position: fixed;
+  top: 0;
+  background-color: var(--color-white);
+  z-index: 1;
 }
 
 .righteous {
@@ -157,8 +161,9 @@ p {
 }
 
 /* main */
-/* .main_container {
-} */
+.main_container {
+  margin-top: 5.5rem;
+}
 
 /* Home Container */
 .home_container {
@@ -182,11 +187,11 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: first baseline;
   gap: 24rem;
 }
 
 .home_heading_wrapper {
+  position: relative;
   margin-top: 6.75rem;
   width: 40rem;
   color: var(--color-white);
@@ -210,7 +215,7 @@ p {
   align-items: center;
   gap: 1rem;
 
-  bottom: 3rem;
+  bottom: 30rem;
 
   color: var(--color-white);
   text-align: right;
@@ -259,7 +264,7 @@ p {
   color: var(--color-font-tertiary);
 
   /* Paragraph */
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -514,5 +519,52 @@ p {
   font-weight: 500;
   line-height: 1.25rem; /* 366.667% */
   text-transform: capitalize;
+}
 
+/* Media Query */
+
+/* Large desktop screens (1440px and above) */
+@media (min-width: 1440px) {
+}
+
+/* Medium-sized desktop screens (1280px to 1439px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .home_container {
+    height: 39rem;
+  }
+
+  .home_wrapper {
+    gap: 9rem;
+  }
+
+  .home_heading_wrapper {
+    margin-top: 0;
+  }
+}
+
+/* Small desktop screens and tablets (1024px to 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .home_container {
+    height: 39rem;
+  }
+
+  .home_wrapper {
+    gap: 9rem;
+  }
+
+  .home_heading_wrapper {
+    margin-top: 0;
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Mobile devices in landscape orientation (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+}
+
+/* Mobiles devices in portrait orientation (320px to 479px) */
+@media (min-width: 320px) and (max-width: 479px) {
 }

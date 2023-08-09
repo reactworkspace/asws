@@ -22,6 +22,8 @@ A web application that stores the attendance of teachers & students with detail 
 - `npm install react-icons --save`
 - `npm install formik --save`
 - `npm install recharts --save`
+- `npm install aos --save`
+- `npm install react-scroll --save`
 
 
 ## Usage

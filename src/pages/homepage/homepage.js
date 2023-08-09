@@ -46,7 +46,7 @@ import {
   EventTitle,
   EventCard,
   FooterList,
-  FooterSubcsribe
+  FooterSubcsribe,
 } from '../../components/homepage/section/section';
 
 const HomePage = () => {
@@ -435,8 +435,7 @@ export const HomePageComponent = () => {
             />
           </div>
           <div className={style.footer_right_container}>
-            <FooterSubcsribe 
-            heading='Subscribe to get latest updates' />
+            <FooterSubcsribe heading="Subscribe to get latest updates" />
           </div>
         </div>
       </section>
