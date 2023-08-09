@@ -392,11 +392,3 @@ export const FooterSubcsribe = (props) => {
   );
 };
 
-
-export const Greeting = () => {
-  return(
-    <div className={style.greeting_container} >
-
-    </div>
-  );
-};
