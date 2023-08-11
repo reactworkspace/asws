@@ -65,7 +65,7 @@ export const NavigationBar = () => {
         <h1>
           <Link
             activeClass={style.active}
-            className={style.nav_font}
+            className={`${style.nav_font} ${style.nav_font_whatwedo}`}
             to="whatwedo"
             spy={true}
             smooth={true}

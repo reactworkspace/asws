@@ -27,16 +27,18 @@ import WithLoader from '../../HOC/withLoader/WithLoader';
 import {
   SigninButton,
   PrimaryButton,
+  TertiaryButton,
   PlayButton,
 } from '../../components/homepage/buttons/buttons';
 
 // import svg as react component
 import { ReactComponent as PlayIcon } from '../../assets/svg/homepage/play_icon.svg';
-import GreetingGif from '../../assets/images/opening.gif';
+
+// import image
+import AswsLogo from '../../assets/images/asws_logo.png';
 
 // import section componenets
 import {
-
   NavigationBar,
   Title,
   Content,
@@ -51,7 +53,6 @@ import {
   FooterList,
   FooterSubcsribe,
 } from '../../components/homepage/section/section';
-
 
 const HomePage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -112,34 +113,15 @@ export const HomePageComponent = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  const [showGreeting, setShowGreeting] = useState(true);
-
-  useEffect(() => {
-    // Simulate loader delay
-    const loaderTimeout = setTimeout(() => {
-      setShowGreeting(false);
-    }, 5450); // 60000 milliseconds = 1 minute
-
-    return () => {
-      clearTimeout(loaderTimeout);
-    };
-  }, []);
-
-
   return (
     <div className={style.homepage}>
-
-      {showGreeting && (
-        <div className={style.greeting_container}>
-          <img src={GreetingGif} alt="gif" />
-        </div>
-      )}
-
       {/* header */}
       <section class={style.header_container}>
-        <div className={style.header_logo}>
+        <div>
           <h1>
-            <span className={style.righteous}>ahle sunnat welfare society</span>
+            <span className={style.righteous}>
+              <img src={AswsLogo} alt="asws_logo" className={style.asws_logo} />
+            </span>
           </h1>
         </div>
 
@@ -163,17 +145,8 @@ export const HomePageComponent = () => {
                 </span>
               </div>
               <div className={style.home_buttons_wrapper}>
-                <PrimaryButton title="what we do" />
+                <TertiaryButton title="what we do" />
                 <PlayButton title="play video" />
-              </div>
-            </div>
-            <div className={style.home_paragraph_wrapper}>
-              <div>
-                <span>500 children completed IFP Program</span>
-              </div>
-              <div className={style.home_line}></div>
-              <div>
-                <span>58 donations collected</span>
               </div>
             </div>
           </div>
@@ -200,10 +173,10 @@ export const HomePageComponent = () => {
                         place and hence the idea of 100 days of islamic
                         foundation program (IFP) evolved. <br />
                         <br />
-                        Duis cursus, mi quis viverra ornare, eros dolor interdum
-                        nulla, ut commodo diam libero vitae erat. Aenean
-                        faucibus nibh et justo cursus id rutrum lorem imperdiet.
-                        Nunc ut sem vitae risus tristique posuere.
+                        To educate and empower the young generations with the
+                        core values of the holy Quran and Sunnah which will
+                        nurture them in all spheres of life. To decorate the
+                        society with the beauty of islam
                       </span>
                     </p>
                   </div>
@@ -244,27 +217,24 @@ export const HomePageComponent = () => {
                 </div>
                 <List>
                   <ListItem
-                    title="Namaz-e-Fajr"
-                    paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros."
+                    title="Masnoon Dua"
+                    paragraph="Masnoon Duain are most important part of every Muslim's life. .."
                   />
 
                   <ListItem
-                    title="Azkar-e-Namaz"
-                    paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    title="Azkar -e Namaz"
+                    paragraph="Namaz Prayers serve to develop a direct connection with ALLAH.
                     Suspendisse varius enim in eros."
                   />
 
                   <ListItem
                     title="Quran With Tajwid"
-                    paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros."
+                    paragraph="Tajweed Rule allows the reciter to emphasise the accent, phonetics, rhythm and temper of The Quranic recitation."
                   />
 
                   <ListItem
                     title="20 Surah"
-                    paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros."
+                    paragraph="the Quran encompasses one or more revelations received by Muhammad from Allah (God)."
                   />
                 </List>
               </Content>
@@ -294,22 +264,22 @@ export const HomePageComponent = () => {
             <div className={style.projectswehavedone_bottom_wrapper}>
               <div className={style.projectwehavedone_card_1}>
                 <ProjectCard
-                  cardHeading="Mission smile 1k: Outdoor charity"
-                  cardParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+                  cardHeading="100 days IFP in Hyderabad"
+                  cardParagraph="With this program ,we are teaching the basics of islam and inculcating a culture of discipline by encouraging them with memorizing and practicing"
                   btnTitle="learn more"
                 />
               </div>
               <div className={style.projectwehavedone_card_2}>
                 <ProjectCard
-                  cardHeading="Weekly excursions"
-                  cardParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+                  cardHeading="100 day IFP Impact"
+                  cardParagraph="This program has not only impacted the kids but also the people involved in one or the other way like kids, parents ,people"
                   btnTitle="learn more"
                 />
               </div>
               <div className={style.projectwehavedone_card_3}>
                 <ProjectCard
-                  cardHeading="Monthly public awareness"
-                  cardParagraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+                  cardHeading="Impact on Community"
+                  cardParagraph="Alhamdulillah , over a year we have successfully completed 3 (100 days) IFP at different location of Hyderabad"
                   btnTitle="learn more"
                 />
               </div>
@@ -396,8 +366,14 @@ export const HomePageComponent = () => {
       <section id="footer" className={style.footer_container}>
         <div className={style.footer_wrapper}>
           <div className={style.footer_left_container}>
-            <div className={style.footer_organisation_name}>
-              <span>ahle sunnat welfare society</span>
+            <div className={style.footer_organisation_logo}>
+              <span>
+                <img
+                  src={AswsLogo}
+                  alt="asws_logo"
+                  className={style.asws_logo}
+                />
+              </span>
             </div>
             <FooterList
               heading="home"

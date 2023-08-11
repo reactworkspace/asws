@@ -17,9 +17,13 @@
   text-transform: capitalize;
 }
 
+.nav_font_whatwedo {
+  color: var(--color-font-primary);
+}
+
 .nav_font:hover,
 .active {
-  color: var(--color-font-primary) ;
+  color: var(--color-font-primary);
   font-weight: 600;
   cursor: pointer;
   transition: all 300ms ease-in-out;

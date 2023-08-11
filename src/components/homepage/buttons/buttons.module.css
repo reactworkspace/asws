@@ -90,7 +90,6 @@
   padding: 1rem 2rem;
   gap: 0.75rem;
   border-radius: 0.25rem;
- 
 
   color: var(--color-black);
   background-color: var(--color-white);
@@ -109,8 +108,32 @@
   color: var(--color-white);
   background-color: var(--color-font-primary);
 }
-/* Circile Primary Button */
 
+/* button Secondary */
+.btn_teritairy_container {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 2rem;
+  gap: 0.75rem;
+  border-radius: 0.25rem;
+
+  color: var(--color-white);
+  background-color: var(--color-font-primary);
+  text-align: right;
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+
+  transition: all 300ms ease-in-out;
+}
+
+/* Circile Primary Button */
 .btn_circle_primary_container {
   width: 3.5rem;
   height: 3.5rem;
