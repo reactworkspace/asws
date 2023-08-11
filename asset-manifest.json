@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.91887920.css",
-    "main.js": "/static/js/main.c19d6320.js",
+    "main.css": "/static/css/main.4d5833cc.css",
+    "main.js": "/static/js/main.df7495b6.js",
     "static/media/projectcard2.jpg": "/static/media/projectcard2.b5e49d792e4aff6524a4.jpg",
     "static/media/homepage_img1.png": "/static/media/homepage_img1.4723f108f6e6b1b7fccf.png",
     "static/media/projectcard1.jpg": "/static/media/projectcard1.b4d7c8ed6fcc44becafe.jpg",
@@ -17,6 +17,9 @@
     "static/media/jamianizamialogo.png": "/static/media/jamianizamialogo.2d56bc13b9dcce45e9db.png",
     "static/media/asws_logo.png": "/static/media/asws_logo.aec8058659e6ca94d1b7.png",
     "static/media/studentprofile.png": "/static/media/studentprofile.71cc14acc79aff8722de.png",
+    "static/media/bismillah.png": "/static/media/bismillah.d5e907b1832695e2414e.png",
+    "static/media/list_icon2.svg": "/static/media/list_icon2.cfe47c4d19f722efb90a79b87c2a8e55.svg",
+    "static/media/list_icon1.svg": "/static/media/list_icon1.9cd3cb453a9a7c1ae40d8932d5096e7f.svg",
     "static/media/star_left_group.svg": "/static/media/star_left_group.747f3e5ba0c4678190284ce74d1b2f5f.svg",
     "static/media/teachericon.svg": "/static/media/teachericon.84b5a5be807f204d7eb4dca8d79ea59b.svg",
     "static/media/aswslogo.svg": "/static/media/aswslogo.8f3e6ce72d631092d5ab203644da6b63.svg",
@@ -37,16 +40,15 @@
     "static/media/notes.svg": "/static/media/notes.87d0e40b6ec8c5834ff7cddd3a25e1ac.svg",
     "static/media/profileicon.svg": "/static/media/profileicon.a37cb5821ed7da35778a5598773f4106.svg",
     "static/media/studenticon.svg": "/static/media/studenticon.2f9dede768d21053584fd0dc77331dce.svg",
-    "static/media/square_icon.svg": "/static/media/square_icon.8b03af387084f49b8de9d01f919ffd6e.svg",
     "static/media/Line.svg": "/static/media/Line.5db9638372243f1ebfe9706f8bee69aa.svg",
     "static/media/cap-absent.svg": "/static/media/cap-absent.594940ac52b15ecf9748692db9c81cb8.svg",
     "static/media/cap-leave.svg": "/static/media/cap-leave.a03ecfcf8144af1720df60d436f02863.svg",
     "static/media/cap-present.svg": "/static/media/cap-present.3058778aa3307cf22761a0ef0da1b761.svg",
-    "main.91887920.css.map": "/static/css/main.91887920.css.map",
-    "main.c19d6320.js.map": "/static/js/main.c19d6320.js.map"
+    "main.4d5833cc.css.map": "/static/css/main.4d5833cc.css.map",
+    "main.df7495b6.js.map": "/static/js/main.df7495b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.91887920.css",
-    "static/js/main.c19d6320.js"
+    "static/css/main.4d5833cc.css",
+    "static/js/main.df7495b6.js"
   ]
 }
