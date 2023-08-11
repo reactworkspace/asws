@@ -13,9 +13,12 @@ import {
 
 // import svg as react component
 import { ReactComponent as Line } from '../../../assets/svg/homepage/Line.svg';
-import { ReactComponent as SquareIcon } from '../../../assets/svg/homepage/square_icon.svg';
 import { ReactComponent as StartLeftDesign } from '../../../assets/svg/homepage/star_left_group.svg';
 import { ReactComponent as StartRightDesign } from '../../../assets/svg/homepage/star_right_group.svg';
+import { ReactComponent as SquireIcon1 } from '../../../assets/svg/homepage/list_icon1.svg';
+import { ReactComponent as SquireIcon2 } from '../../../assets/svg/homepage/list_icon2.svg';
+import { ReactComponent as SquireIcon3 } from '../../../assets/svg/homepage/list_icon2.svg';
+import { ReactComponent as SquireIcon4 } from '../../../assets/svg/homepage/list_icon2.svg';
 
 // import Chart Component
 import { PieChart, Pie, Cell } from 'recharts';
@@ -143,18 +146,70 @@ export const List = ({ children }) => {
   return <div className={style.list_container}>{children}</div>;
 };
 
-export const ListItem = (props) => {
-  const { title, paragraph } = props;
+export const ListItems = (props) => {
+  const {
+    Item1,
+    Item2,
+    Item3,
+    Item4,
+    paragraph1,
+    paragraph2,
+    paragraph3,
+    paragraph4,
+  } = props;
   return (
-    <div className={style.list_item_container}>
-      <div className={style.list_item_title}>
-        <SquareIcon />
-        <div>
-          <span>{title}</span>
+    <div>
+      <div className={style.list_item_container}>
+        <div className={style.list_item_title}>
+          <div className={style.list_icon_container}>
+            <SquireIcon1 />
+          </div>
+          <div>
+            <span>{Item1}</span>
+          </div>
+        </div>
+        <div className={style.list_item_paragraph}>
+          <span>{paragraph1}</span>
         </div>
       </div>
-      <div className={style.list_item_paragraph}>
-        <span>{paragraph}</span>
+      <div className={style.list_item_container}>
+        <div className={style.list_item_title}>
+          <div className={style.list_icon_container}>
+            <SquireIcon2 />
+          </div>
+          <div>
+            <span>{Item2}</span>
+          </div>
+        </div>
+        <div className={style.list_item_paragraph}>
+          <span>{paragraph2}</span>
+        </div>
+      </div>
+      <div className={style.list_item_container}>
+        <div className={style.list_item_title}>
+          <div className={style.list_icon_container}>
+            <SquireIcon3 />
+          </div>
+          <div>
+            <span>{Item3}</span>
+          </div>
+        </div>
+        <div className={style.list_item_paragraph}>
+          <span>{paragraph3}</span>
+        </div>
+      </div>
+      <div className={style.list_item_container}>
+        <div className={style.list_item_title}>
+          <div className={style.list_icon_container}>
+            <SquireIcon4 />
+          </div>
+          <div>
+            <span>{Item4}</span>
+          </div>
+        </div>
+        <div className={style.list_item_paragraph}>
+          <span>{paragraph4}</span>
+        </div>
       </div>
     </div>
   );
@@ -391,4 +446,3 @@ export const FooterSubcsribe = (props) => {
     </div>
   );
 };
-

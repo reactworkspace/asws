@@ -43,7 +43,7 @@ import {
   Title,
   Content,
   List,
-  ListItem,
+  ListItems,
   ProjectCard,
   Statistics,
   Chart,
@@ -53,6 +53,8 @@ import {
   FooterList,
   FooterSubcsribe,
 } from '../../components/homepage/section/section';
+
+import { Curtain } from '../../components/homepage/curtain/curtain';
 
 const HomePage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -93,7 +95,8 @@ const HomePage = () => {
         <section>
           <Router>
             <Routes>
-              <Route exact path="/" element={<HomePageComponent />} />
+              <Route exact path="/" element={<Curtain />} />
+              <Route exact path="/homepage" element={<HomePageComponent />} />
               <Route exact path="/signin" element={<SigninPageComponent />} />
               <Route exact path="/signup" element={<SignupPageComponent />} />
               <Route exact path="/forgot" element={<ForgotPageComponenet />} />
@@ -128,7 +131,13 @@ export const HomePageComponent = () => {
         <NavigationBar />
 
         <div className={style.sigin_container}>
-          <SigninButton title="sign in" address="/signin" />
+          <SigninButton
+            btnName="sign in"
+            dropDownBtnName1="sign in"
+            dropDownBtnName2="sign up"
+            address1="/signin"
+            address2="/signup"
+          />
         </div>
       </section>
 
@@ -216,25 +225,15 @@ export const HomePageComponent = () => {
                   </p>
                 </div>
                 <List>
-                  <ListItem
-                    title="Masnoon Dua"
-                    paragraph="Masnoon Duain are most important part of every Muslim's life. .."
-                  />
-
-                  <ListItem
-                    title="Azkar -e Namaz"
-                    paragraph="Namaz Prayers serve to develop a direct connection with ALLAH.
-                    Suspendisse varius enim in eros."
-                  />
-
-                  <ListItem
-                    title="Quran With Tajwid"
-                    paragraph="Tajweed Rule allows the reciter to emphasise the accent, phonetics, rhythm and temper of The Quranic recitation."
-                  />
-
-                  <ListItem
-                    title="20 Surah"
-                    paragraph="the Quran encompasses one or more revelations received by Muhammad from Allah (God)."
+                  <ListItems
+                    Item1="Masnoon  Dua"
+                    paragraph1="Masnoon Duain are most important part of every Muslim's life. .."
+                    Item2="Azkar -e Namaz"
+                    paragraph2="Namaz Prayers serve to develop a direct connection with ALLAH."
+                    Item3="Quran With Tajwid"
+                    paragraph3="Tajweed Rule allows the reciter to emphasise the accent, phonetics, rhythm and temper of The Quranic recitation."
+                    Item4="20 Surah"
+                    paragraph4="the Quran encompasses one or more revelations received by Muhammad from Allah (God)."
                   />
                 </List>
               </Content>
