@@ -25,7 +25,7 @@ export const Curtain = () => {
   };
 
   return (
-    <div>
+    <div className={style.curtain_container}>
       {' '}
       <div>
         <div id="starter">
