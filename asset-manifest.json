@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd0c1acf.css",
-    "main.js": "/static/js/main.cd37bf71.js",
+    "main.css": "/static/css/main.fcc456fc.css",
+    "main.js": "/static/js/main.247f133e.js",
     "static/media/projectcard2.jpg": "/static/media/projectcard2.b5e49d792e4aff6524a4.jpg",
     "static/media/homepage_img1.png": "/static/media/homepage_img1.4723f108f6e6b1b7fccf.png",
     "static/media/projectcard1.jpg": "/static/media/projectcard1.b4d7c8ed6fcc44becafe.jpg",
@@ -15,6 +15,7 @@
     "static/media/userprofile.png": "/static/media/userprofile.2ae106a362a3cc556cbe.png",
     "static/media/osmaniauniversitylogo.png": "/static/media/osmaniauniversitylogo.98b0b22099abf033ea7e.png",
     "static/media/jamianizamialogo.png": "/static/media/jamianizamialogo.2d56bc13b9dcce45e9db.png",
+    "static/media/upi_qrcode.jpg": "/static/media/upi_qrcode.5bca900909c87e2208cc.jpg",
     "static/media/asws_logo.png": "/static/media/asws_logo.aec8058659e6ca94d1b7.png",
     "static/media/studentprofile.png": "/static/media/studentprofile.71cc14acc79aff8722de.png",
     "static/media/bismillah.png": "/static/media/bismillah.d5e907b1832695e2414e.png",
@@ -45,11 +46,11 @@
     "static/media/cap-absent.svg": "/static/media/cap-absent.594940ac52b15ecf9748692db9c81cb8.svg",
     "static/media/cap-leave.svg": "/static/media/cap-leave.a03ecfcf8144af1720df60d436f02863.svg",
     "static/media/cap-present.svg": "/static/media/cap-present.3058778aa3307cf22761a0ef0da1b761.svg",
-    "main.dd0c1acf.css.map": "/static/css/main.dd0c1acf.css.map",
-    "main.cd37bf71.js.map": "/static/js/main.cd37bf71.js.map"
+    "main.fcc456fc.css.map": "/static/css/main.fcc456fc.css.map",
+    "main.247f133e.js.map": "/static/js/main.247f133e.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd0c1acf.css",
-    "static/js/main.cd37bf71.js"
+    "static/css/main.fcc456fc.css",
+    "static/js/main.247f133e.js"
   ]
 }
