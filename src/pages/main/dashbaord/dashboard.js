@@ -31,6 +31,9 @@ import { ReactComponent as ThreeDotsIcons } from '../../../assets/svg/threedots.
 
 // import StudentProfilePhoto from '../../../assets/images/studentprofile.png';
 import TeacherProfilePhoto from '../../../assets/images/teacherprofile.png';
+import TeacherProfilePhoto1 from '../../../assets/images/teachers/teacher1.png';
+import TeacherProfilePhoto2 from '../../../assets/images/teachers/teacher2.png';
+import TeacherProfilePhoto3 from '../../../assets/images/teachers/teacher3.png';
 
 import StudentProfilePhoto1 from '../../../assets/images/students/student_img_1.jpeg';
 import StudentProfilePhoto2 from '../../../assets/images/students/student_img_2.jpeg';
@@ -85,6 +88,29 @@ const TeacherProfile = () => {
   );
 };
 
+const TeacherProfile1 = () => {
+  return (
+    <div id="teacherprofile">
+      <img src={TeacherProfilePhoto1} alt="TeacherProfilePhoto" />
+    </div>
+  );
+};
+
+const TeacherProfile2 = () => {
+  return (
+    <div id="teacherprofile">
+      <img src={TeacherProfilePhoto2} alt="TeacherProfilePhoto" />
+    </div>
+  );
+};
+
+const TeacherProfile3 = () => {
+  return (
+    <div id="teacherprofile">
+      <img src={TeacherProfilePhoto3} alt="TeacherProfilePhoto" />
+    </div>
+  );
+};
 // const StudentTrData = () => {
 //   return (
 // <tr>
@@ -103,14 +129,17 @@ const TeacherProfile = () => {
 //   );
 // };
 
-const StudentTrData = () => {
+export const StudentTrData = () => {
   return (
     <>
       <tr>
         <td>
           <StudentProfile imgSrc={StudentProfilePhoto1} />
         </td>
-        <td>sameed bin ali</td>
+        <Link to="studentdetails">
+          {' '}
+          <td>sameed bin ali</td>{' '}
+        </Link>
         <td>ID: 101</td>
         <td> Zainab Masjid</td>
         <td>984765261</td>
@@ -241,8 +270,6 @@ const StudentTrData = () => {
         </td>
       </tr>
 
-
-      
       {/* <tr>
         <td>
           <StudentProfile imgSrc={StudentProfilePhoto11} />
@@ -652,16 +679,18 @@ const Dashboard = () => {
                 <TeacherProfile />
               </div>
               <div className="teachers-details">
-                <span className="teachers-name poppins-sub-heading-1rem">
-                  shaik ahmed
-                </span>
-                <span className="teachers-centre">jamia masjid centre</span>
+                <Link to="teacherdetails">
+                  <span className="teachers-name poppins-sub-heading-1rem">
+                    shaik ahmed
+                  </span>
+                  <span className="teachers-centre">jamia masjid centre</span>
+                </Link>
               </div>
             </div>
             <div className="line "></div>
             <div className="teachers-div flex">
               <div className="teachers-profile">
-                <TeacherProfile />
+                <TeacherProfile1 />
               </div>
               <div className="teachers-details">
                 <span className="teachers-name poppins-sub-heading-1rem">
@@ -673,7 +702,7 @@ const Dashboard = () => {
             <div className="line "></div>
             <div className="teachers-div flex">
               <div className="teachers-profile">
-                <TeacherProfile />
+                <TeacherProfile2 />
               </div>
               <div className="teachers-details">
                 <span className="teachers-name poppins-sub-heading-1rem">
@@ -685,7 +714,7 @@ const Dashboard = () => {
             <div className="line"></div>
             <div className="teachers-div flex">
               <div className="teachers-profile">
-                <TeacherProfile />
+                <TeacherProfile3 />
               </div>
               <div className="teachers-details">
                 <span className="teachers-name  poppins-sub-heading-1rem">
@@ -695,17 +724,6 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="line "></div>
-            <div className="teachers-div flex">
-              <div className="teachers-profile">
-                <TeacherProfile />
-              </div>
-              <div className="teachers-details">
-                <span className="teachers-name poppins-sub-heading-1rem">
-                  shaik ahmed
-                </span>
-                <span className="teachers-centre">jamia masjid centre</span>
-              </div>
-            </div>
             <Link to="/teacher">
               <div className="view-more-btn poppins flex-c">
                 <span>view more</span>

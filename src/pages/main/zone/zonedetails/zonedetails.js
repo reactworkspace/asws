@@ -17,7 +17,7 @@ import ZoneData from '../../../../data/zonedata';
 
 // import cnetre image address
 import CentreImgage from '../../../../assets/images/centrephoto.png';
-import StudentProfilePhoto from '../../../../assets/images/studentprofile.png';
+// import StudentProfilePhoto from '../../../../assets/images/studentprofile.png';
 import TeacherProfilePhoto from '../../../../assets/images/teacherprofile.png';
 
 // import react icons
@@ -29,8 +29,10 @@ import { ReactComponent as PersonIcon } from '../../../../assets/svg/personicon.
 import { ReactComponent as ThreeDotsIcons } from '../../../../assets/svg/threedots.svg';
 
 // import student data
-import studentData from '../../../../data/studentdata';
+// import studentData from '../../../../data/studentdata';
 import teacherData from '../../../../data/teacherdata';
+
+import { StudentTrData } from '../../dashbaord/dashboard';
 
 // import recharts
 import {
@@ -168,31 +170,21 @@ const CentreInformationData = () => {
   );
 };
 
-const StudentProfile = () => {
-  return (
-    <div id="studentprofile">
-      <img src={StudentProfilePhoto} alt="StudentProfilePhoto" />
-    </div>
-  );
-};
+// const StudentProfile = () => {
+//   return (
+//     <div id="studentprofile">
+//       <img src={StudentProfilePhoto} alt="StudentProfilePhoto" />
+//     </div>
+//   );
+// };
 
-const StudentTrData = () => {
-  return (
-    <tr>
-      <td>
-        <StudentProfile />
-      </td>
-      <td> {studentData.studentName}</td>
-      <td>ID: {studentData.studentId}</td>
-      <td>{studentData.centreName}</td>
-      <td>{studentData.studentContactNum1}</td>
-      <td>{studentData.addmissionDate}</td>
-      <td>
-        <ThreeDotsIcons />
-      </td>
-    </tr>
-  );
-};
+// const StudentTrData = () => {
+//   return (
+//     <>
+//     <StudentTableRowData />
+//     </>
+//   );
+// };
 
 const StudentContent = () => {
   return (
@@ -209,12 +201,6 @@ const StudentContent = () => {
         </tr>
       </thead>
       <tbody>
-        <StudentTrData />
-        <StudentTrData />
-        <StudentTrData />
-        <StudentTrData />
-        <StudentTrData />
-        <StudentTrData />
         <StudentTrData />
       </tbody>
     </table>

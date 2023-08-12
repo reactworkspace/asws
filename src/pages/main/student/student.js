@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import UserProfile from '../../../components/main/profile/userprofile';
 
 // Import Button Componenets
-import { DropdownNewMenuButton } from  '../../../components/main/buttons/buttons';
+import { DropdownNewMenuButton } from '../../../components/main/buttons/buttons';
 
 // react icons
 import { HiOutlineSearch } from 'react-icons/hi';
@@ -35,8 +35,7 @@ import StudentProfilePhoto8 from '../../../assets/images/students/student_img_8.
 import StudentProfilePhoto9 from '../../../assets/images/students/student_img_9.jpeg';
 // import StudentProfilePhoto10 from '../../../assets/images/students/student_img_10.jpeg';
 
-
- const StudentProfile = (props) => {
+const StudentProfile = (props) => {
   const { imgSrc } = props;
   return (
     <div id="studentprofile">
@@ -81,14 +80,18 @@ const StudentTable = () => {
   );
 };
 
-const StudentTableRowData = () => {
+export const StudentTableRowData = () => {
   return (
-   <>
- <tr>
+    <>
+      <tr>
+        {' '}
         <td>
           <StudentProfile imgSrc={StudentProfilePhoto1} />
         </td>
-        <td>sameed bin ali</td>
+        <Link to='/studentdetails'>
+          {' '}
+          <td>sameed bin ali</td>{' '}
+        </Link>
         <td>ID: 101</td>
         <td> July 21 2023</td>
         <td>Mohd Mejraj</td>
@@ -223,7 +226,7 @@ const StudentTableRowData = () => {
           <ThreeDotsIcons />
         </td>
       </tr>
-      </>
+    </>
   );
 };
 

@@ -15,6 +15,8 @@ import { HiOutlineSearch } from 'react-icons/hi';
 
 // Import zone card
 import ZoneCard from '../../../components/main/zone/zonecard';
+import ZoneCard1 from '../../../components/main/zone/zonecard1';
+import ZoneCard2 from '../../../components/main/zone/zonecard2';
 
 const SearchZone = () => {
   return (
@@ -86,7 +88,9 @@ const Zone = () => {
         </div>
         <div id="zone-card-list">
           <ZoneCard />
-          <ZoneCard />
+          <ZoneCard1 />
+          <ZoneCard2 />
+
         </div>
       </div>
     </section>

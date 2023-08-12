@@ -360,7 +360,7 @@ const StudentDetails = () => {
                   </div>
                   <div className="details-profile-user flex-col">
                     <span className="details-profile-username">
-                      mohd kashif
+                      Sameed bin Ali
                     </span>
                     <span>zone: east zone</span>
                     <span>centre: noor masjid centre</span>
