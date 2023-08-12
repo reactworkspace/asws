@@ -11,10 +11,15 @@ import {
   BsChevronDown,
   BsChevronRight,
   BsArrowRightShort,
+  BsX,
 } from 'react-icons/bs';
+
 
 // import svg as react component
 import { ReactComponent as PlayIcon } from '../../../assets/svg/homepage/play_icon.svg';
+
+// upi image
+import UpiImg from '../../../assets/images/homepage/upi_qrcode.jpg';
 
 export const SigninButton = (props) => {
   const { btnName, dropDownBtnName1, dropDownBtnName2, address1, address2 } =
@@ -137,6 +142,48 @@ export const TertiaryButton = (props) => {
           <span>{title}</span>
         </div>
       </Link>
+    </div>
+  );
+};
+
+// DonationButton
+export const DonationButton = (props) => {
+  const { title } = props;
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <div>
+      <button className={style.btn_primary_container} onClick={toggleDropdown}>
+        <span>{title}</span>
+      </button>
+      {isOpen && (
+        <div className={style.donation_payment_container}>
+          <BsX
+            className={style.donation_close_icon}
+            onClick={toggleDropdown}
+          />
+          <br />
+          <img src={UpiImg} alt="UPI Payment" className={style.donation_upi_img} />
+        </div>
+      )}
     </div>
   );
 };

@@ -338,16 +338,16 @@ export const Chart = () => {
 };
 
 // Donation Card
-export const DonationCard = (props) => {
-  const { heading, btnTitle, btnAddress } = props;
+export const DonationCard = ({children}) => {
 
   return (
     <div className={style.donationcard_container}>
       <div className={style.donationcard_wrapper}>
         <div className={style.donationcard_heading}>
-          <span>{heading}</span>
+          <span>"Empower Positive Change: Extend a Helping Hand through Your
+          Generous Donations and Make a Lasting Difference"</span>
         </div>
-        <PrimaryButton title={btnTitle} address={btnAddress} />
+        <div>{children}</div>
       </div>
       <div className={style.start_left_container}>
         <StartLeftDesign />

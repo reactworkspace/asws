@@ -28,6 +28,7 @@ import {
   SigninButton,
   PrimaryButton,
   TertiaryButton,
+  DonationButton,
   PlayButton,
 } from '../../components/homepage/buttons/buttons';
 
@@ -122,9 +123,9 @@ export const HomePageComponent = () => {
       <section class={style.header_container}>
         <div>
           {/* <h1> */}
-            <span className={style.righteous}>
-              <img src={AswsLogo} alt="asws_logo" className={style.asws_logo} />
-            </span>
+          <span className={style.righteous}>
+            <img src={AswsLogo} alt="asws_logo" className={style.asws_logo} />
+          </span>
           {/* </h1> */}
         </div>
 
@@ -254,7 +255,8 @@ export const HomePageComponent = () => {
               <Content>
                 <div>
                   <h2>
-                    Alhumdulilah, 3 programs (100 days IFP) completed successfully in Hyderabad in a year!"
+                    Alhumdulilah, 3 programs (100 days IFP) completed
+                    successfully in Hyderabad in a year!"
                   </h2>
                 </div>
               </Content>
@@ -322,18 +324,17 @@ export const HomePageComponent = () => {
             </div>
           </div>
         </section> */}
-
       </main>
 
       {/* Donation Section */}
       <section className={style.donation_container}>
         <div className={style.donation_wrapper} data-aos="fade-up">
-          <DonationCard
-            heading='"Empower Positive Change: Extend a Helping Hand through Your
-          Generous Donations and Make a Lasting Difference"'
-            btnTitle="donate now"
-            btnAddress=""
-          />
+          <DonationCard>
+          <DonationButton
+              title="donate now"
+              className={style.donation_button_component}
+            />
+          </DonationCard>
         </div>
       </section>
 
