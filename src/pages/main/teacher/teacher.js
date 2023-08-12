@@ -21,6 +21,44 @@ import { HiOutlineSearch } from 'react-icons/hi';
 // Import Teacher Card
 import TeacherCard from '../../../components/main/teacher/teacherscard';
 
+import TeacherProfilePhoto from '../../../assets/images/teacherprofile.png';
+import TeacherProfilePhoto1 from '../../../assets/images/teachers/teacher1.png';
+import TeacherProfilePhoto2 from '../../../assets/images/teachers/teacher2.png';
+import TeacherProfilePhoto3 from '../../../assets/images/teachers/teacher3.png';
+
+
+
+const TeacherProfile = () => {
+  return (
+    <div id="teacherprofile">
+      <img src={TeacherProfilePhoto} alt="TeacherProfilePhoto" />
+    </div>
+  );
+};
+
+const TeacherProfile1 = () => {
+  return (
+    <div id="teacherprofile">
+      <img src={TeacherProfilePhoto1} alt="TeacherProfilePhoto" />
+    </div>
+  );
+};
+
+const TeacherProfile2 = () => {
+  return (
+    <div id="teacherprofile">
+      <img src={TeacherProfilePhoto2} alt="TeacherProfilePhoto" />
+    </div>
+  );
+};
+
+const TeacherProfile3 = () => {
+  return (
+    <div id="teacherprofile">
+      <img src={TeacherProfilePhoto3} alt="TeacherProfilePhoto" />
+    </div>
+  );
+};
 const SearchTeacher = () => {
   return (
     <div className="search-teacher-div">
@@ -57,12 +95,27 @@ const Teacher = () => {
           />
         </div>
         <div id="teacher-cards-list">
-          <TeacherCard />
-          <TeacherCard />
-          <TeacherCard />
-          <TeacherCard />
-          <TeacherCard />
-          <TeacherCard />
+          <TeacherCard
+            TeacherImg={TeacherProfile}
+            TeacherName="Shaik Ahmed"
+            TeacherCenter="jamia masjid"
+          />
+          <TeacherCard
+            TeacherImg={TeacherProfile1}
+            TeacherName="syed khaja"
+            TeacherCenter="Abuzar Masjid"
+          />
+          <TeacherCard
+            TeacherImg={TeacherProfile2}
+            TeacherName="Shoeb Siddiqui"
+            TeacherCenter="Hussaini Masjid"
+          />
+          <TeacherCard
+            TeacherImg={TeacherProfile3}
+            TeacherName="Mohd Jaffar"
+            TeacherCenter="Yahiya Masjid
+"
+          />
         </div>
       </div>
     </section>

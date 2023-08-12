@@ -88,10 +88,9 @@ export const StudentTableRowData = () => {
         <td>
           <StudentProfile imgSrc={StudentProfilePhoto1} />
         </td>
-        <Link to='/studentdetails'>
-          {' '}
-          <td>sameed bin ali</td>{' '}
-        </Link>
+        <td>
+          <Link to="studentdetails">sameed bin ali </Link>
+        </td>{' '}
         <td>ID: 101</td>
         <td> July 21 2023</td>
         <td>Mohd Mejraj</td>

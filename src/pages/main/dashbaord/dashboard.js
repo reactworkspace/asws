@@ -135,11 +135,10 @@ export const StudentTrData = () => {
       <tr>
         <td>
           <StudentProfile imgSrc={StudentProfilePhoto1} />
-        </td>
-        <Link to="studentdetails">
-          {' '}
-          <td>sameed bin ali</td>{' '}
-        </Link>
+        </td>{' '}
+        <td>
+          <Link to="studentdetails">sameed bin ali </Link>
+        </td>{' '}
         <td>ID: 101</td>
         <td> Zainab Masjid</td>
         <td>984765261</td>
@@ -694,9 +693,9 @@ const Dashboard = () => {
               </div>
               <div className="teachers-details">
                 <span className="teachers-name poppins-sub-heading-1rem">
-                  shaik ahmed
+                  Syed Khaja
                 </span>
-                <span className="teachers-centre">jamia masjid centre</span>
+                <span className="teachers-centre">Abuzar Masjid centre</span>
               </div>
             </div>
             <div className="line "></div>
@@ -706,9 +705,9 @@ const Dashboard = () => {
               </div>
               <div className="teachers-details">
                 <span className="teachers-name poppins-sub-heading-1rem">
-                  shaik ahmed
+                  Shoeb Siddiqui
                 </span>
-                <span className="teachers-centre">jamia masjid centre</span>
+                <span className="teachers-centre">Hussaini Masjid centre</span>
               </div>
             </div>
             <div className="line"></div>
@@ -718,9 +717,9 @@ const Dashboard = () => {
               </div>
               <div className="teachers-details">
                 <span className="teachers-name  poppins-sub-heading-1rem">
-                  shaik ahmed
+                  Mohd Jaffar
                 </span>
-                <span className="teachers-centre">jamia masjid centre</span>
+                <span className="teachers-centre">Yahiya Masjid centre</span>
               </div>
             </div>
             <div className="line "></div>
