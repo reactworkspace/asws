@@ -45,8 +45,8 @@ import {
   List,
   ListItems,
   ProjectCard,
-  Statistics,
-  Chart,
+  // Statistics,
+  // Chart,
   DonationCard,
   EventTitle,
   EventCard,
@@ -286,7 +286,7 @@ export const HomePageComponent = () => {
         </section>
 
         {/* Data Section */}
-        <section className={style.data_container}>
+        {/* <section className={style.data_container}>
           <div className={style.data_wrapper}>
             <div className={style.data_left_container} data-aos="fade-up">
               <div className={style.data_heading}>
@@ -321,7 +321,8 @@ export const HomePageComponent = () => {
               <Chart />
             </div>
           </div>
-        </section>
+        </section> */}
+
       </main>
 
       {/* Donation Section */}
@@ -344,10 +345,10 @@ export const HomePageComponent = () => {
           </div>
           <div className={style.event_cards_container} data-aos="fade-up">
             <EventCard
-              eventDay="13"
+              eventDay="12"
               eventMonth="aug"
-              eventDetail="next event"
-              eventHeading="Next IFP program will start in another city, Kurnool."
+              eventDetail="today event (classic Garden)"
+              eventHeading="Prize distribution ceremony at new classic garden at 8:30 PM"
             />
             <EventCard
               eventDay="25"

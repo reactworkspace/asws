@@ -23,8 +23,6 @@ import { ReactComponent as SquireIcon4 } from '../../../assets/svg/homepage/list
 // import Chart Component
 import { PieChart, Pie, Cell } from 'recharts';
 
-
-
 // NavigationBar
 export const NavigationBar = () => {
   const [click, setClick] = useState(false);
@@ -70,7 +68,7 @@ export const NavigationBar = () => {
         <h1>
           <Link
             activeClass={style.active}
-            className={`${style.nav_font} ${style.nav_font_whatwedo}`}
+            className={style.nav_font}
             to="whatwedo"
             spy={true}
             smooth={true}
@@ -341,9 +339,7 @@ export const Chart = () => {
 
 // Donation Card
 export const DonationCard = (props) => {
-
   const { heading, btnTitle, btnAddress } = props;
-
 
   return (
     <div className={style.donationcard_container}>

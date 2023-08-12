@@ -17,10 +17,6 @@
   text-transform: capitalize;
 }
 
-.nav_font_whatwedo {
-  color: var(--color-font-primary);
-}
-
 .nav_font:hover,
 .active {
   color: var(--color-font-primary);
