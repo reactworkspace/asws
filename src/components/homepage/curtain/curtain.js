@@ -1,5 +1,6 @@
 import React from 'react';
-import './style.css';
+// import './whiteStyle.css';
+import './redStyle.css';
 import Bismilla from '../../../assets/images/bismillah.png';
 import AswsLogo from '../../../assets/images/asws_logo.png';
 import style from './curtain.module.css';

@@ -23,6 +23,8 @@ import { ReactComponent as SquireIcon4 } from '../../../assets/svg/homepage/list
 // import Chart Component
 import { PieChart, Pie, Cell } from 'recharts';
 
+import Aux from '../../../HOC/'
+
 // NavigationBar
 export const NavigationBar = () => {
   const [click, setClick] = useState(false);
@@ -339,7 +341,10 @@ export const Chart = () => {
 
 // Donation Card
 export const DonationCard = (props) => {
+
   const { heading, btnTitle, btnAddress } = props;
+
+
   return (
     <div className={style.donationcard_container}>
       <div className={style.donationcard_wrapper}>

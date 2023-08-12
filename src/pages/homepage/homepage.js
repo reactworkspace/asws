@@ -121,11 +121,11 @@ export const HomePageComponent = () => {
       {/* header */}
       <section class={style.header_container}>
         <div>
-          <h1>
+          {/* <h1> */}
             <span className={style.righteous}>
               <img src={AswsLogo} alt="asws_logo" className={style.asws_logo} />
             </span>
-          </h1>
+          {/* </h1> */}
         </div>
 
         <NavigationBar />
@@ -149,8 +149,7 @@ export const HomePageComponent = () => {
             <div>
               <div className={style.home_heading_wrapper}>
                 <span>
-                  100 days <br />
-                  islmaic foundational program (IFP)
+                  100 days <br /> Islamic Foundational Program (IFP)
                 </span>
               </div>
               <div className={style.home_buttons_wrapper}>
@@ -255,7 +254,7 @@ export const HomePageComponent = () => {
               <Content>
                 <div>
                   <h2>
-                    Alhumdulilah, 3 (100 days) IFP in Hyderabad in a year!"
+                    Alhumdulilah, 3 programs (100 days IFP) completed successfully in Hyderabad in a year!"
                   </h2>
                 </div>
               </Content>

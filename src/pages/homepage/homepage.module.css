@@ -114,11 +114,12 @@ p {
 /* Header */
 .header_container {
   width: 100%;
-  padding: 1.125rem 6.875rem;
+  /* padding: 1.125rem 6.875rem; */
+  padding: 1rem 6.875rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20rem;
+  gap: 18rem;
   position: fixed;
   top: 0;
   background-color: var(--color-white);
@@ -136,7 +137,8 @@ p {
 }
 
 .asws_logo {
-  height: 3.5rem;
+  height: 4.5rem;
+  cursor: pointer;
 }
 
 /* main */
