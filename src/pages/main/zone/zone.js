@@ -87,16 +87,6 @@ const Zone = () => {
         <div id="zone-card-list">
           <ZoneCard />
           <ZoneCard />
-          <ZoneCard />
-          <ZoneCard />
-          <ZoneCard />
-          <ZoneCard />
-          <ZoneCard />
-          <ZoneCard />
-          <ZoneCard />
-          <ZoneCard />
-          <ZoneCard />
-          <ZoneCard />
         </div>
       </div>
     </section>

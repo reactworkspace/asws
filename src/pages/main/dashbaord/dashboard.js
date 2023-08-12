@@ -25,15 +25,37 @@ import { ReactComponent as TeacherIcon } from '../../../assets/svg/teacher.svg';
 import { ReactComponent as ThreeDotsIcons } from '../../../assets/svg/threedots.svg';
 
 // react icons
-import { FaFilter } from 'react-icons/fa';
+// import { FaFilter } from 'react-icons/fa';
 
 // import {  AiOutlineBell } from 'react-icons/ai';
 
-import StudentProfilePhoto from '../../../assets/images/studentprofile.png';
+// import StudentProfilePhoto from '../../../assets/images/studentprofile.png';
 import TeacherProfilePhoto from '../../../assets/images/teacherprofile.png';
 
+import StudentProfilePhoto1 from '../../../assets/images/students/student_img_1.jpeg';
+import StudentProfilePhoto2 from '../../../assets/images/students/student_img_2.jpeg';
+import StudentProfilePhoto3 from '../../../assets/images/students/student_img_3.jpeg';
+import StudentProfilePhoto4 from '../../../assets/images/students/student_img_4.jpeg';
+import StudentProfilePhoto5 from '../../../assets/images/students/student_img_5.jpeg';
+import StudentProfilePhoto6 from '../../../assets/images/students/student_img_6.jpeg';
+import StudentProfilePhoto7 from '../../../assets/images/students/student_img_7.jpeg';
+import StudentProfilePhoto8 from '../../../assets/images/students/student_img_8.jpeg';
+import StudentProfilePhoto9 from '../../../assets/images/students/student_img_9.jpeg';
+import StudentProfilePhoto10 from '../../../assets/images/students/student_img_10.jpeg';
+
+// import StudentProfilePhoto11 from '../../../assets/images/students/student_img_11.jpeg';
+// import StudentProfilePhoto12 from '../../../assets/images/students/student_img_12.jpeg';
+// import StudentProfilePhoto13 from '../../../assets/images/students/student_img_13.jpeg';
+// import StudentProfilePhoto14 from '../../../assets/images/students/student_img_14.jpeg';
+// import StudentProfilePhoto15 from '../../../assets/images/students/student_img_15.jpeg';
+// import StudentProfilePhoto16 from '../../../assets/images/students/student_img_16.jpeg';
+// import StudentProfilePhoto17 from '../../../assets/images/students/student_img_17.jpeg';
+// import StudentProfilePhoto18 from '../../../assets/images/students/student_img_18.jpeg';
+// import StudentProfilePhoto19 from '../../../assets/images/students/student_img_19.jpeg';
+// import StudentProfilePhoto20 from '../../../assets/images/students/student_img_20.jpeg';
+
 // import student data from data folder
-import studentData from '../../../data/studentdata';
+// import studentData from '../../../data/studentdata';
 
 // import recharts
 import {
@@ -46,10 +68,11 @@ import {
   CartesianGrid,
 } from 'recharts';
 
-const StudentProfile = () => {
+const StudentProfile = (props) => {
+  const { imgSrc } = props;
   return (
     <div id="studentprofile">
-      <img src={StudentProfilePhoto} alt="StudentProfilePhoto" />
+      <img src={imgSrc} alt="StudentProfilePhoto" />
     </div>
   );
 };
@@ -62,21 +85,298 @@ const TeacherProfile = () => {
   );
 };
 
+// const StudentTrData = () => {
+//   return (
+// <tr>
+//   <td>
+//     <StudentProfile />
+//   </td>
+//   <td> {studentData.studentName}</td>
+//   <td>ID: {studentData.studentId}</td>
+//   <td>{studentData.centreName}</td>
+//   <td>{studentData.studentContactNum1}</td>
+//   <td>{studentData.addmissionDate}</td>
+//   <td>
+//     <ThreeDotsIcons />
+//   </td>
+// </tr>
+//   );
+// };
+
 const StudentTrData = () => {
   return (
-    <tr>
-      <td>
-        <StudentProfile />
-      </td>
-      <td> {studentData.studentName}</td>
-      <td>ID: {studentData.studentId}</td>
-      <td>{studentData.centreName}</td>
-      <td>{studentData.studentContactNum1}</td>
-      <td>{studentData.addmissionDate}</td>
-      <td>
-        <ThreeDotsIcons />
-      </td>
-    </tr>
+    <>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto1} />
+        </td>
+        <td>sameed bin ali</td>
+        <td>ID: 101</td>
+        <td> Zainab Masjid</td>
+        <td>984765261</td>
+        <td>07/21/2023</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto2} />
+        </td>
+        <td>syed ahmed ali </td>
+        <td>ID: 102</td>
+        <td>Zainab Masjid</td>
+        <td>984765261</td>
+        <td>07/21/2023</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto3} />
+        </td>
+        <td>mohd Amar abdul ahad</td>
+        <td>ID: 103</td>
+        <td>Zainab Masjid</td>
+        <td>984765261</td>
+        <td>07/21/2023</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto4} />
+        </td>
+        <td>syed haris hassan</td>
+        <td>ID: 104</td>
+        <td>Zainab Masjid</td>
+        <td>984765261</td>
+        <td>07/21/2023</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto5} />
+        </td>
+        <td>abdul quddus</td>
+        <td>ID: 105</td>
+        <td>Zainab Masjid</td>
+        <td>984765261</td>
+        <td>07/21/2023</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto6} />
+        </td>
+        <td>mohd mustafa hussain</td>
+        <td>ID: 106</td>
+        <td>Zainab Masjid</td>
+        <td>984765261</td>
+        <td>07/21/2023</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto7} />
+        </td>
+        <td>mohd misbah</td>
+        <td>ID: 107</td>
+        <td>Jamia Masjid</td>
+        <td>984765261</td>
+        <td>07/21/2023</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto8} />
+        </td>
+        <td>Mohd Muzammil</td>
+        <td>ID: 108</td>
+        <td>Jamia Masjid</td>
+        <td>984765261</td>
+        <td>07/21/2023</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto9} />
+        </td>
+        <td>Mohd Huzaif</td>
+        <td>ID: 109</td>
+        <td>Jamia Masjid</td>
+        <td>984765261</td>
+        <td>07/21/2023</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto10} />
+        </td>
+        <td> Mohd Sirajuddin</td>
+        <td>ID: 110</td>
+        <td>Jamia Masjid</td>
+        <td>984765261</td>
+        <td>07/21/2023</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+
+      
+      {/* <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto11} />
+        </td>
+        <td> </td>
+        <td>ID:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto12} />
+        </td>
+        <td> </td>
+        <td>ID:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto13} />
+        </td>
+        <td> </td>
+        <td>ID:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto14} />
+        </td>
+        <td> </td>
+        <td>ID:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto15} />
+        </td>
+        <td> </td>
+        <td>ID:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto16} />
+        </td>
+        <td> </td>
+        <td>ID:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto17} />
+        </td>
+        <td> </td>
+        <td>ID:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto18} />
+        </td>
+        <td> </td>
+        <td>ID:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto19} />
+        </td>
+        <td> </td>
+        <td>ID:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto20} />
+        </td>
+        <td> </td>
+        <td>ID:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr> */}
+    </>
   );
 };
 
@@ -134,19 +434,19 @@ const AttendanceBarChart = () => {
     let newBarGap;
 
     if (screenWidth >= 1440) {
-      newBarSize = 20; 
+      newBarSize = 20;
       newBarGap = 6;
     } else if (screenWidth >= 1280) {
-      newBarSize = 15; 
+      newBarSize = 15;
       newBarGap = 6;
     } else if (screenWidth >= 1024) {
-      newBarSize = 15; 
+      newBarSize = 15;
       newBarGap = 6;
     } else if (screenWidth >= 768) {
-      newBarSize = 11; 
+      newBarSize = 11;
       newBarGap = 6;
     } else {
-      newBarSize = 8; 
+      newBarSize = 8;
       newBarGap = 6;
     }
 
@@ -200,7 +500,7 @@ const AttendanceBarChart = () => {
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         <XAxis dataKey="week" />
         <YAxis />
-        <Tooltip content={renderCustomTooltip}  />
+        <Tooltip content={renderCustomTooltip} />
         <Bar
           dataKey="present"
           fill="#4cbc9a"
@@ -301,10 +601,11 @@ const Dashboard = () => {
               <span className="circle bg-color-3"></span>
               <span>leave</span>
             </div>
-            <div className="filters-btn flex-c">
+            <div></div>
+            {/* <div className="filters-btn flex-c">
               <FaFilter />
               <span>filters</span>
-            </div>
+            </div> */}
           </div>
           <div className="attendance-barchart">
             <AttendanceBarChart />
@@ -329,12 +630,6 @@ const Dashboard = () => {
                 </tr>
               </thead>
               <tbody>
-                <StudentTrData />
-                <StudentTrData />
-                <StudentTrData />
-                <StudentTrData />
-                <StudentTrData />
-                <StudentTrData />
                 <StudentTrData />
               </tbody>
             </table>

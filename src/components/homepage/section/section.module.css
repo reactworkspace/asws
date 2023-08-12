@@ -4,13 +4,14 @@
   padding: 1rem 1.25rem;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .nav_font {
   color: var(--color-font-tertiary);
   font-family: 'Roboto';
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;

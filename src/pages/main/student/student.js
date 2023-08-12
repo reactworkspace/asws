@@ -21,12 +21,26 @@ import { HiOutlineSearch } from 'react-icons/hi';
 import { ReactComponent as ThreeDotsIcons } from '../../../assets/svg/threedots.svg';
 
 // import image address
-import StudentProfilePhoto from '../../../assets/images/studentprofile.png';
+// import StudentProfilePhoto from '../../../assets/images/studentprofile.png';
 
-const StudentProfile = () => {
+//  student images
+import StudentProfilePhoto1 from '../../../assets/images/students/student_img_1.jpeg';
+import StudentProfilePhoto2 from '../../../assets/images/students/student_img_2.jpeg';
+import StudentProfilePhoto3 from '../../../assets/images/students/student_img_3.jpeg';
+import StudentProfilePhoto4 from '../../../assets/images/students/student_img_4.jpeg';
+import StudentProfilePhoto5 from '../../../assets/images/students/student_img_5.jpeg';
+import StudentProfilePhoto6 from '../../../assets/images/students/student_img_6.jpeg';
+import StudentProfilePhoto7 from '../../../assets/images/students/student_img_7.jpeg';
+import StudentProfilePhoto8 from '../../../assets/images/students/student_img_8.jpeg';
+import StudentProfilePhoto9 from '../../../assets/images/students/student_img_9.jpeg';
+// import StudentProfilePhoto10 from '../../../assets/images/students/student_img_10.jpeg';
+
+
+ const StudentProfile = (props) => {
+  const { imgSrc } = props;
   return (
     <div id="studentprofile">
-      <img src={StudentProfilePhoto} alt="StudentProfilePhoto" />
+      <img src={imgSrc} alt="StudentProfilePhoto" />
     </div>
   );
 };
@@ -50,7 +64,6 @@ const StudentTable = () => {
       <thead>
         <tr>
           <th></th>
-          <th></th>
           <th>name</th>
           <th>ID</th>
           <th>admission date</th>
@@ -63,13 +76,6 @@ const StudentTable = () => {
       </thead>
       <tbody>
         <StudentTableRowData />
-        <StudentTableRowData />
-        <StudentTableRowData />
-        <StudentTableRowData />
-        <StudentTableRowData />
-        <StudentTableRowData />
-        <StudentTableRowData />
-        <StudentTableRowData />
       </tbody>
     </table>
   );
@@ -77,24 +83,147 @@ const StudentTable = () => {
 
 const StudentTableRowData = () => {
   return (
-    <tr>
-      <td></td>
-      <td>
-        <StudentProfile />
-      </td>
-      <td>
-        <Link to="/studentdetails">mohd kashif </Link>
-      </td>
-      <td>#123456789</td>
-      <td className="muted-text">march 25 2021</td>
-      <td>mohd hussain</td>
-      <td>hyderabad</td>
-      <td>contact</td>
-      <td>iv</td>
-      <td>
-        <ThreeDotsIcons />
-      </td>
-    </tr>
+   <>
+ <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto1} />
+        </td>
+        <td>sameed bin ali</td>
+        <td>ID: 101</td>
+        <td> July 21 2023</td>
+        <td>Mohd Mejraj</td>
+        <td>Hyderbad</td>
+        <td>984765261</td>
+        <td>IV</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto2} />
+        </td>
+        <td>syed ahmed ali </td>
+        <td>ID: 102</td>
+        <td>July 21 2023</td>
+        <td>Mohd Ahmed</td>
+        <td>Hyderbad</td>
+        <td>984765261</td>
+        <td>IV</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto3} />
+        </td>
+        <td>mohd Amar abdul ahad</td>
+        <td>ID: 103</td>
+        <td>July 21 2023</td>
+        <td>Mohd Ghouse</td>
+        <td>Hyderbad</td>
+        <td>984765261</td>
+        <td>IV</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto4} />
+        </td>
+        <td>syed haris hassan</td>
+        <td>ID: 104</td>
+        <td>July 21 2023</td>
+        <td>Mohd Sohial</td>
+        <td>Hyderbad</td>
+        <td>984765261</td>
+        <td>IV</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto5} />
+        </td>
+        <td>abdul quddus</td>
+        <td>ID: 105</td>
+        <td>July 21 2023</td>
+        <td>Mohd Umran</td>
+        <td>Hyderbad</td>
+        <td>984765261</td>
+        <td>IV</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto6} />
+        </td>
+        <td>mohd mustafa hussain</td>
+        <td>ID: 106</td>
+        <td>July 21 2023</td>
+        <td>Mohd Omer</td>
+        <td>Ranga Reddy</td>
+        <td>984765261</td>
+        <td>IV</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto7} />
+        </td>
+        <td>mohd misbah</td>
+        <td>ID: 107</td>
+        <td>July 21 2023</td>
+        <td>Syed Owais</td>
+        <td>Hyderbad</td>
+        <td>984765261</td>
+        <td>IV</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto8} />
+        </td>
+        <td>Mohd Muzammil</td>
+        <td>ID: 108</td>
+        <td>July 21 2023</td>
+        <td>Mohd Hussain</td>
+        <td>Ranga Reddyd</td>
+        <td>984765261</td>
+        <td>IV</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <StudentProfile imgSrc={StudentProfilePhoto9} />
+        </td>
+        <td>Mohd Huzaif</td>
+        <td>ID: 109</td>
+        <td>July 21 2023</td>
+        <td>Mohd Younsuf</td>
+        <td>Hyderbad</td>
+        <td>984765261</td>
+        <td>IV</td>
+        <td>
+          <ThreeDotsIcons />
+        </td>
+      </tr>
+      </>
   );
 };
 

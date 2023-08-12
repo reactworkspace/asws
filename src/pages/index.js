@@ -55,6 +55,15 @@ const UserProfile = () => {
   );
 };
 
+// export const LogoutComponent = () => {
+
+//   return (
+//     <div className="logout-button">
+//       <span> Logout</span>
+//     </div>
+//   );
+// };
+
 const AswsIndex = () => {
   const currentUrl = window.location.pathname;
   const modifiedUrl = currentUrl.substring(1);
@@ -111,6 +120,18 @@ const AswsIndex = () => {
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  //logout
+  const handleLogout = () => {
+    // Clear the session storage or local storage based on your logic
+    sessionStorage.removeItem('isLoggedIn');
+    sessionStorage.removeItem('userId');
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('userId');
+
+    // Redirect the user to the desired page after logout
+    window.location.href = '/'; // Replace 'login' with your actual login page route
   };
 
   return (
@@ -319,6 +340,22 @@ const AswsIndex = () => {
                     </div>
                   </Link>
                 </li>
+                <li></li>
+                <li></li>
+                <li  onClick={handleLogout} > 
+                  <Link >
+                    <div
+                      className={`flex list-button ${
+                        isActive === 'setting' ? 'active' : ''
+                      }`}
+                    >
+                      <SettingIcons className="nav-icons" />
+                      <span>logout</span>
+                    </div>
+                  </Link>
+                </li>
+                
+                
               </ul>
             </div>
           </nav>
