@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fe9f3224.css",
-    "main.js": "/static/js/main.a5b33cc4.js",
+    "main.css": "/static/css/main.3dca0882.css",
+    "main.js": "/static/js/main.f69ad75c.js",
     "static/media/projectcard2.jpg": "/static/media/projectcard2.b5e49d792e4aff6524a4.jpg",
     "static/media/homepage_img1.png": "/static/media/homepage_img1.4723f108f6e6b1b7fccf.png",
     "static/media/projectcard1.jpg": "/static/media/projectcard1.b4d7c8ed6fcc44becafe.jpg",
@@ -18,6 +18,7 @@
     "static/media/asws_logo.png": "/static/media/asws_logo.aec8058659e6ca94d1b7.png",
     "static/media/studentprofile.png": "/static/media/studentprofile.71cc14acc79aff8722de.png",
     "static/media/bismillah.png": "/static/media/bismillah.d5e907b1832695e2414e.png",
+    "static/media/red_curtain.svg": "/static/media/red_curtain.cbd6425b55930b33c80d.svg",
     "static/media/list_icon2.svg": "/static/media/list_icon2.cfe47c4d19f722efb90a79b87c2a8e55.svg",
     "static/media/list_icon1.svg": "/static/media/list_icon1.9cd3cb453a9a7c1ae40d8932d5096e7f.svg",
     "static/media/star_left_group.svg": "/static/media/star_left_group.747f3e5ba0c4678190284ce74d1b2f5f.svg",
@@ -44,11 +45,11 @@
     "static/media/cap-absent.svg": "/static/media/cap-absent.594940ac52b15ecf9748692db9c81cb8.svg",
     "static/media/cap-leave.svg": "/static/media/cap-leave.a03ecfcf8144af1720df60d436f02863.svg",
     "static/media/cap-present.svg": "/static/media/cap-present.3058778aa3307cf22761a0ef0da1b761.svg",
-    "main.fe9f3224.css.map": "/static/css/main.fe9f3224.css.map",
-    "main.a5b33cc4.js.map": "/static/js/main.a5b33cc4.js.map"
+    "main.3dca0882.css.map": "/static/css/main.3dca0882.css.map",
+    "main.f69ad75c.js.map": "/static/js/main.f69ad75c.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe9f3224.css",
-    "static/js/main.a5b33cc4.js"
+    "static/css/main.3dca0882.css",
+    "static/js/main.f69ad75c.js"
   ]
 }
