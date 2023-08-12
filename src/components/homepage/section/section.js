@@ -23,7 +23,7 @@ import { ReactComponent as SquireIcon4 } from '../../../assets/svg/homepage/list
 // import Chart Component
 import { PieChart, Pie, Cell } from 'recharts';
 
-import Aux from '../../../HOC/'
+
 
 // NavigationBar
 export const NavigationBar = () => {
