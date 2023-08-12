@@ -16,8 +16,17 @@ export const Curtain = () => {
     const starter = document.getElementById('starter');
     starter.className = 'fade-out';
 
+    document.body.style.backgroundColor = 'white';
+
+    // Revert back to the original background color after 3 minutes
+     setTimeout(() => {
+      document.body.style.backgroundColor = ''; // Revert to default
+    }, 3 * 60 * 1000);
+
+    
     setTimeout(() => {
       starter.style.display = 'none';
+
     }, 2000);
 
     setTimeout(() => {
