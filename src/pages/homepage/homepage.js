@@ -120,7 +120,7 @@ export const HomePageComponent = () => {
   return (
     <div className={style.homepage}>
       {/* header */}
-      <section class={style.header_container}>
+      <section className={style.header_container}>
         <div>
           {/* <h1> */}
           <span className={style.righteous}>
