@@ -31,7 +31,7 @@
 }
 
 .poppins-heading-2rem {
-  font-family: Poppins;
+  font-family: 'Poppins';
   font-size: 2.25rem;
   font-style: normal;
   font-weight: 500;
@@ -51,7 +51,7 @@
 }
 
 .poppins-sub-heading {
-  font-family: Poppins;
+  font-family: 'Poppins';
   font-size: 1.5625rem;
   font-style: normal;
   font-weight: 500;

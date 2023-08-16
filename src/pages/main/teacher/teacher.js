@@ -13,7 +13,8 @@ import * as React from 'react';
 import UserProfile from '../../../components/main/profile/userprofile';
 
 // Import Button Componenets
-import { DropdownNewMenuButton } from '../../../components/main/buttons/buttons';
+import { DropdownNewMenuButton } from '../../../components/main/common/buttons/buttons';
+import { SecondaryFilterButton } from '../../../components/main/common/buttons/filterbuttons/filterbuttons';
 
 // react icons
 import { HiOutlineSearch } from 'react-icons/hi';
@@ -48,13 +49,16 @@ const Teacher = () => {
         </div>
         <div className="teacher-search-btn flex-r-sb">
           <SearchTeacher />
-          <DropdownNewMenuButton
-            title="new teacher"
-            address1="/addteacher"
-            addressTitle1="add teacher"
-            address2="/importteacher"
-            addressTitle2="import teacher"
-          />
+          <div className="flex gap1rem">
+            <SecondaryFilterButton />
+            <DropdownNewMenuButton
+              title="new teacher"
+              address1="/addteacher"
+              addressTitle1="add teacher"
+              address2="/importteacher"
+              addressTitle2="import teacher"
+            />
+          </div>
         </div>
         <div id="teacher-cards-list">
           <TeacherCard />

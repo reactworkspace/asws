@@ -12,7 +12,8 @@ import { Link } from 'react-router-dom';
 import UserProfile from '../../../components/main/profile/userprofile';
 
 // Import Button Componenets
-import { DropdownNewMenuButton } from '../../../components/main/buttons/buttons';
+import { DropdownNewMenuButton } from '../../../components/main/common/buttons/buttons';
+import { SecondaryFilterButton } from '../../../components/main/common/buttons/filterbuttons/filterbuttons';
 
 // react icons
 import { HiOutlineSearch } from 'react-icons/hi';
@@ -89,7 +90,7 @@ export const StudentTableRowData = () => {
           <StudentProfile imgSrc={StudentProfilePhoto1} />
         </td>
         <td>
-          <Link to="studentdetails">sameed bin ali </Link>
+          <Link to="/studentdetails">sameed bin ali </Link>
         </td>{' '}
         <td>ID: 101</td>
         <td> July 21 2023</td>
@@ -245,13 +246,16 @@ const Student = () => {
 
           <div className="student-search-btn flex-r-sb">
             <SearchStudent />
-            <DropdownNewMenuButton
-              title="new student"
-              address1="/addstudent"
-              addressTitle1="add student"
-              address2="/importstudent"
-              addressTitle2="import student"
-            />
+            <div className="flex gap1rem">
+              <SecondaryFilterButton />
+              <DropdownNewMenuButton
+                title="new student"
+                address1="/addstudent"
+                addressTitle1="add student"
+                address2="/importstudent"
+                addressTitle2="import student"
+              />
+            </div>
           </div>
         </div>
 

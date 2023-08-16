@@ -16,7 +16,10 @@ import { Link } from 'react-router-dom';
 import UserProfile from '../../../components/main/profile/userprofile';
 
 // Import Button components
-import { DropdownMenuButton } from '../../../components/main/buttons/buttons';
+import { DropdownMenuButton } from '../../../components/main/common/buttons/buttons';
+
+// buttons
+import { PrimaryFilterButton } from '../../../components/main/common/buttons/filterbuttons/filterbuttons';
 
 // icons
 import { ReactComponent as ZoneIcon } from '../../../assets/svg/zone.svg';
@@ -46,17 +49,6 @@ import StudentProfilePhoto8 from '../../../assets/images/students/student_img_8.
 import StudentProfilePhoto9 from '../../../assets/images/students/student_img_9.jpeg';
 import StudentProfilePhoto10 from '../../../assets/images/students/student_img_10.jpeg';
 
-// import StudentProfilePhoto11 from '../../../assets/images/students/student_img_11.jpeg';
-// import StudentProfilePhoto12 from '../../../assets/images/students/student_img_12.jpeg';
-// import StudentProfilePhoto13 from '../../../assets/images/students/student_img_13.jpeg';
-// import StudentProfilePhoto14 from '../../../assets/images/students/student_img_14.jpeg';
-// import StudentProfilePhoto15 from '../../../assets/images/students/student_img_15.jpeg';
-// import StudentProfilePhoto16 from '../../../assets/images/students/student_img_16.jpeg';
-// import StudentProfilePhoto17 from '../../../assets/images/students/student_img_17.jpeg';
-// import StudentProfilePhoto18 from '../../../assets/images/students/student_img_18.jpeg';
-// import StudentProfilePhoto19 from '../../../assets/images/students/student_img_19.jpeg';
-// import StudentProfilePhoto20 from '../../../assets/images/students/student_img_20.jpeg';
-
 // import student data from data folder
 // import studentData from '../../../data/studentdata';
 
@@ -70,6 +62,7 @@ import {
   Tooltip,
   CartesianGrid,
 } from 'recharts';
+
 
 const StudentProfile = (props) => {
   const { imgSrc } = props;
@@ -627,7 +620,9 @@ const Dashboard = () => {
               <span className="circle bg-color-3"></span>
               <span>leave</span>
             </div>
-            <div></div>
+            <div>
+              <PrimaryFilterButton />
+            </div>
             {/* <div className="filters-btn flex-c">
               <FaFilter />
               <span>filters</span>

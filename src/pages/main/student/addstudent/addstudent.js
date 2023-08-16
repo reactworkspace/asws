@@ -15,7 +15,7 @@ import { useState } from 'react';
 import UserProfile from '../../../../components/main/profile/userprofile';
 
 // Import Components
-import { PrimaryButton } from '../../../../components/main/buttons/buttons';
+import { PrimaryButton } from '../../../../components/main/common/buttons/buttons';
 
 // import react icons
 import { TiPlus } from 'react-icons/ti';

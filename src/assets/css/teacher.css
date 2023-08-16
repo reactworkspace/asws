@@ -57,7 +57,8 @@
 
 #teacher-card {
   width: 19rem;
-  height: 22rem;
+  height: auto;
+  padding: 2rem;
   border-radius: var(--card-border);
   background-color: var(--color-white);
   display: flex;

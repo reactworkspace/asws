@@ -18,6 +18,7 @@ import AddStudent from './main/student/addstudent/addstudent';
 import AddTeacher from './main/teacher/addteacher/addteacher';
 import AddZone from './main/zone/addzone/addzone';
 import AddSubject from './main/syllabus/addsubject/addsubject';
+import Subject from './main/syllabus/subject/subject';
 
 import {
   ImportZone,
@@ -32,9 +33,10 @@ import ZoneDetails from './main/zone/zonedetails/zonedetails';
 // react-icons
 import { BsGridFill } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { FiLogOut } from 'react-icons/fi';
 
 // Logo & Icons
-import { ReactComponent as AswsLogo } from '../assets/svg/aswslogo.svg';
+// import { ReactComponent as AswsLogo } from '../assets/svg/aswslogo.svg';
 import { ReactComponent as ZoneIcon } from '../assets/svg/zone.svg';
 import { ReactComponent as StudentIcon } from '../assets/svg/student.svg';
 import { ReactComponent as TeacherIcon } from '../assets/svg/teacher.svg';
@@ -43,6 +45,8 @@ import { ReactComponent as SettingIcons } from '../assets/svg/setting.svg';
 
 // hooks
 import { useState } from 'react';
+// import AswsLogo
+import AswsLogoImg from '../assets/images/asws_logo.png';
 
 //  import profile
 import UserProfilePhoto from '../assets/images/userprofile.png';
@@ -52,6 +56,18 @@ const UserProfile = () => {
     <div id="userprofile">
       <img src={UserProfilePhoto} alt="UserProfilePhoto" />
     </div>
+  );
+};
+
+const AswsLogo = () => {
+  return (
+    <>
+      <img
+        src={AswsLogoImg}
+        alt="AswsLogo"
+        style={{ height: '100px', width: '100px' }}
+      />
+    </>
   );
 };
 
@@ -95,7 +111,11 @@ const AswsIndex = () => {
     navUrl = 'teacher';
   } else if (modifiedUrl === 'attendance') {
     navUrl = modifiedUrl;
-  } else if (modifiedUrl === 'syllabus' || modifiedUrl === 'addsubject') {
+  } else if (
+    modifiedUrl === 'syllabus' ||
+    modifiedUrl === 'addsubject' ||
+    modifiedUrl === 'subject'
+  ) {
     navUrl = 'syllabus';
   } else if (modifiedUrl === 'setting') {
     navUrl = modifiedUrl;
@@ -340,22 +360,19 @@ const AswsIndex = () => {
                     </div>
                   </Link>
                 </li>
-                <li></li>
-                <li></li>
-                <li  onClick={handleLogout} > 
-                  <Link >
+
+                <li onClick={handleLogout} className="logout_btn_container">
+                  <Link>
                     <div
                       className={`flex list-button ${
-                        isActive === 'setting' ? 'active' : ''
+                        isActive === 'logout' ? 'active' : ''
                       }`}
                     >
-                      <SettingIcons className="nav-icons" />
+                      <FiLogOut className="nav-icons" />
                       <span>logout</span>
                     </div>
                   </Link>
                 </li>
-                
-                
               </ul>
             </div>
           </nav>
@@ -374,6 +391,11 @@ const AswsIndex = () => {
                 <Route exact path="/addteacher" element={<AddTeacher />} />
                 <Route exact path="/addzone" element={<AddZone />} />
                 <Route exact path="/addsubject" element={<AddSubject />} />
+                <Route
+                  exact
+                  path="/subject/:subjectName"
+                  element={<Subject />}
+                />
 
                 <Route
                   exact

@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import UserProfile from '../../../../components/main/profile/userprofile';
 
 // Import Components
-import { PrimaryAddButton, PrimaryButton } from '../../../../components/main/buttons/buttons';
+import { PrimaryAddButton, PrimaryButton } from '../../../../components/main/common/buttons/buttons';
 
 const AddSubjectTitle = () => {
   const [text, setText] = useState('');

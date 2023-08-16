@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import UserProfile from '../../../../components/main/profile/userprofile';
 
 // Import Components
-import { PrimaryButton } from '../../../../components/main/buttons/buttons';
+import { PrimaryButton } from '../../../../components/main/common/buttons/buttons';
 
 const AddTeacher = () => {
   const [text, setText] = useState('');

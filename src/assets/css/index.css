@@ -39,6 +39,8 @@
   --color-grey-3: #a098ae;
   --color-grey-4: #fafafa;
 
+  /* font color */
+  --color-font: #363b64;
   /* line  */
   --line: #eaeaea;
 
@@ -52,9 +54,14 @@
   /* black Color */
   --color-black: #232222;
   --color-black-1: #000;
+  --color-black-2: #3c3c3d;
 
   /* Transparent Color */
   --color-purple-10: rgba(77, 68, 181, 0.1);
+
+  /* Divider */
+  --color-devider: #b4b7bf;
+  --color-devider-1: #f0f1f2;
 
   /* Gradient Color */
   --linear-1: linear-gradient(
@@ -111,6 +118,7 @@ nav {
   background-color: var(--color-purple);
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 nav a:focus {
   color: var(--color-white) !important;
@@ -147,6 +155,7 @@ li .nav-icons {
   width: 1.6rem;
 }
 .list-button {
+  position: relative;
   cursor: pointer;
   width: 100%;
   height: 1.5rem;
@@ -171,6 +180,10 @@ li .nav-icons {
   padding-left: 1rem;
 }
 
+.logout_btn_container {
+  margin-top: 3rem;
+}
+
 /* hamburger-menu styling */
 
 #hamburger-menu {
@@ -190,6 +203,7 @@ li .nav-icons {
   margin-bottom: 0.4rem;
   height: 50px;
 }
+
 #hamburger-menu li .nav-icons {
   margin-left: 2rem;
 }
@@ -224,6 +238,9 @@ li .nav-icons {
   li .nav-icons {
     height: 2.7rem;
     width: 2.7rem;
+  }
+  .logout_btn_container {
+    margin-top: 18rem;
   }
 }
 
@@ -301,6 +318,7 @@ li .nav-icons {
     width: 100%;
     height: 100%;
   }
+
   header {
     display: grid;
     grid-template-columns: 1rem 1fr 1fr 1fr;

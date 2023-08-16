@@ -8,7 +8,7 @@ import '../../../assets/css/flex.css';
 import UserProfile from '../../../components/main/profile/userprofile';
 
 // Import Button Componenets
-import { DropdownNewMenuButton } from  '../../../components/main/buttons/buttons';
+import { DropdownNewMenuButton } from  '../../../components/main/common/buttons/buttons';
 
 // react icons
 import { HiOutlineSearch } from 'react-icons/hi';
@@ -27,7 +27,7 @@ const SearchZone = () => {
   );
 };
 
-const ZoneCheckButtons = () => {
+export const ZoneCheckButtons = () => {
   return (
     <div id="zone-check-buttons">
       <label className="zone-checkbox-lable flex-c poppins-sub-heading-1rem">

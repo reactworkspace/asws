@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import UserProfile from '../../../../components/main/profile/userprofile';
 
 // Import Componenets
-import { PrimaryButton } from '../../../../components/main/buttons/buttons';
+import { PrimaryButton } from '../../../../components/main/common/buttons/buttons';
 
 const AddZone = () => {
   const [text, setText] = useState('');

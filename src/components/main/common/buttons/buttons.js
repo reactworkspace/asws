@@ -10,7 +10,7 @@ import { TiPlus } from 'react-icons/ti';
 import { BsCaretUpFill } from 'react-icons/bs';
 
 //
-import '../../../assets/css/buttons.css';
+import '../../../../assets/css/buttons.css';
 
 // DropdownMenuButton button1
 export const DropdownMenuButton = (props) => {
@@ -113,5 +113,20 @@ export const PrimaryAddButton = (props) => {
       <TiPlus />
       <span>{title}</span>
     </div>
+  );
+};
+
+
+export const SecondaryButton = (props) => {
+  const { title, address, onClick } = props;
+
+  return (
+    <button className="btn-secondary-container" onClick={onClick}>
+      <Link to={address}>
+        <div>
+          <span>{title}</span>
+        </div>
+      </Link>
+    </button>
   );
 };
