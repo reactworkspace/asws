@@ -159,12 +159,28 @@ export const SecondaryFilterButton = () => {
               <div className={style.filter_zone_list_heading}>
                 <span>zone</span>
               </div>
-              <div></div>
+              <div className={style.filter_zone_list_btns}>
+                <SecondaryCheckButtons title="east zone" />
+                <SecondaryCheckButtons title="west zone" />
+                <SecondaryCheckButtons title="south zone" />
+                <SecondaryCheckButtons title="central zone" />
+              </div>
             </div>
-            <div filter_zone_list_wrapper></div>
+            <div className={style.filter_zone_list_name}>
+              <TertiaryCheckButtons title="jamia masjid" />
+              <TertiaryCheckButtons title="noor masjid" />
+              <TertiaryCheckButtons title="zeba masjid" />
+              <TertiaryCheckButtons title="yahiya masjid" />
+              <TertiaryCheckButtons title="mohamadia masjid" />
+              <TertiaryCheckButtons title="wazerali masjid" />
+              <TertiaryCheckButtons title="youfian masjid" />
+              <TertiaryCheckButtons title="abubakar masjid" />
+              <TertiaryCheckButtons title="hussain masjid" />
+            </div>
           </div>
         </div>
         <Devider1 />
+
         <div className={style.filter_footer_container}>
           <div className={style.filter_footer_heading}>
             <span>clear</span>

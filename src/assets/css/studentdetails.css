@@ -36,6 +36,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
+  overflow: hidden;
+  height: auto;
+}
+
+.current-attendance-performance-chart{
+  width: 20rem;
+  height: 20rem;
 }
 
 .cap-present-title,
