@@ -8,15 +8,15 @@ import '../../../assets/css/flex.css';
 import UserProfile from '../../../components/main/profile/userprofile';
 
 // Import Button Componenets
-import { DropdownNewMenuButton } from  '../../../components/main/common/buttons/buttons';
+import { DropdownNewMenuButton } from '../../../components/main/common/buttons/buttons';
 
 // react icons
 import { HiOutlineSearch } from 'react-icons/hi';
 
 // Import zone card
 import ZoneCard from '../../../components/main/zone/zonecard';
-import ZoneCard1 from '../../../components/main/zone/zonecard1';
-import ZoneCard2 from '../../../components/main/zone/zonecard2';
+
+import { PrimaryCheckButtons } from '../../../components/main/common/buttons/checkbuttons/checkbuttons';
 
 const SearchZone = () => {
   return (
@@ -30,30 +30,10 @@ const SearchZone = () => {
 export const ZoneCheckButtons = () => {
   return (
     <div id="zone-check-buttons">
-      <label className="zone-checkbox-lable flex-c poppins-sub-heading-1rem">
-        <input type="checkbox" />
-        <span>east zone</span>
-      </label>
-
-      <label className="zone-checkbox-lable flex-c poppins-sub-heading-1rem">
-        <input type="checkbox" />
-        <span>west zone</span>
-      </label>
-
-      <label className="zone-checkbox-lable flex-c poppins-sub-heading-1rem">
-        <input type="checkbox" />
-        <span>north zone</span>
-      </label>
-
-      <label className="zone-checkbox-lable flex-c poppins-sub-heading-1rem">
-        <input type="checkbox" />
-        <span>south zone</span>
-      </label>
-
-      <label className="zone-checkbox-lable flex-c poppins-sub-heading-1rem">
-        <input type="checkbox" />
-        <span>central zone</span>
-      </label>
+      <PrimaryCheckButtons title="east zone" />
+      <PrimaryCheckButtons title="west zone" />
+      <PrimaryCheckButtons title="north zone" />
+      <PrimaryCheckButtons title="south zone" />
     </div>
   );
 };
@@ -88,9 +68,6 @@ const Zone = () => {
         </div>
         <div id="zone-card-list">
           <ZoneCard />
-          <ZoneCard1 />
-          <ZoneCard2 />
-
         </div>
       </div>
     </section>

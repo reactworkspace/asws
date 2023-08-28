@@ -1,3 +1,4 @@
+
 .btn {
   width: 7.5rem;
   height: auto;
@@ -145,4 +146,44 @@
   text-decoration-line: underline;
   cursor: pointer;
   text-transform: capitalize;
+}
+
+/* Secondary Button */
+.btn_secondary {
+  padding: 0.625rem 4.5rem !important;
+
+  font-size: 1.3rem;
+  border-radius: 2rem;
+}
+
+.filterOptionsSecondaryFilter {
+  width: 40.375rem;
+  /* height: 27.75rem; */
+
+  z-index: 0;
+  position: fixed;
+  top: -100%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 1.25rem;
+  background: var(--color-white);
+  box-shadow: 0px 2px 6px 0px rgba(13, 10, 44, 0.08);
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.3s, height 0.3s;
+
+  color: var(--color-purple);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.filterOptionsSecondaryFilter.showOptionsSecondaryFilter {
+  z-index: 100;
+  top: 50%;
+  opacity: 1;
+  height: 27.75rem;
+  width: 40.375rem;
+  display: flex;
 }

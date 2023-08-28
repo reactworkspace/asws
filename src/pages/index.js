@@ -266,10 +266,10 @@ const AswsIndex = () => {
         </div>
 
         {/* Body Section */}
-        <section id="body-section">
+        <div className="flex ">
           <nav className="navbar">
             <div className="aswslogo">
-              <AswsLogo />
+              <img src={AswsLogoImg} alt="AswsLogo" />
             </div>
             <div id="navbar-list">
               <ul className="poppins">
@@ -376,57 +376,44 @@ const AswsIndex = () => {
               </ul>
             </div>
           </nav>
-          <section>
-            <section id="main-section">
-              <Routes>
-                <Route exact path="/" element={<Dashboard />} />
-                <Route exact path="/zone" element={<Zone />} />
-                <Route exact path="/student" element={<Student />} />
-                <Route exact path="/teacher" element={<Teacher />} />
-                <Route exact path="/attendance" element={<Attendance />} />
-                <Route exact path="/syllabus" element={<Syllabus />} />
-                <Route exact path="/setting" element={<Setting />} />
 
-                <Route exact path="/addstudent" element={<AddStudent />} />
-                <Route exact path="/addteacher" element={<AddTeacher />} />
-                <Route exact path="/addzone" element={<AddZone />} />
-                <Route exact path="/addsubject" element={<AddSubject />} />
-                <Route
-                  exact
-                  path="/subject/:subjectName"
-                  element={<Subject />}
-                />
+          <section id="main-section">
+            <Routes>
+              <Route exact path="/" element={<Dashboard />} />
+              <Route exact path="/zone" element={<Zone />} />
+              <Route exact path="/student" element={<Student />} />
+              <Route exact path="/teacher" element={<Teacher />} />
+              <Route exact path="/attendance" element={<Attendance />} />
+              <Route exact path="/syllabus" element={<Syllabus />} />
+              <Route exact path="/setting" element={<Setting />} />
 
-                <Route
-                  exact
-                  path="/studentdetails"
-                  element={<StudentDetails />}
-                />
+              <Route exact path="/addstudent" element={<AddStudent />} />
+              <Route exact path="/addteacher" element={<AddTeacher />} />
+              <Route exact path="/addzone" element={<AddZone />} />
+              <Route exact path="/addsubject" element={<AddSubject />} />
+              <Route exact path="/subject/:subjectName" element={<Subject />} />
 
-                <Route
-                  exact
-                  path="/teacherdetails"
-                  element={<TeacherDetails />}
-                />
-                <Route exact path="/zonedetails" element={<ZoneDetails />} />
+              <Route
+                exact
+                path="/studentdetails"
+                element={<StudentDetails />}
+              />
 
-                <Route
-                  exact
-                  path="/importstudent"
-                  element={<ImportStudent />}
-                />
+              <Route
+                exact
+                path="/teacherdetails"
+                element={<TeacherDetails />}
+              />
+              <Route exact path="/zonedetails" element={<ZoneDetails />} />
 
-                <Route
-                  exact
-                  path="/importteacher"
-                  element={<ImportTeacher />}
-                />
+              <Route exact path="/importstudent" element={<ImportStudent />} />
 
-                <Route exact path="/importzone" element={<ImportZone />} />
-              </Routes>
-            </section>
+              <Route exact path="/importteacher" element={<ImportTeacher />} />
+
+              <Route exact path="/importzone" element={<ImportZone />} />
+            </Routes>
           </section>
-        </section>
+        </div>
       </Router>
     </>
   );

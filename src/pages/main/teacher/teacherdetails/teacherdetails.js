@@ -45,6 +45,7 @@ const JamiaNizamia = () => {
     </>
   );
 };
+
 const TeacherDetailsCardData = () => {
   return (
     <div>
@@ -271,7 +272,7 @@ const TeacherDetails = () => {
                       <span>osmania university</span>
                     </div>
                     <div className="experience-title">
-                      <span>batchelor of computer application</span>
+                      <span>Worked as Tutor in Canvas Junior College</span>
                     </div>
                     <div className="experience-duration">
                       <span>may 2019 - apr 2022</span>
@@ -288,7 +289,7 @@ const TeacherDetails = () => {
                       <span>jamia nizamia</span>
                     </div>
                     <div className="experience-title">
-                      <span>alim - fazil</span>
+                      <span>Worked as Tutor in JMCC School</span>
                     </div>
                     <div className="experience-duration">
                       <span>may 2015 - apr 2018</span>

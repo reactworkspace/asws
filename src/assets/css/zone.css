@@ -49,33 +49,13 @@
   padding: 2rem 0 0 0;
 }
 
-.zone-checkbox-lable input[type='checkbox'] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  /* Add custom styles */
-  width: 1.8rem;
-  height: 1.8rem;
-  border-radius: 0.4rem;
-  border: 0.2rem solid var(--color-grey-3);
-}
-
-.zone-checkbox-lable input[type='checkbox']:checked {
-  appearance: auto;
-  accent-color: var(--color-purple);
-}
-
-.zone-checkbox-lable span {
-  padding-left: 0.8rem;
-}
-
 /* Zone Cards */
 
 #zone-card-list {
   padding: 2rem 0 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 2rem;
 }
 
 /* Zone Cards */

@@ -338,14 +338,15 @@ export const Chart = () => {
 };
 
 // Donation Card
-export const DonationCard = ({children}) => {
-
+export const DonationCard = ({ children }) => {
   return (
     <div className={style.donationcard_container}>
       <div className={style.donationcard_wrapper}>
         <div className={style.donationcard_heading}>
-          <span>"Empower Positive Change: Extend a Helping Hand through Your
-          Generous Donations and Make a Lasting Difference"</span>
+          <span>
+            "Empower Positive Change: Extend a Helping Hand through Your
+            Generous Donations and Make a Lasting Difference"
+          </span>
         </div>
         <div>{children}</div>
       </div>
@@ -386,7 +387,7 @@ export const EventCard = (props) => {
         </div>
         <div className={style.eventcard_details}>
           <div className={style.eventcard_detail}>{eventDetail}</div>
-          <div className={style.eventcard_heading}>
+          <div>
             <h3>{eventHeading}</h3>
           </div>
         </div>

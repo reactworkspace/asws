@@ -6,6 +6,10 @@ import '../../assets/css/flex.css';
 
 import React from 'react';
 import { useState } from 'react';
+import axios from 'axios'; // Import Axios
+
+
+// import { authenticateUser } from '../../api/auth';
 
 import { Link } from 'react-router-dom';
 
@@ -17,8 +21,7 @@ import SignInImg from '../../assets/images/signin.png';
 import SignUpImg from '../../assets/images/signup.png';
 
 // Imported the userLogin.json data somehow
-import userLoginData from '../../json/userLogin.json';
-
+// import userLoginData from '../../json/userLogin.json';
 
 export const ForgotPageComponenet = () => {
   return <>Forgot</>;
@@ -257,37 +260,6 @@ export const SigninPageComponent = () => {
 
   const handleRememberMeChange = (e) => {
     setRememberMe(e.target.checked);
-  };
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-
-    // Find the user in the userLoginData array by matching the email
-    const user = userLoginData.find((user) => user.email === email);
-
-    if (user) {
-      // Check if the password matches the stored password for the user
-      if (user.password === password) {
-        // Login successful, store login info in localStorage if "remember me" is checked
-        if (rememberMe) {
-          localStorage.setItem('isLoggedIn', 'true');
-          localStorage.setItem('userId', user.id);
-        }
-        // Handle successful login here, e.g., redirect to dashboard
-        window.location.href = '/';
-        window.location.reload();
-        sessionStorage.setItem('isLoggedIn', 'true');
-        sessionStorage.setItem('userId', user.id);
-
-        setLoginError('');
-      } else {
-        // Password is incorrect
-        setLoginError('Incorrect password');
-      }
-    } else {
-      // User not found in userLoginData
-      setLoginError('User not found');
-    }
   };
 
   return (

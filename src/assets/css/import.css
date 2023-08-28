@@ -41,6 +41,10 @@
   color: var(--color-grey-3);
 }
 
+.upload-button{
+  width: 10rem;
+}
+
 .download-template-file span {
   text-decoration: underline;
   color: var(--color-green-hyperlink);

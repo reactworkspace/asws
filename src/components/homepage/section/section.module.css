@@ -328,17 +328,6 @@
   text-transform: uppercase;
 }
 
-.eventcard_heading {
-  color: var(--color-white);
-
-  /* H3 */
-  font-family: 'Roboto';
-  font-size: 1.75rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 2.625rem; /* 2.625rem */
-}
-
 .eventcard_button {
   align-self: center;
 }
@@ -427,4 +416,171 @@
 .footersubscribe_input:focus {
   background-color: var(--color-white);
   color: var(--color-font-primary);
+}
+
+/* Small desktop screens and tablets (1024px to 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  /* Common */
+  .content_container {
+    width: 25rem;
+  }
+  .list_item_paragraph {
+    width: 19rem;
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Common  */
+  .list_item_paragraph {
+    width: 19rem;
+  }
+  /* Header */
+  .nav_container {
+    display: none;
+  }
+  /* Donation */
+  .donationcard_heading {
+    width: 25rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  /* Event */
+  .eventtitle_container {
+    width: 50rem;
+  }
+  .eventtitle_title {
+    width: 40%;
+  }
+}
+
+/* Mobile devices in landscape orientation (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  /* Common */
+  .content_container {
+    width: 25rem;
+  }
+  .list_item_paragraph {
+    width: 19rem;
+  }
+
+  /* Header */
+  .nav_container {
+    display: none;
+  }
+
+  /* Donation */
+  .donationcard_heading {
+    width: 25rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  /* Events */
+  .eventtitle_container {
+    width: 30rem;
+  }
+  .eventtitle_title {
+    width: 75%;
+  }
+  .eventcard_container {
+    width: 31rem;
+  }
+  .eventcard_day {
+    font-size: 1.5rem;
+    line-height: 1.5rem; /* 3.6rem */
+  }
+}
+
+/* Mobile devices in portrait orientation (320px to 479px) */
+@media (min-width: 280px) and (max-width: 479px) {
+  /* Commmon */
+  .title_line {
+    width: 2rem;
+  }
+  .content_container {
+    width: 11rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content_container {
+    margin-top: 2rem;
+    margin-left: 3.5rem;
+  }
+
+  .list_item_paragraph {
+    width: 19rem;
+  }
+
+  /* Header */
+  .asws_logo {
+    height: 4rem;
+    cursor: pointer;
+  }
+  .nav_container {
+    display: none;
+  }
+
+  /* what we do */
+  .list_item_title {
+    font-size: 1rem;
+  }
+  .list_item_paragraph {
+    width: 8.5rem !important;
+    font-size: 0.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1rem;
+  }
+
+  /* Project we have done */
+  .projectcard_container {
+    width: 16.6875rem;
+    height: 30rem;
+  }
+
+  /* Event */
+  .eventtitle_container {
+    width: 18rem;
+  }
+  .eventtitle_title {
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  .eventcard_container {
+    width: 18rem;
+    height: auto;
+  }
+  .eventcard_day {
+    font-size: 1.5rem;
+    line-height: 1.5rem; /* 3.6rem */
+  }
+  .eventcard_detail{
+    font-size: 0.8rem;
+  }
+
+  /* Donation */
+  .donation_container {
+    padding: 0rem 3rem;
+  }
+  .donationcard_heading {
+    width: 10rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  /* Footer */
+  .footersubscribe_form_wrapper {
+    width: 15rem;
+    flex-direction: column;
+  }
+  .footersubscribe_heading {
+    width: 10rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  .footersubscribe_input {
+    width: 100%;
+  }
 }

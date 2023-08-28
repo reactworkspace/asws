@@ -13,6 +13,7 @@ import UserProfile from '../profile/userprofile';
 import { ReactComponent as FileIcon } from '../../../assets/svg/file_document_icon.svg';
 
 // Import Zone Page Component
+import { PrimaryButton } from '../common/buttons/buttons';
 
 export const ImportZone = () => {
   return (
@@ -42,6 +43,14 @@ export const ImportZone = () => {
               <span>.Csv file type is suported</span>
             </div>
           </div>
+
+          <div className="upload-button">
+            <PrimaryButton
+              title="upload"
+              onClick={() => alert('Zone Data has been Uploaded Successfully')}
+            />
+          </div>
+
           <div className="download-template-file">
             <span className="poppins">download template file</span>
           </div>
@@ -81,6 +90,12 @@ export const ImportTeacher = () => {
               <span>.Csv file type is suported</span>
             </div>
           </div>
+          <div className="upload-button">
+            <PrimaryButton
+              title="upload"
+              onClick={() => alert('Teacher Data has been Uploaded Successfully')}
+            />
+          </div>
           <div className="download-template-file">
             <span className="poppins">download template file</span>
           </div>
@@ -118,6 +133,12 @@ export const ImportStudent = () => {
               <span>Drag and drop or choose a file</span>
               <span>.Csv file type is suported</span>
             </div>
+          </div>
+          <div className="upload-button">
+            <PrimaryButton
+              title="upload"
+              onClick={() => alert('Student Data has been Uploaded Successfully')}
+            />
           </div>
           <div className="download-template-file">
             <span className="poppins">download template file</span>

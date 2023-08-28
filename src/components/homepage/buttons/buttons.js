@@ -132,19 +132,7 @@ export const SecondaryButton = (props) => {
   );
 };
 
-// Teritairy Button
-export const TertiaryButton = (props) => {
-  const { title, address } = props;
-  return (
-    <div>
-      <Link to={address}>
-        <div className={style.btn_teritairy_container}>
-          <span>{title}</span>
-        </div>
-      </Link>
-    </div>
-  );
-};
+
 
 // DonationButton
 export const DonationButton = (props) => {

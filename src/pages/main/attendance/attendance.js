@@ -4,45 +4,30 @@ import '../../../assets/css/attendance.css';
 import '../../../assets/css/font.css';
 import '../../../assets/css/flex.css';
 
+import {
+  StudentTable,
+  TeacherTable,
+} from '../../../components/main/attendance/attendance';
+
 // Import user profile components
 import UserProfile from '../../../components/main/profile/userprofile';
 
-const AttendanceTable = () => {
+import { Tabs } from 'antd';
+const { TabPane } = Tabs; // Import TabPane from Antd Tabs
+
+const TeacherAttendance = () => {
   return (
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>user name</th>
-          <th>ID</th>
-          <th>centre</th>
-          <th>roles</th>
-          <th>attendance</th>
-        </tr>
-      </thead>
-      <tbody>
-        <AttendanceTableRowData />
-        <AttendanceTableRowData />
-        <AttendanceTableRowData />
-        <AttendanceTableRowData />
-        <AttendanceTableRowData />
-        <AttendanceTableRowData />
-        <AttendanceTableRowData />
-      </tbody>
-    </table>
+    <div className="teacherAttendance-container">
+      <TeacherTable />
+    </div>
   );
 };
 
-const AttendanceTableRowData = () => {
+const StudentAttendance = () => {
   return (
-    <tr>
-      <td></td>
-      <td>javeed ali</td>
-      <td>#123456789</td>
-      <td>macca masjid centre charminar</td>
-      <td>student</td>
-      <td>present</td>
-    </tr>
+    <div className="studentAttendance-container">
+      <StudentTable />
+    </div>
   );
 };
 
@@ -57,15 +42,27 @@ const Attendance = () => {
           <UserProfile />
         </div>
 
-        {/* attendnace buttons */}
-        <div></div>
-
         {/* Attendance table */}
         <div id="attendance-table-id">
-          <div className="attendance-table-div">
-            <AttendanceTable />
-          </div>
-          <div className="attendance-table-pagination"></div>
+          {/* Tab buttons */}
+          <Tabs defaultActiveKey="1">
+            <TabPane
+              tab={
+                <span className="tabpane-span poppins-heading">student</span>
+              }
+              key="1"
+            >
+              <StudentAttendance />
+            </TabPane>
+            <TabPane
+              tab={
+                <span className="tabpane-span poppins-heading">teacher</span>
+              }
+              key="2"
+            >
+              <TeacherAttendance />
+            </TabPane>
+          </Tabs>
         </div>
       </div>
     </section>

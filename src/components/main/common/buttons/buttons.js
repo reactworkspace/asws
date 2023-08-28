@@ -92,10 +92,10 @@ export const DropdownNewMenuButton = (props) => {
 };
 
 export const PrimaryButton = (props) => {
-  const { title, address } = props;
+  const { title, address, onClick } = props;
 
   return (
-    <div className="btn-primary-container">
+    <div className="btn-primary-container" onClick={onClick}>
       <Link to={address}>
         <div>
           <span>{title}</span>

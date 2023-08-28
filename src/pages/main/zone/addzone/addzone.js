@@ -6,6 +6,8 @@ import '../../../../assets/css/flex.css';
 import '../../../../assets/css/userprofile.css';
 
 import { useState } from 'react';
+import api from '../../../../api/api'; // Import your axios instance
+
 import { Link } from 'react-router-dom';
 
 // Import user profile components
@@ -15,16 +17,69 @@ import UserProfile from '../../../../components/main/profile/userprofile';
 import { PrimaryButton } from '../../../../components/main/common/buttons/buttons';
 
 const AddZone = () => {
-  const [text, setText] = useState('');
+  const [formData, setFormData] = useState({
+    centreName: '',
+    committeeMember: '',
+    email: '',
+    phone: '',
+    address: '',
+    waqtBoardNo: '',
+  });
 
-  function handleTextChange(event) {
+  const [text, setText] = useState(''); // Define the 'text' state
+
+  const handleTextChange = (event) => {
+    // Define the 'handleTextChange' function
     const newText = event.target.value;
     setText(newText);
-  }
+  };
 
+  const handleFormSubmit = () => {
+    // Make an API request using axios
+    api
+      .post('/api/zones/{zoneId}/centers', formData)
+      .then((response) => {
+        // Handle success, maybe show a success message
+      })
+      .catch((error) => {
+        // Handle error, maybe show an error message
+      });
+  };
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = event => {
+    const file = event.target.files[0];
+    setSelectedFile(file);
+  };
+
+  const handleFileUpload = () => {
+    if (selectedFile) {
+      const formData = new FormData();
+      formData.append('image', selectedFile);
+
+      // Make an API request to upload the image
+      api.post('/api/upload', formData)
+        .then(response => {
+          // Handle success, maybe show a success message
+        })
+        .catch(error => {
+          // Handle error, maybe show an error message
+        });
+    }
+  };
+  
   return (
     <section id="addzone">
-      <div>
+      <form onSubmit={handleFormSubmit}>
         <div className="addzone-heading flex-r-sb">
           <div>
             <span className="poppins-heading">
@@ -51,6 +106,9 @@ const AddZone = () => {
                 className="zone-form-input poppin"
                 id="centre-name-input"
                 placeholder=" "
+                name="centreName"
+                value={formData.centreName}
+                onChange={handleInputChange}
                 required
               />
             </div>
@@ -103,7 +161,9 @@ const AddZone = () => {
                 onChange={handleTextChange}
                 required
               ></textarea>
-               <p className='zone-form-input-textarea-count'>{text.length}/300</p>
+              <p className="zone-form-input-textarea-count">
+                {text.length}/300
+              </p>
             </div>
             <div>
               <label className="zone-form-label" htmlFor="waqboardno">
@@ -126,16 +186,17 @@ const AddZone = () => {
             <span>photo collections *</span>
           </div>
           <div className="photo-card-collection-card">
-            <span>drag and drop or</span>
-            <span>click here to select file</span>
+            <input type="file" accept="image/*" onChange={handleFileChange} />
+            <button onClick={handleFileUpload}>Upload Photo</button>
           </div>
         </div>
+
         <div className="zone-submit-button-div">
           <div>
-            <PrimaryButton title="submit" />
+            <PrimaryButton title="submit" type="submit" />
           </div>
         </div>
-      </div>
+      </form>
     </section>
   );
 };

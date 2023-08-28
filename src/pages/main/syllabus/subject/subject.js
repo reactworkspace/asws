@@ -51,32 +51,6 @@ const Subject = () => {
 
           <div className="subject-container">
             <div className="subject-wrapper">
-              {/* heading */}
-              <div className="chapter-container chapter-heading-font">
-                <div className="chapter-heading-container">
-                  <div>
-                    <span>{subjectName} name</span>
-                  </div>
-                  <div>
-                    <span>added by</span>
-                  </div>
-                </div>
-                <div className="chapter-action-container">action</div>
-              </div>
-              {/* content */}
-              <div className="chapter-container chapter-content-font ">
-                <div className="chapter-heading-container">
-                  <div>
-                    <span>{subjectName} name</span>
-                  </div>
-                  <div>
-                    <span>added by</span>
-                  </div>
-                </div>
-                <div className="chapter-action-container action-icon">
-                  <RiDeleteBin5Line />
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -27,10 +27,11 @@ import WithLoader from '../../HOC/withLoader/WithLoader';
 import {
   SigninButton,
   PrimaryButton,
-  TertiaryButton,
   DonationButton,
   PlayButton,
 } from '../../components/homepage/buttons/buttons';
+
+import { TertiaryButton } from '../../components/homepage/buttons/buttons1';
 
 // import svg as react component
 import { ReactComponent as PlayIcon } from '../../assets/svg/homepage/play_icon.svg';
@@ -55,9 +56,32 @@ import {
   FooterSubcsribe,
 } from '../../components/homepage/section/section';
 
-import { Curtain } from '../../components/homepage/curtain/curtain';
-
 const HomePage = () => {
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoading, setIsLoading] = useState(true);
+
+  // useEffect(() => {
+  //   // Simulate an artificial delay of 2 seconds (2000 milliseconds)
+  //   const delay = 1000;
+
+  //   setTimeout(() => {
+  //     // Check if the user is logged in (e.g., retrieve data from sessionStorage)
+  //     const isLoggedInSessionStorage = sessionStorage.getItem('isLoggedIn');
+  //     if (isLoggedInSessionStorage !== null) {
+  //       setIsLoggedIn(isLoggedInSessionStorage === 'true');
+  //       setIsLoading(false); // Mark loading as completed
+  //     } else {
+  //       // Check if the user is logged in (e.g., retrieve data from localStorage)
+  //       const isLoggedInLocalStorage = localStorage.getItem('isLoggedIn');
+  //       setIsLoggedIn(isLoggedInLocalStorage === 'true');
+  //       setIsLoading(false); // Mark loading as completed
+
+  //       // If not found in sessionStorage, store the value in sessionStorage for future reference in this session
+  //       sessionStorage.setItem('isLoggedIn', isLoggedInLocalStorage);
+  //     }
+  //   }, delay);
+  // }, []);
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -66,19 +90,15 @@ const HomePage = () => {
     const delay = 1000;
 
     setTimeout(() => {
-      // Check if the user is logged in (e.g., retrieve data from sessionStorage)
-      const isLoggedInSessionStorage = sessionStorage.getItem('isLoggedIn');
-      if (isLoggedInSessionStorage !== null) {
-        setIsLoggedIn(isLoggedInSessionStorage === 'true');
+      // Check if the user is logged in using the stored token
+      const authToken = localStorage.getItem('authToken');
+
+      if (authToken) {
+        setIsLoggedIn(true);
         setIsLoading(false); // Mark loading as completed
       } else {
-        // Check if the user is logged in (e.g., retrieve data from localStorage)
-        const isLoggedInLocalStorage = localStorage.getItem('isLoggedIn');
-        setIsLoggedIn(isLoggedInLocalStorage === 'true');
+        setIsLoggedIn(false);
         setIsLoading(false); // Mark loading as completed
-
-        // If not found in sessionStorage, store the value in sessionStorage for future reference in this session
-        sessionStorage.setItem('isLoggedIn', isLoggedInLocalStorage);
       }
     }, delay);
   }, []);
@@ -96,8 +116,7 @@ const HomePage = () => {
         <section>
           <Router>
             <Routes>
-              <Route exact path="/" element={<Curtain />} />
-              <Route exact path="/homepage" element={<HomePageComponent />} />
+              <Route exact path="/" element={<HomePageComponent />} />
               <Route exact path="/signin" element={<SigninPageComponent />} />
               <Route exact path="/signup" element={<SignupPageComponent />} />
               <Route exact path="/forgot" element={<ForgotPageComponenet />} />
@@ -140,6 +159,9 @@ export const HomePageComponent = () => {
             address2="/signup"
           />
         </div>
+        <div className={style.navbar_hamburguer}>
+
+        </div>
       </section>
 
       {/* main */}
@@ -154,7 +176,7 @@ export const HomePageComponent = () => {
                 </span>
               </div>
               <div className={style.home_buttons_wrapper}>
-                <TertiaryButton title="what we do" />
+                <TertiaryButton title="what we do" address="whatwedo" />
                 <PlayButton title="play video" />
               </div>
             </div>
@@ -330,7 +352,7 @@ export const HomePageComponent = () => {
       <section className={style.donation_container}>
         <div className={style.donation_wrapper} data-aos="fade-up">
           <DonationCard>
-          <DonationButton
+            <DonationButton
               title="donate now"
               className={style.donation_button_component}
             />

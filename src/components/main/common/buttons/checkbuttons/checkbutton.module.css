@@ -2,12 +2,18 @@
 .primaryCheckButtons_label {
   color: var(--color-text);
   font-family: 'Poppins';
-  font-size: 0.75rem;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 
   text-transform: capitalize;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
 }
 
 .primaryCheckButtons_label input[type='checkbox'] {
@@ -19,6 +25,7 @@
   height: 1.8rem;
   border-radius: 0.4rem;
   border: 0.2rem solid var(--color-grey-3);
+  cursor: pointer;
 }
 
 .primaryCheckButtons_label input[type='checkbox']:checked {

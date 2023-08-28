@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import style from './filterbuttons.module.css';
 
 import { Devider, Devider1 } from '../../devider/devider';
+import Backdrop from '../../backdrop/backdrop';
 
 import { IoClose } from 'react-icons/io5';
 import { ToggleRadioButton } from '../radiobuttons/radiobuttons';
@@ -28,6 +29,11 @@ export const PrimaryFilterButton = () => {
         </div>
         <span>filter</span>
       </div>
+      <Backdrop
+        className={style.back_drop}
+        show={showOptions}
+        onClick={handleButtonClick}
+      />
       <div
         className={`${style.filterOptions} ${
           showOptions ? style.showOptions : ''
@@ -42,7 +48,10 @@ export const PrimaryFilterButton = () => {
             <IoClose onClick={handleButtonClick} />
           </div>
         </div>
-        <Devider />
+        <div>
+          <Devider />
+        </div>
+
         <div className={style.radio_btn_container}>
           <div className={style.radio_btn_wrapper}>
             {/* centres */}
@@ -92,7 +101,10 @@ export const PrimaryFilterButton = () => {
             </div>
           </div>
         </div>
-        <Devider1 />
+
+        <div>
+          <Devider1 />
+        </div>
         <div className={style.filter_footer_container}>
           <div className={style.filter_footer_heading}>
             <span>clear</span>
@@ -115,15 +127,23 @@ export const SecondaryFilterButton = () => {
 
   return (
     <div>
-      <div className={`${style.btn}`} onClick={handleButtonClick}>
+      <div
+        className={`${style.btn} ${style.btn_secondary}`}
+        onClick={handleButtonClick}
+      >
         <div>
           <FilterIcon className={style.filter_icon} />
         </div>
         <span>filter</span>
       </div>
+      <Backdrop
+        className={style.back_drop}
+        show={showOptions}
+        onClick={handleButtonClick}
+      />
       <div
-        className={`${style.filterOptions} ${
-          showOptions ? style.showOptions : ''
+        className={`${style.filterOptionsSecondaryFilter} ${
+          showOptions ? style.showOptionsSecondaryFilter : ''
         }`}
       >
         <div className={style.filter_heading_container}>
@@ -135,7 +155,9 @@ export const SecondaryFilterButton = () => {
             <IoClose onClick={handleButtonClick} />
           </div>
         </div>
-        <Devider />
+        <div>
+          <Devider />
+        </div>
         <div className={style.radio_btn_container}>
           <div className={style.radio_btn_wrapper}>
             {/* centres */}
@@ -179,7 +201,9 @@ export const SecondaryFilterButton = () => {
             </div>
           </div>
         </div>
-        <Devider1 />
+        <div>
+          <Devider1 />
+        </div>
 
         <div className={style.filter_footer_container}>
           <div className={style.filter_footer_heading}>

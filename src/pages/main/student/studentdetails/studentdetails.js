@@ -24,7 +24,6 @@ import { ReactComponent as CAPabsent } from '../../../../assets/svg/cap-absent.s
 // Import icons using react icons
 import { BsThreeDotsVertical, BsPerson } from 'react-icons/bs';
 
-
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -425,66 +424,91 @@ const StudentDetails = () => {
             </div>
           </div>
 
-          {/* Current Attendance Performance */}
-          <div className="current-attendance-performance">
-            <div className="current-attendance-performance-heading poppins">
-              <span>current attendance performance</span>
-            </div>
-            <div className="current-attendance-performance-card">
-              <div className="current-attendance-performance-chart">
-                <ResponsiveContainer width="100%" height="100%">
-                  <PieChart width={200} height={200}>
-                    <Pie
-                      data={data}
-                      cx="40%"
-                      cy="50%"
-                      labelLine={false}
-                      label={renderCustomizedLabel}
-                      outerRadius={100}
-                      fill="#8884d8"
-                      dataKey="value"
-                    >
-                      {data.map((entry, index) => (
-                        <Cell
-                          key={`cell-${index}`}
-                          fill={COLORS[index % COLORS.length]}
-                        />
-                      ))}
-                    </Pie>
-                  </PieChart>
-                </ResponsiveContainer>
+          {/* Current Attendance Performance & Leader Board Position */}
+          <div className="cap-lbp">
+            {/* Current Attendance Performance */}
+            <div className="current-attendance-performance">
+              <div className="current-attendance-performance-heading poppins">
+                <span>current attendance performance</span>
               </div>
-
-              <div className="cap-pla flex-r-sa">
-                <div className="current-attendance-performance-present">
-                  <div className="cap-present-icon">
-                    <CAPpresent />
-                  </div>
-                  <div className="cap-present-title">
-                    <span>70% present</span>
-                  </div>
+              <div className="current-attendance-performance-card">
+                <div className="current-attendance-performance-chart">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart width={200} height={200}>
+                      <Pie
+                        data={data}
+                        cx="40%"
+                        cy="50%"
+                        labelLine={false}
+                        label={renderCustomizedLabel}
+                        outerRadius={100}
+                        fill="#8884d8"
+                        dataKey="value"
+                      >
+                        {data.map((entry, index) => (
+                          <Cell
+                            key={`cell-${index}`}
+                            fill={COLORS[index % COLORS.length]}
+                          />
+                        ))}
+                      </Pie>
+                    </PieChart>
+                  </ResponsiveContainer>
                 </div>
 
-                <div className="current-attendance-performance-leave">
-                  <div className="cap-leave-icon">
-                    <CAPleave />
+                <div className="cap-pla flex-r-sa">
+                  <div className="current-attendance-performance-present">
+                    <div className="cap-present-icon">
+                      <CAPpresent />
+                    </div>
+                    <div className="cap-present-title">
+                      <span>70% present</span>
+                    </div>
                   </div>
-                  <div className="cap-leave-title">
-                    <span>10% leave</span>
-                  </div>
-                </div>
 
-                <div className="current-attendance-performance-absent">
-                  <div className="cap-absent-icon">
-                    <CAPabsent />
+                  <div className="current-attendance-performance-leave">
+                    <div className="cap-leave-icon">
+                      <CAPleave />
+                    </div>
+                    <div className="cap-leave-title">
+                      <span>10% leave</span>
+                    </div>
                   </div>
-                  <div className="cap-absent-title">
-                    <span>20% absent</span>
+
+                  <div className="current-attendance-performance-absent">
+                    <div className="cap-absent-icon">
+                      <CAPabsent />
+                    </div>
+                    <div className="cap-absent-title">
+                      <span>20% absent</span>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Leader Board Position */}
+
+            <div className="leader-board-position">
+              <div className="leader-board-position-heading poppins">
+                <span>leader board position</span>
+              </div>
+              <div className="leader-board-position-card">
+                <span>no data available for this student</span>
               </div>
             </div>
           </div>
+
+          {/* Average Subject Score */}
+          <div className="average-subject-score">
+            <div className="average-subject-score-heading poppins">
+              <span>Average Subject Score</span>
+            </div>
+            <div className="average-subject-score-card">
+              
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -47,10 +47,15 @@
 
 /* Teacher Cards list */
 #teacher-cards-list {
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 1.5rem;
+
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2rem; */
 }
 
 /* Teacher Cards */
@@ -127,11 +132,18 @@
   #teacher-card {
     width: 16.75rem;
   }
+  #teacher-cards-list {
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  }
 }
+
 /* Small desktop screens and tablets (1024px to 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
   #teacher-card {
     width: 19.5rem;
+  }
+  #teacher-cards-list {
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
   }
 }
 

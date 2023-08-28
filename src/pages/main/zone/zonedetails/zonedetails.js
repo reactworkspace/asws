@@ -17,32 +17,33 @@ import ZoneData from '../../../../data/zonedata';
 
 // import cnetre image address
 import CentreImgage from '../../../../assets/images/centrephoto.png';
-// import StudentProfilePhoto from '../../../../assets/images/studentprofile.png';
-import TeacherProfilePhoto from '../../../../assets/images/teacherprofile.png';
+
+// import filter button component
+import { PrimaryFilterButton } from '../../../../components/main/common/buttons/filterbuttons/filterbuttons';
 
 // import react icons
 import { BsPerson, BsEnvelope, BsGeoAlt, BsTelephone } from 'react-icons/bs';
-import { FaFilter } from 'react-icons/fa';
 
 // import svg
 import { ReactComponent as PersonIcon } from '../../../../assets/svg/personicon.svg';
-import { ReactComponent as ThreeDotsIcons } from '../../../../assets/svg/threedots.svg';
+// import { ReactComponent as ThreeDotsIcons } from '../../../../assets/svg/threedots.svg';
 
 // import student data
 // import studentData from '../../../../data/studentdata';
-import teacherData from '../../../../data/teacherdata';
+// import teacherData from '../../../../data/teacherdata';
 
-import { StudentTrData } from '../../dashbaord/dashboard';
+// import { StudentTrData } from '../../dashbaord/dashboard';
+import { AttendanceBarChart } from '../../dashbaord/dashboard';
 
 // import recharts
-import {
-  ResponsiveContainer,
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-} from 'recharts';
+// import {
+//   ResponsiveContainer,
+//   BarChart,
+//   Bar,
+//   XAxis,
+//   YAxis,
+//   Tooltip,
+// } from 'recharts';
 
 const CentreInformationData = () => {
   return (
@@ -170,173 +171,12 @@ const CentreInformationData = () => {
   );
 };
 
-// const StudentProfile = () => {
-//   return (
-//     <div id="studentprofile">
-//       <img src={StudentProfilePhoto} alt="StudentProfilePhoto" />
-//     </div>
-//   );
-// };
-
-// const StudentTrData = () => {
-//   return (
-//     <>
-//     <StudentTableRowData />
-//     </>
-//   );
-// };
+const TeacherContent = () => {
+  return <>teacher</>;
+};
 
 const StudentContent = () => {
-  return (
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>name</th>
-          <th>id</th>
-          <th>centre</th>
-          <th>contact no</th>
-          <th>admission date</th>
-          <th>action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <StudentTrData />
-      </tbody>
-    </table>
-  );
-};
-
-const TeacherProfile = () => {
-  return (
-    <div id="teacherprofile">
-      <img src={TeacherProfilePhoto} alt="TeacherProfilePhoto" />
-    </div>
-  );
-};
-
-const TeacherTrData = () => {
-  return (
-    <tr>
-      <td>
-        <TeacherProfile />
-      </td>
-      <td> {teacherData.teacherName}</td>
-      <td>ID: {teacherData.teacherId}</td>
-      <td>{teacherData.centreName}</td>
-      <td>{teacherData.phoneNumber}</td>
-      <td>{teacherData.dateofjoining}</td>
-      <td>
-        <ThreeDotsIcons />
-      </td>
-    </tr>
-  );
-};
-
-const TeacherContent = () => {
-  return (
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>name</th>
-          <th>id</th>
-          <th>centre</th>
-          <th>contact no</th>
-          <th>date of joining</th>
-          <th>action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <TeacherTrData />
-        <TeacherTrData />
-        <TeacherTrData />
-        <TeacherTrData />
-        <TeacherTrData />
-        <TeacherTrData />
-        <TeacherTrData />
-      </tbody>
-    </table>
-  );
-};
-
-const CentreAttendancePerformanceData = [
-  {
-    week: 'week 1',
-    present: 40,
-    absent: 10,
-    leave: 20,
-  },
-  {
-    week: 'week 2',
-    present: 25,
-    absent: 10,
-    leave: 15,
-  },
-  {
-    week: 'week 3',
-    present: 50,
-    absent: 30,
-    leave: 40,
-  },
-  {
-    week: 'week 4',
-    present: 40,
-    absent: 30,
-    leave: 20,
-  },
-  {
-    week: 'week 5',
-    present: 40,
-    absent: 30,
-    leave: 20,
-  },
-  {
-    week: 'week 6',
-    present: 40,
-    absent: 30,
-    leave: 20,
-  },
-  {
-    week: 'week 7',
-    present: 40,
-    absent: 30,
-    leave: 20,
-  },
-];
-
-const CentreAttendancePerformance = () => {
-  return (
-    <ResponsiveContainer width="100%" height="100%" aspect={3}>
-      <BarChart
-        data={CentreAttendancePerformanceData}
-        barGap={10}
-        barCategoryGap="20%"
-      >
-        <XAxis dataKey="week" />
-        <YAxis />
-        <Tooltip />
-        <Bar
-          dataKey="present"
-          fill="#4cbc9a"
-          barSize={25}
-          radius={[10, 10, 10, 10]}
-        />
-        <Bar
-          dataKey="absent"
-          fill="#F95A77"
-          barSize={25}
-          radius={[10, 10, 10, 10]}
-        />
-        <Bar
-          dataKey="leave"
-          fill="#F4BE37"
-          barSize={25}
-          radius={[10, 10, 10, 10]}
-        />
-      </BarChart>
-    </ResponsiveContainer>
-  );
+  return <>student</>;
 };
 
 const ZoneDetails = () => {
@@ -415,13 +255,12 @@ const ZoneDetails = () => {
                   <span className="circle bg-color-3"></span>
                   <span>leave</span>
                 </div>
-                <div className="filters-btn flex-c">
-                  <FaFilter />
-                  <span>filters</span>
+                <div>
+                  <PrimaryFilterButton />
                 </div>
               </div>
               <div className="attendance-performance-barchart">
-                <CentreAttendancePerformance />
+                <AttendanceBarChart />
               </div>
             </div>
           </div>
