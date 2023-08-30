@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.8028e170.css",
-    "main.js": "/static/js/main.f508b500.js",
+    "main.css": "/static/css/main.43751692.css",
+    "main.js": "/static/js/main.424ff167.js",
     "static/media/projectcard2.jpg": "/static/media/projectcard2.b5e49d792e4aff6524a4.jpg",
     "static/media/homepage_img1.png": "/static/media/homepage_img1.4723f108f6e6b1b7fccf.png",
     "static/media/projectcard1.jpg": "/static/media/projectcard1.b4d7c8ed6fcc44becafe.jpg",
     "static/media/projectcard3.jpg": "/static/media/projectcard3.660c5c828fccdb4c6bd8.jpg",
-    "static/media/teacherprofile.png": "/static/media/teacherprofile.6ddce6bd411c1699d32d.png",
     "static/media/centrephoto.png": "/static/media/centrephoto.84113396ad7afe73d336.png",
     "static/media/whatwedo.png": "/static/media/whatwedo.5cde324dffe42ac69a96.png",
     "static/media/aboutus.jpg": "/static/media/aboutus.783fb2f3420a047ec279.jpg",
@@ -15,31 +14,18 @@
     "static/media/userprofile.png": "/static/media/userprofile.2ae106a362a3cc556cbe.png",
     "static/media/osmaniauniversitylogo.png": "/static/media/osmaniauniversitylogo.98b0b22099abf033ea7e.png",
     "static/media/teacher2.png": "/static/media/teacher2.40c1826d51ffc6a0874f.png",
-    "static/media/student_img_4.jpeg": "/static/media/student_img_4.a41b98a3405ee2c67813.jpeg",
     "static/media/teacher1.png": "/static/media/teacher1.5535ceffea889c96d84d.png",
-    "static/media/student_img_10.jpeg": "/static/media/student_img_10.3a0d9ca90b254c184d0a.jpeg",
     "static/media/teacher3.png": "/static/media/teacher3.fddb79a8105d2042948d.png",
     "static/media/jamianizamialogo.png": "/static/media/jamianizamialogo.2d56bc13b9dcce45e9db.png",
-    "static/media/student_img_5.jpeg": "/static/media/student_img_5.55874906d4bdfd18a303.jpeg",
-    "static/media/student_img_2.jpeg": "/static/media/student_img_2.c076148b3e7355b5619a.jpeg",
-    "static/media/student_img_7.jpeg": "/static/media/student_img_7.5c653e3c79fbacdc6966.jpeg",
-    "static/media/student_img_9.jpeg": "/static/media/student_img_9.f37cad2ee304f8ea576c.jpeg",
-    "static/media/student_img_6.jpeg": "/static/media/student_img_6.9334f1ec78ae90f7247a.jpeg",
-    "static/media/student_img_8.jpeg": "/static/media/student_img_8.4fa2012603152de91760.jpeg",
-    "static/media/student_img_1.jpeg": "/static/media/student_img_1.cfeeb340ce425ad6997a.jpeg",
-    "static/media/student_img_3.jpeg": "/static/media/student_img_3.12044201aa5dc0d01ca0.jpeg",
     "static/media/upi_qrcode.jpg": "/static/media/upi_qrcode.5bca900909c87e2208cc.jpg",
     "static/media/asws_logo.png": "/static/media/asws_logo.aec8058659e6ca94d1b7.png",
     "static/media/studentprofile.png": "/static/media/studentprofile.71cc14acc79aff8722de.png",
-    "static/media/bismillah.png": "/static/media/bismillah.d5e907b1832695e2414e.png",
-    "static/media/red_curtain.svg": "/static/media/red_curtain.cbd6425b55930b33c80d.svg",
     "static/media/list_icon2.svg": "/static/media/list_icon2.cfe47c4d19f722efb90a79b87c2a8e55.svg",
     "static/media/list_icon1.svg": "/static/media/list_icon1.9cd3cb453a9a7c1ae40d8932d5096e7f.svg",
     "static/media/star_left_group.svg": "/static/media/star_left_group.747f3e5ba0c4678190284ce74d1b2f5f.svg",
     "static/media/teachericon.svg": "/static/media/teachericon.84b5a5be807f204d7eb4dca8d79ea59b.svg",
     "static/media/star_right_group.svg": "/static/media/star_right_group.9e157e7882addd076b4365a04766b193.svg",
     "static/media/personicon.svg": "/static/media/personicon.e4ff83a59454273ebe4e3ea79c965b6a.svg",
-    "static/media/threedots.svg": "/static/media/threedots.f8ca4e6c16594d598050449f591cae45.svg",
     "static/media/student.svg": "/static/media/student.88eb15498f64adda8372972ce59d9479.svg",
     "index.html": "/index.html",
     "static/media/teacher.svg": "/static/media/teacher.50f2d4e6d4857d6e35fe12e3cd54b933.svg",
@@ -58,11 +44,11 @@
     "static/media/cap-absent.svg": "/static/media/cap-absent.594940ac52b15ecf9748692db9c81cb8.svg",
     "static/media/cap-leave.svg": "/static/media/cap-leave.a03ecfcf8144af1720df60d436f02863.svg",
     "static/media/cap-present.svg": "/static/media/cap-present.3058778aa3307cf22761a0ef0da1b761.svg",
-    "main.8028e170.css.map": "/static/css/main.8028e170.css.map",
-    "main.f508b500.js.map": "/static/js/main.f508b500.js.map"
+    "main.43751692.css.map": "/static/css/main.43751692.css.map",
+    "main.424ff167.js.map": "/static/js/main.424ff167.js.map"
   },
   "entrypoints": [
-    "static/css/main.8028e170.css",
-    "static/js/main.f508b500.js"
+    "static/css/main.43751692.css",
+    "static/js/main.424ff167.js"
   ]
 }
