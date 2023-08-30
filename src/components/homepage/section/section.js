@@ -6,6 +6,7 @@ import style from './section.module.css';
 
 // import button componenet
 import {
+  SigninButton,
   PrimaryButton,
   SecondaryButton,
   CirclePrimaryButton,
@@ -22,6 +23,10 @@ import { ReactComponent as SquireIcon4 } from '../../../assets/svg/homepage/list
 
 // import Chart Component
 import { PieChart, Pie, Cell } from 'recharts';
+
+// React Icons
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { GrClose } from 'react-icons/gr';
 
 // NavigationBar
 export const NavigationBar = () => {
@@ -112,6 +117,122 @@ export const NavigationBar = () => {
           </Link>
         </h1>
       </div>
+    </div>
+  );
+};
+
+// Navbar Menu with Hamburger
+export const NavBarMenu = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // const [click, setClick] = useState(false);
+  // const closeMenu = () => setClick(false);
+
+  return (
+    <div className={style.navbarmenu_container}>
+      <div className={style.navbar_hamburger}>
+        <GiHamburgerMenu onClick={toggleMenu} />
+      </div>
+      {isMenuOpen && (
+        <div className={style.navmenuList_container}>
+          <ul className={style.navbar_unorderdlist_container}>
+            <li>
+              {' '}
+              <h1>
+                {' '}
+                <Link
+                  activeClass={style.active}
+                  className={style.nav_font}
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={500}
+                >
+                  <span>home</span>
+                </Link>
+              </h1>
+            </li>
+            <li>
+              <h1>
+                {' '}
+                <Link
+                  activeClass={style.active}
+                  className={style.nav_font}
+                  to="aboutus"
+                  spy={true}
+                  smooth={true}
+                  offset={-60}
+                  duration={500}
+                >
+                  <span>about us</span>
+                </Link>
+              </h1>
+            </li>
+            <li>
+              <h1>
+                <Link
+                  activeClass={style.active}
+                  className={style.nav_font}
+                  to="whatwedo"
+                  spy={true}
+                  smooth={true}
+                  offset={-60}
+                  duration={500}
+                >
+                  <span>what we do</span>
+                </Link>
+              </h1>
+            </li>
+            <li>
+              <h1>
+                <Link
+                  activeClass={style.active}
+                  className={style.nav_font}
+                  to="projectwehavedone"
+                  spy={true}
+                  smooth={true}
+                  offset={-60}
+                  duration={500}
+                >
+                  <span>media</span>
+                </Link>
+              </h1>
+            </li>
+
+            <li>
+              <h1>
+                <Link
+                  activeClass={style.active}
+                  className={style.nav_font}
+                  to="footer"
+                  spy={true}
+                  smooth={true}
+                  offset={-300}
+                  duration={500}
+                >
+                  <span>contact</span>
+                </Link>
+              </h1>
+            </li>
+            <li>
+              <SigninButton
+                btnName="sign in"
+                dropDownBtnName1="sign in"
+                dropDownBtnName2="sign up"
+                address1="/signin"
+                address2="/signup"
+              />
+            </li>
+          </ul>
+
+          <GrClose className={style.navmenu_closeicon} onClick={toggleMenu}  />
+        </div>
+      )}
     </div>
   );
 };

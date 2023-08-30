@@ -42,6 +42,7 @@ import AswsLogo from '../../assets/images/asws_logo.png';
 // import section componenets
 import {
   NavigationBar,
+  NavBarMenu,
   Title,
   Content,
   List,
@@ -160,7 +161,7 @@ export const HomePageComponent = () => {
           />
         </div>
         <div className={style.navbar_hamburguer}>
-
+          <NavBarMenu />
         </div>
       </section>
 

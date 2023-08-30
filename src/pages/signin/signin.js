@@ -6,7 +6,6 @@ import '../../assets/css/flex.css';
 
 import React from 'react';
 import { useState } from 'react';
-import axios from 'axios'; // Import Axios
 
 
 // import { authenticateUser } from '../../api/auth';
@@ -244,7 +243,7 @@ export const SigninPageComponent = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
-  const [loginError, setLoginError] = useState('');
+
 
   const handleTogglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -283,7 +282,7 @@ export const SigninPageComponent = () => {
               </span>
             </div>
             <div className="signin-form-container">
-              <form action="" onSubmit={handleFormSubmit}>
+              <form action="" >
                 <div className="form-feild-container">
                   <label
                     className="signin-form-label"
@@ -328,9 +327,9 @@ export const SigninPageComponent = () => {
                       </span>
                     )}
                   </div>
-                  {loginError && (
+                  {/* {loginError && (
                     <div className="error-message">{loginError}</div>
-                  )}
+                  )} */}
                 </div>
 
                 <div className="form-checkbox-container">
