@@ -5,7 +5,7 @@ import style from './homepage.module.css';
 import React, { useState, useEffect } from 'react';
 
 // React Router
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 // Import Animation On Scroll
 import AOS from 'aos';
@@ -92,9 +92,11 @@ const HomePage = () => {
 
     setTimeout(() => {
       // Check if the user is logged in using the stored token
-      const authToken = localStorage.getItem('authToken');
+      const isLoggedIn =
+        sessionStorage.getItem('isLoggedIn') ||
+        localStorage.getItem('isLoggedIn');
 
-      if (authToken) {
+      if (isLoggedIn) {
         setIsLoggedIn(true);
         setIsLoading(false); // Mark loading as completed
       } else {
@@ -115,14 +117,12 @@ const HomePage = () => {
         <AswsIndex />
       ) : (
         <section>
-          <Router>
-            <Routes>
-              <Route exact path="/" element={<HomePageComponent />} />
-              <Route exact path="/signin" element={<SigninPageComponent />} />
-              <Route exact path="/signup" element={<SignupPageComponent />} />
-              <Route exact path="/forgot" element={<ForgotPageComponenet />} />
-            </Routes>
-          </Router>
+          <Routes>
+            <Route exact path="/" element={<HomePageComponent />} />
+            <Route exact path="/signin" element={<SigninPageComponent />} />
+            <Route exact path="/signup" element={<SignupPageComponent />} />
+            <Route exact path="/forgot" element={<ForgotPageComponenet />} />
+          </Routes>
         </section>
       )}
     </>

@@ -6,7 +6,6 @@ import '../../../../assets/css/flex.css';
 import '../../../../assets/css/userprofile.css';
 
 import { useState } from 'react';
-import api from '../../../../api/api'; // Import your axios instance
 
 import { Link } from 'react-router-dom';
 
@@ -17,15 +16,6 @@ import UserProfile from '../../../../components/main/profile/userprofile';
 import { PrimaryButton } from '../../../../components/main/common/buttons/buttons';
 
 const AddZone = () => {
-  const [formData, setFormData] = useState({
-    centreName: '',
-    committeeMember: '',
-    email: '',
-    phone: '',
-    address: '',
-    waqtBoardNo: '',
-  });
-
   const [text, setText] = useState(''); // Define the 'text' state
 
   const handleTextChange = (event) => {
@@ -34,52 +24,9 @@ const AddZone = () => {
     setText(newText);
   };
 
-  const handleFormSubmit = () => {
-    // Make an API request using axios
-    api
-      .post('/api/zones/{zoneId}/centers', formData)
-      .then((response) => {
-        // Handle success, maybe show a success message
-      })
-      .catch((error) => {
-        // Handle error, maybe show an error message
-      });
-  };
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const [selectedFile, setSelectedFile] = useState(null);
-
-  const handleFileChange = event => {
-    const file = event.target.files[0];
-    setSelectedFile(file);
-  };
-
-  const handleFileUpload = () => {
-    if (selectedFile) {
-      const formData = new FormData();
-      formData.append('image', selectedFile);
-
-      // Make an API request to upload the image
-      api.post('/api/upload', formData)
-        .then(response => {
-          // Handle success, maybe show a success message
-        })
-        .catch(error => {
-          // Handle error, maybe show an error message
-        });
-    }
-  };
-  
   return (
     <section id="addzone">
-      <form onSubmit={handleFormSubmit}>
+      <form>
         <div className="addzone-heading flex-r-sb">
           <div>
             <span className="poppins-heading">
@@ -107,8 +54,6 @@ const AddZone = () => {
                 id="centre-name-input"
                 placeholder=" "
                 name="centreName"
-                value={formData.centreName}
-                onChange={handleInputChange}
                 required
               />
             </div>
@@ -186,8 +131,8 @@ const AddZone = () => {
             <span>photo collections *</span>
           </div>
           <div className="photo-card-collection-card">
-            <input type="file" accept="image/*" onChange={handleFileChange} />
-            <button onClick={handleFileUpload}>Upload Photo</button>
+            <input type="file" accept="image/*" />
+            <button>Upload Photo</button>
           </div>
         </div>
 

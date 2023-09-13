@@ -4,11 +4,15 @@ import '../../assets/css/signup.css';
 import '../../assets/css/index.css';
 import '../../assets/css/flex.css';
 
-import React from 'react';
-import { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCredentials } from '../../services/auth/authSlice';
+import { useLoginMutation } from '../../services/auth/authApiSlice';
 
+// import { useDispatch, useSelector } from 'react-redux';
 
-// import { authenticateUser } from '../../api/auth';
+// import { loginRequest } from '../../redux/actions/signin/SigninAction';
 
 import { Link } from 'react-router-dom';
 
@@ -239,27 +243,83 @@ export const SignupPageComponent = () => {
 };
 
 export const SigninPageComponent = () => {
+  const userRef = useRef();
+  const errRef = useRef();
+  const [userName, setUserName] = useState('');
+  const [userPassword, setUserPassword] = useState('');
+  const [errMsg, setErrMsg] = useState('');
+  const navigate = useNavigate();
+
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
-
-
   const handleTogglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+  // const [password, setPassword] = useState('');
+  // const [email, setEmail] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
 
   const handleRememberMeChange = (e) => {
     setRememberMe(e.target.checked);
+    localStorage.setItem('isLoggedIn', true);
   };
+
+  // const handleLogin = () => {
+  //   dispatch(loginRequest({ email, password }));
+  // };
+
+  // const handlePasswordChange = (e) => {
+  //   setPassword(e.target.value);
+  // };
+
+  // const handleEmailChange = (e) => {
+  //   setEmail(e.target.value);
+  // };
+
+  // Dispatch
+
+  const [login] = useLoginMutation();
+  const dispatch = useDispatch();
+  const error = useSelector((state) => state.auth.error);
+
+  useEffect(() => {
+    userRef.current.focus();
+  }, []);
+
+  useEffect(() => {
+    setErrMsg('');
+  }, [userName, userPassword]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const userData = await login({ userName, userPassword }).unwrap();
+      dispatch(setCredentials({ ...userData, userName }));
+      setUserName('');
+      setUserPassword('');
+      navigate('/');
+
+      sessionStorage.setItem('isLoggedIn', true);
+
+      // window.location.href = '/';
+    } catch (err) {
+      if (!err?.originalStatus) {
+        // isLoading: true until timeout occurs
+        setErrMsg('No Server Response');
+      } else if (err.originalStatus === 400) {
+        setErrMsg('Missing Username or Password');
+      } else if (err.originalStatus === 401) {
+        setErrMsg('Unauthorized');
+      } else {
+        setErrMsg('Login Failed');
+      }
+      errRef.current.focus();
+    }
+  };
+
+  const handleUserInput = (e) => setUserName(e.target.value);
+
+  const handlePwdInput = (e) => setUserPassword(e.target.value);
 
   return (
     <main className="signin-main-container ">
@@ -282,7 +342,7 @@ export const SigninPageComponent = () => {
               </span>
             </div>
             <div className="signin-form-container">
-              <form action="" >
+              <form onSubmit={handleSubmit}>
                 <div className="form-feild-container">
                   <label
                     className="signin-form-label"
@@ -295,8 +355,13 @@ export const SigninPageComponent = () => {
                     className="signin-form-input poppin"
                     id="signin-email-input"
                     placeholder="hannah.green@test.com"
-                    value={email}
-                    onChange={handleEmailChange}
+                    // value={email}
+                    // onChange={handleEmailChange}
+                    // onChange={(e) => setEmail(e.target.value)}
+                    ref={userRef}
+                    value={userName}
+                    onChange={handleUserInput}
+                    autoComplete="off"
                     required
                   />
                 </div>
@@ -315,10 +380,13 @@ export const SigninPageComponent = () => {
                       id="signin-password-input"
                       placeholder="password123@"
                       required
-                      value={password}
-                      onChange={handlePasswordChange}
+                      // value={password}
+                      onChange={handlePwdInput}
+                      value={userPassword}
+                      // onChange={handlePasswordChange}
+                      // onChange={(e) => setPassword(e.target.value)}
                     />
-                    {password && (
+                    {userPassword && (
                       <span
                         className="eye-icon"
                         onClick={handleTogglePasswordVisibility}
@@ -327,6 +395,11 @@ export const SigninPageComponent = () => {
                       </span>
                     )}
                   </div>
+                  {error && (
+                    <p>
+                      {error} {errMsg}
+                    </p>
+                  )}
                   {/* {loginError && (
                     <div className="error-message">{loginError}</div>
                   )} */}

@@ -14,7 +14,7 @@ import UserProfile from '../../../../components/main/profile/userprofile';
 
 import { PrimaryButton } from '../../../../components/main/common/buttons/buttons';
 
-import { RiDeleteBin5Line } from 'react-icons/ri';
+// import { RiDeleteBin5Line } from 'react-icons/ri';
 
 const Subject = () => {
   const { subjectName } = useParams();

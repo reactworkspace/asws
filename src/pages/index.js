@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 
 // styles
 import '../assets/css/index.css';
@@ -50,6 +50,9 @@ import AswsLogoImg from '../assets/images/asws_logo.png';
 
 //  import profile
 import UserProfilePhoto from '../assets/images/userprofile.png';
+
+// Require Auth
+import RequireAuth from '../services/auth/RequireAuth';
 
 const UserProfile = () => {
   return (
@@ -146,9 +149,7 @@ const AswsIndex = () => {
   const handleLogout = () => {
     // Clear the session storage or local storage based on your logic
     sessionStorage.removeItem('isLoggedIn');
-    sessionStorage.removeItem('userId');
     localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('userId');
 
     // Redirect the user to the desired page after logout
     window.location.href = '/'; // Replace 'login' with your actual login page route
@@ -156,23 +157,119 @@ const AswsIndex = () => {
 
   return (
     <>
-      <Router>
-        <header>
-          <div>
-            <GiHamburgerMenu
-              className={`icon ${isMenuOpen ? 'open' : ''}`}
-              onClick={handleMenuToggle}
-            />
+      {/* <Router> */}
+      <header>
+        <div>
+          <GiHamburgerMenu
+            className={`icon ${isMenuOpen ? 'open' : ''}`}
+            onClick={handleMenuToggle}
+          />
+        </div>
+        <div>
+          <AswsLogo />
+        </div>
+        <div>
+          <UserProfile />
+        </div>
+      </header>
+      <div id="hamburger-menu">
+        {isMenuOpen && (
+          <ul className="poppins">
+            <li>
+              <Link to="/" onClick={() => handleClick('dashboard')}>
+                <div
+                  className={`flex list-button ${
+                    isActive === 'dashboard' ? 'active' : ''
+                  }`}
+                >
+                  <BsGridFill className="nav-icons" />
+                  <span>dashboard</span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/zone" onClick={() => handleClick('zone')}>
+                <div
+                  className={`flex list-button ${
+                    isActive === 'zone' ? 'active' : ''
+                  }`}
+                >
+                  <ZoneIcon className="nav-icons" />
+                  <span>zone</span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/student" onClick={() => handleClick('student')}>
+                <div
+                  className={`flex list-button ${
+                    isActive === 'student' ? 'active' : ''
+                  }`}
+                >
+                  <StudentIcon className="nav-icons" />
+                  <span>student</span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/teacher" onClick={() => handleClick('teacher')}>
+                <div
+                  className={`flex list-button ${
+                    isActive === 'teacher' ? 'active' : ''
+                  }`}
+                >
+                  <TeacherIcon className="nav-icons" />
+                  <span>teacher</span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/attendance" onClick={() => handleClick('attendance')}>
+                <div
+                  className={`flex list-button ${
+                    isActive === 'attendance' ? 'active' : ''
+                  }`}
+                >
+                  <NotesIcon className="nav-icons" />
+                  <span>attendance</span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/syllabus" onClick={() => handleClick('syllabus')}>
+                <div
+                  className={`flex list-button ${
+                    isActive === 'syllabus' ? 'active' : ''
+                  }`}
+                >
+                  <NotesIcon className="nav-icons" />
+                  <span>syllabus</span>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/setting" onClick={() => handleClick('setting')}>
+                <div
+                  className={`flex list-button ${
+                    isActive === 'setting' ? 'active' : ''
+                  }`}
+                >
+                  <SettingIcons className="nav-icons" />
+                  <span>setting</span>
+                </div>
+              </Link>
+            </li>
+          </ul>
+        )}
+      </div>
+
+      {/* Body Section */}
+      <div className="flex ">
+        <nav className="navbar">
+          <div className="aswslogo">
+            <img src={AswsLogoImg} alt="AswsLogo" />
           </div>
-          <div>
-            <AswsLogo />
-          </div>
-          <div>
-            <UserProfile />
-          </div>
-        </header>
-        <div id="hamburger-menu">
-          {isMenuOpen && (
+          <div id="navbar-list">
             <ul className="poppins">
               <li>
                 <Link to="/" onClick={() => handleClick('dashboard')}>
@@ -261,160 +358,56 @@ const AswsIndex = () => {
                   </div>
                 </Link>
               </li>
-            </ul>
-          )}
-        </div>
 
-        {/* Body Section */}
-        <div className="flex ">
-          <nav className="navbar">
-            <div className="aswslogo">
-              <img src={AswsLogoImg} alt="AswsLogo" />
-            </div>
-            <div id="navbar-list">
-              <ul className="poppins">
-                <li>
-                  <Link to="/" onClick={() => handleClick('dashboard')}>
-                    <div
-                      className={`flex list-button ${
-                        isActive === 'dashboard' ? 'active' : ''
-                      }`}
-                    >
-                      <BsGridFill className="nav-icons" />
-                      <span>dashboard</span>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/zone" onClick={() => handleClick('zone')}>
-                    <div
-                      className={`flex list-button ${
-                        isActive === 'zone' ? 'active' : ''
-                      }`}
-                    >
-                      <ZoneIcon className="nav-icons" />
-                      <span>zone</span>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/student" onClick={() => handleClick('student')}>
-                    <div
-                      className={`flex list-button ${
-                        isActive === 'student' ? 'active' : ''
-                      }`}
-                    >
-                      <StudentIcon className="nav-icons" />
-                      <span>student</span>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/teacher" onClick={() => handleClick('teacher')}>
-                    <div
-                      className={`flex list-button ${
-                        isActive === 'teacher' ? 'active' : ''
-                      }`}
-                    >
-                      <TeacherIcon className="nav-icons" />
-                      <span>teacher</span>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/attendance"
-                    onClick={() => handleClick('attendance')}
+              <li onClick={handleLogout} className="logout_btn_container">
+                <Link>
+                  <div
+                    className={`flex list-button ${
+                      isActive === 'logout' ? 'active' : ''
+                    }`}
                   >
-                    <div
-                      className={`flex list-button ${
-                        isActive === 'attendance' ? 'active' : ''
-                      }`}
-                    >
-                      <NotesIcon className="nav-icons" />
-                      <span>attendance</span>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/syllabus" onClick={() => handleClick('syllabus')}>
-                    <div
-                      className={`flex list-button ${
-                        isActive === 'syllabus' ? 'active' : ''
-                      }`}
-                    >
-                      <NotesIcon className="nav-icons" />
-                      <span>syllabus</span>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/setting" onClick={() => handleClick('setting')}>
-                    <div
-                      className={`flex list-button ${
-                        isActive === 'setting' ? 'active' : ''
-                      }`}
-                    >
-                      <SettingIcons className="nav-icons" />
-                      <span>setting</span>
-                    </div>
-                  </Link>
-                </li>
+                    <FiLogOut className="nav-icons" />
+                    <span>logout</span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-                <li onClick={handleLogout} className="logout_btn_container">
-                  <Link>
-                    <div
-                      className={`flex list-button ${
-                        isActive === 'logout' ? 'active' : ''
-                      }`}
-                    >
-                      <FiLogOut className="nav-icons" />
-                      <span>logout</span>
-                    </div>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </nav>
+        <section id="main-section">
+          {/* protected routes */}
+          {/* <Router> */}
+          <Routes element={<RequireAuth />}>
+            <Route exact path="/" element={<Dashboard />} />
+            <Route exact path="/zone" element={<Zone />} />
+            <Route exact path="/student" element={<Student />} />
+            <Route exact path="/teacher" element={<Teacher />} />
+            <Route exact path="/attendance" element={<Attendance />} />
+            <Route exact path="/syllabus" element={<Syllabus />} />
+            <Route exact path="/setting" element={<Setting />} />
 
-          <section id="main-section">
-            <Routes>
-              <Route exact path="/" element={<Dashboard />} />
-              <Route exact path="/zone" element={<Zone />} />
-              <Route exact path="/student" element={<Student />} />
-              <Route exact path="/teacher" element={<Teacher />} />
-              <Route exact path="/attendance" element={<Attendance />} />
-              <Route exact path="/syllabus" element={<Syllabus />} />
-              <Route exact path="/setting" element={<Setting />} />
+            <Route exact path="/addstudent" element={<AddStudent />} />
+            <Route exact path="/addteacher" element={<AddTeacher />} />
+            <Route exact path="/addzone" element={<AddZone />} />
+            <Route exact path="/addsubject" element={<AddSubject />} />
+            <Route exact path="/subject/:subjectName" element={<Subject />} />
 
-              <Route exact path="/addstudent" element={<AddStudent />} />
-              <Route exact path="/addteacher" element={<AddTeacher />} />
-              <Route exact path="/addzone" element={<AddZone />} />
-              <Route exact path="/addsubject" element={<AddSubject />} />
-              <Route exact path="/subject/:subjectName" element={<Subject />} />
+            <Route exact path="/studentdetails" element={<StudentDetails />} />
 
-              <Route
-                exact
-                path="/studentdetails"
-                element={<StudentDetails />}
-              />
+            <Route exact path="/teacherdetails" element={<TeacherDetails />} />
+            <Route exact path="/zonedetails" element={<ZoneDetails />} />
 
-              <Route
-                exact
-                path="/teacherdetails"
-                element={<TeacherDetails />}
-              />
-              <Route exact path="/zonedetails" element={<ZoneDetails />} />
+            <Route exact path="/importstudent" element={<ImportStudent />} />
 
-              <Route exact path="/importstudent" element={<ImportStudent />} />
+            <Route exact path="/importteacher" element={<ImportTeacher />} />
 
-              <Route exact path="/importteacher" element={<ImportTeacher />} />
-
-              <Route exact path="/importzone" element={<ImportZone />} />
-            </Routes>
-          </section>
-        </div>
-      </Router>
+            <Route exact path="/importzone" element={<ImportZone />} />
+          </Routes>
+          {/* </Router> */}
+        </section>
+      </div>
+      {/* </Router> */}
     </>
   );
 };

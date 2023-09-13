@@ -24,7 +24,13 @@ A web application that stores the attendance of teachers & students with detail 
 - `npm install recharts --save`
 - `npm install aos --save`
 - `npm install react-scroll --save`
-
+- `npm install js-cookies --save`
+- `npm install jsonwebtoken --save`
+- `npm install antd --save` 
+- `npm install redux --save` 
+- `npm install react-redux --save` 
+- `npm install redux-saga --save` 
+- `npm install @reduxjs/toolkit --save` 
 
 ## Usage
 <!-- Usage instructions go here -->
